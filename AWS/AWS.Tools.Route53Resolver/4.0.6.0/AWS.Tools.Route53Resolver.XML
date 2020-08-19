@@ -1,0 +1,1063 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Route53Resolver</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverEndpointIpAddressAssociationCmdlet">
+            <summary>
+            Adds IP addresses to an inbound or an outbound resolver endpoint. If you want to adding
+            more than one IP address, submit one <code>AssociateResolverEndpointIpAddress</code>
+            request for each IP address.
+            
+             
+            <para>
+            To remove an IP address from an endpoint, see <a>DisassociateResolverEndpointIpAddress</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverEndpointIpAddressAssociationCmdlet.IpAddress">
+            <summary>
+            <para>
+            <para>Either the IPv4 address that you want to add to a resolver endpoint or a subnet ID.
+            If you specify a subnet ID, Resolver chooses an IP address for you from the available
+            IPs in the specified subnet.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverEndpointIpAddressAssociationCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the resolver endpoint that you want to associate IP addresses with.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverEndpointIpAddressAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoint'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.AssociateResolverEndpointIpAddressResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.AssociateResolverEndpointIpAddressResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverEndpointIpAddressAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IpAddress parameter.
+            The -PassThru parameter is deprecated, use -Select '^IpAddress' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverEndpointIpAddressAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet">
+            <summary>
+            Associates a resolver rule with a VPC. When you associate a rule with a VPC, Resolver
+            forwards all DNS queries for the domain name that is specified in the rule and that
+            originate in the VPC. The queries are forwarded to the IP addresses for the DNS resolvers
+            that are specified in the rule. For more information about rules, see <a>CreateResolverRule</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet.Name">
+            <summary>
+            <para>
+            <para>A name for the association that you're creating between a resolver rule and a VPC.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet.ResolverRuleId">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule that you want to associate with the VPC. To list the existing
+            resolver rules, use <a>ListResolverRules</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet.VPCId">
+            <summary>
+            <para>
+            <para>The ID of the VPC that you want to associate the resolver rule with.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRuleAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.AssociateResolverRuleResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.AssociateResolverRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRuleId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRuleId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResolverRuleAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.AddR53RResourceTagCmdlet">
+            <summary>
+            Adds one or more tags to a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the resource that you want to add tags to. To get
+            the ARN for a resource, use the applicable <code>Get</code> or <code>List</code> command:
+            </para><ul><li><para><a>GetResolverEndpoint</a></para></li><li><para><a>GetResolverRule</a></para></li><li><para><a>GetResolverRuleAssociation</a></para></li><li><para><a>ListResolverEndpoints</a></para></li><li><para><a>ListResolverRuleAssociations</a></para></li><li><para><a>ListResolverRules</a></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags that you want to add to the specified resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.AddR53RResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointCmdlet">
+            <summary>
+            Gets information about a specified resolver endpoint, such as whether it's an inbound
+            or an outbound resolver endpoint, and the current status of the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the resolver endpoint that you want to get information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoint'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.GetResolverEndpointResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.GetResolverEndpointResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverEndpointId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverEndpointId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet">
+            <summary>
+            Gets the IP addresses for a specified resolver endpoint.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the resolver endpoint that you want to get IP addresses for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of IP addresses that you want to return in the response to a <code>ListResolverEndpointIpAddresses</code>
+            request. If you don't specify a value for <code>MaxResults</code>, Resolver returns
+            up to 100 IP addresses. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>For the first <code>ListResolverEndpointIpAddresses</code> request, omit this value.</para><para>If the specified resolver endpoint has more than <code>MaxResults</code> IP addresses,
+            you can submit another <code>ListResolverEndpointIpAddresses</code> request to get
+            the next group of IP addresses. In the next request, specify the value of <code>NextToken</code>
+            from the previous response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'IpAddresses'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.ListResolverEndpointIpAddressesResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.ListResolverEndpointIpAddressesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverEndpointId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverEndpointId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointIpAddressListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointListCmdlet">
+            <summary>
+            Lists all the resolver endpoints that were created using the current AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An optional specification to return a subset of resolver endpoints, such as all inbound
+            resolver endpoints.</para><note><para>If you submit a second or subsequent <code>ListResolverEndpoints</code> request and
+            specify the <code>NextToken</code> parameter, you must use the same values for <code>Filters</code>,
+            if any, as in the previous request.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of resolver endpoints that you want to return in the response to
+            a <code>ListResolverEndpoints</code> request. If you don't specify a value for <code>MaxResults</code>,
+            Resolver returns up to 100 resolver endpoints. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>For the first <code>ListResolverEndpoints</code> request, omit this value.</para><para>If you have more than <code>MaxResults</code> resolver endpoints, you can submit another
+            <code>ListResolverEndpoints</code> request to get the next group of resolver endpoints.
+            In the next request, specify the value of <code>NextToken</code> from the previous
+            response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoints'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.ListResolverEndpointsResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.ListResolverEndpointsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverEndpointListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleCmdlet">
+            <summary>
+            Gets information about a specified resolver rule, such as the domain name that the
+            rule forwards DNS queries for and the ID of the outbound resolver endpoint that the
+            rule is associated with.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleCmdlet.ResolverRuleId">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule that you want to get information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRule'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.GetResolverRuleResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.GetResolverRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRuleId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRuleId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationCmdlet">
+            <summary>
+            Gets information about an association between a specified resolver rule and a VPC.
+            You associate a resolver rule and a VPC using <a>AssociateResolverRule</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationCmdlet.ResolverRuleAssociationId">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule association that you want to get information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRuleAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.GetResolverRuleAssociationResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.GetResolverRuleAssociationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRuleAssociationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRuleAssociationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationListCmdlet">
+            <summary>
+            Lists the associations that were created between resolver rules and VPCs using the
+            current AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An optional specification to return a subset of resolver rules, such as resolver rules
+            that are associated with the same VPC ID.</para><note><para>If you submit a second or subsequent <code>ListResolverRuleAssociations</code> request
+            and specify the <code>NextToken</code> parameter, you must use the same values for
+            <code>Filters</code>, if any, as in the previous request.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of rule associations that you want to return in the response to
+            a <code>ListResolverRuleAssociations</code> request. If you don't specify a value
+            for <code>MaxResults</code>, Resolver returns up to 100 rule associations. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>For the first <code>ListResolverRuleAssociation</code> request, omit this value.</para><para>If you have more than <code>MaxResults</code> rule associations, you can submit another
+            <code>ListResolverRuleAssociation</code> request to get the next group of rule associations.
+            In the next request, specify the value of <code>NextToken</code> from the previous
+            response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRuleAssociations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.ListResolverRuleAssociationsResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.ListResolverRuleAssociationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleAssociationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleListCmdlet">
+            <summary>
+            Lists the resolver rules that were created using the current AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An optional specification to return a subset of resolver rules, such as all resolver
+            rules that are associated with the same resolver endpoint.</para><note><para>If you submit a second or subsequent <code>ListResolverRules</code> request and specify
+            the <code>NextToken</code> parameter, you must use the same values for <code>Filters</code>,
+            if any, as in the previous request.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of resolver rules that you want to return in the response to a
+            <code>ListResolverRules</code> request. If you don't specify a value for <code>MaxResults</code>,
+            Resolver returns up to 100 resolver rules.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>For the first <code>ListResolverRules</code> request, omit this value.</para><para>If you have more than <code>MaxResults</code> resolver rules, you can submit another
+            <code>ListResolverRules</code> request to get the next group of resolver rules. In
+            the next request, specify the value of <code>NextToken</code> from the previous response.
+            </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRules'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.ListResolverRulesResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.ListResolverRulesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRuleListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRulePolicyCmdlet">
+            <summary>
+            Gets information about a resolver rule policy. A resolver rule policy specifies the
+            Resolver operations and resources that you want to allow another AWS account to be
+            able to use.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRulePolicyCmdlet.Arn">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule policy that you want to get information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRulePolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRulePolicy'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.GetResolverRulePolicyResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.GetResolverRulePolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResolverRulePolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Arn parameter.
+            The -PassThru parameter is deprecated, use -Select '^Arn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet">
+            <summary>
+            Lists the tags that you associated with the specified resource.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the resource that you want to list tags for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of tags that you want to return in the response to a <code>ListTagsForResource</code>
+            request. If you don't specify a value for <code>MaxResults</code>, Resolver returns
+            up to 100 tags.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>For the first <code>ListTagsForResource</code> request, omit this value.</para><para>If you have more than <code>MaxResults</code> tags, you can submit another <code>ListTagsForResource</code>
+            request to get the next group of tags for the resource. In the next request, specify
+            the value of <code>NextToken</code> from the previous response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.GetR53RResourceTagListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet">
+            <summary>
+            Creates a resolver endpoint. There are two types of resolver endpoints, inbound and
+            outbound:
+            
+             <ul><li><para>
+            An <i>inbound resolver endpoint</i> forwards DNS queries to the DNS service for a
+            VPC from your network or another VPC.
+            </para></li><li><para>
+            An <i>outbound resolver endpoint</i> forwards DNS queries from the DNS service for
+            a VPC to your network or another VPC.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.CreatorRequestId">
+            <summary>
+            <para>
+            <para>A unique string that identifies the request and that allows failed requests to be
+            retried without the risk of executing the operation twice. <code>CreatorRequestId</code>
+            can be any unique string, for example, a date/time stamp. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.Direction">
+            <summary>
+            <para>
+            <para>Specify the applicable value:</para><ul><li><para><code>INBOUND</code>: Resolver forwards DNS queries to the DNS service for a VPC
+            from your network or another VPC</para></li><li><para><code>OUTBOUND</code>: Resolver forwards DNS queries from the DNS service for a VPC
+            to your network or another VPC</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.IpAddress">
+            <summary>
+            <para>
+            <para>The subnets and IP addresses in your VPC that you want DNS queries to pass through
+            on the way from your VPCs to your network (for outbound endpoints) or on the way from
+            your network to your VPCs (for inbound resolver endpoints). </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.Name">
+            <summary>
+            <para>
+            <para>A friendly name that lets you easily find a configuration in the Resolver dashboard
+            in the Route 53 console.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.SecurityGroupId">
+            <summary>
+            <para>
+            <para>The ID of one or more security groups that you want to use to control access to this
+            VPC. The security group that you specify must include one or more inbound rules (for
+            inbound resolver endpoints) or outbound rules (for outbound resolver endpoints).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of the tag keys and values that you want to associate with the endpoint.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoint'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.CreateResolverEndpointResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.CreateResolverEndpointResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverEndpointCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet">
+            <summary>
+            For DNS queries that originate in your VPCs, specifies which resolver endpoint the
+            queries pass through, one domain name that you want to forward to your network, and
+            the IP addresses of the DNS resolvers in your network.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.CreatorRequestId">
+            <summary>
+            <para>
+            <para>A unique string that identifies the request and that allows failed requests to be
+            retried without the risk of executing the operation twice. <code>CreatorRequestId</code>
+            can be any unique string, for example, a date/time stamp. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.DomainName">
+            <summary>
+            <para>
+            <para>DNS queries for this domain name are forwarded to the IP addresses that you specify
+            in <code>TargetIps</code>. If a query matches multiple resolver rules (example.com
+            and www.example.com), outbound DNS queries are routed using the resolver rule that
+            contains the most specific domain name (www.example.com).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.Name">
+            <summary>
+            <para>
+            <para>A friendly name that lets you easily find a rule in the Resolver dashboard in the
+            Route 53 console.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the outbound resolver endpoint that you want to use to route DNS queries
+            to the IP addresses that you specify in <code>TargetIps</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.RuleType">
+            <summary>
+            <para>
+            <para>Specify <code>FORWARD</code>. Other resolver rule types aren't supported.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of the tag keys and values that you want to associate with the endpoint.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.TargetIp">
+            <summary>
+            <para>
+            <para>The IPs that you want Resolver to forward DNS queries to. You can specify only IPv4
+            addresses. Separate IP addresses with a comma.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRule'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.CreateResolverRuleResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.CreateResolverRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DomainName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DomainName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.NewR53RResolverRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointCmdlet">
+            <summary>
+            Deletes a resolver endpoint. The effect of deleting a resolver endpoint depends on
+            whether it's an inbound or an outbound resolver endpoint:
+            
+             <ul><li><para><b>Inbound</b>: DNS queries from your network or another VPC are no longer routed
+            to the DNS service for the specified VPC.
+            </para></li><li><para><b>Outbound</b>: DNS queries from a VPC are no longer routed to your network or to
+            another VPC.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the resolver endpoint that you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoint'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.DeleteResolverEndpointResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.DeleteResolverEndpointResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverEndpointId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverEndpointId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointIpAddressAssociationCmdlet">
+            <summary>
+            Removes IP addresses from an inbound or an outbound resolver endpoint. If you want
+            to remove more than one IP address, submit one <code>DisassociateResolverEndpointIpAddress</code>
+            request for each IP address.
+            
+             
+            <para>
+            To add an IP address to an endpoint, see <a>AssociateResolverEndpointIpAddress</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointIpAddressAssociationCmdlet.IpAddress">
+            <summary>
+            <para>
+            <para>The IPv4 address that you want to remove from a resolver endpoint.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointIpAddressAssociationCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the resolver endpoint that you want to disassociate an IP address from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointIpAddressAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoint'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.DisassociateResolverEndpointIpAddressResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.DisassociateResolverEndpointIpAddressResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointIpAddressAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IpAddress parameter.
+            The -PassThru parameter is deprecated, use -Select '^IpAddress' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverEndpointIpAddressAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleCmdlet">
+            <summary>
+            Deletes a resolver rule. Before you can delete a resolver rule, you must disassociate
+            it from all the VPCs that you associated the resolver rule with. For more infomation,
+            see <a>DisassociateResolverRule</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleCmdlet.ResolverRuleId">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule that you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRule'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.DeleteResolverRuleResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.DeleteResolverRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRuleId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRuleId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleAssociationCmdlet">
+            <summary>
+            Removes the association between a specified resolver rule and a specified VPC.
+            
+             <important><para>
+            If you disassociate a resolver rule from a VPC, Resolver stops forwarding DNS queries
+            for the domain name that you specified in the resolver rule. 
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleAssociationCmdlet.ResolverRuleId">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule that you want to disassociate from the specified VPC.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleAssociationCmdlet.VPCId">
+            <summary>
+            <para>
+            <para>The ID of the VPC that you want to disassociate the resolver rule from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRuleAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.DisassociateResolverRuleResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.DisassociateResolverRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRuleId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRuleId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResolverRuleAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResourceTagCmdlet">
+            <summary>
+            Removes one or more tags from a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the resource that you want to remove tags from.
+            To get the ARN for a resource, use the applicable <code>Get</code> or <code>List</code>
+            command: </para><ul><li><para><a>GetResolverEndpoint</a></para></li><li><para><a>GetResolverRule</a></para></li><li><para><a>GetResolverRuleAssociation</a></para></li><li><para><a>ListResolverEndpoints</a></para></li><li><para><a>ListResolverRuleAssociations</a></para></li><li><para><a>ListResolverRules</a></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The tags that you want to remove to the specified resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.RemoveR53RResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.SetR53RResolverRulePolicyCmdlet">
+            <summary>
+            Specifies the Resolver operations and resources that you want to allow another AWS
+            account to be able to use.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.SetR53RResolverRulePolicyCmdlet.Arn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the account that you want to grant permissions to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.SetR53RResolverRulePolicyCmdlet.ResolverRulePolicy">
+            <summary>
+            <para>
+            <para>An AWS Identity and Access Management policy statement that lists the permissions
+            that you want to grant to another AWS account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.SetR53RResolverRulePolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ReturnValue'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.PutResolverRulePolicyResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.PutResolverRulePolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.SetR53RResolverRulePolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRulePolicy parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRulePolicy' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.SetR53RResolverRulePolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverEndpointCmdlet">
+            <summary>
+            Updates the name of an inbound or an outbound resolver endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverEndpointCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the resolver endpoint that you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverEndpointCmdlet.ResolverEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the resolver endpoint that you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverEndpointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverEndpoint'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.UpdateResolverEndpointResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.UpdateResolverEndpointResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverEndpointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverEndpointId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverEndpointId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverEndpointCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverRuleCmdlet">
+            <summary>
+            Updates settings for a specified resolver rule. <code>ResolverRuleId</code> is required,
+            and all other parameters are optional. If you don't specify a parameter, it retains
+            its current value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverRuleCmdlet.Config">
+            <summary>
+            <para>
+            <para>The new settings for the resolver rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverRuleCmdlet.ResolverRuleId">
+            <summary>
+            <para>
+            <para>The ID of the resolver rule that you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResolverRule'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Route53Resolver.Model.UpdateResolverRuleResponse).
+            Specifying the name of a property of type Amazon.Route53Resolver.Model.UpdateResolverRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResolverRuleId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResolverRuleId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.R53R.UpdateR53RResolverRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

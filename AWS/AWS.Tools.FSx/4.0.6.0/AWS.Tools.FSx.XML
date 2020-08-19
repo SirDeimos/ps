@@ -1,0 +1,1135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.FSx</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.AddFSXResourceTagCmdlet">
+            <summary>
+            Tags an Amazon FSx resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.AddFSXResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the Amazon FSx resource that you want to tag.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.AddFSXResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of tags for the resource. If a tag with a given key already exists, the value
+            is replaced by the one specified in this parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.AddFSXResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.AddFSXResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.AddFSXResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet">
+            <summary>
+            Returns the description of specific Amazon FSx for Windows File Server backups, if
+            a <code>BackupIds</code> value is provided for that backup. Otherwise, it returns
+            all backups owned by your AWS account in the AWS Region of the endpoint that you're
+            calling.
+            
+             
+            <para>
+            When retrieving all backups, you can optionally specify the <code>MaxResults</code>
+            parameter to limit the number of backups in a response. If more backups remain, Amazon
+            FSx returns a <code>NextToken</code> value in the response. In this case, send a later
+            request with the <code>NextToken</code> request parameter set to the value of <code>NextToken</code>
+            from the last response.
+            </para><para>
+            This action is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code>
+            is called first without a <code>NextToken</code>value. Then the action continues to
+            be called with the <code>NextToken</code> parameter set to the value of the last <code>NextToken</code>
+            value until a response has no <code>NextToken</code>.
+            </para><para>
+            When using this action, keep the following in mind:
+            </para><ul><li><para>
+            The implementation might return fewer than <code>MaxResults</code> file system descriptions
+            while still including a <code>NextToken</code> value.
+            </para></li><li><para>
+            The order of backups returned in the response of one <code>DescribeBackups</code>
+            call and the order of backups returned across the responses of a multi-call iteration
+            is unspecified.
+            </para></li></ul><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet.BackupId">
+            <summary>
+            <para>
+            <para>(Optional) IDs of the backups you want to retrieve (String). This overrides any filters.
+            If any IDs are not found, BackupNotFound will be thrown.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet.Filter">
+            <summary>
+            <para>
+            <para>(Optional) Filters structure. Supported names are file-system-id and backup-type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Maximum number of backups to return in the response (integer). This parameter
+            value must be greater than 0. The number of items that Amazon FSx returns is the minimum
+            of the <code>MaxResults</code> parameter specified in the request and the service's
+            internal maximum number of items per page.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Opaque pagination token returned from a previous <code>DescribeBackups</code>
+            operation (String). If a token present, the action continues the list from where the
+            returning call left off.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Backups'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.DescribeBackupsResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.DescribeBackupsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXBackupCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet">
+            <summary>
+            Returns the description of specific Amazon FSx for Lustre data repository tasks, if
+            one or more <code>TaskIds</code> values are provided in the request, or if filters
+            are used in the request. You can use filters to narrow the response to include just
+            tasks for specific file systems, or tasks in a specific lifecycle state. Otherwise,
+            it returns all data repository tasks owned by your AWS account in the AWS Region of
+            the endpoint that you're calling.
+            
+             
+            <para>
+            When retrieving all tasks, you can paginate the response by using the optional <code>MaxResults</code>
+            parameter to limit the number of tasks returned in a response. If more tasks remain,
+            Amazon FSx returns a <code>NextToken</code> value in the response. In this case, send
+            a later request with the <code>NextToken</code> request parameter set to the value
+            of <code>NextToken</code> from the last response.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet.Filter">
+            <summary>
+            <para>
+            <para>(Optional) You can use filters to narrow the <code>DescribeDataRepositoryTasks</code>
+            response to include just tasks for specific file systems, or tasks in a specific lifecycle
+            state.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet.TaskId">
+            <summary>
+            <para>
+            <para>(Optional) IDs of the tasks whose descriptions you want to retrieve (String).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet.MaxResult">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet.NextToken">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DataRepositoryTasks'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.DescribeDataRepositoryTasksResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.DescribeDataRepositoryTasksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXDataRepositoryTaskCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.GetFSXFileSystemCmdlet">
+            <summary>
+            Returns the description of specific Amazon FSx file systems, if a <code>FileSystemIds</code>
+            value is provided for that file system. Otherwise, it returns descriptions of all
+            file systems owned by your AWS account in the AWS Region of the endpoint that you're
+            calling.
+            
+             
+            <para>
+            When retrieving all file system descriptions, you can optionally specify the <code>MaxResults</code>
+            parameter to limit the number of descriptions in a response. If more file system descriptions
+            remain, Amazon FSx returns a <code>NextToken</code> value in the response. In this
+            case, send a later request with the <code>NextToken</code> request parameter set to
+            the value of <code>NextToken</code> from the last response.
+            </para><para>
+            This action is used in an iterative process to retrieve a list of your file system
+            descriptions. <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value.
+            Then the action continues to be called with the <code>NextToken</code> parameter set
+            to the value of the last <code>NextToken</code> value until a response has no <code>NextToken</code>.
+            </para><para>
+            When using this action, keep the following in mind:
+            </para><ul><li><para>
+            The implementation might return fewer than <code>MaxResults</code> file system descriptions
+            while still including a <code>NextToken</code> value.
+            </para></li><li><para>
+            The order of file systems returned in the response of one <code>DescribeFileSystems</code>
+            call and the order of file systems returned across the responses of a multicall iteration
+            is unspecified.
+            </para></li></ul><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXFileSystemCmdlet.FileSystemId">
+            <summary>
+            <para>
+            <para>(Optional) IDs of the file systems whose descriptions you want to retrieve (String).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXFileSystemCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Maximum number of file systems to return in the response (integer). This
+            parameter value must be greater than 0. The number of items that Amazon FSx returns
+            is the minimum of the <code>MaxResults</code> parameter specified in the request and
+            the service's internal maximum number of items per page.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXFileSystemCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Opaque pagination token returned from a previous <code>DescribeFileSystems</code>
+            operation (String). If a token present, the action continues the list from where the
+            returning call left off.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXFileSystemCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FileSystems'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.DescribeFileSystemsResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.DescribeFileSystemsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXFileSystemCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet">
+            <summary>
+            Lists tags for an Amazon FSx file systems and backups in the case of Amazon FSx for
+            Windows File Server.
+            
+             
+            <para>
+            When retrieving all tags, you can optionally specify the <code>MaxResults</code> parameter
+            to limit the number of tags in a response. If more tags remain, Amazon FSx returns
+            a <code>NextToken</code> value in the response. In this case, send a later request
+            with the <code>NextToken</code> request parameter set to the value of <code>NextToken</code>
+            from the last response.
+            </para><para>
+            This action is used in an iterative process to retrieve a list of your tags. <code>ListTagsForResource</code>
+            is called first without a <code>NextToken</code>value. Then the action continues to
+            be called with the <code>NextToken</code> parameter set to the value of the last <code>NextToken</code>
+            value until a response has no <code>NextToken</code>.
+            </para><para>
+            When using this action, keep the following in mind:
+            </para><ul><li><para>
+            The implementation might return fewer than <code>MaxResults</code> file system descriptions
+            while still including a <code>NextToken</code> value.
+            </para></li><li><para>
+            The order of tags returned in the response of one <code>ListTagsForResource</code>
+            call and the order of tags returned across the responses of a multi-call iteration
+            is unspecified.
+            </para></li></ul><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The ARN of the Amazon FSx resource that will have its tags listed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Maximum number of tags to return in the response (integer). This parameter
+            value must be greater than 0. The number of items that Amazon FSx returns is the minimum
+            of the <code>MaxResults</code> parameter specified in the request and the service's
+            internal maximum number of items per page.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Opaque pagination token returned from a previous <code>ListTagsForResource</code>
+            operation (String). If a token present, the action continues the list from where the
+            returning call left off.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.GetFSXResourceTagListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet">
+            <summary>
+            Creates a backup of an existing Amazon FSx for Windows File Server file system. Creating
+            regular backups for your file system is a best practice that complements the replication
+            that Amazon FSx for Windows File Server performs for your file system. It also enables
+            you to restore from user modification of data.
+            
+             
+            <para>
+            If a backup with the specified client request token exists, and the parameters match,
+            this operation returns the description of the existing backup. If a backup specified
+            client request token exists, and the parameters don't match, this operation returns
+            <code>IncompatibleParameterError</code>. If a backup with the specified client request
+            token doesn't exist, <code>CreateBackup</code> does the following: 
+            </para><ul><li><para>
+            Creates a new Amazon FSx backup with an assigned ID, and an initial lifecycle state
+            of <code>CREATING</code>.
+            </para></li><li><para>
+            Returns the description of the backup.
+            </para></li></ul><para>
+            By using the idempotent operation, you can retry a <code>CreateBackup</code> operation
+            without the risk of creating an extra backup. This approach can be useful when an
+            initial call fails in a way that makes it unclear whether a backup was created. If
+            you use the same client request token and the initial call created a backup, the operation
+            returns a successful result because all the parameters are the same.
+            </para><para>
+            The <code>CreateFileSystem</code> operation returns while the backup's lifecycle state
+            is still <code>CREATING</code>. You can check the file system creation status by calling
+            the <a>DescribeBackups</a> operation, which returns the backup state along with other
+            information.
+            </para><note></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>(Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent
+            creation. This string is automatically filled on your behalf when you use the AWS
+            Command Line Interface (AWS CLI) or an AWS SDK.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet.FileSystemId">
+            <summary>
+            <para>
+            <para>The ID of the file system to back up.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the backup at backup creation. The key value of the <code>Name</code>
+            tag appears in the console as the backup name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Backup'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.CreateBackupResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.CreateBackupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the FileSystemId parameter.
+            The -PassThru parameter is deprecated, use -Select '^FileSystemId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXBackupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet">
+            <summary>
+            Creates an Amazon FSx for Lustre data repository task. You use data repository tasks
+            to perform bulk operations between your Amazon FSx file system and its linked data
+            repository. An example of a data repository task is exporting any data and metadata
+            changes, including POSIX metadata, to files, directories, and symbolic links (symlinks)
+            from your FSx file system to its linked data repository. A <code>CreateDataRepositoryTask</code>
+            operation will fail if a data repository is not linked to the FSx file system. To
+            learn more about data repository tasks, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Using
+            Data Repository Tasks</a>. To learn more about linking a data repository to your file
+            system, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/export-data-repository.html#export-prefix">Setting
+            the Export Prefix</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Report_Enabled">
+            <summary>
+            <para>
+            <para>Set <code>Enabled</code> to <code>True</code> to generate a <code>CompletionReport</code>
+            when the task completes. If set to <code>true</code>, then you need to provide a report
+            <code>Scope</code>, <code>Path</code>, and <code>Format</code>. Set <code>Enabled</code>
+            to <code>False</code> if you do not want a <code>CompletionReport</code> generated
+            when the task completes.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.FileSystemId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Report_Format">
+            <summary>
+            <para>
+            <para>Required if <code>Enabled</code> is set to <code>true</code>. Specifies the format
+            of the <code>CompletionReport</code>. <code>REPORT_CSV_20191124</code> is the only
+            format currently supported. When <code>Format</code> is set to <code>REPORT_CSV_20191124</code>,
+            the <code>CompletionReport</code> is provided in CSV format, and is delivered to <code>{path}/task-{id}/failures.csv</code>.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Report_Path">
+            <summary>
+            <para>
+            <para>Required if <code>Enabled</code> is set to <code>true</code>. Specifies the location
+            of the report on the file system's linked S3 data repository. An absolute path that
+            defines where the completion report will be stored in the destination location. The
+            <code>Path</code> you provide must be located within the file system’s ExportPath.
+            An example <code>Path</code> value is "s3://myBucket/myExportPath/optionalPrefix".
+            The report provides the following information for each file in the report: FilePath,
+            FileStatus, and ErrorCode. To learn more about a file system's <code>ExportPath</code>,
+            see . </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Path">
+            <summary>
+            <para>
+            <para>(Optional) The path or paths on the Amazon FSx file system to use when the data repository
+            task is processed. The default path is the file system root directory. The paths you
+            provide need to be relative to the mount point of the file system. If the mount point
+            is <code>/mnt/fsx</code> and <code>/mnt/fsx/path1</code> is a directory or file on
+            the file system you want to export, then the path to provide is <code>path1</code>.
+            If a path that you provide isn't valid, the task fails.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Report_Scope">
+            <summary>
+            <para>
+            <para>Required if <code>Enabled</code> is set to <code>true</code>. Specifies the scope
+            of the <code>CompletionReport</code>; <code>FAILED_FILES_ONLY</code> is the only scope
+            currently supported. When <code>Scope</code> is set to <code>FAILED_FILES_ONLY</code>,
+            the <code>CompletionReport</code> only contains information about files that the data
+            repository task failed to process.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Tag">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Type">
+            <summary>
+            <para>
+            <para>Specifies the type of data repository task to create.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DataRepositoryTask'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.CreateDataRepositoryTaskResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.CreateDataRepositoryTaskResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the FileSystemId parameter.
+            The -PassThru parameter is deprecated, use -Select '^FileSystemId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXDataRepositoryTaskCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet">
+            <summary>
+            Creates a new, empty Amazon FSx file system.
+            
+             
+            <para>
+            If a file system with the specified client request token exists and the parameters
+            match, <code>CreateFileSystem</code> returns the description of the existing file
+            system. If a file system specified client request token exists and the parameters
+            don't match, this call returns <code>IncompatibleParameterError</code>. If a file
+            system with the specified client request token doesn't exist, <code>CreateFileSystem</code>
+            does the following: 
+            </para><ul><li><para>
+            Creates a new, empty Amazon FSx file system with an assigned ID, and an initial lifecycle
+            state of <code>CREATING</code>.
+            </para></li><li><para>
+            Returns the description of the file system.
+            </para></li></ul><para>
+            This operation requires a client request token in the request that Amazon FSx uses
+            to ensure idempotent creation. This means that calling the operation multiple times
+            with the same client request token has no effect. By using the idempotent operation,
+            you can retry a <code>CreateFileSystem</code> operation without the risk of creating
+            an extra file system. This approach can be useful when an initial call fails in a
+            way that makes it unclear whether a file system was created. Examples are if a transport
+            level timeout occurred, or your connection was reset. If you use the same client request
+            token and the initial call created a file system, the client receives success as long
+            as the parameters are the same.
+            </para><note><para>
+            The <code>CreateFileSystem</code> call returns while the file system's lifecycle state
+            is still <code>CREATING</code>. You can check the file-system creation status by calling
+            the <a>DescribeFileSystems</a> operation, which returns the file system state along
+            with other information.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>(Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent
+            creation. This string is automatically filled on your behalf when you use the AWS
+            Command Line Interface (AWS CLI) or an AWS SDK.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.FileSystemType">
+            <summary>
+            <para>
+            <para>The type of Amazon FSx file system to create, either <code>WINDOWS</code> or <code>LUSTRE</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.KmsKeyId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.LustreConfiguration">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.SecurityGroupId">
+            <summary>
+            <para>
+            <para>A list of IDs specifying the security groups to apply to all network interfaces created
+            for file system access. This list isn't returned in later requests to describe the
+            file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.StorageCapacity">
+            <summary>
+            <para>
+            <para>Sets the storage capacity of the file system that you're creating.</para><para>For Lustre file systems:</para><ul><li><para>For <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, valid values
+            are 1.2, 2.4, and increments of 2.4 TiB.</para></li><li><para>For <code>SCRATCH_1</code> deployment type, valid values are 1.2, 2.4, and increments
+            of 3.6 TiB.</para></li></ul><para>For Windows file systems:</para><ul><li><para>If <code>StorageType=SSD</code>, valid values are 32 GiB - 65,536 GiB (64 TiB).</para></li><li><para>If <code>StorageType=HDD</code>, valid values are 2000 GiB - 65,536 GiB (64 TiB).</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.StorageType">
+            <summary>
+            <para>
+            <para>Sets the storage type for the Amazon FSx for Windows file system you're creating.
+            Valid values are <code>SSD</code> and <code>HDD</code>.</para><ul><li><para>Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all
+            Windows deployment types.</para></li><li><para>Set to <code>HDD</code> to use hard disk drive storage. HDD is supported on <code>SINGLE_AZ_2</code>
+            and <code>MULTI_AZ_1</code> Windows file system deployment types. </para></li></ul><para> Default value is <code>SSD</code>. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options">
+            Storage Type Options</a> in the <i>Amazon FSx for Windows User Guide</i>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.SubnetId">
+            <summary>
+            <para>
+            <para>Specifies the IDs of the subnets that the file system will be accessible from. For
+            Windows <code>MULTI_AZ_1</code> file system deployment types, provide exactly two
+            subnet IDs, one for the preferred file server and one for the standby file server.
+            You specify one of these subnets as the preferred subnet using the <code>WindowsConfiguration
+            &gt; PreferredSubnetID</code> property.</para><para>For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> file system deployment
+            types and Lustre file systems, provide exactly one subnet ID. The file server is launched
+            in that subnet's Availability Zone.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the file system being created. The key value of the <code>Name</code>
+            tag appears in the console as the file system name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.WindowsConfiguration">
+            <summary>
+            <para>
+            <para>The Microsoft Windows configuration for the file system being created. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FileSystem'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.CreateFileSystemResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.CreateFileSystemResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet">
+            <summary>
+            Creates a new Amazon FSx file system from an existing Amazon FSx for Windows File
+            Server backup.
+            
+             
+            <para>
+            If a file system with the specified client request token exists and the parameters
+            match, this operation returns the description of the file system. If a client request
+            token specified by the file system exists and the parameters don't match, this call
+            returns <code>IncompatibleParameterError</code>. If a file system with the specified
+            client request token doesn't exist, this operation does the following:
+            </para><ul><li><para>
+            Creates a new Amazon FSx file system from backup with an assigned ID, and an initial
+            lifecycle state of <code>CREATING</code>.
+            </para></li><li><para>
+            Returns the description of the file system.
+            </para></li></ul><para>
+            Parameters like Active Directory, default share name, automatic backup, and backup
+            settings default to the parameters of the file system that was backed up, unless overridden.
+            You can explicitly supply other settings.
+            </para><para>
+            By using the idempotent operation, you can retry a <code>CreateFileSystemFromBackup</code>
+            call without the risk of creating an extra file system. This approach can be useful
+            when an initial call fails in a way that makes it unclear whether a file system was
+            created. Examples are if a transport level timeout occurred, or your connection was
+            reset. If you use the same client request token and the initial call created a file
+            system, the client receives success as long as the parameters are the same.
+            </para><note><para>
+            The <code>CreateFileSystemFromBackup</code> call returns while the file system's lifecycle
+            state is still <code>CREATING</code>. You can check the file-system creation status
+            by calling the <a>DescribeFileSystems</a> operation, which returns the file system
+            state along with other information.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.BackupId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>(Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent
+            creation. This string is automatically filled on your behalf when you use the AWS
+            Command Line Interface (AWS CLI) or an AWS SDK.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.SecurityGroupId">
+            <summary>
+            <para>
+            <para>A list of IDs for the security groups that apply to the specified network interfaces
+            created for file system access. These security groups apply to all network interfaces.
+            This value isn't returned in later DescribeFileSystem requests.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.StorageType">
+            <summary>
+            <para>
+            <para>Sets the storage type for the Windows file system you're creating from a backup. Valid
+            values are <code>SSD</code> and <code>HDD</code>.</para><ul><li><para>Set to <code>SSD</code> to use solid state drive storage. Supported on all Windows
+            deployment types.</para></li><li><para>Set to <code>HDD</code> to use hard disk drive storage. Supported on <code>SINGLE_AZ_2</code>
+            and <code>MULTI_AZ_1</code> Windows file system deployment types. </para></li></ul><para> Default value is <code>SSD</code>. </para><note><para>HDD and SSD storage types have different minimum storage capacity requirements. A
+            restored file system's storage capacity is tied to the file system that was backed
+            up. You can create a file system that uses HDD storage from a backup of a file system
+            that used SSD storage only if the original SSD file system had a storage capacity
+            of at least 2000 GiB. </para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.SubnetId">
+            <summary>
+            <para>
+            <para>Specifies the IDs of the subnets that the file system will be accessible from. For
+            Windows <code>MULTI_AZ_1</code> file system deployment types, provide exactly two
+            subnet IDs, one for the preferred file server and one for the standby file server.
+            You specify one of these subnets as the preferred subnet using the <code>WindowsConfiguration
+            &gt; PreferredSubnetID</code> property.</para><para>For Windows <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> deployment types
+            and Lustre file systems, provide exactly one subnet ID. The file server is launched
+            in that subnet's Availability Zone.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to be applied to the file system at file system creation. The key value of
+            the <code>Name</code> tag appears in the console as the file system name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.WindowsConfiguration">
+            <summary>
+            <para>
+            <para>The configuration for this Microsoft Windows file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FileSystem'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.CreateFileSystemFromBackupResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.CreateFileSystemFromBackupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.NewFSXFileSystemFromBackupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXBackupCmdlet">
+            <summary>
+            Deletes an Amazon FSx for Windows File Server backup, deleting its contents. After
+            deletion, the backup no longer exists, and its data is gone.
+            
+             
+            <para>
+            The <code>DeleteBackup</code> call returns instantly. The backup will not show up
+            in later <code>DescribeBackups</code> calls.
+            </para><important><para>
+            The data in a deleted backup is also deleted and can't be recovered by any means.
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXBackupCmdlet.BackupId">
+            <summary>
+            <para>
+            <para>The ID of the backup you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXBackupCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>(Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent
+            deletion. This is automatically filled on your behalf when using the AWS CLI or SDK.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXBackupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.DeleteBackupResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.DeleteBackupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXBackupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXBackupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet">
+            <summary>
+            Deletes a file system, deleting its contents. After deletion, the file system no longer
+            exists, and its data is gone. Any existing automatic backups will also be deleted.
+            
+             
+            <para>
+            By default, when you delete an Amazon FSx for Windows File Server file system, a final
+            backup is created upon deletion. This final backup is not subject to the file system's
+            retention policy, and must be manually deleted.
+            </para><para>
+            The <code>DeleteFileSystem</code> action returns while the file system has the <code>DELETING</code>
+            status. You can check the file system deletion status by calling the <a>DescribeFileSystems</a>
+            action, which returns a list of file systems in your account. If you pass the file
+            system ID for a deleted file system, the <a>DescribeFileSystems</a> returns a <code>FileSystemNotFound</code>
+            error.
+            </para><note><para>
+            Deleting an Amazon FSx for Lustre file system will fail with a 400 BadRequest if a
+            data repository task is in a <code>PENDING</code> or <code>EXECUTING</code> state.
+            </para></note><important><para>
+            The data in a deleted file system is also deleted and can't be recovered by any means.
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>(Optional) A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent
+            deletion. This is automatically filled on your behalf when using the AWS CLI or SDK.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.FileSystemId">
+            <summary>
+            <para>
+            <para>The ID of the file system you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.WindowsConfiguration_FinalBackupTag">
+            <summary>
+            <para>
+            <para>A set of tags for your final backup.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.WindowsConfiguration_SkipFinalBackup">
+            <summary>
+            <para>
+            <para>By default, Amazon FSx for Windows takes a final backup on your behalf when the <code>DeleteFileSystem</code>
+            operation is invoked. Doing this helps protect you from data loss, and we highly recommend
+            taking the final backup. If you want to skip this backup, use this flag to do so.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.DeleteFileSystemResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.DeleteFileSystemResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the FileSystemId parameter.
+            The -PassThru parameter is deprecated, use -Select '^FileSystemId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXFileSystemCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXResourceTagCmdlet">
+            <summary>
+            This action removes a tag from an Amazon FSx resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The ARN of the Amazon FSx resource to untag.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>A list of keys of tags on the resource to untag. In case the tag key doesn't exist,
+            the call will still succeed to be idempotent.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.RemoveFSXResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.StopFSXDataRepositoryTaskCmdlet">
+            <summary>
+            Cancels an existing Amazon FSx for Lustre data repository task if that task is in
+            either the <code>PENDING</code> or <code>EXECUTING</code> state. When you cancel a
+            task, Amazon FSx does the following.
+            
+             <ul><li><para>
+            Any files that FSx has already exported are not reverted.
+            </para></li><li><para>
+            FSx continues to export any files that are "in-flight" when the cancel operation is
+            received.
+            </para></li><li><para>
+            FSx does not export any files that have not yet been exported.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.StopFSXDataRepositoryTaskCmdlet.TaskId">
+            <summary>
+            <para>
+            <para>Specifies the data repository task to cancel.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.StopFSXDataRepositoryTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.CancelDataRepositoryTaskResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.CancelDataRepositoryTaskResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.StopFSXDataRepositoryTaskCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskId parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.StopFSXDataRepositoryTaskCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet">
+            <summary>
+            Use this operation to update the configuration of an existing Amazon FSx file system.
+            For an Amazon FSx for Lustre file system, you can update only the WeeklyMaintenanceStartTime.
+            For an Amazon for Windows File Server file system, you can update the following properties:
+            
+             <ul><li><para>
+            AutomaticBackupRetentionDays
+            </para></li><li><para>
+            DailyAutomaticBackupStartTime
+            </para></li><li><para>
+            SelfManagedActiveDirectoryConfiguration
+            </para></li><li><para>
+            StorageCapacity
+            </para></li><li><para>
+            ThroughputCapacity
+            </para></li><li><para>
+            WeeklyMaintenanceStartTime
+            </para></li></ul><para>
+            You can update multiple properties in a single request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent updates.
+            This string is automatically filled on your behalf when you use the AWS Command Line
+            Interface (AWS CLI) or an AWS SDK.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.FileSystemId">
+            <summary>
+            <para>
+            <para>Identifies the file system that you are updating.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.LustreConfiguration">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.StorageCapacity">
+            <summary>
+            <para>
+            <para>Use this parameter to increase the storage capacity of an Amazon FSx for Windows File
+            Server file system. Specifies the storage capacity target value, GiB, for the file
+            system you're updating. The storage capacity target value must be at least 10 percent
+            (%) greater than the current storage capacity value. In order to increase storage
+            capacity, the file system needs to have at least 16 MB/s of throughput capacity. You
+            cannot make a storage capacity increase request if there is an existing storage capacity
+            increase request in progress. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing
+            Storage Capacity</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.WindowsConfiguration">
+            <summary>
+            <para>
+            <para>The configuration updates for an Amazon FSx for Windows File Server file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FileSystem'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FSx.Model.UpdateFileSystemResponse).
+            Specifying the name of a property of type Amazon.FSx.Model.UpdateFileSystemResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the FileSystemId parameter.
+            The -PassThru parameter is deprecated, use -Select '^FileSystemId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FSX.UpdateFSXFileSystemCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

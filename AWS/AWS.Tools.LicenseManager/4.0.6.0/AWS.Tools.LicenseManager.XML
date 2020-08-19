@@ -1,0 +1,838 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.LicenseManager</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.AddLICMResourceTagCmdlet">
+            <summary>
+            Adds the specified tags to the specified license configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.AddLICMResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.AddLICMResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>One or more tags.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.AddLICMResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.AddLICMResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.AddLICMResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet">
+            <summary>
+            Lists the resource associations for the specified license configuration.
+            
+             
+            <para>
+            Resource associations need not consume licenses from a license configuration. For
+            example, an AMI or a stopped instance might not consume a license (depending on the
+            license rules).
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of a license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LicenseConfigurationAssociations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListAssociationsForLicenseConfigurationResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListAssociationsForLicenseConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LicenseConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LicenseConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMAssociationsForLicenseConfigurationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet">
+            <summary>
+            Lists the license configuration operations that failed.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LicenseOperationFailureList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListFailuresForLicenseConfigurationOperationsResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListFailuresForLicenseConfigurationOperationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LicenseConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LicenseConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMFailuresForLicenseConfigurationOperationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationCmdlet">
+            <summary>
+            Gets detailed information about the specified license configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.GetLicenseConfigurationResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.GetLicenseConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LicenseConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LicenseConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet">
+            <summary>
+            Lists the license configurations for your account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>Filters to scope the results. The following filters and logical operators are supported:</para><ul><li><para><code>licenseCountingType</code> - The dimension on which licenses are counted (vCPU).
+            Logical operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li><li><para><code>enforceLicenseCount</code> - A Boolean value that indicates whether hard license
+            enforcement is used. Logical operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li><li><para><code>usagelimitExceeded</code> - A Boolean value that indicates whether the available
+            licenses have been exceeded. Logical operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Names (ARN) of the license configurations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LicenseConfigurations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListLicenseConfigurationsResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListLicenseConfigurationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseConfigurationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet">
+            <summary>
+            Describes the license configurations for the specified resource.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of a resource that has an associated license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LicenseSpecifications'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListLicenseSpecificationsForResourceResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListLicenseSpecificationsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMLicenseSpecificationsForResourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceInventoryListCmdlet">
+            <summary>
+            Lists resources managed using Systems Manager inventory.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceInventoryListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>Filters to scope the results. The following filters and logical operators are supported:</para><ul><li><para><code>account_id</code> - The ID of the AWS account that owns the resource. Logical
+            operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li><li><para><code>application_name</code> - The name of the application. Logical operators are
+            <code>EQUALS</code> | <code>BEGINS_WITH</code>.</para></li><li><para><code>license_included</code> - The type of license included. Logical operators are
+            <code>EQUALS</code> | <code>NOT_EQUALS</code>. Possible values are <code>sql-server-enterprise</code>
+            | <code>sql-server-standard</code> | <code>sql-server-web</code> | <code>windows-server-datacenter</code>.</para></li><li><para><code>platform</code> - The platform of the resource. Logical operators are <code>EQUALS</code>
+            | <code>BEGINS_WITH</code>.</para></li><li><para><code>resource_id</code> - The ID of the resource. Logical operators are <code>EQUALS</code>
+            | <code>NOT_EQUALS</code>.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceInventoryListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceInventoryListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceInventoryListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResourceInventoryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListResourceInventoryResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListResourceInventoryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceInventoryListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceTagListCmdlet">
+            <summary>
+            Lists the tags for the specified license configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceTagListCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceTagListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMResourceTagListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMServiceSettingCmdlet">
+            <summary>
+            Gets the License Manager settings for the current Region.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMServiceSettingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.GetServiceSettingsResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.GetServiceSettingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet">
+            <summary>
+            Lists all license usage records for a license configuration, displaying license consumption
+            details by resource at a selected point in time. Use this action to audit the current
+            license consumption for any license inventory and configuration.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>Filters to scope the results. The following filters and logical operators are supported:</para><ul><li><para><code>resourceArn</code> - The ARN of the license configuration resource. Logical
+            operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li><li><para><code>resourceType</code> - The resource type (EC2_INSTANCE | EC2_HOST | EC2_AMI
+            | SYSTEMS_MANAGER_MANAGED_INSTANCE). Logical operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li><li><para><code>resourceAccount</code> - The ID of the account that owns the resource. Logical
+            operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LicenseConfigurationUsageList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.ListUsageForLicenseConfigurationResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.ListUsageForLicenseConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LicenseConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LicenseConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.GetLICMUsageForLicenseConfigurationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet">
+            <summary>
+            Creates a license configuration.
+            
+             
+            <para>
+            A license configuration is an abstraction of a customer license agreement that can
+            be consumed and enforced by License Manager. Components include specifications for
+            the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared
+            tenancy, Dedicated Instance, Dedicated Host, or all of these), host affinity (how
+            long a VM must be associated with a host), and the number of licenses purchased and
+            used.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.Description">
+            <summary>
+            <para>
+            <para>Description of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.LicenseCount">
+            <summary>
+            <para>
+            <para>Number of licenses managed by the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.LicenseCountHardLimit">
+            <summary>
+            <para>
+            <para>Indicates whether hard or soft license enforcement is used. Exceeding a hard limit
+            blocks the launch of new instances.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.LicenseCountingType">
+            <summary>
+            <para>
+            <para>Dimension used to track the license inventory.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.LicenseRule">
+            <summary>
+            <para>
+            <para>License rules. The syntax is #name=value (for example, #allowedTenancy=EC2-DedicatedHost).
+            Available rules vary by dimension.</para><ul><li><para><code>Cores</code> dimension: <code>allowedTenancy</code> | <code>maximumCores</code>
+            | <code>minimumCores</code></para></li><li><para><code>Instances</code> dimension: <code>allowedTenancy</code> | <code>maximumCores</code>
+            | <code>minimumCores</code> | <code>maximumSockets</code> | <code>minimumSockets</code>
+            | <code>maximumVcpus</code> | <code>minimumVcpus</code></para></li><li><para><code>Sockets</code> dimension: <code>allowedTenancy</code> | <code>maximumSockets</code>
+            | <code>minimumSockets</code></para></li><li><para><code>vCPUs</code> dimension: <code>allowedTenancy</code> | <code>honorVcpuOptimization</code>
+            | <code>maximumVcpus</code> | <code>minimumVcpus</code></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.Name">
+            <summary>
+            <para>
+            <para>Name of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.ProductInformationList">
+            <summary>
+            <para>
+            <para>Product information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Tags to add to the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LicenseConfigurationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.CreateLicenseConfigurationResponse).
+            Specifying the name of a property of type Amazon.LicenseManager.Model.CreateLicenseConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.NewLICMLicenseConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMLicenseConfigurationCmdlet">
+            <summary>
+            Deletes the specified license configuration.
+            
+             
+            <para>
+            You cannot delete a license configuration that is in use.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMLicenseConfigurationCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>ID of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMLicenseConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.DeleteLicenseConfigurationResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMLicenseConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LicenseConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LicenseConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMLicenseConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMResourceTagCmdlet">
+            <summary>
+            Removes the specified tags from the specified license configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>Keys identifying the tags to remove.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.RemoveLICMResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet">
+            <summary>
+            Modifies the attributes of an existing license configuration.
+            
+             
+            <para>
+            A license configuration is an abstraction of a customer license agreement that can
+            be consumed and enforced by License Manager. Components include specifications for
+            the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared
+            tenancy, Dedicated Instance, Dedicated Host, or all of these), host affinity (how
+            long a VM must be associated with a host), and the number of licenses purchased and
+            used.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.Description">
+            <summary>
+            <para>
+            <para>New description of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.LicenseConfigurationArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.LicenseConfigurationStatus">
+            <summary>
+            <para>
+            <para>New status of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.LicenseCount">
+            <summary>
+            <para>
+            <para>New number of licenses managed by the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.LicenseCountHardLimit">
+            <summary>
+            <para>
+            <para>New hard limit of the number of available licenses.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.LicenseRule">
+            <summary>
+            <para>
+            <para>New license rules.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.Name">
+            <summary>
+            <para>
+            <para>New name of the license configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.ProductInformationList">
+            <summary>
+            <para>
+            <para>New product information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.UpdateLicenseConfigurationResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LicenseConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LicenseConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet">
+            <summary>
+            Adds or removes the specified license configurations for the specified AWS resource.
+            
+             
+            <para>
+            You can update the license specifications of AMIs, instances, and hosts. You cannot
+            update the license specifications for launch templates and AWS CloudFormation templates,
+            as they send license configurations to the operation that creates the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet.AddLicenseSpecification">
+            <summary>
+            <para>
+            <para>ARNs of the license configurations to add.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet.RemoveLicenseSpecification">
+            <summary>
+            <para>
+            <para>ARNs of the license configurations to remove.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the AWS resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.UpdateLicenseSpecificationsForResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMLicenseSpecificationsForResourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet">
+            <summary>
+            Updates License Manager settings for the current Region.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet.EnableCrossAccountsDiscovery">
+            <summary>
+            <para>
+            <para>Activates cross-account discovery.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet.OrganizationConfiguration_EnableIntegration">
+            <summary>
+            <para>
+            <para>Enables AWS Organization integration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet.S3BucketArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the Amazon S3 bucket where the License Manager information
+            is stored.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet.SnsTopicArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the Amazon SNS topic used for License Manager alerts.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.LicenseManager.Model.UpdateServiceSettingsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.LICM.UpdateLICMServiceSettingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

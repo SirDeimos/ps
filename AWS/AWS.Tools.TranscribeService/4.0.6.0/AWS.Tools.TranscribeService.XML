@@ -1,0 +1,1361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.TranscribeService</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobCmdlet">
+            <summary>
+            Returns information about a transcription job from Amazon Transcribe Medical. To see
+            the status of the job, check the <code>TranscriptionJobStatus</code> field. If the
+            status is <code>COMPLETED</code>, the job is finished. You find the results of the
+            completed job in the <code>TranscriptFileUri</code> field.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobCmdlet.MedicalTranscriptionJobName">
+            <summary>
+            <para>
+            <para>The name of the medical transcription job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'MedicalTranscriptionJob'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.GetMedicalTranscriptionJobResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.GetMedicalTranscriptionJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the MedicalTranscriptionJobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^MedicalTranscriptionJobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet">
+            <summary>
+            Lists medical transcription jobs with a specified status or substring that matches
+            their names.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.JobNameContain">
+            <summary>
+            <para>
+            <para>When specified, the jobs returned in the list are limited to jobs whose name contains
+            the specified string.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of medical transcription jobs to return in the response. IF there
+            are fewer results in the list, this response contains only the actual results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If you a receive a truncated result in the previous request of <code>ListMedicalTranscriptionJobs</code>,
+            include <code>NextToken</code> to fetch the next set of jobs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.Status">
+            <summary>
+            <para>
+            <para>When specified, returns only medical transcription jobs with the specified status.
+            Jobs are ordered by creation date, with the newest jobs returned first. If you don't
+            specify a status, Amazon Transcribe Medical returns all transcription jobs ordered
+            by creation date.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'MedicalTranscriptionJobSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.ListMedicalTranscriptionJobsResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.ListMedicalTranscriptionJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobNameContain parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobNameContain' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalTranscriptionJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyCmdlet">
+            <summary>
+            Retrieve information about a medical vocabulary.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary you are trying to get information about. The value you
+            enter for this request is case-sensitive. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.GetMedicalVocabularyResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.GetMedicalVocabularyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet">
+            <summary>
+            Returns a list of vocabularies that match the specified criteria. You get the entire
+            list of vocabularies if you don't enter a value in any of the request parameters.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet.NameContain">
+            <summary>
+            <para>
+            <para>Returns vocabularies in the list whose name contains the specified string. The search
+            is case-insensitive, <code>ListMedicalVocabularies</code> returns both "vocabularyname"
+            and "VocabularyName" in the response list.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet.StateEqual">
+            <summary>
+            <para>
+            <para>When specified, only returns vocabularies with the <code>VocabularyState</code> equal
+            to the specified vocabulary state.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of vocabularies to return in the response.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of your previous request to <code>ListMedicalVocabularies</code> was
+            truncated, include the <code>NextToken</code> to fetch the next set of jobs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Vocabularies'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.ListMedicalVocabulariesResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.ListMedicalVocabulariesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSMedicalVocabularyListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobCmdlet">
+            <summary>
+            Returns information about a transcription job. To see the status of the job, check
+            the <code>TranscriptionJobStatus</code> field. If the status is <code>COMPLETED</code>,
+            the job is finished and you can find the results at the location specified in the
+            <code>TranscriptFileUri</code> field. If you enable content redaction, the redacted
+            transcript appears in <code>RedactedTranscriptFileUri</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobCmdlet.TranscriptionJobName">
+            <summary>
+            <para>
+            <para>The name of the job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TranscriptionJob'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.GetTranscriptionJobResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.GetTranscriptionJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TranscriptionJobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^TranscriptionJobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet">
+            <summary>
+            Lists transcription jobs with the specified status.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet.JobNameContain">
+            <summary>
+            <para>
+            <para>When specified, the jobs returned in the list are limited to jobs whose name contains
+            the specified string.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of jobs to return in the response. If there are fewer results in
+            the list, this response contains only the actual results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request to <code>ListTranscriptionJobs</code> was truncated,
+            include the <code>NextToken</code> to fetch the next set of jobs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet.Status">
+            <summary>
+            <para>
+            <para>When specified, returns only transcription jobs with the specified status. Jobs are
+            ordered by creation date, with the newest jobs returned first. If you don’t specify
+            a status, Amazon Transcribe returns all transcription jobs ordered by creation date.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TranscriptionJobSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.ListTranscriptionJobsResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.ListTranscriptionJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSTranscriptionJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyCmdlet">
+            <summary>
+            Gets information about a vocabulary.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary to return information about. The name is case-sensitive.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.GetVocabularyResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.GetVocabularyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterCmdlet">
+            <summary>
+            Returns information about a vocabulary filter.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterCmdlet.VocabularyFilterName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary filter for which to return information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.GetVocabularyFilterResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.GetVocabularyFilterResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyFilterName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyFilterName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet">
+            <summary>
+            Gets information about vocabulary filters.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet.NameContain">
+            <summary>
+            <para>
+            <para>Filters the response so that it only contains vocabulary filters whose name contains
+            the specified string.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of filters to return in the response. If there are fewer results
+            in the list, this response contains only the actual results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request to <code>ListVocabularyFilters</code> was truncated,
+            include the <code>NextToken</code> to fetch the next set of collections.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'VocabularyFilters'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.ListVocabularyFiltersResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.ListVocabularyFiltersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the NameContain parameter.
+            The -PassThru parameter is deprecated, use -Select '^NameContain' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyFilterListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet">
+            <summary>
+            Returns a list of vocabularies that match the specified criteria. If no criteria are
+            specified, returns the entire list of vocabularies.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet.NameContain">
+            <summary>
+            <para>
+            <para>When specified, the vocabularies returned in the list are limited to vocabularies
+            whose name contains the specified string. The search is case-insensitive, <code>ListVocabularies</code>
+            returns both "vocabularyname" and "VocabularyName" in the response list.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet.StateEqual">
+            <summary>
+            <para>
+            <para>When specified, only returns vocabularies with the <code>VocabularyState</code> field
+            equal to the specified state.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of vocabularies to return in the response. If there are fewer results
+            in the list, this response contains only the actual results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request to <code>ListVocabularies</code> was truncated,
+            include the <code>NextToken</code> to fetch the next set of jobs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Vocabularies'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.ListVocabulariesResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.ListVocabulariesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.GetTRSVocabularyListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.NewTRSMedicalVocabularyCmdlet">
+            <summary>
+            Creates a new custom vocabulary that you can use to change how Amazon Transcribe Medical
+            transcribes your audio file.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSMedicalVocabularyCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code used for the entries within your custom vocabulary. The language
+            code of your custom vocabulary must match the language code of your transcription
+            job. US English (en-US) is the only language code available for Amazon Transcribe
+            Medical.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSMedicalVocabularyCmdlet.VocabularyFileUri">
+            <summary>
+            <para>
+            <para>The Amazon S3 location of the text file you use to define your custom vocabulary.
+            The URI must be in the same AWS region as the API endpoint you're calling. Enter information
+            about your <code>VocabularyFileUri</code> in the following format:</para><para><code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;
+            </code></para><para>This is an example of a vocabulary file uri location in Amazon S3:</para><para><code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code></para><para>For more information about S3 object names, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object
+            Keys</a> in the <i>Amazon S3 Developer Guide</i>.</para><para>For more information about custom vocabularies, see <a href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
+            Custom Vocabularies</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSMedicalVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the custom vocabulary. This case-sensitive name must be unique within
+            an AWS account. If you try to create a vocabulary with the same name as a previous
+            vocabulary you will receive a <code>ConflictException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSMedicalVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.CreateMedicalVocabularyResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.CreateMedicalVocabularyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSMedicalVocabularyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet">
+            <summary>
+            Creates a new custom vocabulary that you can use to change the way Amazon Transcribe
+            handles transcription of an audio file.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code of the vocabulary entries.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.Phrase">
+            <summary>
+            <para>
+            <para>An array of strings that contains the vocabulary entries. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.VocabularyFileUri">
+            <summary>
+            <para>
+            <para>The S3 location of the text file that contains the definition of the custom vocabulary.
+            The URI must be in the same region as the API endpoint that you are calling. The general
+            form is </para><para>For more information about S3 object names, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object
+            Keys</a> in the <i>Amazon S3 Developer Guide</i>.</para><para>For more information about custom vocabularies, see <a href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom
+            Vocabularies</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary. The name must be unique within an AWS account. The name
+            is case-sensitive. If you try to create a vocabulary with the same name as a previous
+            vocabulary you will receive a <code>ConflictException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.CreateVocabularyResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.CreateVocabularyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet">
+            <summary>
+            Creates a new vocabulary filter that you can use to filter words, such as profane
+            words, from the output of a transcription job.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code of the words in the vocabulary filter. All words in the filter must
+            be in the same language. The vocabulary filter can only be used with transcription
+            jobs in the specified language.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.VocabularyFilterFileUri">
+            <summary>
+            <para>
+            <para>The Amazon S3 location of a text file used as input to create the vocabulary filter.
+            Only use characters from the character set defined for custom vocabularies. For a
+            list of character sets, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character
+            Sets for Custom Vocabularies</a>.</para><para>The specified file must be less than 50 KB of UTF-8 characters.</para><para>If you provide the location of a list of words in the <code>VocabularyFilterFileUri</code>
+            parameter, you can't use the <code>Words</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.VocabularyFilterName">
+            <summary>
+            <para>
+            <para>The vocabulary filter name. The name must be unique within the account that contains
+            it.If you try to create a vocabulary filter with the same name as a previous vocabulary
+            filter you will receive a <code>ConflictException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.Word">
+            <summary>
+            <para>
+            <para>The words to use in the vocabulary filter. Only use characters from the character
+            set defined for custom vocabularies. For a list of character sets, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character
+            Sets for Custom Vocabularies</a>.</para><para>If you provide a list of words in the <code>Words</code> parameter, you can't use
+            the <code>VocabularyFilterFileUri</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.CreateVocabularyFilterResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.CreateVocabularyFilterResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyFilterName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyFilterName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.NewTRSVocabularyFilterCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalTranscriptionJobCmdlet">
+            <summary>
+            Deletes a transcription job generated by Amazon Transcribe Medical and any related
+            information.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalTranscriptionJobCmdlet.MedicalTranscriptionJobName">
+            <summary>
+            <para>
+            <para>The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete
+            a transcription job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalTranscriptionJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.DeleteMedicalTranscriptionJobResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalTranscriptionJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the MedicalTranscriptionJobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^MedicalTranscriptionJobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalTranscriptionJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalVocabularyCmdlet">
+            <summary>
+            Deletes a vocabulary from Amazon Transcribe Medical.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary you are choosing to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.DeleteMedicalVocabularyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalVocabularyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSMedicalVocabularyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSTranscriptionJobCmdlet">
+            <summary>
+            Deletes a previously submitted transcription job along with any other generated results
+            such as the transcription, models, and so on.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSTranscriptionJobCmdlet.TranscriptionJobName">
+            <summary>
+            <para>
+            <para>The name of the transcription job to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSTranscriptionJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.DeleteTranscriptionJobResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSTranscriptionJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TranscriptionJobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^TranscriptionJobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSTranscriptionJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyCmdlet">
+            <summary>
+            Deletes a vocabulary from Amazon Transcribe.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.DeleteVocabularyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyFilterCmdlet">
+            <summary>
+            Removes a vocabulary filter.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyFilterCmdlet.VocabularyFilterName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary filter to remove.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyFilterCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.DeleteVocabularyFilterResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyFilterCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyFilterName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyFilterName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.RemoveTRSVocabularyFilterCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet">
+            <summary>
+            Start a batch job to transcribe medical speech to text.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Settings_ChannelIdentification">
+            <summary>
+            <para>
+            <para>Instructs Amazon Transcribe Medical to process each audio channel separately and then
+            merge the transcription output of each channel into a single transcription.</para><para>Amazon Transcribe Medical also produces a transcription of each item detected on an
+            audio channel, including the start time and end time of the item and alternative transcriptions
+            of item. The alternative transcriptions also come with confidence scores provided
+            by Amazon Transcribe Medical.</para><para>You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code>
+            in the same request. If you set both, your request returns a <code>BadRequestException</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code for the language spoken in the input media file. US English (en-US)
+            is the valid value for medical transcription jobs. Any other value you enter for language
+            code results in a <code>BadRequestException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Settings_MaxAlternative">
+            <summary>
+            <para>
+            <para>The maximum number of alternatives that you tell the service to return. If you specify
+            the <code>MaxAlternatives</code> field, you must set the <code>ShowAlternatives</code>
+            field to true.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Settings_MaxSpeakerLabel">
+            <summary>
+            <para>
+            <para>The maximum number of speakers to identify in the input audio. If there are more speakers
+            in the audio than this number, multiple speakers are identified as a single speaker.
+            If you specify the <code>MaxSpeakerLabels</code> field, you must set the <code>ShowSpeakerLabels</code>
+            field to true.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Media_MediaFileUri">
+            <summary>
+            <para>
+            <para>The S3 object location of the input media file. The URI must be in the same region
+            as the API endpoint that you are calling. The general form is:</para><para>For example:</para><para>For more information about S3 object names, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object
+            Keys</a> in the <i>Amazon S3 Developer Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.MediaFormat">
+            <summary>
+            <para>
+            <para>The audio format of the input media file.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.MediaSampleRateHertz">
+            <summary>
+            <para>
+            <para>The sample rate, in Hertz, of the audio track in the input media file.</para><para>If you do not specify the media sample rate, Amazon Transcribe Medical determines
+            the sample rate. If you specify the sample rate, it must match the rate detected by
+            Amazon Transcribe Medical. In most cases, you should leave the <code>MediaSampleRateHertz</code>
+            field blank and let Amazon Transcribe Medical determine the sample rate.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.MedicalTranscriptionJobName">
+            <summary>
+            <para>
+            <para>The name of the medical transcription job. You can't use the strings "." or ".." by
+            themselves as the job name. The name must also be unique within an AWS account. If
+            you try to create a medical transcription job with the same name as a previous medical
+            transcription job you will receive a <code>ConflictException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.OutputBucketName">
+            <summary>
+            <para>
+            <para>The Amazon S3 location where the transcription is stored.</para><para>You must set <code>OutputBucketName</code> for Amazon Transcribe Medical to store
+            the transcription results. Your transcript appears in the S3 location you specify.
+            When you call the <a>GetMedicalTranscriptionJob</a>, the operation returns this location
+            in the <code>TranscriptFileUri</code> field. The S3 bucket must have permissions that
+            allow Amazon Transcribe Medical to put files in the bucket. For more information,
+            see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/security_iam_id-based-policy-examples.html#auth-role-iam-user">Permissions
+            Required for IAM User Roles</a>.</para><para>You can specify an AWS Key Management Service (KMS) key to encrypt the output of your
+            transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't
+            specify a KMS key, Amazon Transcribe Medical uses the default Amazon S3 key for server-side
+            encryption of transcripts that are placed in your S3 bucket.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.OutputEncryptionKMSKeyId">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to
+            encrypt the output of the transcription job. The user calling the <a>StartMedicalTranscriptionJob</a>
+            operation must have permission to use the specified KMS key.</para><para>You use either of the following to identify a KMS key in the current account:</para><ul><li><para>KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"</para></li><li><para>KMS Key Alias: "alias/ExampleAlias"</para></li></ul><para>You can use either of the following to identify a KMS key in the current account or
+            another account:</para><ul><li><para>Amazon Resource Name (ARN) of a KMS key in the current account or another account:
+            "arn:aws:kms:region:account ID:key/1234abcd-12ab-34cd-56ef-1234567890ab"</para></li><li><para>ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"</para></li></ul><para>If you don't specify an encryption key, the output of the medical transcription job
+            is encrypted with the default Amazon S3 key (SSE-S3).</para><para>If you specify a KMS key to encrypt your output, you must also specify an output location
+            in the <code>OutputBucketName</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Settings_ShowAlternative">
+            <summary>
+            <para>
+            <para>Determines whether alternative transcripts are generated along with the transcript
+            that has the highest confidence. If you set <code>ShowAlternatives</code> field to
+            true, you must also set the maximum number of alternatives to return in the <code>MaxAlternatives</code>
+            field.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Settings_ShowSpeakerLabel">
+            <summary>
+            <para>
+            <para>Determines whether the transcription job uses speaker recognition to identify different
+            speakers in the input audio. Speaker recongition labels individual speakers in the
+            audio file. If you set the <code>ShowSpeakerLabels</code> field to true, you must
+            also set the maximum number of speaker labels in the <code>MaxSpeakerLabels</code>
+            field.</para><para>You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code>
+            in the same request. If you set both, your request returns a <code>BadRequestException</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Specialty">
+            <summary>
+            <para>
+            <para>The medical specialty of any clinician speaking in the input media.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations
+            between two or more speakers, e.g., a conversations between doctors and patients.
+            <code>DICTATION</code> refers to single-speaker dictated speech, e.g., for clinical
+            notes.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Settings_VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary to use when processing a medical transcription job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'MedicalTranscriptionJob'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.StartMedicalTranscriptionJobResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.StartMedicalTranscriptionJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the MedicalTranscriptionJobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^MedicalTranscriptionJobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSMedicalTranscriptionJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet">
+            <summary>
+            Starts an asynchronous job to transcribe speech to text.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.JobExecutionSettings_AllowDeferredExecution">
+            <summary>
+            <para>
+            <para>Indicates whether a job should be queued by Amazon Transcribe when the concurrent
+            execution limit is exceeded. When the <code>AllowDeferredExecution</code> field is
+            true, jobs are queued and executed when the number of executing jobs falls below the
+            concurrent execution limit. If the field is false, Amazon Transcribe returns a <code>LimitExceededException</code>
+            exception.</para><para>If you specify the <code>AllowDeferredExecution</code> field, you must specify the
+            <code>DataAccessRoleArn</code> field.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_ChannelIdentification">
+            <summary>
+            <para>
+            <para>Instructs Amazon Transcribe to process each audio channel separately and then merge
+            the transcription output of each channel into a single transcription. </para><para>Amazon Transcribe also produces a transcription of each item detected on an audio
+            channel, including the start time and end time of the item and alternative transcriptions
+            of the item including the confidence that Amazon Transcribe has in the transcription.</para><para>You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code>
+            in the same request. If you set both, your request returns a <code>BadRequestException</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.JobExecutionSettings_DataAccessRoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of a role that has access to the S3 bucket that contains
+            the input files. Amazon Transcribe assumes this role to read queued media files. If
+            you have specified an output S3 bucket for the transcription results, this role should
+            have access to the output bucket as well.</para><para>If you specify the <code>AllowDeferredExecution</code> field, you must specify the
+            <code>DataAccessRoleArn</code> field.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code for the language used in the input media file.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_MaxAlternative">
+            <summary>
+            <para>
+            <para>The number of alternative transcriptions that the service should return. If you specify
+            the <code>MaxAlternatives</code> field, you must set the <code>ShowAlternatives</code>
+            field to true.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_MaxSpeakerLabel">
+            <summary>
+            <para>
+            <para>The maximum number of speakers to identify in the input audio. If there are more speakers
+            in the audio than this number, multiple speakers are identified as a single speaker.
+            If you specify the <code>MaxSpeakerLabels</code> field, you must set the <code>ShowSpeakerLabels</code>
+            field to true.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Media_MediaFileUri">
+            <summary>
+            <para>
+            <para>The S3 object location of the input media file. The URI must be in the same region
+            as the API endpoint that you are calling. The general form is:</para><para>For example:</para><para>For more information about S3 object names, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object
+            Keys</a> in the <i>Amazon S3 Developer Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.MediaFormat">
+            <summary>
+            <para>
+            <para>The format of the input media file.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.MediaSampleRateHertz">
+            <summary>
+            <para>
+            <para>The sample rate, in Hertz, of the audio track in the input media file. </para><para>If you do not specify the media sample rate, Amazon Transcribe determines the sample
+            rate. If you specify the sample rate, it must match the sample rate detected by Amazon
+            Transcribe. In most cases, you should leave the <code>MediaSampleRateHertz</code>
+            field blank and let Amazon Transcribe determine the sample rate.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.OutputBucketName">
+            <summary>
+            <para>
+            <para>The location where the transcription is stored.</para><para>If you set the <code>OutputBucketName</code>, Amazon Transcribe puts the transcript
+            in the specified S3 bucket. When you call the <a>GetTranscriptionJob</a> operation,
+            the operation returns this location in the <code>TranscriptFileUri</code> field. If
+            you enable content redaction, the redacted transcript appears in <code>RedactedTranscriptFileUri</code>.
+            If you enable content redaction and choose to output an unredacted transcript, that
+            transcript's location still appears in the <code>TranscriptFileUri</code>. The S3
+            bucket must have permissions that allow Amazon Transcribe to put files in the bucket.
+            For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/security_iam_id-based-policy-examples.html#auth-role-iam-user">Permissions
+            Required for IAM User Roles</a>.</para><para>You can specify an AWS Key Management Service (KMS) key to encrypt the output of your
+            transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't
+            specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side
+            encryption of transcripts that are placed in your S3 bucket.</para><para>If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a
+            pre-signed URL, a shareable URL that provides secure access to your transcription,
+            and returns it in the <code>TranscriptFileUri</code> field. Use this URL to download
+            the transcription.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.OutputEncryptionKMSKeyId">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to
+            encrypt the output of the transcription job. The user calling the <code>StartTranscriptionJob</code>
+            operation must have permission to use the specified KMS key.</para><para>You can use either of the following to identify a KMS key in the current account:</para><ul><li><para>KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"</para></li><li><para>KMS Key Alias: "alias/ExampleAlias"</para></li></ul><para>You can use either of the following to identify a KMS key in the current account or
+            another account:</para><ul><li><para>Amazon Resource Name (ARN) of a KMS Key: "arn:aws:kms:region:account ID:key/1234abcd-12ab-34cd-56ef-1234567890ab"</para></li><li><para>ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"</para></li></ul><para>If you don't specify an encryption key, the output of the transcription job is encrypted
+            with the default Amazon S3 key (SSE-S3). </para><para>If you specify a KMS key to encrypt your output, you must also specify an output location
+            in the <code>OutputBucketName</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.ContentRedaction_RedactionOutput">
+            <summary>
+            <para>
+            <para>The output transcript file stored in either the default S3 bucket or in a bucket you
+            specify.</para><para>When you choose <code>redacted</code> Amazon Transcribe outputs only the redacted
+            transcript.</para><para>When you choose <code>redacted_and_unredacted</code> Amazon Transcribe outputs both
+            the redacted and unredacted transcripts.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.ContentRedaction_RedactionType">
+            <summary>
+            <para>
+            <para>Request parameter that defines the entities to be redacted. The only accepted value
+            is <code>PII</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_ShowAlternative">
+            <summary>
+            <para>
+            <para>Determines whether the transcription contains alternative transcriptions. If you set
+            the <code>ShowAlternatives</code> field to true, you must also set the maximum number
+            of alternatives to return in the <code>MaxAlternatives</code> field.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_ShowSpeakerLabel">
+            <summary>
+            <para>
+            <para>Determines whether the transcription job uses speaker recognition to identify different
+            speakers in the input audio. Speaker recognition labels individual speakers in the
+            audio file. If you set the <code>ShowSpeakerLabels</code> field to true, you must
+            also set the maximum number of speaker labels <code>MaxSpeakerLabels</code> field.</para><para>You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code>
+            in the same request. If you set both, your request returns a <code>BadRequestException</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.TranscriptionJobName">
+            <summary>
+            <para>
+            <para>The name of the job. Note that you can't use the strings "." or ".." by themselves
+            as the job name. The name must also be unique within an AWS account. If you try to
+            create a transcription job with the same name as a previous transcription job you
+            will receive a <code>ConflictException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_VocabularyFilterMethod">
+            <summary>
+            <para>
+            <para>Set to <code>mask</code> to remove filtered text from the transcript and replace it
+            with three asterisks ("***") as placeholder text. Set to <code>remove</code> to remove
+            filtered text from the transcript without using placeholder text.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_VocabularyFilterName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary filter to use when transcribing the audio. The filter that
+            you specify must have the same language code as the transcription job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Settings_VocabularyName">
+            <summary>
+            <para>
+            <para>The name of a vocabulary to use when processing the transcription job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TranscriptionJob'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.StartTranscriptionJobResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.StartTranscriptionJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TranscriptionJobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^TranscriptionJobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.StartTRSTranscriptionJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSMedicalVocabularyCmdlet">
+            <summary>
+            Updates an existing vocabulary with new values in a different text file. The <code>UpdateMedicalVocabulary</code>
+            operation overwrites all of the existing information with the values that you provide
+            in the request.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSMedicalVocabularyCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code of the entries in the updated vocabulary. US English (en-US) is
+            the only valid language code in Amazon Transcribe Medical.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSMedicalVocabularyCmdlet.VocabularyFileUri">
+            <summary>
+            <para>
+            <para>The Amazon S3 location of the text file containing the definition of the custom vocabulary.
+            The URI must be in the same AWS region as the API endpoint you are calling. You can
+            see the fields you need to enter for you Amazon S3 location in the example URI here:</para><para><code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;
+            </code></para><para>For example:</para><para><code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code></para><para>For more information about S3 object names, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object
+            Keys</a> in the <i>Amazon S3 Developer Guide</i>.</para><para>For more information about custom vocabularies in Amazon Transcribe Medical, see <a href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Medical
+            Custom Vocabularies</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSMedicalVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary to update. The name is case-sensitive. If you try to update
+            a vocabulary with the same name as a previous vocabulary you will receive a <code>ConflictException</code>
+            error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSMedicalVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.UpdateMedicalVocabularyResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.UpdateMedicalVocabularyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSMedicalVocabularyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet">
+            <summary>
+            Updates an existing vocabulary with new values. The <code>UpdateVocabulary</code>
+            operation overwrites all of the existing information with the values that you provide
+            in the request.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.LanguageCode">
+            <summary>
+            <para>
+            <para>The language code of the vocabulary entries.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.Phrase">
+            <summary>
+            <para>
+            <para>An array of strings containing the vocabulary entries.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.VocabularyFileUri">
+            <summary>
+            <para>
+            <para>The S3 location of the text file that contains the definition of the custom vocabulary.
+            The URI must be in the same region as the API endpoint that you are calling. The general
+            form is </para><para>For example:</para><para>For more information about S3 object names, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object
+            Keys</a> in the <i>Amazon S3 Developer Guide</i>.</para><para>For more information about custom vocabularies, see <a href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom
+            Vocabularies</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.VocabularyName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary to update. The name is case-sensitive. If you try to update
+            a vocabulary with the same name as a previous vocabulary you will receive a <code>ConflictException</code>
+            error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.UpdateVocabularyResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.UpdateVocabularyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet">
+            <summary>
+            Updates a vocabulary filter with a new list of filtered words.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet.VocabularyFilterFileUri">
+            <summary>
+            <para>
+            <para>The Amazon S3 location of a text file used as input to create the vocabulary filter.
+            Only use characters from the character set defined for custom vocabularies. For a
+            list of character sets, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character
+            Sets for Custom Vocabularies</a>.</para><para>The specified file must be less than 50 KB of UTF-8 characters.</para><para>If you provide the location of a list of words in the <code>VocabularyFilterFileUri</code>
+            parameter, you can't use the <code>Words</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet.VocabularyFilterName">
+            <summary>
+            <para>
+            <para>The name of the vocabulary filter to update. If you try to update a vocabulary filter
+            with the same name as a previous vocabulary filter you will receive a <code>ConflictException</code>
+            error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet.Word">
+            <summary>
+            <para>
+            <para>The words to use in the vocabulary filter. Only use characters from the character
+            set defined for custom vocabularies. For a list of character sets, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character
+            Sets for Custom Vocabularies</a>.</para><para>If you provide a list of words in the <code>Words</code> parameter, you can't use
+            the <code>VocabularyFilterFileUri</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.TranscribeService.Model.UpdateVocabularyFilterResponse).
+            Specifying the name of a property of type Amazon.TranscribeService.Model.UpdateVocabularyFilterResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the VocabularyFilterName parameter.
+            The -PassThru parameter is deprecated, use -Select '^VocabularyFilterName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRS.UpdateTRSVocabularyFilterCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

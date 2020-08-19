@@ -1,0 +1,1980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>View node for Amazon.MediaPackage.AmazonMediaPackageConfig</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.AmazonMediaPackageConfig</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RegionEndpointServiceName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ServiceVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UserAgent</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RegionEndpointServiceName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ServiceVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UserAgent</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.Authorization</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.Authorization</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CdnIdentifierSecret</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SecretsRoleArn</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CdnIdentifierSecret</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SecretsRoleArn</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.Channel</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.Channel</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsIngest</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CmafEncryption</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CmafEncryption</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>KeyRotationIntervalSeconds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SpekeKeyProvider</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>KeyRotationIntervalSeconds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SpekeKeyProvider</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CmafPackage</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CmafPackage</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Encryption</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsManifests</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentDurationSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentPrefix</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamSelection</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CmafPackageCreateOrUpdateParameters</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CmafPackageCreateOrUpdateParameters</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Encryption</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsManifests</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentDurationSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentPrefix</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamSelection</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CreateChannelRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CreateChannelRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Description</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tags</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Description</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tags</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CreateChannelResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CreateChannelResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsIngest</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CreateHarvestJobRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CreateHarvestJobRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>EndTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>OriginEndpointId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>S3Destination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartTime</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CreateHarvestJobResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CreateHarvestJobResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CreatedAt</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EndTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>OriginEndpointId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>S3Destination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CreateOriginEndpointRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CreateOriginEndpointRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Authorization</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CmafPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DashPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MssPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Origination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartoverWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeDelaySeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Whitelist</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.CreateOriginEndpointResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.CreateOriginEndpointResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Authorization</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CmafPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DashPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MssPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Origination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartoverWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeDelaySeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Url</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Whitelist</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DashEncryption</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DashEncryption</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>KeyRotationIntervalSeconds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SpekeKeyProvider</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>KeyRotationIntervalSeconds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SpekeKeyProvider</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DashPackage</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DashPackage</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AdsOnDeliveryRestrictions</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AdTriggers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Encryption</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestLayout</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MinBufferTimeSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MinUpdatePeriodSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PeriodTriggers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Profile</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentDurationSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentTemplateFormat</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamSelection</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SuggestedPresentationDelaySeconds</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DeleteChannelRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DeleteChannelRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DeleteOriginEndpointRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DeleteOriginEndpointRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DescribeChannelRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DescribeChannelRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DescribeChannelResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DescribeChannelResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsIngest</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DescribeHarvestJobRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DescribeHarvestJobRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DescribeHarvestJobResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DescribeHarvestJobResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CreatedAt</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EndTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>OriginEndpointId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>S3Destination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DescribeOriginEndpointRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DescribeOriginEndpointRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.DescribeOriginEndpointResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.DescribeOriginEndpointResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Authorization</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CmafPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DashPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MssPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Origination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartoverWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeDelaySeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Url</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Whitelist</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.HarvestJob</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.HarvestJob</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CreatedAt</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EndTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>OriginEndpointId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>S3Destination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.HlsEncryption</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.HlsEncryption</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>ConstantInitializationVector</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EncryptionMethod</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>KeyRotationIntervalSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RepeatExtXKey</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SpekeKeyProvider</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.HlsIngest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.HlsIngest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>IngestEndpoints</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>IngestEndpoints</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.HlsManifest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.HlsManifest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AdMarkers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeIframeOnlyStream</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PlaylistType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PlaylistWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ProgramDateTimeIntervalSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Url</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.HlsManifestCreateOrUpdateParameters</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.HlsManifestCreateOrUpdateParameters</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AdMarkers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AdsOnDeliveryRestrictions</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AdTriggers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeIframeOnlyStream</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PlaylistType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PlaylistWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ProgramDateTimeIntervalSeconds</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.HlsPackage</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.HlsPackage</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AdMarkers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AdsOnDeliveryRestrictions</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AdTriggers</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Encryption</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeIframeOnlyStream</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PlaylistType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PlaylistWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ProgramDateTimeIntervalSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SegmentDurationSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamSelection</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>UseAudioRenditionGroup</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.IngestEndpoint</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.IngestEndpoint</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Password</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Url</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Username</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Password</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Url</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Username</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListChannelsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListChannelsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>MaxResults</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>MaxResults</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListChannelsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListChannelsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Channels</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Channels</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListHarvestJobsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListHarvestJobsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>IncludeChannelId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IncludeStatus</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MaxResults</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>IncludeChannelId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IncludeStatus</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MaxResults</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListHarvestJobsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListHarvestJobsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>HarvestJobs</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>HarvestJobs</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListOriginEndpointsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListOriginEndpointsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ChannelId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MaxResults</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ChannelId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MaxResults</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListOriginEndpointsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListOriginEndpointsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OriginEndpoints</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OriginEndpoints</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListTagsForResourceRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListTagsForResourceRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ResourceArn</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ResourceArn</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.ListTagsForResourceResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.ListTagsForResourceResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Tags</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Tags</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.MssEncryption</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.MssEncryption</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>SpekeKeyProvider</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>SpekeKeyProvider</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.MssPackage</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.MssPackage</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Encryption</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ManifestWindowSeconds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SegmentDurationSeconds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamSelection</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Encryption</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ManifestWindowSeconds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SegmentDurationSeconds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamSelection</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.OriginEndpoint</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.OriginEndpoint</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Authorization</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CmafPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DashPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MssPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Origination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartoverWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeDelaySeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Url</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Whitelist</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.RotateChannelCredentialsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.RotateChannelCredentialsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.RotateChannelCredentialsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.RotateChannelCredentialsResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsIngest</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.RotateIngestEndpointCredentialsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.RotateIngestEndpointCredentialsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>IngestEndpointId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>IngestEndpointId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.RotateIngestEndpointCredentialsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.RotateIngestEndpointCredentialsResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsIngest</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.S3Destination</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.S3Destination</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>BucketName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ManifestKey</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RoleArn</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>BucketName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ManifestKey</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RoleArn</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.SpekeKeyProvider</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.SpekeKeyProvider</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>CertificateArn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ResourceId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RoleArn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SystemIds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Url</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.StreamSelection</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.StreamSelection</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>MaxVideoBitsPerSecond</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MinVideoBitsPerSecond</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamOrder</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>MaxVideoBitsPerSecond</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MinVideoBitsPerSecond</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamOrder</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.TagResourceRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.TagResourceRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ResourceArn</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tags</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ResourceArn</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tags</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.UntagResourceRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.UntagResourceRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ResourceArn</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TagKeys</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ResourceArn</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TagKeys</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.UpdateChannelRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.UpdateChannelRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Description</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Description</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.UpdateChannelResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.UpdateChannelResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsIngest</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.UpdateOriginEndpointRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.UpdateOriginEndpointRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Authorization</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CmafPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DashPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MssPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Origination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartoverWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeDelaySeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Whitelist</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Model.UpdateOriginEndpointResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Model.UpdateOriginEndpointResponse</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Arn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Authorization</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ChannelId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CmafPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DashPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HlsPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ManifestName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MssPackage</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Origination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartoverWindowSeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Tags</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeDelaySeconds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Url</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Whitelist</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.MediaPackage.Internal.AmazonMediaPackageMetadata</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.MediaPackage.Internal.AmazonMediaPackageMetadata</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ServiceId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OperationNameMapping</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ServiceId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OperationNameMapping</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
+<!-- SIG # Begin signature block -->
+<!-- MIIcUAYJKoZIhvcNAQcCoIIcQTCCHD0CAQExDzANBglghkgBZQMEAgEFADB5Bgor -->
+<!-- BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG -->
+<!-- KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCCpPjEOuKzJBX6X -->
+<!-- V9fWL9q8CL7HUTECqRBH96J6SXLzKKCCF0cwggS5MIIDoaADAgECAhArd4OFAE9M -->
+<!-- ppHAfzWQwHt/MA0GCSqGSIb3DQEBCwUAMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UE -->
+<!-- ChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0 -->
+<!-- IE5ldHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUg -->
+<!-- U2lnbmluZyBDQSAtIEcyMB4XDTE3MDcxMDAwMDAwMFoXDTIwMDcxMDIzNTk1OVow -->
+<!-- ajELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1Nl -->
+<!-- YXR0bGUxGTAXBgNVBAoMEEFtYXpvbi5jb20sIEluYy4xGTAXBgNVBAMMEEFtYXpv -->
+<!-- bi5jb20sIEluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC18TJW -->
+<!-- m2/aGpvb+TP2CZMg49X/5bjDAgPxWlAs7bqDyZnRYJork4rLmejpeJu+2BhRjZeK -->
+<!-- OirT4XveddBsdL1/TR+FKp8BXEsrm0wcR4yT6mNHJ9yCgC1YBNG91bZ75kRIT+46 -->
+<!-- chbC7eNI5703wi8ejxe2KvvOERppBTaFStVJuAHab69dvFma8qE3s7wbqPdQ5eTI -->
+<!-- +Xm0bXp8cObS+vj+hf3N2pfDNWM8ITva3kbowGoCW0rKzpf7fBGtBOKnOCCSL0yC -->
+<!-- AOwLlFkslemVyrT1/HTDjOTKCro016HxOPddA4cefvr2ZhGlRZQQHg7wMdG7TpZX -->
+<!-- ueQ6LoS9UxlzCYHFAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQE -->
+<!-- AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBM -->
+<!-- MCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcC -->
+<!-- AjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5 -->
+<!-- S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2Iu -->
+<!-- Y29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9y -->
+<!-- Yi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIu -->
+<!-- Y3J0MA0GCSqGSIb3DQEBCwUAA4IBAQC+C4TcK44ph2QQK/1f65jOR23DtSBC3y9a -->
+<!-- bzRHdo4qxmcAW5ot69os7GJfzgVsA5lh1IT4+aMuGYA4GTcF6iTSOMgFSRwP8urI -->
+<!-- N2BprsWuMJsQ7+Flo3PBRN3dU6idOlFKOfuRxgIHRn47t2yRan6XTNhfiWl84DrD -->
+<!-- NjSTnk4c72Gzu0hiwQB9OTsf8CQP3Shb3ZzcAOmeUB01TFoJU34PfJpKlKQZeQIi -->
+<!-- W5WdPPr1G/0cAHgejDHtdNYcSqIWfoGeYgCxUg1IFpp1VmPlqb/de8QKONzPDK6/ -->
+<!-- 5hulSGqGgpRmEkwGGJiQeOB51GxYZRCPq3hN3UJ6N0A+hYzj7yspMIIFRzCCBC+g -->
+<!-- AwIBAgIQfBs1NUrn23TnQV8RacprqDANBgkqhkiG9w0BAQsFADCBvTELMAkGA1UE -->
+<!-- BhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2ln -->
+<!-- biBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwOCBWZXJpU2lnbiwgSW5j -->
+<!-- LiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MTgwNgYDVQQDEy9WZXJpU2lnbiBV -->
+<!-- bml2ZXJzYWwgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xNDA3MjIw -->
+<!-- MDAwMDBaFw0yNDA3MjEyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UEChMU -->
+<!-- U3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5l -->
+<!-- dHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2ln -->
+<!-- bmluZyBDQSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA15VD -->
+<!-- 1NzfZ645+1KktiYxBHDpt45bKro3aTWVj7vAMOeG2HO73+vRdj+KVo7rLUvwVxhO -->
+<!-- sY2lM9MLdSPVankn3aPT9w6HZbXerRzx9TW0IlGvIqHBXUuQf8BZTqudeakC1x5J -->
+<!-- sTtNh/7CeKu/71KunK8I2TnlmlE+aV8wEE5xY2xY4fAgMxsPdL5byxLh24zEgJRy -->
+<!-- u/ZFmp7BJQv7oxye2KYJcHHswEdMj33D3hnOPu4Eco4X0//wsgUyGUzTsByf/qV4 -->
+<!-- IEJwQbAmjG8AyDoAEUF6QbCnipEEoJl49He082Aq5mxQBLcUYP8NUfSoi4T+Idpc -->
+<!-- Xn31KXlPsER0b21y/wIDAQABo4IBeDCCAXQwLgYIKwYBBQUHAQEEIjAgMB4GCCsG -->
+<!-- AQUFBzABhhJodHRwOi8vcy5zeW1jZC5jb20wEgYDVR0TAQH/BAgwBgEB/wIBADBm -->
+<!-- BgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYIKwYBBQUHAgEWF2h0dHBzOi8v -->
+<!-- ZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkaF2h0dHBzOi8vZC5zeW1jYi5j -->
+<!-- b20vcnBhMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9zLnN5bWNiLmNvbS91bml2 -->
+<!-- ZXJzYWwtcm9vdC5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDgYDVR0PAQH/BAQD -->
+<!-- AgEGMCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFTeW1hbnRlY1BLSS0xLTcyNDAd -->
+<!-- BgNVHQ4EFgQU1MAGIknrOUvdk+JcobhHdglyA1gwHwYDVR0jBBgwFoAUtnf6aUhH -->
+<!-- n1MS1cLqBzJ2B9GXBxkwDQYJKoZIhvcNAQELBQADggEBAH/ryqfqi3ZC6z6OIFQw -->
+<!-- 47e53PpIPhbHD0WVEM0nhqNm8wLtcfiqwlWXkXCD+VJ+Umk8yfHglEaAGLuh1KRW -->
+<!-- pvMdAJHVhvNIh+DLxDRoIF60y/kF7ZyvcFMnueg+flGgaXGL3FHtgDolMp9Er25D -->
+<!-- KNMhdbuX2IuLjP6pBEYEhfcVnEsRjcQsF/7Vbn+a4laS8ZazrS359N/aiZnOsjhE -->
+<!-- wPdHe8olufoqaDObUHLeqJ/UzSwLNL2LMHhA4I2OJxuQbxq+CBWBXesv4lHnUR7J -->
+<!-- eCnnHmW/OO8BSgEJJA4WxBR5wUE3NNA9kVKUneFo7wjw4mmcZ26QCxqTcdQmAsPA -->
+<!-- WiMwggZqMIIFUqADAgECAhADAZoCOv9YsWvW1ermF/BmMA0GCSqGSIb3DQEBBQUA -->
+<!-- MGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsT -->
+<!-- EHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQg -->
+<!-- Q0EtMTAeFw0xNDEwMjIwMDAwMDBaFw0yNDEwMjIwMDAwMDBaMEcxCzAJBgNVBAYT -->
+<!-- AlVTMREwDwYDVQQKEwhEaWdpQ2VydDElMCMGA1UEAxMcRGlnaUNlcnQgVGltZXN0 -->
+<!-- YW1wIFJlc3BvbmRlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKNk -->
+<!-- Xfx8s+CCNeDg9sYq5kl1O8xu4FOpnx9kWeZ8a39rjJ1V+JLjntVaY1sCSVDZg85v -->
+<!-- Zu7dy4XpX6X51Id0iEQ7Gcnl9ZGfxhQ5rCTqqEsskYnMXij0ZLZQt/USs3OWCmej -->
+<!-- vmGfrvP9Enh1DqZbFP1FI46GRFV9GIYFjFWHeUhG98oOjafeTl/iqLYtWQJhiGFy -->
+<!-- GGi5uHzu5uc0LzF3gTAfuzYBje8n4/ea8EwxZI3j6/oZh6h+z+yMDDZbesF6uHjH -->
+<!-- yQYuRhDIjegEYNu8c3T6Ttj+qkDxss5wRoPp2kChWTrZFQlXmVYwk/PJYczQCMxr -->
+<!-- 7GJCkawCwO+k8IkRj3cCAwEAAaOCAzUwggMxMA4GA1UdDwEB/wQEAwIHgDAMBgNV -->
+<!-- HRMBAf8EAjAAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMIIBvwYDVR0gBIIBtjCC -->
+<!-- AbIwggGhBglghkgBhv1sBwEwggGSMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k -->
+<!-- aWdpY2VydC5jb20vQ1BTMIIBZAYIKwYBBQUHAgIwggFWHoIBUgBBAG4AeQAgAHUA -->
+<!-- cwBlACAAbwBmACAAdABoAGkAcwAgAEMAZQByAHQAaQBmAGkAYwBhAHQAZQAgAGMA -->
+<!-- bwBuAHMAdABpAHQAdQB0AGUAcwAgAGEAYwBjAGUAcAB0AGEAbgBjAGUAIABvAGYA -->
+<!-- IAB0AGgAZQAgAEQAaQBnAGkAQwBlAHIAdAAgAEMAUAAvAEMAUABTACAAYQBuAGQA -->
+<!-- IAB0AGgAZQAgAFIAZQBsAHkAaQBuAGcAIABQAGEAcgB0AHkAIABBAGcAcgBlAGUA -->
+<!-- bQBlAG4AdAAgAHcAaABpAGMAaAAgAGwAaQBtAGkAdAAgAGwAaQBhAGIAaQBsAGkA -->
+<!-- dAB5ACAAYQBuAGQAIABhAHIAZQAgAGkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAA -->
+<!-- aABlAHIAZQBpAG4AIABiAHkAIAByAGUAZgBlAHIAZQBuAGMAZQAuMAsGCWCGSAGG -->
+<!-- /WwDFTAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcNK2cCzTAdBgNVHQ4EFgQU -->
+<!-- YVpNJLZJMp1KKnkag0v0HonByn0wfQYDVR0fBHYwdDA4oDagNIYyaHR0cDovL2Ny -->
+<!-- bDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcmwwOKA2oDSG -->
+<!-- Mmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEu -->
+<!-- Y3JsMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGln -->
+<!-- aWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5j -->
+<!-- b20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNydDANBgkqhkiG9w0BAQUFAAOCAQEA -->
+<!-- nSV+GzNNsiaBXJuGziMgD4CH5Yj//7HUaiwx7ToXGXEXzakbvFoWOQCd42yE5FpA -->
+<!-- +94GAYw3+puxnSR+/iCkV61bt5qwYCbqaVchXTQvH3Gwg5QZBWs1kBCge5fH9j/n -->
+<!-- 4hFBpr1i2fAnPTgdKG86Ugnw7HBi02JLsOBzppLA044x2C/jbRcTBu7kA7YUq/OP -->
+<!-- Q6dxnSHdFMoVXZJB2vkPgdGZdA0mxA5/G7X1oPHGdwYoFenYk+VVFvC7Cqsc21xI -->
+<!-- J2bIo4sKHOWV2q7ELlmgYd3a822iYemKC23sEhi991VUQAOSK2vCUcIKSK+w1G7g -->
+<!-- 9BQKOhvjjz3Kr2qNe9zYRDCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhsw -->
+<!-- DQYJKoZIhvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0 -->
+<!-- IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNl -->
+<!-- cnQgQXNzdXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAw -->
+<!-- MDAwMFowYjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcG -->
+<!-- A1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJl -->
+<!-- ZCBJRCBDQS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnK -->
+<!-- wkKVpYBzQHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InE -->
+<!-- Ctqvy15r7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH -->
+<!-- 6zY/2DDD/6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77b -->
+<!-- lUjE7h6z8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnx -->
+<!-- TPKvmPv2zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2Kk -->
+<!-- PzIUYJX9BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0 -->
+<!-- MDIGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEF -->
+<!-- BQcDCDCCAdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYB -->
+<!-- BQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9y -->
+<!-- eS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYA -->
+<!-- IAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkA -->
+<!-- dAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAA -->
+<!-- RABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAA -->
+<!-- UgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAA -->
+<!-- dwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4A -->
+<!-- ZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkA -->
+<!-- bgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1Ud -->
+<!-- EwEB/wQIMAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRw -->
+<!-- Oi8vb2NzcC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRz -->
+<!-- LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1Ud -->
+<!-- HwR6MHgwOqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFz -->
+<!-- c3VyZWRJRFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNv -->
+<!-- bS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZ -->
+<!-- B+0e36K+Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0G -->
+<!-- CSqGSIb3DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/s -->
+<!-- dR90OPKyXGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZ -->
+<!-- Vann4+erYs37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQl -->
+<!-- c+Qqq8+cdkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dF -->
+<!-- zdaD7eeSDY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsY -->
+<!-- Gk38KiGtSTGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEXzCCBFsCAQEwgZkw -->
+<!-- gYQxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRTeW1hbnRlYyBDb3Jwb3JhdGlvbjEf -->
+<!-- MB0GA1UECxMWU3ltYW50ZWMgVHJ1c3QgTmV0d29yazE1MDMGA1UEAxMsU3ltYW50 -->
+<!-- ZWMgQ2xhc3MgMyBTSEEyNTYgQ29kZSBTaWduaW5nIENBIC0gRzICECt3g4UAT0ym -->
+<!-- kcB/NZDAe38wDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIBDDEKMAigAoAA -->
+<!-- oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w -->
+<!-- DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgVescOWCtxbauJg9qZK66vD/M -->
+<!-- ajeKS+Mi+6aI4eme/zQwDQYJKoZIhvcNAQEBBQAEggEAQoQy2FI7lxlSG0WRcdw8 -->
+<!-- tUr5sn/Ids3twkuiG3ChZeCxSXvjeYeL/CF6dIqQTrPLrEefk3aaoU5Zmn5BCoph -->
+<!-- 4xPLHBtuzf4l5Cdcuez+fS67ISt6O+Uybju0g0IF/scEvFnvQLjQxBKRUEZJJnnO -->
+<!-- E32ZYp4gHJD3hqVWPlwa/aFtP5Sk33BZsARWjuauio3gMSZnOPV3JPW6wBGLdDje -->
+<!-- lL9BAJIHZTQu+qSzLlTa+woVm7/HgCopBkF8lFsBV1RTZ1d2SszEte1NaQ4DIjvV -->
+<!-- TIqRPJvxi51UkOrnxIM+OhUfAwEWJyq5UwEABpJAPZqCPtDa/+uXH15dPGIyWglj -->
+<!-- XKGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYTAlVT -->
+<!-- MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j -->
+<!-- b20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/WLFr -->
+<!-- 1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAc -->
+<!-- BgkqhkiG9w0BCQUxDxcNMjAwNjEwMjMxNzM4WjAjBgkqhkiG9w0BCQQxFgQUOZrH -->
+<!-- LaBdm33BCmXMf1UVz8X8O/MwDQYJKoZIhvcNAQEBBQAEggEAV79ia4bEMQcr7bAG -->
+<!-- 9iS0U2/XhegpUhATOgi3+rZHDdmlp6VbUB+wo8RT+ixomuviAqbDRTqjnjzpGRqj -->
+<!-- fxLgAEOYy++gD7Z1wgvScuP0FhVYwgdaGcnAO74ZX2lFNtxWllfO3hNe/jE5GNqC -->
+<!-- 7xlGy/5opjEpA1jht5FmxHX0SGhG8nQrBvANKR3TiHo3s0UD4pP1akUzqi7Y9Y4N -->
+<!-- w/jZzc2hmBcPfYqokmmPCnjhm9EFaIXiHBGglEqSj/vzPPKweDfEvUUB34erde5R -->
+<!-- 648MLIBNOtQrSh8GGL4frR1EV6dQvFsHw8MdoHx8ZHdnaNEuRU0ZlnHXopd01k2H -->
+<!-- O1dQng== -->
+<!-- SIG # End signature block -->

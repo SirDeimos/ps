@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.EBS</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet">
+            <summary>
+            Returns the block indexes and block tokens for blocks that are different between two
+            Amazon Elastic Block Store snapshots of the same volume/snapshot lineage.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.FirstSnapshotId">
+            <summary>
+            <para>
+            <para>The ID of the first snapshot to use for the comparison.</para><important><para>The <code>FirstSnapshotID</code> parameter must be specified with a <code>SecondSnapshotId</code>
+            parameter; otherwise, an error occurs.</para></important>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.SecondSnapshotId">
+            <summary>
+            <para>
+            <para>The ID of the second snapshot to use for the comparison.</para><important><para>The <code>SecondSnapshotId</code> parameter must be specified with a <code>FirstSnapshotID</code>
+            parameter; otherwise, an error occurs.</para></important>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.StartingBlockIndex">
+            <summary>
+            <para>
+            <para>The block index from which the comparison should start.</para><para>The list in the response will start from this block index or the next valid block
+            index in the snapshots.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to request the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ChangedBlocks'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.EBS.Model.ListChangedBlocksResponse).
+            Specifying the name of a property of type Amazon.EBS.Model.ListChangedBlocksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SecondSnapshotId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SecondSnapshotId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSChangedBlockListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockCmdlet">
+            <summary>
+            Returns the data in a block in an Amazon Elastic Block Store snapshot.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockCmdlet.BlockIndex">
+            <summary>
+            <para>
+            <para>The block index of the block from which to get data.</para><para>Obtain the <code>BlockIndex</code> by running the <code>ListChangedBlocks</code> or
+            <code>ListSnapshotBlocks</code> operations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockCmdlet.BlockToken">
+            <summary>
+            <para>
+            <para>The block token of the block from which to get data.</para><para>Obtain the <code>BlockToken</code> by running the <code>ListChangedBlocks</code> or
+            <code>ListSnapshotBlocks</code> operations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockCmdlet.SnapshotId">
+            <summary>
+            <para>
+            <para>The ID of the snapshot containing the block from which to get data.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.EBS.Model.GetSnapshotBlockResponse).
+            Specifying the name of a property of type Amazon.EBS.Model.GetSnapshotBlockResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SnapshotId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SnapshotId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet">
+            <summary>
+            Returns the block indexes and block tokens for blocks in an Amazon Elastic Block Store
+            snapshot.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.SnapshotId">
+            <summary>
+            <para>
+            <para>The ID of the snapshot from which to get block indexes and block tokens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.StartingBlockIndex">
+            <summary>
+            <para>
+            <para>The block index from which the list should start. The list in the response will start
+            from this block index or the next valid block index in the snapshot.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to request the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Blocks'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.EBS.Model.ListSnapshotBlocksResponse).
+            Specifying the name of a property of type Amazon.EBS.Model.ListSnapshotBlocksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SnapshotId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SnapshotId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EBS.GetEBSSnapshotBlockListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+    </members>
+</doc>

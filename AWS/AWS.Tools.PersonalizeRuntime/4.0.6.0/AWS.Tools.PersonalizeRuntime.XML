@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.PersonalizeRuntime</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet">
+            <summary>
+            Re-ranks a list of recommended items for the given user. The first item in the list
+            is deemed the most likely item to be of interest to the user.
+            
+             <note><para>
+            The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet.CampaignArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the campaign to use for generating the personalized
+            ranking.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet.Context">
+            <summary>
+            <para>
+            <para>The contextual metadata to use when getting recommendations. Contextual metadata includes
+            any interaction information that might be relevant when getting a user's recommendations,
+            such as the user's current location or device type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet.InputList">
+            <summary>
+            <para>
+            <para>A list of items (itemId's) to rank. If an item was not included in the training dataset,
+            the item is appended to the end of the reranked list. The maximum is 500.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The user for which you want the campaign to provide a personalized ranking.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PersonalizedRanking'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.PersonalizeRuntime.Model.GetPersonalizedRankingResponse).
+            Specifying the name of a property of type Amazon.PersonalizeRuntime.Model.GetPersonalizedRankingResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRPersonalizedRankingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CampaignArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CampaignArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet">
+            <summary>
+            Returns a list of recommended items. The required input depends on the recipe type
+            used to create the solution backing the campaign, as follows:
+            
+             <ul><li><para>
+            RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used
+            </para></li><li><para>
+            USER_PERSONALIZATION - <code>itemId</code> optional, <code>userId</code> required
+            </para></li></ul><note><para>
+            Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING
+            use the API.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.CampaignArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the campaign to use for getting recommendations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.Context">
+            <summary>
+            <para>
+            <para>The contextual metadata to use when getting recommendations. Contextual metadata includes
+            any interaction information that might be relevant when getting a user's recommendations,
+            such as the user's current location or device type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.FilterArn">
+            <summary>
+            <para>
+            <para>The ARN of the filter to apply to the returned recommendations. For more information,
+            see Using Filters with Amazon Personalize.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.ItemId">
+            <summary>
+            <para>
+            <para>The item ID to provide recommendations for.</para><para>Required for <code>RELATED_ITEMS</code> recipe type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.NumResult">
+            <summary>
+            <para>
+            <para>The number of results to return. The default is 25. The maximum is 500.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The user ID to provide recommendations for.</para><para>Required for <code>USER_PERSONALIZATION</code> recipe type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ItemList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.PersonalizeRuntime.Model.GetRecommendationsResponse).
+            Specifying the name of a property of type Amazon.PersonalizeRuntime.Model.GetRecommendationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PERSR.GetPERSRRecommendationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CampaignArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CampaignArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+    </members>
+</doc>

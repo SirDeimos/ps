@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Translate</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet">
+            <summary>
+            Translates input text from the source language to the target language. For a list
+            of available languages and language codes, see <a>what-is-languages</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.SourceLanguageCode">
+            <summary>
+            <para>
+            <para>The language code for the language of the source text. The language must be a language
+            supported by Amazon Translate. For a list of language codes, see <a>what-is-languages</a>.</para><para>To have Amazon Translate determine the source language of your text, you can specify
+            <code>auto</code> in the <code>SourceLanguageCode</code> field. If you specify <code>auto</code>,
+            Amazon Translate will call <a href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
+            Comprehend</a> to determine the source language.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.TargetLanguageCode">
+            <summary>
+            <para>
+            <para>The language code requested for the language of the target text. The language must
+            be a language supported by Amazon Translate.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.TerminologyName">
+            <summary>
+            <para>
+            <para>The name of the terminology list file to be used in the TranslateText request. You
+            can use 1 terminology list at most in a <code>TranslateText</code> request. Terminology
+            lists can contain a maximum of 256 terms.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.Text">
+            <summary>
+            <para>
+            <para>The text to translate. The text string can be a maximum of 5,000 bytes long. Depending
+            on your character set, this may be fewer than 5,000 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.TranslateTextResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.TranslateTextResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Text parameter.
+            The -PassThru parameter is deprecated, use -Select '^Text' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ConvertToTRNTargetLanguageCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyCmdlet">
+            <summary>
+            Retrieves a custom terminology.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the custom terminology being retrieved.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyCmdlet.TerminologyDataFormat">
+            <summary>
+            <para>
+            <para>The data format of the custom terminology being retrieved, either CSV or TMX.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.GetTerminologyResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.GetTerminologyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyListCmdlet">
+            <summary>
+            Provides a list of custom terminologies associated with your account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of custom terminologies returned per list request.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>500</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the request to ListTerminologies was truncated, include the NextToken
+            to fetch the next group of custom terminologies. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TerminologyPropertiesList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.ListTerminologiesResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.ListTerminologiesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTerminologyListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobCmdlet">
+            <summary>
+            Gets the properties associated with an asycnhronous batch translation job including
+            name, ID, status, source and target languages, input/output S3 buckets, and so on.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The identifier that Amazon Translate generated for the job. The <a>StartTextTranslationJob</a>
+            operation returns this identifier in its response.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TextTranslationJobProperties'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.DescribeTextTranslationJobResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.DescribeTextTranslationJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet">
+            <summary>
+            Gets a list of the batch translation jobs that you have submitted.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.Filter_JobName">
+            <summary>
+            <para>
+            <para>Filters the list of jobs by name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.Filter_JobStatus">
+            <summary>
+            <para>
+            <para>Filters the list of jobs based by job status.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.Filter_SubmittedAfterTime">
+            <summary>
+            <para>
+            <para>Filters the list of jobs based on the time that the job was submitted for processing
+            and returns only the jobs submitted after the specified time. Jobs are returned in
+            descending order, newest to oldest.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.Filter_SubmittedBeforeTime">
+            <summary>
+            <para>
+            <para>Filters the list of jobs based on the time that the job was submitted for processing
+            and returns only the jobs submitted before the specified time. Jobs are returned in
+            ascending order, oldest to newest.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in each page. The default value is 100.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to request the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TextTranslationJobPropertiesList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.ListTextTranslationJobsResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.ListTextTranslationJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Filter_JobName parameter.
+            The -PassThru parameter is deprecated, use -Select '^Filter_JobName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.GetTRNTextTranslationJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet">
+            <summary>
+            Creates or updates a custom terminology, depending on whether or not one already exists
+            for the given terminology name. Importing a terminology with the same name as an existing
+            one will merge the terminologies based on the chosen merge strategy. Currently, the
+            only supported merge strategy is OVERWRITE, and so the imported terminology will overwrite
+            an existing terminology of the same name.
+            
+             
+            <para>
+            If you import a terminology that overwrites an existing one, the new terminology take
+            up to 10 minutes to fully propagate and be available for use in a translation due
+            to cache policies with the DataPlane service that performs the translations.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the custom terminology being imported.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.TerminologyData_File">
+            <summary>
+            <para>
+            <para>The file containing the custom terminology data. Your version of the AWS SDK performs
+            a Base64-encoding on this field before sending a request to the AWS service. Users
+            of the SDK should not perform Base64-encoding themselves.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.TerminologyData_Format">
+            <summary>
+            <para>
+            <para>The data format of the custom terminology. Either CSV or TMX.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.EncryptionKey_Id">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom
+            terminology.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.MergeStrategy">
+            <summary>
+            <para>
+            <para>The merge strategy of the custom terminology being imported. Currently, only the OVERWRITE
+            merge strategy is supported. In this case, the imported terminology will overwrite
+            an existing terminology of the same name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the custom terminology being imported.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.EncryptionKey_Type">
+            <summary>
+            <para>
+            <para>The type of encryption key used by Amazon Translate to encrypt custom terminologies.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TerminologyProperties'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.ImportTerminologyResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.ImportTerminologyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.ImportTRNTerminologyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.RemoveTRNTerminologyCmdlet">
+            <summary>
+            A synchronous action that deletes a custom terminology.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.RemoveTRNTerminologyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the custom terminology being deleted. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.RemoveTRNTerminologyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.DeleteTerminologyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.RemoveTRNTerminologyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.RemoveTRNTerminologyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet">
+            <summary>
+            Starts an asynchronous batch translation job. Batch translation jobs can be used to
+            translate large volumes of text across multiple documents at once. For more information,
+            see <a>async</a>.
+            
+             
+            <para>
+            Batch translation jobs can be described with the <a>DescribeTextTranslationJob</a>
+            operation, listed with the <a>ListTextTranslationJobs</a> operation, and stopped with
+            the <a>StopTextTranslationJob</a> operation.
+            </para><note><para>
+            Amazon Translate does not support batch translation of multiple source languages at
+            once.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.InputDataConfig_ContentType">
+            <summary>
+            <para>
+            <para>The multipurpose internet mail extension (MIME) type of the input files. Valid values
+            are <code>text/plain</code> for plaintext files and <code>text/html</code> for HTML
+            files.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.DataAccessRoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role
+            that grants Amazon Translate read access to your input data. For more nformation,
+            see <a>identity-and-access-management</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.JobName">
+            <summary>
+            <para>
+            <para>The name of the batch translation job to be performed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.InputDataConfig_S3Uri">
+            <summary>
+            <para>
+            <para>The URI of the AWS S3 folder that contains the input file. The folder must be in the
+            same Region as the API endpoint you are calling.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.OutputDataConfig_S3Uri">
+            <summary>
+            <para>
+            <para>The URI of the S3 folder that contains a translation job's output file. The folder
+            must be in the same Region as the API endpoint that you are calling.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.SourceLanguageCode">
+            <summary>
+            <para>
+            <para>The language code of the input language. For a list of language codes, see <a>what-is-languages</a>.</para><para>Amazon Translate does not automatically detect a source language during batch translation
+            jobs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.TargetLanguageCode">
+            <summary>
+            <para>
+            <para>The language code of the output language.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.TerminologyName">
+            <summary>
+            <para>
+            <para>The name of the terminology to use in the batch translation job. For a list of available
+            terminologies, use the <a>ListTerminologies</a> operation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The client token of the EC2 instance calling the request. This token is auto-generated
+            when using the Amazon Translate SDK. Otherwise, use the <a href="docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html">DescribeInstances</a>
+            EC2 operation to retreive an instance's client token. For more information, see <a href="docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html#client-tokens">Client
+            Tokens</a> in the EC2 User Guide.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.StartTextTranslationJobResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.StartTextTranslationJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StartTRNTextTranslationJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TRN.StopTRNTextTranslationJobCmdlet">
+            <summary>
+            Stops an asynchronous batch translation job that is in progress.
+            
+             
+            <para>
+            If the job's state is <code>IN_PROGRESS</code>, the job will be marked for termination
+            and put into the <code>STOP_REQUESTED</code> state. If the job completes before it
+            can be stopped, it is put into the <code>COMPLETED</code> state. Otherwise, the job
+            is put into the <code>STOPPED</code> state.
+            </para><para>
+            Asynchronous batch translation jobs are started with the <a>StartTextTranslationJob</a>
+            operation. You can use the <a>DescribeTextTranslationJob</a> or <a>ListTextTranslationJobs</a>
+            operations to get a batch translation job's <code>JobId</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StopTRNTextTranslationJobCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The job ID of the job to be stopped.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StopTRNTextTranslationJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Translate.Model.StopTextTranslationJobResponse).
+            Specifying the name of a property of type Amazon.Translate.Model.StopTextTranslationJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StopTRNTextTranslationJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TRN.StopTRNTextTranslationJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

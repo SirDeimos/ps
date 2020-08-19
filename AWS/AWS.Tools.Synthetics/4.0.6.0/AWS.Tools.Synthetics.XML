@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Synthetics</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.AddCWSYNResourceTagCmdlet">
+            <summary>
+            Assigns one or more tags (key-value pairs) to the specified canary. 
+            
+             
+            <para>
+            Tags can help you organize and categorize your resources. You can also use them to
+            scope user permissions, by granting a user permission to access or change only resources
+            with certain tag values.
+            </para><para>
+            Tags don't have any semantic meaning to AWS and are interpreted strictly as strings
+            of characters.
+            </para><para>
+            You can use the <code>TagResource</code> action with a canary that already has tags.
+            If you specify a new tag key for the alarm, this tag is appended to the list of tags
+            associated with the alarm. If you specify a tag key that is already associated with
+            the alarm, the new tag value that you specify replaces the previous value for that
+            tag.
+            </para><para>
+            You can associate as many as 50 tags with a canary.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.AddCWSYNResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the canary that you're adding tags to.</para><para>The ARN format of a canary is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:canary:<i>canary-name</i></code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.AddCWSYNResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The list of key-value pairs to associate with the canary.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.AddCWSYNResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.AddCWSYNResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.AddCWSYNResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanariesLastRunCmdlet">
+            <summary>
+            Use this operation to see information from the most recent run of each canary that
+            you have created.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanariesLastRunCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specify this parameter to limit how many runs are returned each time you use the <code>DescribeLastRun</code>
+            operation. If you omit this parameter, the default of 100 is used.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanariesLastRunCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token that indicates that there is more data available. You can use this token in
+            a subsequent <code>DescribeCanaries</code> operation to retrieve the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanariesLastRunCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CanariesLastRun'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.DescribeCanariesLastRunResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.DescribeCanariesLastRunResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanariesLastRunCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryCmdlet">
+            <summary>
+            Retrieves complete information about one canary. You must specify the name of the
+            canary that you want. To get a list of canaries and their names, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the canary that you want details for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Canary'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.GetCanaryResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.GetCanaryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryListCmdlet">
+            <summary>
+            This operation returns a list of the canaries in your account, along with full details
+            about each canary.
+            
+             
+            <para>
+            This operation does not have resource-level authorization, so if a user is able to
+            use <code>DescribeCanaries</code>, the user can see all of the canaries in the account.
+            A deny policy can only be used to restrict access to all canaries. It cannot be used
+            on specific resources. 
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specify this parameter to limit how many canaries are returned each time you use the
+            <code>DescribeCanaries</code> operation. If you omit this parameter, the default of
+            100 is used.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token that indicates that there is more data available. You can use this token in
+            a subsequent operation to retrieve the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Canaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.DescribeCanariesResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.DescribeCanariesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet">
+            <summary>
+            Retrieves a list of runs for a specified canary.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the canary that you want to see runs for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specify this parameter to limit how many runs are returned each time you use the <code>GetCanaryRuns</code>
+            operation. If you omit this parameter, the default of 100 is used.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token that indicates that there is more data available. You can use this token in
+            a subsequent <code>GetCanaryRuns</code> operation to retrieve the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CanaryRuns'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.GetCanaryRunsResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.GetCanaryRunsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNCanaryRunCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNResourceTagCmdlet">
+            <summary>
+            Displays the tags associated with a canary.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the canary that you want to view tags for.</para><para>The ARN format of a canary is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:canary:<i>canary-name</i></code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNRuntimeVersionCmdlet">
+            <summary>
+            Returns a list of Synthetics canary runtime versions. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html">
+            Canary Runtime Versions</a>.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNRuntimeVersionCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specify this parameter to limit how many runs are returned each time you use the <code>DescribeRuntimeVersions</code>
+            operation. If you omit this parameter, the default of 100 is used.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNRuntimeVersionCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token that indicates that there is more data available. You can use this token in
+            a subsequent <code>DescribeRuntimeVersions</code> operation to retrieve the next set
+            of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNRuntimeVersionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RuntimeVersions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.DescribeRuntimeVersionsResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.DescribeRuntimeVersionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.GetCWSYNRuntimeVersionCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet">
+            <summary>
+            Creates a canary. Canaries are scripts that monitor your endpoints and APIs from the
+            outside-in. Canaries help you check the availability and latency of your web services
+            and troubleshoot anomalies by investigating load time data, screenshots of the UI,
+            logs, and metrics. You can set up a canary to run continuously or just once. 
+            
+             
+            <para>
+            Do not use <code>CreateCanary</code> to modify an existing canary. Use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_UpdateCanary.html">UpdateCanary</a>
+            instead.
+            </para><para>
+            To create canaries, you must have the <code>CloudWatchSyntheticsFullAccess</code>
+            policy. If you are creating a new IAM role for the canary, you also need the the <code>iam:CreateRole</code>,
+            <code>iam:CreatePolicy</code> and <code>iam:AttachRolePolicy</code> permissions. For
+            more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Roles">Necessary
+            Roles and Permissions</a>.
+            </para><para>
+            Do not include secrets or proprietary information in your canary names. The canary
+            name makes up part of the Amazon Resource Name (ARN) for the canary, and the ARN is
+            included in outbound calls over the internet. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/servicelens_canaries_security.html">Security
+            Considerations for Synthetics Canaries</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.ArtifactS3Location">
+            <summary>
+            <para>
+            <para>The location in Amazon S3 where Synthetics stores artifacts from the test runs of
+            this canary. Artifacts include the log file, screenshots, and HAR files.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Schedule_DurationInSecond">
+            <summary>
+            <para>
+            <para>How long, in seconds, for the canary to continue making regular runs according to
+            the schedule in the <code>Expression</code> value. If you specify 0, the canary continues
+            making runs until you stop it. If you omit this field, the default of 0 is used.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.ExecutionRoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the IAM role to be used to run the canary. This role must already exist,
+            and must include <code>lambda.amazonaws.com</code> as a principal in the trust policy.
+            The role must also have the following permissions:</para><ul><li><para><code>s3:PutObject</code></para></li><li><para><code>s3:GetBucketLocation</code></para></li><li><para><code>s3:ListAllMyBuckets</code></para></li><li><para><code>cloudwatch:PutMetricData</code></para></li><li><para><code>logs:CreateLogGroup</code></para></li><li><para><code>logs:CreateLogStream</code></para></li><li><para><code>logs:CreateLogStream</code></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Schedule_Expression">
+            <summary>
+            <para>
+            <para>A rate expression that defines how often the canary is to run. The syntax is <code>rate(<i>number
+            unit</i>)</code>. <i>unit</i> can be <code>minute</code>, <code>minutes</code>, or
+            <code>hour</code>. </para><para>For example, <code>rate(1 minute)</code> runs the canary once a minute, <code>rate(10
+            minutes)</code> runs it once every 10 minutes, and <code>rate(1 hour)</code> runs
+            it once every hour. You can specify a frequency between <code>rate(1 minute)</code>
+            and <code>rate(1 hour)</code>.</para><para>Specifying <code>rate(0 minute)</code> or <code>rate(0 hour)</code> is a special value
+            that causes the canary to run only once when it is started.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.FailureRetentionPeriodInDay">
+            <summary>
+            <para>
+            <para>The number of days to retain data about failed runs of this canary. If you omit this
+            field, the default of 31 days is used. The valid range is 1 to 455 days.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Code_Handler">
+            <summary>
+            <para>
+            <para>The entry point to use for the source code when running the canary. This value must
+            end with the string <code>.handler</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.RunConfig_MemoryInMB">
+            <summary>
+            <para>
+            <para>The maximum amount of memory available to the canary while it is running, in MB. The
+            value you specify must be a multiple of 64.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name for this canary. Be sure to give it a descriptive name that distinguishes
+            it from other canaries in your account.</para><para>Do not include secrets or proprietary information in your canary names. The canary
+            name makes up part of the canary ARN, and the ARN is included in outbound calls over
+            the internet. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/servicelens_canaries_security.html">Security
+            Considerations for Synthetics Canaries</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.RuntimeVersion">
+            <summary>
+            <para>
+            <para>Specifies the runtime version to use for the canary. Currently, the only valid value
+            is <code>syn-1.0</code>. For more information about runtime versions, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html">
+            Canary Runtime Versions</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Code_S3Bucket">
+            <summary>
+            <para>
+            <para>If your canary script is located in S3, specify the full bucket name here. The bucket
+            must already exist. Specify the full bucket name, including <code>s3://</code> as
+            the start of the bucket name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Code_S3Key">
+            <summary>
+            <para>
+            <para>The S3 key of your script. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html">Working
+            with Amazon S3 Objects</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Code_S3Version">
+            <summary>
+            <para>
+            <para>The S3 version ID of your script.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.VpcConfig_SecurityGroupId">
+            <summary>
+            <para>
+            <para>The IDs of the security groups for this canary.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.VpcConfig_SubnetId">
+            <summary>
+            <para>
+            <para>The IDs of the subnets where this canary is to run.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.SuccessRetentionPeriodInDay">
+            <summary>
+            <para>
+            <para>The number of days to retain data about successful runs of this canary. If you omit
+            this field, the default of 31 days is used. The valid range is 1 to 455 days.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs to associate with the canary. You can associate as many
+            as 50 tags with a canary.</para><para>Tags can help you organize and categorize your resources. You can also use them to
+            scope user permissions, by granting a user permission to access or change only the
+            resources that have certain tag values.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.RunConfig_TimeoutInSecond">
+            <summary>
+            <para>
+            <para>How long the canary is allowed to run before it must stop. If you omit this field,
+            the frequency of the canary is used as this value, up to a maximum of 14 minutes.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Code_ZipFile">
+            <summary>
+            <para>
+            <para>If you input your canary script directly into the canary instead of referring to an
+            S3 location, the value of this parameter is the .zip file that contains the script.
+            It can be up to 5 MB.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Canary'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.CreateCanaryResponse).
+            Specifying the name of a property of type Amazon.Synthetics.Model.CreateCanaryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.NewCWSYNCanaryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNCanaryCmdlet">
+            <summary>
+            Permanently deletes the specified canary.
+            
+             
+            <para>
+            When you delete a canary, resources used and created by the canary are not automatically
+            deleted. After you delete a canary that you do not intend to use again, you should
+            also delete the following:
+            </para><ul><li><para>
+            The Lambda functions and layers used by this canary. These have the prefix <code>cwsyn-<i>MyCanaryName</i></code>.
+            </para></li><li><para>
+            The CloudWatch alarms created for this canary. These alarms have a name of <code>Synthetics-SharpDrop-Alarm-<i>MyCanaryName</i></code>.
+            </para></li><li><para>
+            Amazon S3 objects and buckets, such as the canary's artifact location.
+            </para></li><li><para>
+            IAM roles created for the canary. If they were created in the console, these roles
+            have the name <code> role/service-role/CloudWatchSyntheticsRole-<i>MyCanaryName</i></code>.
+            </para></li><li><para>
+            CloudWatch Logs log groups created for the canary. These logs groups have the name
+            <code>/aws/lambda/cwsyn-<i>MyCanaryName</i></code>. 
+            </para></li></ul><para>
+            Before you delete a canary, you might want to use <code>GetCanary</code> to display
+            the information about this canary. Make note of the information returned by this operation
+            so that you can delete these resources after you delete the canary.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNCanaryCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the canary that you want to delete. To find the names of your canaries,
+            use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNCanaryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.DeleteCanaryResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNCanaryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNCanaryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNResourceTagCmdlet">
+            <summary>
+            Removes one or more tags from the specified canary.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the canary that you're removing tags from.</para><para>The ARN format of a canary is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:canary:<i>canary-name</i></code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The list of tag keys to remove from the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.RemoveCWSYNResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.StartCWSYNCanaryCmdlet">
+            <summary>
+            Use this operation to run a canary that has already been created. The frequency of
+            the canary runs is determined by the value of the canary's <code>Schedule</code>.
+            To see a canary's schedule, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanary.html">GetCanary</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StartCWSYNCanaryCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the canary that you want to run. To find canary names, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StartCWSYNCanaryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.StartCanaryResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StartCWSYNCanaryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StartCWSYNCanaryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.StopCWSYNCanaryCmdlet">
+            <summary>
+            Stops the canary to prevent all future runs. If the canary is currently running, Synthetics
+            stops waiting for the current run of the specified canary to complete. The run that
+            is in progress completes on its own, publishes metrics, and uploads artifacts, but
+            it is not recorded in Synthetics as a completed run.
+            
+             
+            <para>
+            You can use <code>StartCanary</code> to start it running again with the canary’s current
+            schedule at any point in the future. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StopCWSYNCanaryCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the canary that you want to stop. To find the names of your canaries,
+            use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StopCWSYNCanaryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.StopCanaryResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StopCWSYNCanaryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.StopCWSYNCanaryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet">
+            <summary>
+            Use this operation to change the settings of a canary that has already been created.
+            
+             
+            <para>
+            You can't use this operation to update the tags of an existing canary. To change the
+            tags of an existing canary, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_TagResource.html">TagResource</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Schedule_DurationInSecond">
+            <summary>
+            <para>
+            <para>How long, in seconds, for the canary to continue making regular runs according to
+            the schedule in the <code>Expression</code> value. If you specify 0, the canary continues
+            making runs until you stop it. If you omit this field, the default of 0 is used.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.ExecutionRoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the IAM role to be used to run the canary. This role must already exist,
+            and must include <code>lambda.amazonaws.com</code> as a principal in the trust policy.
+            The role must also have the following permissions:</para><ul><li><para><code>s3:PutObject</code></para></li><li><para><code>s3:GetBucketLocation</code></para></li><li><para><code>s3:ListAllMyBuckets</code></para></li><li><para><code>cloudwatch:PutMetricData</code></para></li><li><para><code>logs:CreateLogGroup</code></para></li><li><para><code>logs:CreateLogStream</code></para></li><li><para><code>logs:CreateLogStream</code></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Schedule_Expression">
+            <summary>
+            <para>
+            <para>A rate expression that defines how often the canary is to run. The syntax is <code>rate(<i>number
+            unit</i>)</code>. <i>unit</i> can be <code>minute</code>, <code>minutes</code>, or
+            <code>hour</code>. </para><para>For example, <code>rate(1 minute)</code> runs the canary once a minute, <code>rate(10
+            minutes)</code> runs it once every 10 minutes, and <code>rate(1 hour)</code> runs
+            it once every hour. You can specify a frequency between <code>rate(1 minute)</code>
+            and <code>rate(1 hour)</code>.</para><para>Specifying <code>rate(0 minute)</code> or <code>rate(0 hour)</code> is a special value
+            that causes the canary to run only once when it is started.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.FailureRetentionPeriodInDay">
+            <summary>
+            <para>
+            <para>The number of days to retain data about failed runs of this canary.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Code_Handler">
+            <summary>
+            <para>
+            <para>The entry point to use for the source code when running the canary. This value must
+            end with the string <code>.handler</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.RunConfig_MemoryInMB">
+            <summary>
+            <para>
+            <para>The maximum amount of memory available to the canary while it is running, in MB. The
+            value you specify must be a multiple of 64.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the canary that you want to update. To find the names of your canaries,
+            use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.</para><para>You cannot change the name of a canary that has already been created.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.RuntimeVersion">
+            <summary>
+            <para>
+            <para>Specifies the runtime version to use for the canary. Currently, the only valid value
+            is <code>syn-1.0</code>. For more information about runtime versions, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html">
+            Canary Runtime Versions</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Code_S3Bucket">
+            <summary>
+            <para>
+            <para>If your canary script is located in S3, specify the full bucket name here. The bucket
+            must already exist. Specify the full bucket name, including <code>s3://</code> as
+            the start of the bucket name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Code_S3Key">
+            <summary>
+            <para>
+            <para>The S3 key of your script. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html">Working
+            with Amazon S3 Objects</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Code_S3Version">
+            <summary>
+            <para>
+            <para>The S3 version ID of your script.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.VpcConfig_SecurityGroupId">
+            <summary>
+            <para>
+            <para>The IDs of the security groups for this canary.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.VpcConfig_SubnetId">
+            <summary>
+            <para>
+            <para>The IDs of the subnets where this canary is to run.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.SuccessRetentionPeriodInDay">
+            <summary>
+            <para>
+            <para>The number of days to retain data about successful runs of this canary.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.RunConfig_TimeoutInSecond">
+            <summary>
+            <para>
+            <para>How long the canary is allowed to run before it must stop. If you omit this field,
+            the frequency of the canary is used as this value, up to a maximum of 14 minutes.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Code_ZipFile">
+            <summary>
+            <para>
+            <para>If you input your canary script directly into the canary instead of referring to an
+            S3 location, the value of this parameter is the .zip file that contains the script.
+            It can be up to 5 MB.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Synthetics.Model.UpdateCanaryResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CWSYN.UpdateCWSYNCanaryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

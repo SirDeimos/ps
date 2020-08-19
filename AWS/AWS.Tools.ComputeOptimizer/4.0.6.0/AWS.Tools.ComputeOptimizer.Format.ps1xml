@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.AmazonComputeOptimizerConfig</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.AmazonComputeOptimizerConfig</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RegionEndpointServiceName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ServiceVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UserAgent</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RegionEndpointServiceName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ServiceVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UserAgent</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.AutoScalingGroupConfiguration</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.AutoScalingGroupConfiguration</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>DesiredCapacity</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>InstanceType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MaxSize</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MinSize</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>DesiredCapacity</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>InstanceType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MaxSize</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MinSize</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.AutoScalingGroupRecommendation</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.AutoScalingGroupRecommendation</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AccountId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AutoScalingGroupArn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AutoScalingGroupName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CurrentConfiguration</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Finding</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>LastRefreshTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>LookBackPeriodInDays</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RecommendationOptions</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>UtilizationMetrics</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.AutoScalingGroupRecommendationOption</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.AutoScalingGroupRecommendationOption</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Configuration</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PerformanceRisk</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ProjectedUtilizationMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Rank</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Configuration</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PerformanceRisk</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ProjectedUtilizationMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Rank</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.DescribeRecommendationExportJobsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.DescribeRecommendationExportJobsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Filters</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>JobIds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MaxResults</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Filters</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>JobIds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MaxResults</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.DescribeRecommendationExportJobsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.DescribeRecommendationExportJobsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RecommendationExportJobs</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RecommendationExportJobs</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.ExportAutoScalingGroupRecommendationsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.ExportAutoScalingGroupRecommendationsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AccountIds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FieldsToExport</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FileFormat</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Filters</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeMemberAccounts</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>S3DestinationConfig</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.ExportAutoScalingGroupRecommendationsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.ExportAutoScalingGroupRecommendationsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>JobId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>S3Destination</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>JobId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>S3Destination</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.ExportDestination</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.ExportDestination</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>S3</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>S3</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.ExportEC2InstanceRecommendationsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.ExportEC2InstanceRecommendationsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AccountIds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FieldsToExport</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FileFormat</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Filters</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeMemberAccounts</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>S3DestinationConfig</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.ExportEC2InstanceRecommendationsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.ExportEC2InstanceRecommendationsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>JobId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>S3Destination</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>JobId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>S3Destination</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.Filter</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.Filter</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Values</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Values</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetAutoScalingGroupRecommendationsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetAutoScalingGroupRecommendationsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AccountIds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>AutoScalingGroupArns</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Filters</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MaxResults</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>NextToken</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetAutoScalingGroupRecommendationsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetAutoScalingGroupRecommendationsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AutoScalingGroupRecommendations</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Errors</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AutoScalingGroupRecommendations</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Errors</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetEC2InstanceRecommendationsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetEC2InstanceRecommendationsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AccountIds</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Filters</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>InstanceArns</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MaxResults</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>NextToken</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetEC2InstanceRecommendationsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetEC2InstanceRecommendationsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Errors</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>InstanceRecommendations</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Errors</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>InstanceRecommendations</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetEC2RecommendationProjectedMetricsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetEC2RecommendationProjectedMetricsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>EndTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>InstanceArn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Period</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Stat</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetEC2RecommendationProjectedMetricsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetEC2RecommendationProjectedMetricsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RecommendedOptionProjectedMetrics</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RecommendedOptionProjectedMetrics</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetEnrollmentStatusResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetEnrollmentStatusResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>MemberAccountsEnrolled</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StatusReason</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>MemberAccountsEnrolled</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StatusReason</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetRecommendationError</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetRecommendationError</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Code</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Identifier</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Message</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Code</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Identifier</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Message</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetRecommendationSummariesRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetRecommendationSummariesRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AccountIds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MaxResults</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AccountIds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MaxResults</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.GetRecommendationSummariesResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.GetRecommendationSummariesResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RecommendationSummaries</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RecommendationSummaries</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.InstanceRecommendation</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.InstanceRecommendation</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AccountId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CurrentInstanceType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Finding</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>InstanceArn</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>InstanceName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>LastRefreshTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>LookBackPeriodInDays</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RecommendationOptions</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RecommendationSources</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>UtilizationMetrics</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.InstanceRecommendationOption</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.InstanceRecommendationOption</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>InstanceType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PerformanceRisk</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ProjectedUtilizationMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Rank</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>InstanceType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PerformanceRisk</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ProjectedUtilizationMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Rank</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.JobFilter</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.JobFilter</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Values</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Values</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.ProjectedMetric</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.ProjectedMetric</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Timestamps</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Values</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Timestamps</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Values</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.RecommendationExportJob</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.RecommendationExportJob</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>CreationTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Destination</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FailureReason</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>JobId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>LastUpdatedTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ResourceType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.RecommendationSource</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.RecommendationSource</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RecommendationSourceArn</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RecommendationSourceType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RecommendationSourceArn</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RecommendationSourceType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.RecommendationSummary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.RecommendationSummary</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AccountId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RecommendationResourceType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Summaries</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AccountId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RecommendationResourceType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Summaries</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.RecommendedOptionProjectedMetric</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.RecommendedOptionProjectedMetric</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ProjectedMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Rank</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RecommendedInstanceType</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ProjectedMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Rank</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RecommendedInstanceType</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.S3Destination</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.S3Destination</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Bucket</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Key</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MetadataKey</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Bucket</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Key</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MetadataKey</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.S3DestinationConfig</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.S3DestinationConfig</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Bucket</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>KeyPrefix</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Bucket</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>KeyPrefix</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.Summary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.Summary</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Value</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Value</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.UpdateEnrollmentStatusRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.UpdateEnrollmentStatusRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>IncludeMemberAccounts</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>IncludeMemberAccounts</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.UpdateEnrollmentStatusResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.UpdateEnrollmentStatusResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StatusReason</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StatusReason</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Model.UtilizationMetric</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Model.UtilizationMetric</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Statistic</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Value</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Statistic</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Value</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.ComputeOptimizer.Internal.AmazonComputeOptimizerMetadata</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.ComputeOptimizer.Internal.AmazonComputeOptimizerMetadata</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ServiceId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OperationNameMapping</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ServiceId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OperationNameMapping</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
+<!-- SIG # Begin signature block -->
+<!-- MIIcUAYJKoZIhvcNAQcCoIIcQTCCHD0CAQExDzANBglghkgBZQMEAgEFADB5Bgor -->
+<!-- BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG -->
+<!-- KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAOk6gngrf2lBGz -->
+<!-- Ssq18el386rMZyDQm/WT3OAy5NF7tKCCF0cwggS5MIIDoaADAgECAhArd4OFAE9M -->
+<!-- ppHAfzWQwHt/MA0GCSqGSIb3DQEBCwUAMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UE -->
+<!-- ChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0 -->
+<!-- IE5ldHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUg -->
+<!-- U2lnbmluZyBDQSAtIEcyMB4XDTE3MDcxMDAwMDAwMFoXDTIwMDcxMDIzNTk1OVow -->
+<!-- ajELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1Nl -->
+<!-- YXR0bGUxGTAXBgNVBAoMEEFtYXpvbi5jb20sIEluYy4xGTAXBgNVBAMMEEFtYXpv -->
+<!-- bi5jb20sIEluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC18TJW -->
+<!-- m2/aGpvb+TP2CZMg49X/5bjDAgPxWlAs7bqDyZnRYJork4rLmejpeJu+2BhRjZeK -->
+<!-- OirT4XveddBsdL1/TR+FKp8BXEsrm0wcR4yT6mNHJ9yCgC1YBNG91bZ75kRIT+46 -->
+<!-- chbC7eNI5703wi8ejxe2KvvOERppBTaFStVJuAHab69dvFma8qE3s7wbqPdQ5eTI -->
+<!-- +Xm0bXp8cObS+vj+hf3N2pfDNWM8ITva3kbowGoCW0rKzpf7fBGtBOKnOCCSL0yC -->
+<!-- AOwLlFkslemVyrT1/HTDjOTKCro016HxOPddA4cefvr2ZhGlRZQQHg7wMdG7TpZX -->
+<!-- ueQ6LoS9UxlzCYHFAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQE -->
+<!-- AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBM -->
+<!-- MCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcC -->
+<!-- AjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5 -->
+<!-- S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2Iu -->
+<!-- Y29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9y -->
+<!-- Yi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIu -->
+<!-- Y3J0MA0GCSqGSIb3DQEBCwUAA4IBAQC+C4TcK44ph2QQK/1f65jOR23DtSBC3y9a -->
+<!-- bzRHdo4qxmcAW5ot69os7GJfzgVsA5lh1IT4+aMuGYA4GTcF6iTSOMgFSRwP8urI -->
+<!-- N2BprsWuMJsQ7+Flo3PBRN3dU6idOlFKOfuRxgIHRn47t2yRan6XTNhfiWl84DrD -->
+<!-- NjSTnk4c72Gzu0hiwQB9OTsf8CQP3Shb3ZzcAOmeUB01TFoJU34PfJpKlKQZeQIi -->
+<!-- W5WdPPr1G/0cAHgejDHtdNYcSqIWfoGeYgCxUg1IFpp1VmPlqb/de8QKONzPDK6/ -->
+<!-- 5hulSGqGgpRmEkwGGJiQeOB51GxYZRCPq3hN3UJ6N0A+hYzj7yspMIIFRzCCBC+g -->
+<!-- AwIBAgIQfBs1NUrn23TnQV8RacprqDANBgkqhkiG9w0BAQsFADCBvTELMAkGA1UE -->
+<!-- BhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2ln -->
+<!-- biBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwOCBWZXJpU2lnbiwgSW5j -->
+<!-- LiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MTgwNgYDVQQDEy9WZXJpU2lnbiBV -->
+<!-- bml2ZXJzYWwgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xNDA3MjIw -->
+<!-- MDAwMDBaFw0yNDA3MjEyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UEChMU -->
+<!-- U3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5l -->
+<!-- dHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2ln -->
+<!-- bmluZyBDQSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA15VD -->
+<!-- 1NzfZ645+1KktiYxBHDpt45bKro3aTWVj7vAMOeG2HO73+vRdj+KVo7rLUvwVxhO -->
+<!-- sY2lM9MLdSPVankn3aPT9w6HZbXerRzx9TW0IlGvIqHBXUuQf8BZTqudeakC1x5J -->
+<!-- sTtNh/7CeKu/71KunK8I2TnlmlE+aV8wEE5xY2xY4fAgMxsPdL5byxLh24zEgJRy -->
+<!-- u/ZFmp7BJQv7oxye2KYJcHHswEdMj33D3hnOPu4Eco4X0//wsgUyGUzTsByf/qV4 -->
+<!-- IEJwQbAmjG8AyDoAEUF6QbCnipEEoJl49He082Aq5mxQBLcUYP8NUfSoi4T+Idpc -->
+<!-- Xn31KXlPsER0b21y/wIDAQABo4IBeDCCAXQwLgYIKwYBBQUHAQEEIjAgMB4GCCsG -->
+<!-- AQUFBzABhhJodHRwOi8vcy5zeW1jZC5jb20wEgYDVR0TAQH/BAgwBgEB/wIBADBm -->
+<!-- BgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYIKwYBBQUHAgEWF2h0dHBzOi8v -->
+<!-- ZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkaF2h0dHBzOi8vZC5zeW1jYi5j -->
+<!-- b20vcnBhMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9zLnN5bWNiLmNvbS91bml2 -->
+<!-- ZXJzYWwtcm9vdC5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDgYDVR0PAQH/BAQD -->
+<!-- AgEGMCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFTeW1hbnRlY1BLSS0xLTcyNDAd -->
+<!-- BgNVHQ4EFgQU1MAGIknrOUvdk+JcobhHdglyA1gwHwYDVR0jBBgwFoAUtnf6aUhH -->
+<!-- n1MS1cLqBzJ2B9GXBxkwDQYJKoZIhvcNAQELBQADggEBAH/ryqfqi3ZC6z6OIFQw -->
+<!-- 47e53PpIPhbHD0WVEM0nhqNm8wLtcfiqwlWXkXCD+VJ+Umk8yfHglEaAGLuh1KRW -->
+<!-- pvMdAJHVhvNIh+DLxDRoIF60y/kF7ZyvcFMnueg+flGgaXGL3FHtgDolMp9Er25D -->
+<!-- KNMhdbuX2IuLjP6pBEYEhfcVnEsRjcQsF/7Vbn+a4laS8ZazrS359N/aiZnOsjhE -->
+<!-- wPdHe8olufoqaDObUHLeqJ/UzSwLNL2LMHhA4I2OJxuQbxq+CBWBXesv4lHnUR7J -->
+<!-- eCnnHmW/OO8BSgEJJA4WxBR5wUE3NNA9kVKUneFo7wjw4mmcZ26QCxqTcdQmAsPA -->
+<!-- WiMwggZqMIIFUqADAgECAhADAZoCOv9YsWvW1ermF/BmMA0GCSqGSIb3DQEBBQUA -->
+<!-- MGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsT -->
+<!-- EHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQg -->
+<!-- Q0EtMTAeFw0xNDEwMjIwMDAwMDBaFw0yNDEwMjIwMDAwMDBaMEcxCzAJBgNVBAYT -->
+<!-- AlVTMREwDwYDVQQKEwhEaWdpQ2VydDElMCMGA1UEAxMcRGlnaUNlcnQgVGltZXN0 -->
+<!-- YW1wIFJlc3BvbmRlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKNk -->
+<!-- Xfx8s+CCNeDg9sYq5kl1O8xu4FOpnx9kWeZ8a39rjJ1V+JLjntVaY1sCSVDZg85v -->
+<!-- Zu7dy4XpX6X51Id0iEQ7Gcnl9ZGfxhQ5rCTqqEsskYnMXij0ZLZQt/USs3OWCmej -->
+<!-- vmGfrvP9Enh1DqZbFP1FI46GRFV9GIYFjFWHeUhG98oOjafeTl/iqLYtWQJhiGFy -->
+<!-- GGi5uHzu5uc0LzF3gTAfuzYBje8n4/ea8EwxZI3j6/oZh6h+z+yMDDZbesF6uHjH -->
+<!-- yQYuRhDIjegEYNu8c3T6Ttj+qkDxss5wRoPp2kChWTrZFQlXmVYwk/PJYczQCMxr -->
+<!-- 7GJCkawCwO+k8IkRj3cCAwEAAaOCAzUwggMxMA4GA1UdDwEB/wQEAwIHgDAMBgNV -->
+<!-- HRMBAf8EAjAAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMIIBvwYDVR0gBIIBtjCC -->
+<!-- AbIwggGhBglghkgBhv1sBwEwggGSMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k -->
+<!-- aWdpY2VydC5jb20vQ1BTMIIBZAYIKwYBBQUHAgIwggFWHoIBUgBBAG4AeQAgAHUA -->
+<!-- cwBlACAAbwBmACAAdABoAGkAcwAgAEMAZQByAHQAaQBmAGkAYwBhAHQAZQAgAGMA -->
+<!-- bwBuAHMAdABpAHQAdQB0AGUAcwAgAGEAYwBjAGUAcAB0AGEAbgBjAGUAIABvAGYA -->
+<!-- IAB0AGgAZQAgAEQAaQBnAGkAQwBlAHIAdAAgAEMAUAAvAEMAUABTACAAYQBuAGQA -->
+<!-- IAB0AGgAZQAgAFIAZQBsAHkAaQBuAGcAIABQAGEAcgB0AHkAIABBAGcAcgBlAGUA -->
+<!-- bQBlAG4AdAAgAHcAaABpAGMAaAAgAGwAaQBtAGkAdAAgAGwAaQBhAGIAaQBsAGkA -->
+<!-- dAB5ACAAYQBuAGQAIABhAHIAZQAgAGkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAA -->
+<!-- aABlAHIAZQBpAG4AIABiAHkAIAByAGUAZgBlAHIAZQBuAGMAZQAuMAsGCWCGSAGG -->
+<!-- /WwDFTAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcNK2cCzTAdBgNVHQ4EFgQU -->
+<!-- YVpNJLZJMp1KKnkag0v0HonByn0wfQYDVR0fBHYwdDA4oDagNIYyaHR0cDovL2Ny -->
+<!-- bDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcmwwOKA2oDSG -->
+<!-- Mmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEu -->
+<!-- Y3JsMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGln -->
+<!-- aWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5j -->
+<!-- b20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNydDANBgkqhkiG9w0BAQUFAAOCAQEA -->
+<!-- nSV+GzNNsiaBXJuGziMgD4CH5Yj//7HUaiwx7ToXGXEXzakbvFoWOQCd42yE5FpA -->
+<!-- +94GAYw3+puxnSR+/iCkV61bt5qwYCbqaVchXTQvH3Gwg5QZBWs1kBCge5fH9j/n -->
+<!-- 4hFBpr1i2fAnPTgdKG86Ugnw7HBi02JLsOBzppLA044x2C/jbRcTBu7kA7YUq/OP -->
+<!-- Q6dxnSHdFMoVXZJB2vkPgdGZdA0mxA5/G7X1oPHGdwYoFenYk+VVFvC7Cqsc21xI -->
+<!-- J2bIo4sKHOWV2q7ELlmgYd3a822iYemKC23sEhi991VUQAOSK2vCUcIKSK+w1G7g -->
+<!-- 9BQKOhvjjz3Kr2qNe9zYRDCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhsw -->
+<!-- DQYJKoZIhvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0 -->
+<!-- IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNl -->
+<!-- cnQgQXNzdXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAw -->
+<!-- MDAwMFowYjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcG -->
+<!-- A1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJl -->
+<!-- ZCBJRCBDQS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnK -->
+<!-- wkKVpYBzQHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InE -->
+<!-- Ctqvy15r7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH -->
+<!-- 6zY/2DDD/6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77b -->
+<!-- lUjE7h6z8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnx -->
+<!-- TPKvmPv2zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2Kk -->
+<!-- PzIUYJX9BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0 -->
+<!-- MDIGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEF -->
+<!-- BQcDCDCCAdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYB -->
+<!-- BQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9y -->
+<!-- eS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYA -->
+<!-- IAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkA -->
+<!-- dAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAA -->
+<!-- RABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAA -->
+<!-- UgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAA -->
+<!-- dwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4A -->
+<!-- ZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkA -->
+<!-- bgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1Ud -->
+<!-- EwEB/wQIMAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRw -->
+<!-- Oi8vb2NzcC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRz -->
+<!-- LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1Ud -->
+<!-- HwR6MHgwOqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFz -->
+<!-- c3VyZWRJRFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNv -->
+<!-- bS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZ -->
+<!-- B+0e36K+Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0G -->
+<!-- CSqGSIb3DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/s -->
+<!-- dR90OPKyXGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZ -->
+<!-- Vann4+erYs37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQl -->
+<!-- c+Qqq8+cdkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dF -->
+<!-- zdaD7eeSDY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsY -->
+<!-- Gk38KiGtSTGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEXzCCBFsCAQEwgZkw -->
+<!-- gYQxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRTeW1hbnRlYyBDb3Jwb3JhdGlvbjEf -->
+<!-- MB0GA1UECxMWU3ltYW50ZWMgVHJ1c3QgTmV0d29yazE1MDMGA1UEAxMsU3ltYW50 -->
+<!-- ZWMgQ2xhc3MgMyBTSEEyNTYgQ29kZSBTaWduaW5nIENBIC0gRzICECt3g4UAT0ym -->
+<!-- kcB/NZDAe38wDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIBDDEKMAigAoAA -->
+<!-- oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w -->
+<!-- DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgS6piQSBJZaqu3d9KuPkWVIdu -->
+<!-- oEVGdFyeif7XAl/xOBIwDQYJKoZIhvcNAQEBBQAEggEAJGesbcM5Rb8AgABm6map -->
+<!-- F2gkZnvxPU5AKiIaSsJkoj7j9n0Q/C8Jm5cMrraaCJ9GX2rEgCbX8YNFBmH1qvXS -->
+<!-- KQQx2MFtK+tksnzMv3oS7SqPwm0HdK7JHRW5YAcLLpd+hMco/txpKzWx8jAUEJtx -->
+<!-- AOwK73I+3k8EsU5u814fCwiFE6rpvx4/H7FkeM5XlVmhVVU8OPZNX2UF7LHy90dl -->
+<!-- 3KRRvZnJKUaoAnjHLFs6swmnozg/v7Su46ZceixhzRNMSq2tkTQJMEB1Gj7Sb/25 -->
+<!-- gmqsQbC/c3fLRbdT5COYJ5dM6guLeKV82Q7MyXU2ZDdHcSFSNhc6YA5ynOi06mh3 -->
+<!-- oaGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYTAlVT -->
+<!-- MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j -->
+<!-- b20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/WLFr -->
+<!-- 1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAc -->
+<!-- BgkqhkiG9w0BCQUxDxcNMjAwNjEwMjMxNjQ2WjAjBgkqhkiG9w0BCQQxFgQUniXx -->
+<!-- gJZNPdQPP3rJv4W/qjx0jwcwDQYJKoZIhvcNAQEBBQAEggEAbeTNRrYawaIRVvrW -->
+<!-- zJwjcV83PYsWD/RU3wxnhInnY6tauaTcTE3VFWZXtorQpPRQ41EQmcYKbJ0rLzhJ -->
+<!-- OMuDUeBcR7pHprUcT413GXJ2RBUd6srO/vqOKiixBkDLMROsJjS069IP7gk2cDxT -->
+<!-- vll/xn9Y7fjIafQvWhcK2p3jDQ+MyE6KSBDT7V30J8XXs/XW2uCf0I8UUIJH+5Ha -->
+<!-- SvfhnlNlC7tzHKRh2YQ9IPbiv796RGPZE+SOhAvNuR/zZrJI4fj1KCTfChJFEQMt -->
+<!-- y1TPGGQLGzZyQEx/ZylrC83TMQvdYt1eczrK3ASBbFh+B/fxW2HahRYrBeMP9ECR -->
+<!-- x9Skgg== -->
+<!-- SIG # End signature block -->

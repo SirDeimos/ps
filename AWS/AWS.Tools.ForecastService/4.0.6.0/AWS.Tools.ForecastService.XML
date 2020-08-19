@@ -1,0 +1,1529 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.ForecastService</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCAccuracyMetricCmdlet">
+            <summary>
+            Provides metrics on the accuracy of the models that were trained by the <a>CreatePredictor</a>
+            operation. Use metrics to see how well the model performed and to decide whether to
+            use the predictor to generate a forecast. For more information, see <a>metrics</a>.
+            
+             
+            <para>
+            This operation generates metrics for each backtest window that was evaluated. The
+            number of backtest windows (<code>NumberOfBacktestWindows</code>) is specified using
+            the <a>EvaluationParameters</a> object, which is optionally included in the <code>CreatePredictor</code>
+            request. If <code>NumberOfBacktestWindows</code> isn't specified, the number defaults
+            to one.
+            </para><para>
+            The parameters of the <code>filling</code> method determine which items contribute
+            to the metrics. If you want all items to contribute, specify <code>zero</code>. If
+            you want only those items that have complete data in the range being evaluated to
+            contribute, specify <code>nan</code>. For more information, see <a>FeaturizationMethod</a>.
+            </para><note><para>
+            Before you can get accuracy metrics, the <code>Status</code> of the predictor must
+            be <code>ACTIVE</code>, signifying that training has completed. To get the status,
+            use the <a>DescribePredictor</a> operation.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCAccuracyMetricCmdlet.PredictorArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the predictor to get metrics for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCAccuracyMetricCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PredictorEvaluationResults'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.GetAccuracyMetricsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.GetAccuracyMetricsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCAccuracyMetricCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PredictorArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^PredictorArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetCmdlet">
+            <summary>
+            Describes an Amazon Forecast dataset created using the <a>CreateDataset</a> operation.
+            
+             
+            <para>
+            In addition to listing the parameters specified in the <code>CreateDataset</code>
+            request, this operation includes the following dataset properties:
+            </para><ul><li><para><code>CreationTime</code></para></li><li><para><code>LastModificationTime</code></para></li><li><para><code>Status</code></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetCmdlet.DatasetArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DescribeDatasetResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.DescribeDatasetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupCmdlet">
+            <summary>
+            Describes a dataset group created using the <a>CreateDatasetGroup</a> operation.
+            
+             
+            <para>
+            In addition to listing the parameters provided in the <code>CreateDatasetGroup</code>
+            request, this operation includes the following properties:
+            </para><ul><li><para><code>DatasetArns</code> - The datasets belonging to the group.
+            </para></li><li><para><code>CreationTime</code></para></li><li><para><code>LastModificationTime</code></para></li><li><para><code>Status</code></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupCmdlet.DatasetGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DescribeDatasetGroupResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.DescribeDatasetGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetGroupArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetGroupArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupListCmdlet">
+            <summary>
+            Returns a list of dataset groups created using the <a>CreateDatasetGroup</a> operation.
+            For each dataset group, this operation returns a summary of its properties, including
+            its Amazon Resource Name (ARN). You can retrieve the complete set of properties by
+            using the dataset group ARN with the <a>DescribeDatasetGroup</a> operation.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request was truncated, the response includes a <code>NextToken</code>.
+            To retrieve the next set of results, use the token in the next request. Tokens expire
+            after 24 hours.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DatasetGroups'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.ListDatasetGroupsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.ListDatasetGroupsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetGroupListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobCmdlet">
+            <summary>
+            Describes a dataset import job created using the <a>CreateDatasetImportJob</a> operation.
+            
+             
+            <para>
+            In addition to listing the parameters provided in the <code>CreateDatasetImportJob</code>
+            request, this operation includes the following properties:
+            </para><ul><li><para><code>CreationTime</code></para></li><li><para><code>LastModificationTime</code></para></li><li><para><code>DataSize</code></para></li><li><para><code>FieldStatistics</code></para></li><li><para><code>Status</code></para></li><li><para><code>Message</code> - If an error occurred, information about the error.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobCmdlet.DatasetImportJobArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset import job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DescribeDatasetImportJobResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.DescribeDatasetImportJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetImportJobArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetImportJobArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobListCmdlet">
+            <summary>
+            Returns a list of dataset import jobs created using the <a>CreateDatasetImportJob</a>
+            operation. For each import job, this operation returns a summary of its properties,
+            including its Amazon Resource Name (ARN). You can retrieve the complete set of properties
+            by using the ARN with the <a>DescribeDatasetImportJob</a> operation. You can filter
+            the list by providing an array of <a>Filter</a> objects.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An array of filters. For each filter, you provide a condition and a match statement.
+            The condition is either <code>IS</code> or <code>IS_NOT</code>, which specifies whether
+            to include or exclude the datasets that match the statement from the list, respectively.
+            The match statement consists of a key and a value.</para><para><b>Filter properties</b></para><ul><li><para><code>Condition</code> - The condition to apply. Valid values are <code>IS</code>
+            and <code>IS_NOT</code>. To include the datasets that match the statement, specify
+            <code>IS</code>. To exclude matching datasets, specify <code>IS_NOT</code>.</para></li><li><para><code>Key</code> - The name of the parameter to filter on. Valid values are <code>DatasetArn</code>
+            and <code>Status</code>.</para></li><li><para><code>Value</code> - The value to match.</para></li></ul><para>For example, to list all dataset import jobs whose status is ACTIVE, you specify the
+            following filter:</para><para><code>"Filters": [ { "Condition": "IS", "Key": "Status", "Value": "ACTIVE" } ]</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request was truncated, the response includes a <code>NextToken</code>.
+            To retrieve the next set of results, use the token in the next request. Tokens expire
+            after 24 hours.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DatasetImportJobs'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.ListDatasetImportJobsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.ListDatasetImportJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetImportJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetListCmdlet">
+            <summary>
+            Returns a list of datasets created using the <a>CreateDataset</a> operation. For each
+            dataset, a summary of its properties, including its Amazon Resource Name (ARN), is
+            returned. To retrieve the complete set of properties, use the ARN with the <a>DescribeDataset</a>
+            operation.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request was truncated, the response includes a <code>NextToken</code>.
+            To retrieve the next set of results, use the token in the next request. Tokens expire
+            after 24 hours.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Datasets'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.ListDatasetsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.ListDatasetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCDatasetListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastCmdlet">
+            <summary>
+            Describes a forecast created using the <a>CreateForecast</a> operation.
+            
+             
+            <para>
+            In addition to listing the properties provided in the <code>CreateForecast</code>
+            request, this operation lists the following properties:
+            </para><ul><li><para><code>DatasetGroupArn</code> - The dataset group that provided the training data.
+            </para></li><li><para><code>CreationTime</code></para></li><li><para><code>LastModificationTime</code></para></li><li><para><code>Status</code></para></li><li><para><code>Message</code> - If an error occurred, information about the error.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastCmdlet.ForecastArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the forecast.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DescribeForecastResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.DescribeForecastResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ForecastArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ForecastArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobCmdlet">
+            <summary>
+            Describes a forecast export job created using the <a>CreateForecastExportJob</a> operation.
+            
+             
+            <para>
+            In addition to listing the properties provided by the user in the <code>CreateForecastExportJob</code>
+            request, this operation lists the following properties:
+            </para><ul><li><para><code>CreationTime</code></para></li><li><para><code>LastModificationTime</code></para></li><li><para><code>Status</code></para></li><li><para><code>Message</code> - If an error occurred, information about the error.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobCmdlet.ForecastExportJobArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the forecast export job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DescribeForecastExportJobResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.DescribeForecastExportJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ForecastExportJobArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ForecastExportJobArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobListCmdlet">
+            <summary>
+            Returns a list of forecast export jobs created using the <a>CreateForecastExportJob</a>
+            operation. For each forecast export job, this operation returns a summary of its properties,
+            including its Amazon Resource Name (ARN). To retrieve the complete set of properties,
+            use the ARN with the <a>DescribeForecastExportJob</a> operation. You can filter the
+            list using an array of <a>Filter</a> objects.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An array of filters. For each filter, you provide a condition and a match statement.
+            The condition is either <code>IS</code> or <code>IS_NOT</code>, which specifies whether
+            to include or exclude the forecast export jobs that match the statement from the list,
+            respectively. The match statement consists of a key and a value.</para><para><b>Filter properties</b></para><ul><li><para><code>Condition</code> - The condition to apply. Valid values are <code>IS</code>
+            and <code>IS_NOT</code>. To include the forecast export jobs that match the statement,
+            specify <code>IS</code>. To exclude matching forecast export jobs, specify <code>IS_NOT</code>.</para></li><li><para><code>Key</code> - The name of the parameter to filter on. Valid values are <code>ForecastArn</code>
+            and <code>Status</code>.</para></li><li><para><code>Value</code> - The value to match.</para></li></ul><para>For example, to list all jobs that export a forecast named <i>electricityforecast</i>,
+            specify the following filter:</para><para><code>"Filters": [ { "Condition": "IS", "Key": "ForecastArn", "Value": "arn:aws:forecast:us-west-2:&lt;acct-id&gt;:forecast/electricityforecast"
+            } ]</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request was truncated, the response includes a <code>NextToken</code>.
+            To retrieve the next set of results, use the token in the next request. Tokens expire
+            after 24 hours.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ForecastExportJobs'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.ListForecastExportJobsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.ListForecastExportJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastExportJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastListCmdlet">
+            <summary>
+            Returns a list of forecasts created using the <a>CreateForecast</a> operation. For
+            each forecast, this operation returns a summary of its properties, including its Amazon
+            Resource Name (ARN). To retrieve the complete set of properties, specify the ARN with
+            the <a>DescribeForecast</a> operation. You can filter the list using an array of <a>Filter</a>
+            objects.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An array of filters. For each filter, you provide a condition and a match statement.
+            The condition is either <code>IS</code> or <code>IS_NOT</code>, which specifies whether
+            to include or exclude the forecasts that match the statement from the list, respectively.
+            The match statement consists of a key and a value.</para><para><b>Filter properties</b></para><ul><li><para><code>Condition</code> - The condition to apply. Valid values are <code>IS</code>
+            and <code>IS_NOT</code>. To include the forecasts that match the statement, specify
+            <code>IS</code>. To exclude matching forecasts, specify <code>IS_NOT</code>.</para></li><li><para><code>Key</code> - The name of the parameter to filter on. Valid values are <code>DatasetGroupArn</code>,
+            <code>PredictorArn</code>, and <code>Status</code>.</para></li><li><para><code>Value</code> - The value to match.</para></li></ul><para>For example, to list all forecasts whose status is not ACTIVE, you would specify:</para><para><code>"Filters": [ { "Condition": "IS_NOT", "Key": "Status", "Value": "ACTIVE" }
+            ]</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request was truncated, the response includes a <code>NextToken</code>.
+            To retrieve the next set of results, use the token in the next request. Tokens expire
+            after 24 hours.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Forecasts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.ListForecastsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.ListForecastsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCForecastListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorCmdlet">
+            <summary>
+            Describes a predictor created using the <a>CreatePredictor</a> operation.
+            
+             
+            <para>
+            In addition to listing the properties provided in the <code>CreatePredictor</code>
+            request, this operation lists the following properties:
+            </para><ul><li><para><code>DatasetImportJobArns</code> - The dataset import jobs used to import training
+            data.
+            </para></li><li><para><code>AutoMLAlgorithmArns</code> - If AutoML is performed, the algorithms that were
+            evaluated.
+            </para></li><li><para><code>CreationTime</code></para></li><li><para><code>LastModificationTime</code></para></li><li><para><code>Status</code></para></li><li><para><code>Message</code> - If an error occurred, information about the error.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorCmdlet.PredictorArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the predictor that you want information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DescribePredictorResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.DescribePredictorResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PredictorArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^PredictorArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorListCmdlet">
+            <summary>
+            Returns a list of predictors created using the <a>CreatePredictor</a> operation. For
+            each predictor, this operation returns a summary of its properties, including its
+            Amazon Resource Name (ARN). You can retrieve the complete set of properties by using
+            the ARN with the <a>DescribePredictor</a> operation. You can filter the list using
+            an array of <a>Filter</a> objects.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>An array of filters. For each filter, you provide a condition and a match statement.
+            The condition is either <code>IS</code> or <code>IS_NOT</code>, which specifies whether
+            to include or exclude the predictors that match the statement from the list, respectively.
+            The match statement consists of a key and a value.</para><para><b>Filter properties</b></para><ul><li><para><code>Condition</code> - The condition to apply. Valid values are <code>IS</code>
+            and <code>IS_NOT</code>. To include the predictors that match the statement, specify
+            <code>IS</code>. To exclude matching predictors, specify <code>IS_NOT</code>.</para></li><li><para><code>Key</code> - The name of the parameter to filter on. Valid values are <code>DatasetGroupArn</code>
+            and <code>Status</code>.</para></li><li><para><code>Value</code> - The value to match.</para></li></ul><para>For example, to list all predictors whose status is ACTIVE, you would specify:</para><para><code>"Filters": [ { "Condition": "IS", "Key": "Status", "Value": "ACTIVE" } ]</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request was truncated, the response includes a <code>NextToken</code>.
+            To retrieve the next set of results, use the token in the next request. Tokens expire
+            after 24 hours.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Predictors'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.ListPredictorsResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.ListPredictorsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.GetFRCPredictorListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet">
+            <summary>
+            Creates an Amazon Forecast dataset. The information about the dataset that you provide
+            helps Forecast understand how to consume the data for model training. This includes
+            the following:
+            
+             <ul><li><para><i><code>DataFrequency</code></i> - How frequently your historical time-series
+            data is collected.
+            </para></li><li><para><i><code>Domain</code></i> and <i><code>DatasetType</code></i> - Each dataset
+            has an associated dataset domain and a type within the domain. Amazon Forecast provides
+            a list of predefined domains and types within each domain. For each unique dataset
+            domain and type within the domain, Amazon Forecast requires your data to include a
+            minimum set of predefined fields.
+            </para></li><li><para><i><code>Schema</code></i> - A schema specifies the fields in the dataset, including
+            the field name and data type.
+            </para></li></ul><para>
+            After creating a dataset, you import your training data into it and add the dataset
+            to a dataset group. You use the dataset group to create a predictor. For more information,
+            see <a>howitworks-datasets-groups</a>.
+            </para><para>
+            To get a list of all your datasets, use the <a>ListDatasets</a> operation.
+            </para><para>
+            For example Forecast datasets, see the <a href="https://github.com/aws-samples/amazon-forecast-samples/tree/master/data">Amazon
+            Forecast Sample GitHub repository</a>.
+            </para><note><para>
+            The <code>Status</code> of a dataset must be <code>ACTIVE</code> before you can import
+            training data. Use the <a>DescribeDataset</a> operation to get the status.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.Schema_Attribute">
+            <summary>
+            <para>
+            <para>An array of attributes specifying the name and type of each field in a dataset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.DataFrequency">
+            <summary>
+            <para>
+            <para>The frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+            datasets.</para><para>Valid intervals are Y (Year), M (Month), W (Week), D (Day), H (Hour), 30min (30 minutes),
+            15min (15 minutes), 10min (10 minutes), 5min (5 minutes), and 1min (1 minute). For
+            example, "D" indicates every day and "15min" indicates every 15 minutes.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.DatasetName">
+            <summary>
+            <para>
+            <para>A name for the dataset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.DatasetType">
+            <summary>
+            <para>
+            <para>The dataset type. Valid values depend on the chosen <code>Domain</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.Domain">
+            <summary>
+            <para>
+            <para>The domain associated with the dataset. When you add a dataset to a dataset group,
+            this value and the value specified for the <code>Domain</code> parameter of the <a>CreateDatasetGroup</a>
+            operation must match.</para><para>The <code>Domain</code> and <code>DatasetType</code> that you choose determine the
+            fields that must be present in the training data that you import to the dataset. For
+            example, if you choose the <code>RETAIL</code> domain and <code>TARGET_TIME_SERIES</code>
+            as the <code>DatasetType</code>, Amazon Forecast requires <code>item_id</code>, <code>timestamp</code>,
+            and <code>demand</code> fields to be present in your data. For more information, see
+            <a>howitworks-datasets-groups</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.EncryptionConfig_KMSKeyArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the KMS key.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.EncryptionConfig_RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the IAM role that Amazon Forecast can assume to access the AWS KMS key.</para><para>Passing a role across AWS accounts is not allowed. If you pass a role that isn't in
+            your account, you get an <code>InvalidInputException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DatasetArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.CreateDatasetResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.CreateDatasetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet">
+            <summary>
+            Creates a dataset group, which holds a collection of related datasets. You can add
+            datasets to the dataset group when you create the dataset group, or later by using
+            the <a>UpdateDatasetGroup</a> operation.
+            
+             
+            <para>
+            After creating a dataset group and adding datasets, you use the dataset group when
+            you create a predictor. For more information, see <a>howitworks-datasets-groups</a>.
+            </para><para>
+            To get a list of all your datasets groups, use the <a>ListDatasetGroups</a> operation.
+            </para><note><para>
+            The <code>Status</code> of a dataset group must be <code>ACTIVE</code> before you
+            can create use the dataset group to create a predictor. To get the status, use the
+            <a>DescribeDatasetGroup</a> operation.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet.DatasetArn">
+            <summary>
+            <para>
+            <para>An array of Amazon Resource Names (ARNs) of the datasets that you want to include
+            in the dataset group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet.DatasetGroupName">
+            <summary>
+            <para>
+            <para>A name for the dataset group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet.Domain">
+            <summary>
+            <para>
+            <para>The domain associated with the dataset group. When you add a dataset to a dataset
+            group, this value and the value specified for the <code>Domain</code> parameter of
+            the <a>CreateDataset</a> operation must match.</para><para>The <code>Domain</code> and <code>DatasetType</code> that you choose determine the
+            fields that must be present in training data that you import to a dataset. For example,
+            if you choose the <code>RETAIL</code> domain and <code>TARGET_TIME_SERIES</code> as
+            the <code>DatasetType</code>, Amazon Forecast requires that <code>item_id</code>,
+            <code>timestamp</code>, and <code>demand</code> fields are present in your data. For
+            more information, see <a>howitworks-datasets-groups</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DatasetGroupArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.CreateDatasetGroupResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.CreateDatasetGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet">
+            <summary>
+            Imports your training data to an Amazon Forecast dataset. You provide the location
+            of your training data in an Amazon Simple Storage Service (Amazon S3) bucket and the
+            Amazon Resource Name (ARN) of the dataset that you want to import the data to.
+            
+             
+            <para>
+            You must specify a <a>DataSource</a> object that includes an AWS Identity and Access
+            Management (IAM) role that Amazon Forecast can assume to access the data. For more
+            information, see <a>aws-forecast-iam-roles</a>.
+            </para><para>
+            The training data must be in CSV format. The delimiter must be a comma (,).
+            </para><para>
+            You can specify the path to a specific CSV file, the S3 bucket, or to a folder in
+            the S3 bucket. For the latter two cases, Amazon Forecast imports all files up to the
+            limit of 10,000 files.
+            </para><para>
+            To get a list of all your dataset import jobs, filtered by specified criteria, use
+            the <a>ListDatasetImportJobs</a> operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.DatasetArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the Amazon Forecast dataset that you want to import
+            data to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.DatasetImportJobName">
+            <summary>
+            <para>
+            <para>The name for the dataset import job. We recommend including the current timestamp
+            in the name, for example, <code>20190721DatasetImport</code>. This can help you avoid
+            getting a <code>ResourceAlreadyExistsException</code> exception.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.S3Config_KMSKeyArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.S3Config_Path">
+            <summary>
+            <para>
+            <para>The path to an Amazon Simple Storage Service (Amazon S3) bucket or file(s) in an Amazon
+            S3 bucket.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.S3Config_RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the AWS Identity and Access Management (IAM) role that Amazon Forecast
+            can assume to access the Amazon S3 bucket or files. If you provide a value for the
+            <code>KMSKeyArn</code> key, the role must allow access to the key.</para><para>Passing a role across AWS accounts is not allowed. If you pass a role that isn't in
+            your account, you get an <code>InvalidInputException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.TimestampFormat">
+            <summary>
+            <para>
+            <para>The format of timestamps in the dataset. The format that you specify depends on the
+            <code>DataFrequency</code> specified when the dataset was created. The following formats
+            are supported</para><ul><li><para>"yyyy-MM-dd"</para><para>For the following data frequencies: Y, M, W, and D</para></li><li><para>"yyyy-MM-dd HH:mm:ss"</para><para>For the following data frequencies: H, 30min, 15min, and 1min; and optionally, for:
+            Y, M, W, and D</para></li></ul><para>If the format isn't specified, Amazon Forecast expects the format to be "yyyy-MM-dd
+            HH:mm:ss".</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DatasetImportJobArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.CreateDatasetImportJobResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.CreateDatasetImportJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCDatasetImportJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet">
+            <summary>
+            Creates a forecast for each item in the <code>TARGET_TIME_SERIES</code> dataset that
+            was used to train the predictor. This is known as inference. To retrieve the forecast
+            for a single item at low latency, use the operation. To export the complete forecast
+            into your Amazon Simple Storage Service (Amazon S3) bucket, use the <a>CreateForecastExportJob</a>
+            operation.
+            
+             
+            <para>
+            The range of the forecast is determined by the <code>ForecastHorizon</code> value,
+            which you specify in the <a>CreatePredictor</a> request, multiplied by the <code>DataFrequency</code>
+            value, which you specify in the <a>CreateDataset</a> request. When you query a forecast,
+            you can request a specific date range within the forecast.
+            </para><para>
+            To get a list of all your forecasts, use the <a>ListForecasts</a> operation.
+            </para><note><para>
+            The forecasts generated by Amazon Forecast are in the same time zone as the dataset
+            that was used to create the predictor.
+            </para></note><para>
+            For more information, see <a>howitworks-forecast</a>.
+            </para><note><para>
+            The <code>Status</code> of the forecast must be <code>ACTIVE</code> before you can
+            query or export the forecast. Use the <a>DescribeForecast</a> operation to get the
+            status.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet.ForecastName">
+            <summary>
+            <para>
+            <para>A name for the forecast.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet.ForecastType">
+            <summary>
+            <para>
+            <para>The quantiles at which probabilistic forecasts are generated. You can specify up to
+            5 quantiles per forecast. Accepted values include <code>0.01 to 0.99</code> (increments
+            of .01 only) and <code>mean</code>. The mean forecast is different from the median
+            (0.50) when the distribution is not symmetric (e.g. Beta, Negative Binomial). The
+            default value is <code>["0.1", "0.5", "0.9"]</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet.PredictorArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the predictor to use to generate the forecast.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ForecastArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.CreateForecastResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.CreateForecastResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PredictorArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^PredictorArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet">
+            <summary>
+            Exports a forecast created by the <a>CreateForecast</a> operation to your Amazon Simple
+            Storage Service (Amazon S3) bucket. The forecast file name will match the following
+            conventions:
+            
+             
+            <para>
+            &lt;ForecastExportJobName&gt;_&lt;ExportTimestamp&gt;_&lt;PageNumber&gt;
+            </para><para>
+            where the &lt;ExportTimestamp&gt; component is in Java SimpleDateFormat (yyyy-MM-ddTHH-mm-ssZ).
+            </para><para>
+            You must specify a <a>DataDestination</a> object that includes an AWS Identity and
+            Access Management (IAM) role that Amazon Forecast can assume to access the Amazon
+            S3 bucket. For more information, see <a>aws-forecast-iam-roles</a>.
+            </para><para>
+            For more information, see <a>howitworks-forecast</a>.
+            </para><para>
+            To get a list of all your forecast export jobs, use the <a>ListForecastExportJobs</a>
+            operation.
+            </para><note><para>
+            The <code>Status</code> of the forecast export job must be <code>ACTIVE</code> before
+            you can access the forecast in your Amazon S3 bucket. To get the status, use the <a>DescribeForecastExportJob</a>
+            operation.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.ForecastArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the forecast that you want to export.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.ForecastExportJobName">
+            <summary>
+            <para>
+            <para>The name for the forecast export job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.S3Config_KMSKeyArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.S3Config_Path">
+            <summary>
+            <para>
+            <para>The path to an Amazon Simple Storage Service (Amazon S3) bucket or file(s) in an Amazon
+            S3 bucket.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.S3Config_RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the AWS Identity and Access Management (IAM) role that Amazon Forecast
+            can assume to access the Amazon S3 bucket or files. If you provide a value for the
+            <code>KMSKeyArn</code> key, the role must allow access to the key.</para><para>Passing a role across AWS accounts is not allowed. If you pass a role that isn't in
+            your account, you get an <code>InvalidInputException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ForecastExportJobArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.CreateForecastExportJobResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.CreateForecastExportJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ForecastArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ForecastArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCForecastExportJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet">
+            <summary>
+            Creates an Amazon Forecast predictor.
+            
+             
+            <para>
+            In the request, you provide a dataset group and either specify an algorithm or let
+            Amazon Forecast choose the algorithm for you using AutoML. If you specify an algorithm,
+            you also can override algorithm-specific hyperparameters.
+            </para><para>
+            Amazon Forecast uses the chosen algorithm to train a model using the latest version
+            of the datasets in the specified dataset group. The result is called a predictor.
+            You then generate a forecast using the <a>CreateForecast</a> operation.
+            </para><para>
+            After training a model, the <code>CreatePredictor</code> operation also evaluates
+            it. To see the evaluation metrics, use the <a>GetAccuracyMetrics</a> operation. Always
+            review the evaluation metrics before deciding to use the predictor to generate a forecast.
+            </para><para>
+            Optionally, you can specify a featurization configuration to fill and aggregate the
+            data fields in the <code>TARGET_TIME_SERIES</code> dataset to improve model training.
+            For more information, see <a>FeaturizationConfig</a>.
+            </para><para>
+            For RELATED_TIME_SERIES datasets, <code>CreatePredictor</code> verifies that the <code>DataFrequency</code>
+            specified when the dataset was created matches the <code>ForecastFrequency</code>.
+            TARGET_TIME_SERIES datasets don't have this restriction. Amazon Forecast also verifies
+            the delimiter and timestamp format. For more information, see <a>howitworks-datasets-groups</a>.
+            </para><para><b>AutoML</b></para><para>
+            If you want Amazon Forecast to evaluate each algorithm and choose the one that minimizes
+            the <code>objective function</code>, set <code>PerformAutoML</code> to <code>true</code>.
+            The <code>objective function</code> is defined as the mean of the weighted p10, p50,
+            and p90 quantile losses. For more information, see <a>EvaluationResult</a>.
+            </para><para>
+            When AutoML is enabled, the following properties are disallowed:
+            </para><ul><li><para><code>AlgorithmArn</code></para></li><li><para><code>HPOConfig</code></para></li><li><para><code>PerformHPO</code></para></li><li><para><code>TrainingParameters</code></para></li></ul><para>
+            To get a list of all of your predictors, use the <a>ListPredictors</a> operation.
+            </para><note><para>
+            Before you can use the predictor to create a forecast, the <code>Status</code> of
+            the predictor must be <code>ACTIVE</code>, signifying that training has completed.
+            To get the status, use the <a>DescribePredictor</a> operation.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.AlgorithmArn">
+            <summary>
+            <para>
+            Amazon.ForecastService.Model.CreatePredictorRequest.AlgorithmArn
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.EvaluationParameters_BackTestWindowOffset">
+            <summary>
+            <para>
+            <para>The point from the end of the dataset where you want to split the data for model training
+            and testing (evaluation). Specify the value as the number of data points. The default
+            is the value of the forecast horizon. <code>BackTestWindowOffset</code> can be used
+            to mimic a past virtual forecast start date. This value must be greater than or equal
+            to the forecast horizon and less than half of the TARGET_TIME_SERIES dataset length.</para><para><code>ForecastHorizon</code> &lt;= <code>BackTestWindowOffset</code> &lt; 1/2 * TARGET_TIME_SERIES
+            dataset length</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.ParameterRanges_CategoricalParameterRange">
+            <summary>
+            <para>
+            <para>Specifies the tunable range for each categorical hyperparameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.ParameterRanges_ContinuousParameterRange">
+            <summary>
+            <para>
+            <para>Specifies the tunable range for each continuous hyperparameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.InputDataConfig_DatasetGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.FeaturizationConfig_Featurization">
+            <summary>
+            <para>
+            <para>An array of featurization (transformation) information for the fields of a dataset.
+            Only a single featurization is supported.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.FeaturizationConfig_ForecastDimension">
+            <summary>
+            <para>
+            <para>An array of dimension (field) names that specify how to group the generated forecast.</para><para>For example, suppose that you are generating a forecast for item sales across all
+            of your stores, and your dataset contains a <code>store_id</code> field. If you want
+            the sales forecast for each item by store, you would specify <code>store_id</code>
+            as the dimension.</para><para>All forecast dimensions specified in the <code>TARGET_TIME_SERIES</code> dataset don't
+            need to be specified in the <code>CreatePredictor</code> request. All forecast dimensions
+            specified in the <code>RELATED_TIME_SERIES</code> dataset must be specified in the
+            <code>CreatePredictor</code> request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.FeaturizationConfig_ForecastFrequency">
+            <summary>
+            <para>
+            <para>The frequency of predictions in a forecast.</para><para>Valid intervals are Y (Year), M (Month), W (Week), D (Day), H (Hour), 30min (30 minutes),
+            15min (15 minutes), 10min (10 minutes), 5min (5 minutes), and 1min (1 minute). For
+            example, "Y" indicates every year and "5min" indicates every five minutes.</para><para>The frequency must be greater than or equal to the TARGET_TIME_SERIES dataset frequency.</para><para>When a RELATED_TIME_SERIES dataset is provided, the frequency must be equal to the
+            RELATED_TIME_SERIES dataset frequency.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.ForecastHorizon">
+            <summary>
+            <para>
+            <para>Specifies the number of time-steps that the model is trained to predict. The forecast
+            horizon is also called the prediction length.</para><para>For example, if you configure a dataset for daily data collection (using the <code>DataFrequency</code>
+            parameter of the <a>CreateDataset</a> operation) and set the forecast horizon to 10,
+            the model returns predictions for 10 days.</para><para>The maximum forecast horizon is the lesser of 500 time-steps or 1/3 of the TARGET_TIME_SERIES
+            dataset length.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.ParameterRanges_IntegerParameterRange">
+            <summary>
+            <para>
+            <para>Specifies the tunable range for each integer hyperparameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.EncryptionConfig_KMSKeyArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the KMS key.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.EvaluationParameters_NumberOfBacktestWindow">
+            <summary>
+            <para>
+            <para>The number of times to split the input data. The default is 1. Valid values are 1
+            through 5.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.PerformAutoML">
+            <summary>
+            <para>
+            <para>Whether to perform AutoML. When Amazon Forecast performs AutoML, it evaluates the
+            algorithms it provides and chooses the best algorithm and configuration for your training
+            dataset.</para><para>The default value is <code>false</code>. In this case, you are required to specify
+            an algorithm.</para><para>Set <code>PerformAutoML</code> to <code>true</code> to have Amazon Forecast perform
+            AutoML. This is a good option if you aren't sure which algorithm is suitable for your
+            training data. In this case, <code>PerformHPO</code> must be false.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.PerformHPO">
+            <summary>
+            <para>
+            <para>Whether to perform hyperparameter optimization (HPO). HPO finds optimal hyperparameter
+            values for your training data. The process of performing HPO is known as running a
+            hyperparameter tuning job.</para><para>The default value is <code>false</code>. In this case, Amazon Forecast uses default
+            hyperparameter values from the chosen algorithm.</para><para>To override the default values, set <code>PerformHPO</code> to <code>true</code> and,
+            optionally, supply the <a>HyperParameterTuningJobConfig</a> object. The tuning job
+            specifies a metric to optimize, which hyperparameters participate in tuning, and the
+            valid range for each tunable hyperparameter. In this case, you are required to specify
+            an algorithm and <code>PerformAutoML</code> must be false.</para><para>The following algorithm supports HPO:</para><ul><li><para>DeepAR+</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.PredictorName">
+            <summary>
+            <para>
+            <para>A name for the predictor.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.EncryptionConfig_RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the IAM role that Amazon Forecast can assume to access the AWS KMS key.</para><para>Passing a role across AWS accounts is not allowed. If you pass a role that isn't in
+            your account, you get an <code>InvalidInputException</code> error.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.InputDataConfig_SupplementaryFeature">
+            <summary>
+            <para>
+            <para>An array of supplementary features. The only supported feature is a holiday calendar.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.TrainingParameter">
+            <summary>
+            <para>
+            <para>The hyperparameters to override for model training. The hyperparameters that you can
+            override are listed in the individual algorithms. For the list of supported algorithms,
+            see <a>aws-forecast-choosing-recipes</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PredictorArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.CreatePredictorResponse).
+            Specifying the name of a property of type Amazon.ForecastService.Model.CreatePredictorResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PredictorName parameter.
+            The -PassThru parameter is deprecated, use -Select '^PredictorName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.NewFRCPredictorCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetCmdlet">
+            <summary>
+            Deletes an Amazon Forecast dataset that was created using the <a>CreateDataset</a>
+            operation. You can only delete datasets that have a status of <code>ACTIVE</code>
+            or <code>CREATE_FAILED</code>. To get the status use the <a>DescribeDataset</a> operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetCmdlet.DatasetArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DeleteDatasetResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetGroupCmdlet">
+            <summary>
+            Deletes a dataset group created using the <a>CreateDatasetGroup</a> operation. You
+            can only delete dataset groups that have a status of <code>ACTIVE</code>, <code>CREATE_FAILED</code>,
+            or <code>UPDATE_FAILED</code>. To get the status, use the <a>DescribeDatasetGroup</a>
+            operation.
+            
+             
+            <para>
+            This operation deletes only the dataset group, not the datasets in the group.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetGroupCmdlet.DatasetGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset group to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DeleteDatasetGroupResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetGroupArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetGroupArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetImportJobCmdlet">
+            <summary>
+            Deletes a dataset import job created using the <a>CreateDatasetImportJob</a> operation.
+            You can delete only dataset import jobs that have a status of <code>ACTIVE</code>
+            or <code>CREATE_FAILED</code>. To get the status, use the <a>DescribeDatasetImportJob</a>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetImportJobCmdlet.DatasetImportJobArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the dataset import job to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetImportJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DeleteDatasetImportJobResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetImportJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetImportJobArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetImportJobArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCDatasetImportJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastCmdlet">
+            <summary>
+            Deletes a forecast created using the <a>CreateForecast</a> operation. You can delete
+            only forecasts that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>.
+            To get the status, use the <a>DescribeForecast</a> operation.
+            
+             
+            <para>
+            You can't delete a forecast while it is being exported. After a forecast is deleted,
+            you can no longer query the forecast.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastCmdlet.ForecastArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the forecast to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DeleteForecastResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ForecastArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ForecastArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastExportJobCmdlet">
+            <summary>
+            Deletes a forecast export job created using the <a>CreateForecastExportJob</a> operation.
+            You can delete only export jobs that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>.
+            To get the status, use the <a>DescribeForecastExportJob</a> operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastExportJobCmdlet.ForecastExportJobArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the forecast export job to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastExportJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DeleteForecastExportJobResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastExportJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ForecastExportJobArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ForecastExportJobArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCForecastExportJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCPredictorCmdlet">
+            <summary>
+            Deletes a predictor created using the <a>CreatePredictor</a> operation. You can delete
+            only predictor that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>.
+            To get the status, use the <a>DescribePredictor</a> operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCPredictorCmdlet.PredictorArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the predictor to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCPredictorCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.DeletePredictorResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCPredictorCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PredictorArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^PredictorArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.RemoveFRCPredictorCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FRC.UpdateFRCDatasetGroupCmdlet">
+            <summary>
+            Replaces the datasets in a dataset group with the specified datasets.
+            
+             <note><para>
+            The <code>Status</code> of the dataset group must be <code>ACTIVE</code> before you
+            can use the dataset group to create a predictor. Use the <a>DescribeDatasetGroup</a>
+            operation to get the status.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.UpdateFRCDatasetGroupCmdlet.DatasetArn">
+            <summary>
+            <para>
+            <para>An array of the Amazon Resource Names (ARNs) of the datasets to add to the dataset
+            group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.UpdateFRCDatasetGroupCmdlet.DatasetGroupArn">
+            <summary>
+            <para>
+            <para>The ARN of the dataset group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.UpdateFRCDatasetGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ForecastService.Model.UpdateDatasetGroupResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.UpdateFRCDatasetGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DatasetGroupArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DatasetGroupArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FRC.UpdateFRCDatasetGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

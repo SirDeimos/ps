@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.FMS</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.AddFMSAdminAccountAssociationCmdlet">
+            <summary>
+            Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be
+            associated with the master account of your AWS organization or associated with a member
+            account that has the appropriate permissions. If the account ID that you submit is
+            not an AWS Organizations master account, AWS Firewall Manager will set the appropriate
+            permissions for the given member account.
+            
+             
+            <para>
+            The account that you associate with AWS Firewall Manager is called the AWS Firewall
+            Manager administrator account. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSAdminAccountAssociationCmdlet.AdminAccount">
+            <summary>
+            <para>
+            <para>The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager
+            administrator account. This can be an AWS Organizations master account or a member
+            account. For more information about AWS Organizations and master accounts, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts.html">Managing
+            the AWS Accounts in Your Organization</a>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSAdminAccountAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.AssociateAdminAccountResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSAdminAccountAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AdminAccount parameter.
+            The -PassThru parameter is deprecated, use -Select '^AdminAccount' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSAdminAccountAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.AddFMSResourceTagCmdlet">
+            <summary>
+            Adds one or more tags to an AWS resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource. The Firewall Manager policy is the
+            only AWS resource that supports tagging, so this ARN is a policy ARN.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSResourceTagCmdlet.TagList">
+            <summary>
+            <para>
+            <para>The tags to add to the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.AddFMSResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSAdminAccountCmdlet">
+            <summary>
+            Returns the AWS Organizations master account that is associated with AWS Firewall
+            Manager as the AWS Firewall Manager administrator.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSAdminAccountCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.GetAdminAccountResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.GetAdminAccountResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceDetailCmdlet">
+            <summary>
+            Returns detailed compliance information about the specified member account. Details
+            include resources that are in and out of compliance with the specified policy. Resources
+            are considered noncompliant for AWS WAF and Shield Advanced policies if the specified
+            policy has not been applied to them. Resources are considered noncompliant for security
+            group policies if they are in scope of the policy, they violate one or more of the
+            policy rules, and remediation is disabled or not possible.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceDetailCmdlet.MemberAccount">
+            <summary>
+            <para>
+            <para>The AWS account that owns the resources that you want to get the details for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceDetailCmdlet.PolicyId">
+            <summary>
+            <para>
+            <para>The ID of the policy that you want to get the details for. <code>PolicyId</code> is
+            returned by <code>PutPolicy</code> and by <code>ListPolicies</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceDetailCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PolicyComplianceDetail'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.GetComplianceDetailResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.GetComplianceDetailResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceDetailCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet">
+            <summary>
+            Returns an array of <code>PolicyComplianceStatus</code> objects in the response. Use
+            <code>PolicyComplianceStatus</code> to get a summary of which member accounts are
+            protected by the specified policy.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet.PolicyId">
+            <summary>
+            <para>
+            <para>The ID of the AWS Firewall Manager policy that you want the details for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of <code>PolicyComplianceStatus</code> objects that you want
+            AWS Firewall Manager to return for this request. If you have more <code>PolicyComplianceStatus</code>
+            objects than the number that you specify for <code>MaxResults</code>, the response
+            includes a <code>NextToken</code> value that you can use to get another batch of <code>PolicyComplianceStatus</code>
+            objects.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If you specify a value for <code>MaxResults</code> and you have more <code>PolicyComplianceStatus</code>
+            objects than the number that you specify for <code>MaxResults</code>, AWS Firewall
+            Manager returns a <code>NextToken</code> value in the response that allows you to
+            list another group of <code>PolicyComplianceStatus</code> objects. For the second
+            and subsequent <code>ListComplianceStatus</code> requests, specify the value of <code>NextToken</code>
+            from the previous response to get information about another batch of <code>PolicyComplianceStatus</code>
+            objects.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PolicyComplianceStatusList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.ListComplianceStatusResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.ListComplianceStatusResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSComplianceStatusListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSMemberAccountListCmdlet">
+            <summary>
+            Returns a <code>MemberAccounts</code> object that lists the member accounts in the
+            administrator's AWS organization.
+            
+             
+            <para>
+            The <code>ListMemberAccounts</code> must be submitted by the account that is set as
+            the AWS Firewall Manager administrator.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSMemberAccountListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of member account IDs that you want AWS Firewall Manager to return
+            for this request. If you have more IDs than the number that you specify for <code>MaxResults</code>,
+            the response includes a <code>NextToken</code> value that you can use to get another
+            batch of member account IDs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSMemberAccountListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If you specify a value for <code>MaxResults</code> and you have more account IDs than
+            the number that you specify for <code>MaxResults</code>, AWS Firewall Manager returns
+            a <code>NextToken</code> value in the response that allows you to list another group
+            of IDs. For the second and subsequent <code>ListMemberAccountsRequest</code> requests,
+            specify the value of <code>NextToken</code> from the previous response to get information
+            about another batch of member account IDs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSMemberAccountListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'MemberAccounts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.ListMemberAccountsResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.ListMemberAccountsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSMemberAccountListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSNotificationChannelCmdlet">
+            <summary>
+            Information about the Amazon Simple Notification Service (SNS) topic that is used
+            to record AWS Firewall Manager SNS logs.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSNotificationChannelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.GetNotificationChannelResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.GetNotificationChannelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyCmdlet">
+            <summary>
+            Returns information about the specified AWS Firewall Manager policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyCmdlet.PolicyId">
+            <summary>
+            <para>
+            <para>The ID of the AWS Firewall Manager policy that you want the details for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.GetPolicyResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.GetPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyListCmdlet">
+            <summary>
+            Returns an array of <code>PolicySummary</code> objects in the response.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of <code>PolicySummary</code> objects that you want AWS Firewall
+            Manager to return for this request. If you have more <code>PolicySummary</code> objects
+            than the number that you specify for <code>MaxResults</code>, the response includes
+            a <code>NextToken</code> value that you can use to get another batch of <code>PolicySummary</code>
+            objects.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If you specify a value for <code>MaxResults</code> and you have more <code>PolicySummary</code>
+            objects than the number that you specify for <code>MaxResults</code>, AWS Firewall
+            Manager returns a <code>NextToken</code> value in the response that allows you to
+            list another group of <code>PolicySummary</code> objects. For the second and subsequent
+            <code>ListPolicies</code> requests, specify the value of <code>NextToken</code> from
+            the previous response to get information about another batch of <code>PolicySummary</code>
+            objects.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PolicyList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.ListPoliciesResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.ListPoliciesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSPolicyListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet">
+            <summary>
+            If you created a Shield Advanced policy, returns policy-level attack summary information
+            in the event of a potential DDoS attack. Other policy types are currently unsupported.<br/><br/>In the AWS.Tools.FMS module, this cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.EndTime">
+            <summary>
+            <para>
+            <para>The end of the time period to query for the attacks. This is a <code>timestamp</code>
+            type. The request syntax listing indicates a <code>number</code> type because the
+            default used by AWS Firewall Manager is Unix time in seconds. However, any valid <code>timestamp</code>
+            format is allowed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.MemberAccountId">
+            <summary>
+            <para>
+            <para>The AWS account that is in scope of the policy that you want to get the details for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.PolicyId">
+            <summary>
+            <para>
+            <para>The ID of the policy for which you want to get the attack information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.StartTime">
+            <summary>
+            <para>
+            <para>The start of the time period to query for the attacks. This is a <code>timestamp</code>
+            type. The request syntax listing indicates a <code>number</code> type because the
+            default used by AWS Firewall Manager is Unix time in seconds. However, any valid <code>timestamp</code>
+            format is allowed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of objects that you want AWS Firewall Manager to return for this
+            request. If you have more objects than the number that you specify for <code>MaxResults</code>,
+            the response includes a <code>NextToken</code> value that you can use to get another
+            batch of objects.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If you specify a value for <code>MaxResults</code> and you have more objects than
+            the number that you specify for <code>MaxResults</code>, AWS Firewall Manager returns
+            a <code>NextToken</code> value in the response, which you can use to retrieve another
+            group of objects. For the second and subsequent <code>GetProtectionStatus</code> requests,
+            specify the value of <code>NextToken</code> from the previous response to get information
+            about another batch of objects.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In the AWS.Tools.FMS module, this parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.GetProtectionStatusResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.GetProtectionStatusResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSProtectionStatusCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.GetFMSResourceTagCmdlet">
+            <summary>
+            Retrieves the list of tags for the specified AWS resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource to return tags for. The Firewall Manager
+            policy is the only AWS resource that supports tagging, so this ARN is a policy ARN..</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TagList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.GetFMSResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSAdminAccountAssociationCmdlet">
+            <summary>
+            Disassociates the account that has been set as the AWS Firewall Manager administrator
+            account. To set a different account as the administrator account, you must submit
+            an <code>AssociateAdminAccount</code> request.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSAdminAccountAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.DisassociateAdminAccountResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSAdminAccountAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSNotificationChannelCmdlet">
+            <summary>
+            Deletes an AWS Firewall Manager association with the IAM role and the Amazon Simple
+            Notification Service (SNS) topic that is used to record AWS Firewall Manager SNS logs.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSNotificationChannelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.DeleteNotificationChannelResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSNotificationChannelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSPolicyCmdlet">
+            <summary>
+            Permanently deletes an AWS Firewall Manager policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSPolicyCmdlet.DeleteAllPolicyResource">
+            <summary>
+            <para>
+            <para>If <code>True</code>, the request performs cleanup according to the policy type. </para><para>For AWS WAF and Shield Advanced policies, the cleanup does the following:</para><ul><li><para>Deletes rule groups created by AWS Firewall Manager</para></li><li><para>Removes web ACLs from in-scope resources</para></li><li><para>Deletes web ACLs that contain no rules or rule groups</para></li></ul><para>For security group policies, the cleanup does the following for each security group
+            in the policy:</para><ul><li><para>Disassociates the security group from in-scope resources </para></li><li><para>Deletes the security group if it was created through Firewall Manager and if it's
+            no longer associated with any resources through another policy</para></li></ul><para>After the cleanup, in-scope resources are no longer protected by web ACLs in this
+            policy. Protection of out-of-scope resources remains unchanged. Scope is determined
+            by tags that you create and accounts that you associate with the policy. When creating
+            the policy, if you specify that only resources in specific accounts or with specific
+            tags are in scope of the policy, those accounts and resources are handled by the policy.
+            All others are out of scope. If you don't specify tags or accounts, all resources
+            are in scope. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSPolicyCmdlet.PolicyId">
+            <summary>
+            <para>
+            <para>The ID of the policy that you want to delete. <code>PolicyId</code> is returned by
+            <code>PutPolicy</code> and by <code>ListPolicies</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.DeletePolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSResourceTagCmdlet">
+            <summary>
+            Removes one or more tags from an AWS resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource. The Firewall Manager policy is the
+            only AWS resource that supports tagging, so this ARN is a policy ARN.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The keys of the tags to remove from the resource. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.RemoveFMSResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.SetFMSPolicyCmdlet">
+            <summary>
+            Creates an AWS Firewall Manager policy.
+            
+             
+            <para>
+            Firewall Manager provides the following types of policies: 
+            </para><ul><li><para>
+            A Shield Advanced policy, which applies Shield Advanced protection to specified accounts
+            and resources
+            </para></li><li><para>
+            An AWS WAF policy (type WAFV2), which defines rule groups to run first in the corresponding
+            AWS WAF web ACL and rule groups to run last in the web ACL.
+            </para></li><li><para>
+            An AWS WAF Classic policy (type WAF), which defines a rule group. 
+            </para></li><li><para>
+            A security group policy, which manages VPC security groups across your AWS organization.
+            
+            </para></li></ul><para>
+            Each policy is specific to one of the types. If you want to enforce more than one
+            policy type across accounts, create multiple policies. You can create multiple policies
+            for each type.
+            </para><para>
+            You must be subscribed to Shield Advanced to create a Shield Advanced policy. For
+            more information about subscribing to Shield Advanced, see <a href="https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_CreateSubscription.html">CreateSubscription</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.SetFMSPolicyCmdlet.Policy">
+            <summary>
+            <para>
+            <para>The details of the AWS Firewall Manager policy to be created.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.SetFMSPolicyCmdlet.TagList">
+            <summary>
+            <para>
+            <para>The tags to add to the AWS resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.SetFMSPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.PutPolicyResponse).
+            Specifying the name of a property of type Amazon.FMS.Model.PutPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.SetFMSPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Policy parameter.
+            The -PassThru parameter is deprecated, use -Select '^Policy' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.SetFMSPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.FMS.WriteFMSNotificationChannelCmdlet">
+            <summary>
+            Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS
+            Firewall Manager uses to record SNS logs.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.WriteFMSNotificationChannelCmdlet.SnsRoleName">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the IAM role that allows Amazon SNS to record AWS
+            Firewall Manager activity. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.WriteFMSNotificationChannelCmdlet.SnsTopicArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the SNS topic that collects notifications from AWS
+            Firewall Manager.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.WriteFMSNotificationChannelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.FMS.Model.PutNotificationChannelResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.WriteFMSNotificationChannelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SnsTopicArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^SnsTopicArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.FMS.WriteFMSNotificationChannelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

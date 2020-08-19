@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.ConnectParticipant</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.CONNP.DisconnectCONNPParticipantCmdlet">
+            <summary>
+            Disconnects a participant. Note that ConnectionToken is used for invoking this API
+            instead of ParticipantToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.DisconnectCONNPParticipantCmdlet.ConnectionToken">
+            <summary>
+            <para>
+            <para>The authentication token associated with the participant's connection.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.DisconnectCONNPParticipantCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.DisconnectCONNPParticipantCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ConnectParticipant.Model.DisconnectParticipantResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.DisconnectCONNPParticipantCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConnectionToken parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConnectionToken' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.DisconnectCONNPParticipantCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet">
+            <summary>
+            Retrieves a transcript of the session. Note that ConnectionToken is used for invoking
+            this API instead of ParticipantToken.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.StartPosition_AbsoluteTime">
+            <summary>
+            <para>
+            <para>The time in ISO format where to start.</para><para>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.ConnectionToken">
+            <summary>
+            <para>
+            <para>The authentication token associated with the participant's connection.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.ContactId">
+            <summary>
+            <para>
+            <para>The contactId from the current contact chain for which transcript is needed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.StartPosition_Id">
+            <summary>
+            <para>
+            <para>The ID of the message or event where to start. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.StartPosition_MostRecent">
+            <summary>
+            <para>
+            <para>The start position of the most recent message where you want to start. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.ScanDirection">
+            <summary>
+            <para>
+            <para>The direction from StartPosition from which to retrieve message. Default: BACKWARD
+            when no StartPosition is provided, FORWARD with StartPosition. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.SortOrder">
+            <summary>
+            <para>
+            <para>The sort order for the records. Default: DESCENDING.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in the page. Default: 10. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The pagination token. Use the value returned previously in the next subsequent request
+            to retrieve the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ConnectParticipant.Model.GetTranscriptResponse).
+            Specifying the name of a property of type Amazon.ConnectParticipant.Model.GetTranscriptResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConnectionToken parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConnectionToken' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.GetCONNPTranscriptCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CONNP.NewCONNPParticipantConnectionCmdlet">
+            <summary>
+            Creates the participant's connection. Note that ParticipantToken is used for invoking
+            this API instead of ConnectionToken.
+            
+             
+            <para>
+            The participant token is valid for the lifetime of the participant – until the they
+            are part of a contact.
+            </para><para>
+            The response URL for <code>WEBSOCKET</code> Type has a connect expiry timeout of 100s.
+            Clients must manually connect to the returned websocket URL and subscribe to the desired
+            topic. 
+            </para><para>
+            For chat, you need to publish the following on the established websocket connection:
+            </para><para><code>{"topic":"aws/subscribe","content":{"topics":["aws/chat"]}}</code></para><para>
+            Upon websocket URL expiry, as specified in the response ConnectionExpiry parameter,
+            clients need to call this API again to obtain a new websocket URL and perform the
+            same steps as before.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.NewCONNPParticipantConnectionCmdlet.ParticipantToken">
+            <summary>
+            <para>
+            <para>Participant Token as obtained from <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContactResponse.html">StartChatContact</a>
+            API response.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.NewCONNPParticipantConnectionCmdlet.Type">
+            <summary>
+            <para>
+            <para>Type of connection information required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.NewCONNPParticipantConnectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ConnectParticipant.Model.CreateParticipantConnectionResponse).
+            Specifying the name of a property of type Amazon.ConnectParticipant.Model.CreateParticipantConnectionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.NewCONNPParticipantConnectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ParticipantToken parameter.
+            The -PassThru parameter is deprecated, use -Select '^ParticipantToken' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.NewCONNPParticipantConnectionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet">
+            <summary>
+            Sends an event. Note that ConnectionToken is used for invoking this API instead of
+            ParticipantToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.ConnectionToken">
+            <summary>
+            <para>
+            <para>The authentication token associated with the participant's connection.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.Content">
+            <summary>
+            <para>
+            <para>The content of the event to be sent (for example, message text). This is not yet supported.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.ContentType">
+            <summary>
+            <para>
+            <para>The content type of the request. Supported types are:</para><ul><li><para>application/vnd.amazonaws.connect.event.typing</para></li><li><para>application/vnd.amazonaws.connect.event.connection.acknowledged</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ConnectParticipant.Model.SendEventResponse).
+            Specifying the name of a property of type Amazon.ConnectParticipant.Model.SendEventResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConnectionToken parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConnectionToken' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPEventCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet">
+            <summary>
+            Sends a message. Note that ConnectionToken is used for invoking this API instead of
+            ParticipantToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.ConnectionToken">
+            <summary>
+            <para>
+            <para>The authentication token associated with the connection.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.Content">
+            <summary>
+            <para>
+            <para>The content of the message.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.ContentType">
+            <summary>
+            <para>
+            <para>The type of the content. Supported types are text/plain.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ConnectParticipant.Model.SendMessageResponse).
+            Specifying the name of a property of type Amazon.ConnectParticipant.Model.SendMessageResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Content parameter.
+            The -PassThru parameter is deprecated, use -Select '^Content' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CONNP.SendCONNPMessageCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

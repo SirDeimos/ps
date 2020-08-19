@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Outposts</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostCmdlet">
+            <summary>
+            Gets information about the specified Outpost.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostCmdlet.OutpostId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Outpost'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.GetOutpostResponse).
+            Specifying the name of a property of type Amazon.Outposts.Model.GetOutpostResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OutpostId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OutpostId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet">
+            <summary>
+            Lists the instance types for the specified Outpost.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet.OutpostId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet.MaxResult">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet.NextToken">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InstanceTypes'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.GetOutpostInstanceTypesResponse).
+            Specifying the name of a property of type Amazon.Outposts.Model.GetOutpostInstanceTypesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OutpostId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OutpostId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostInstanceTypeCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostListCmdlet">
+            <summary>
+            List the Outposts for your AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostListCmdlet.MaxResult">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostListCmdlet.NextToken">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Outposts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.ListOutpostsResponse).
+            Specifying the name of a property of type Amazon.Outposts.Model.ListOutpostsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPOutpostListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPSiteListCmdlet">
+            <summary>
+            Lists the sites for the specified AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPSiteListCmdlet.MaxResult">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPSiteListCmdlet.NextToken">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPSiteListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Sites'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.ListSitesResponse).
+            Specifying the name of a property of type Amazon.Outposts.Model.ListSitesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.GetOUTPSiteListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet">
+            <summary>
+            Creates an Outpost.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.AvailabilityZone">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.AvailabilityZoneId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.Description">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.Name">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.SiteId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Outpost'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.CreateOutpostResponse).
+            Specifying the name of a property of type Amazon.Outposts.Model.CreateOutpostResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SiteId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SiteId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.NewOUTPOutpostCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPOutpostCmdlet">
+            <summary>
+            Deletes the Outpost.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPOutpostCmdlet.OutpostId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPOutpostCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.DeleteOutpostResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPOutpostCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OutpostId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OutpostId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPOutpostCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPSiteCmdlet">
+            <summary>
+            Deletes the site.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPSiteCmdlet.SiteId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPSiteCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Outposts.Model.DeleteSiteResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPSiteCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SiteId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SiteId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.OUTP.RemoveOUTPSiteCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

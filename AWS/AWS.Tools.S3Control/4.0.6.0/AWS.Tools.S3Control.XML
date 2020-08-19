@@ -1,0 +1,1337 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.S3Control</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet">
+            <summary>
+            Set the supplied tag-set on an Amazon S3 Batch Operations job.
+            
+             
+            <para>
+            A tag is a key-value pair. You can associate Amazon S3 Batch Operations tags with
+            any job by sending a PUT request against the tagging subresource that is associated
+            with the job. To modify the existing tag set, you can either replace the existing
+            tag set entirely, or make changes within the existing tag set by retrieving the existing
+            tag set using <a>GetJobTagging</a>, modify that tag set, and use this API action to
+            replace the tag set with the one you have modified.. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Using
+            Job Tags</a> in the Amazon Simple Storage Service Developer Guide. 
+            </para><note><ul><li><para>
+            If you send this request with an empty tag set, Amazon S3 deletes the existing tag
+            set on the Batch Operations job. If you use this method, you will be charged for a
+            Tier 1 Request (PUT). For more information, see <a href="http://aws.amazon.com/s3/pricing/">Amazon
+            S3 pricing</a>.
+            </para></li><li><para>
+            For deleting existing tags for your batch operations job, <a>DeleteJobTagging</a>
+            request is preferred because it achieves the same result without incurring charges.
+            </para></li><li><para>
+            A few things to consider about using tags:
+            </para><ul><li><para>
+            Amazon S3 limits the maximum number of tags to 50 tags per job.
+            </para></li><li><para>
+            You can associate up to 50 tags with a job as long as they have unique tag keys.
+            </para></li><li><para>
+            A tag key can be up to 128 Unicode characters in length, and tag values can be up
+            to 256 Unicode characters in length.
+            </para></li><li><para>
+            The key and values are case sensitive.
+            </para></li><li><para>
+            For tagging-related restrictions related to characters and encodings, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined
+            Tag Restrictions</a>.
+            </para></li></ul></li></ul></note><para>
+            To use this operation, you must have permission to perform the <code>s3:PutJobTagging</code>
+            action.
+            </para><para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>GetJobTagging</a></para></li><li><para><a>DeleteJobTagging</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The AWS account ID associated with the Amazon S3 Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The ID for the Amazon S3 Batch Operations job whose tags you want to replace.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The set of tags to associate with the Amazon S3 Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.PutJobTaggingResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CJobTaggingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet">
+            <summary>
+            Creates or modifies the <code>PublicAccessBlock</code> configuration for an Amazon
+            Web Services account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the Amazon Web Services account whose <code>PublicAccessBlock</code>
+            configuration you want to set.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.PublicAccessBlockConfiguration_BlockPublicAcl">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should block public access control lists (ACLs) for buckets
+            in this account. Setting this element to <code>TRUE</code> causes the following behavior:</para><ul><li><para>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</para></li><li><para>PUT Object calls fail if the request includes a public ACL.</para></li><li><para>PUT Bucket calls fail if the request includes a public ACL.</para></li></ul><para>Enabling this setting doesn't affect existing policies or ACLs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.PublicAccessBlockConfiguration_BlockPublicPolicy">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should block public bucket policies for buckets in this
+            account. Setting this element to <code>TRUE</code> causes Amazon S3 to reject calls
+            to PUT Bucket policy if the specified bucket policy allows public access. </para><para>Enabling this setting doesn't affect existing bucket policies.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.PublicAccessBlockConfiguration_IgnorePublicAcl">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should ignore public ACLs for buckets in this account.
+            Setting this element to <code>TRUE</code> causes Amazon S3 to ignore all public ACLs
+            on buckets in this account and any objects that they contain. </para><para>Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't
+            prevent new public ACLs from being set.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.PublicAccessBlockConfiguration_RestrictPublicBucket">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should restrict public bucket policies for buckets in
+            this account. Setting this element to <code>TRUE</code> restricts access to buckets
+            with public policies to only AWS services and authorized users within this account.</para><para>Enabling this setting doesn't affect previously stored bucket policies, except that
+            public and cross-account access within any public bucket policy, including non-public
+            delegation to specific accounts, is blocked.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.PutPublicAccessBlockResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.AddS3CPublicAccessBlockCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointCmdlet">
+            <summary>
+            Returns configuration information about the specified access point.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the account that owns the specified access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access point whose configuration information you want to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.GetAccessPointResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.GetAccessPointResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet">
+            <summary>
+            Returns a list of the access points currently associated with the specified bucket.
+            You can retrieve up to 1000 access points per call. If the specified bucket has more
+            than 1,000 access points (or the number specified in <code>maxResults</code>, whichever
+            is less), the response will include a continuation token that you can use to list
+            the additional access points.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The AWS account ID for owner of the bucket whose access points you want to list.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet.Bucket">
+            <summary>
+            <para>
+            <para>The name of the bucket whose associated access points you want to list.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of access points that you want to include in the list. If the specified
+            bucket has more than this number of access points, then the response will include
+            a continuation token in the <code>NextToken</code> field that you can use to retrieve
+            the next page of access points.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A continuation token. If a previous call to <code>ListAccessPoints</code> returned
+            a continuation token in the <code>NextToken</code> field, then providing that value
+            here causes Amazon S3 to retrieve the next page of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AccessPointList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.ListAccessPointsResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.ListAccessPointsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyCmdlet">
+            <summary>
+            Returns the access point policy associated with the specified access point.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the account that owns the specified access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access point whose policy you want to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Policy'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.GetAccessPointPolicyResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.GetAccessPointPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyStatusCmdlet">
+            <summary>
+            Indicates whether the specified access point currently has a policy that allows public
+            access. For more information about public access through access points, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
+            Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage Service
+            Developer Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyStatusCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the account that owns the specified access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyStatusCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access point whose policy status you want to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyStatusCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PolicyStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.GetAccessPointPolicyStatusResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.GetAccessPointPolicyStatusResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CAccessPointPolicyStatusCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobCmdlet">
+            <summary>
+            Retrieves the configuration parameters and status for a Batch Operations job. For
+            more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">Amazon
+            S3 Batch Operations</a> in the Amazon Simple Storage Service Developer Guide.
+            
+              
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>ListJobs</a></para></li><li><para><a>UpdateJobPriority</a></para></li><li><para><a>UpdateJobStatus</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobCmdlet.AccountId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The ID for the job whose information you want to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Job'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.DescribeJobResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.DescribeJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet">
+            <summary>
+            Lists current Amazon S3 Batch Operations jobs and jobs that have ended within the
+            last 30 days for the AWS account making the request. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">Amazon
+            S3 Batch Operations</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.
+            
+             
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>DescribeJob</a></para></li><li><para><a>UpdateJobPriority</a></para></li><li><para><a>UpdateJobStatus</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet.AccountId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet.JobStatus">
+            <summary>
+            <para>
+            <para>The <code>List Jobs</code> request returns jobs that match the statuses listed in
+            this element.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of jobs that Amazon S3 will include in the <code>List Jobs</code>
+            response. If there are more jobs than this number, the response will include a pagination
+            token in the <code>NextToken</code> field to enable you to retrieve the next page
+            of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A pagination token to request the next page of results. Use the token that Amazon
+            S3 returned in the <code>NextToken</code> element of the <code>ListJobsResult</code>
+            from the previous <code>List Jobs</code> request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Jobs'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.ListJobsResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.ListJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobTaggingCmdlet">
+            <summary>
+            Returns the tags on an Amazon S3 Batch Operations job. To use this operation, you
+            must have permission to perform the <code>s3:GetJobTagging</code> action. For more
+            information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Using
+            Job Tags</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.
+            
+              
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>PutJobTagging</a></para></li><li><para><a>DeleteJobTagging</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobTaggingCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The AWS account ID associated with the Amazon S3 Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobTaggingCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The ID for the Amazon S3 Batch Operations job whose tags you want to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobTaggingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.GetJobTaggingResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.GetJobTaggingResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CJobTaggingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.GetS3CPublicAccessBlockCmdlet">
+            <summary>
+            Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web Services
+            account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CPublicAccessBlockCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the Amazon Web Services account whose <code>PublicAccessBlock</code>
+            configuration you want to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CPublicAccessBlockCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PublicAccessBlockConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.GetPublicAccessBlockResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.GetPublicAccessBlockResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.GetS3CPublicAccessBlockCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet">
+            <summary>
+            Creates an access point and associates it with the specified bucket.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The AWS account ID for the owner of the bucket for which you want to create an access
+            point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.PublicAccessBlockConfiguration_BlockPublicAcl">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should block public access control lists (ACLs) for buckets
+            in this account. Setting this element to <code>TRUE</code> causes the following behavior:</para><ul><li><para>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</para></li><li><para>PUT Object calls fail if the request includes a public ACL.</para></li><li><para>PUT Bucket calls fail if the request includes a public ACL.</para></li></ul><para>Enabling this setting doesn't affect existing policies or ACLs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.PublicAccessBlockConfiguration_BlockPublicPolicy">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should block public bucket policies for buckets in this
+            account. Setting this element to <code>TRUE</code> causes Amazon S3 to reject calls
+            to PUT Bucket policy if the specified bucket policy allows public access. </para><para>Enabling this setting doesn't affect existing bucket policies.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.Bucket">
+            <summary>
+            <para>
+            <para>The name of the bucket that you want to associate this access point with.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.PublicAccessBlockConfiguration_IgnorePublicAcl">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should ignore public ACLs for buckets in this account.
+            Setting this element to <code>TRUE</code> causes Amazon S3 to ignore all public ACLs
+            on buckets in this account and any objects that they contain. </para><para>Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't
+            prevent new public ACLs from being set.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name you want to assign to this access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.PublicAccessBlockConfiguration_RestrictPublicBucket">
+            <summary>
+            <para>
+            <para>Specifies whether Amazon S3 should restrict public bucket policies for buckets in
+            this account. Setting this element to <code>TRUE</code> restricts access to buckets
+            with public policies to only AWS services and authorized users within this account.</para><para>Enabling this setting doesn't affect previously stored bucket policies, except that
+            public and cross-account access within any public bucket policy, including non-public
+            delegation to specific accounts, is blocked.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.VpcConfiguration_VpcId">
+            <summary>
+            <para>
+            <para>If this field is specified, this access point will only allow connections from the
+            specified VPC ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.CreateAccessPointResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Bucket parameter.
+            The -PassThru parameter is deprecated, use -Select '^Bucket' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CAccessPointCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet">
+            <summary>
+            You can use Amazon S3 Batch Operations to perform large-scale Batch Operations on
+            Amazon S3 objects. Amazon S3 Batch Operations can execute a single operation or action
+            on lists of Amazon S3 objects that you specify. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">Amazon
+            S3 Batch Operations</a> in the Amazon Simple Storage Service Developer Guide.
+            
+             
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>DescribeJob</a></para></li><li><para><a>ListJobs</a></para></li><li><para><a>UpdateJobPriority</a></para></li><li><para><a>UpdateJobStatus</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_AccessControlGrant">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.AccountId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Report_Bucket">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the bucket where specified job-completion report
+            will be stored.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectRetention_BypassGovernanceRetention">
+            <summary>
+            <para>
+            <para>Indicates if the operation should be applied to objects in the Batch Operations job
+            even if they have Governance-type Object Lock in place.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_CacheControl">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.AccessControlPolicy_CannedAccessControlList">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_CannedAccessControlList">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>An idempotency token to ensure that you don't accidentally submit the same request
+            twice. You can use any string up to the maximum length.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.ConfirmationRequired">
+            <summary>
+            <para>
+            <para>Indicates whether confirmation is required before Amazon S3 runs the job. Confirmation
+            is only required for jobs created through the Amazon S3 console.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_ContentDisposition">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_ContentEncoding">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_ContentLanguage">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_ContentLength">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_ContentMD5">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_ContentType">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description for this job. You can use any string within the permitted length. Descriptions
+            don't need to be unique and can be used for multiple jobs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Owner_DisplayName">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Report_Enabled">
+            <summary>
+            <para>
+            <para>Indicates whether the specified job will generate a job-completion report.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Location_ETag">
+            <summary>
+            <para>
+            <para>The ETag for the specified manifest object.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3InitiateRestoreObject_ExpirationInDay">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Spec_Field">
+            <summary>
+            <para>
+            <para>If the specified manifest object is in the <code>S3BatchOperations_CSV_20180820</code>
+            format, this element describes which columns contain the required data.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Spec_Format">
+            <summary>
+            <para>
+            <para>Indicates which of the available formats the specified manifest uses.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Report_Format">
+            <summary>
+            <para>
+            <para>The format of the specified job-completion report.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.LambdaInvoke_FunctionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the AWS Lambda function that the specified job
+            will invoke for each object in the manifest.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3InitiateRestoreObject_GlacierJobTier">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.AccessControlList_Grant">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_HttpExpiresDate">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Owner_ID">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_MetadataDirective">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Retention_Mode">
+            <summary>
+            <para>
+            <para>The Retention mode to be applied to all objects in the Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_ModifiedSinceConstraint">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_NewObjectTagging">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Location_ObjectArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for a manifest object.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_ObjectLockLegalHoldStatus">
+            <summary>
+            <para>
+            <para>The Legal Hold status to be applied to all objects in the Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_ObjectLockMode">
+            <summary>
+            <para>
+            <para>The Retention mode to be applied to all objects in the Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_ObjectLockRetainUntilDate">
+            <summary>
+            <para>
+            <para>The date when the applied Object Retention configuration will expire on all objects
+            in the Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Location_ObjectVersionId">
+            <summary>
+            <para>
+            <para>The optional version ID to identify a specific version of the manifest object.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Report_Prefix">
+            <summary>
+            <para>
+            <para>An optional prefix to describe where in the specified bucket the job-completion report
+            will be stored. Amazon S3 will store the job-completion report at &lt;prefix&gt;/job-&lt;job-id&gt;/report.json.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Priority">
+            <summary>
+            <para>
+            <para>The numerical priority for this job. Higher numbers indicate higher priority.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_RedirectLocation">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Report_ReportScope">
+            <summary>
+            <para>
+            <para>Indicates whether the job-completion report will include details of all tasks or only
+            failed tasks.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_RequesterCharged">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_RequesterPay">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Retention_RetainUntilDate">
+            <summary>
+            <para>
+            <para>The date when the applied Object Retention will expire on all objects in the Batch
+            Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the AWS Identity and Access Management (IAM) role
+            that Batch Operations will use to execute this job's operation on each object in the
+            manifest.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_SSEAlgorithm">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_SSEAwsKmsKeyId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.LegalHold_Status">
+            <summary>
+            <para>
+            <para>The Legal Hold status to be applied to all objects in the Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_StorageClass">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A set of tags to associate with the Amazon S3 Batch Operations job. This is an optional
+            parameter. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectTagging_TagSet">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_TargetKeyPrefix">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_TargetResource">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.S3PutObjectCopy_UnModifiedSinceConstraint">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.NewObjectMetadata_UserMetadata">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'JobId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.CreateJobResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.CreateJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.NewS3CJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointCmdlet">
+            <summary>
+            Deletes the specified access point.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the account that owns the specified access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access point you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.DeleteAccessPointResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointPolicyCmdlet">
+            <summary>
+            Deletes the access point policy for the specified access point.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointPolicyCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the account that owns the specified access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointPolicyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access point whose policy you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.DeleteAccessPointPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CAccessPointPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CJobTaggingCmdlet">
+            <summary>
+            Removes the entire tag set from the specified Amazon S3 Batch Operations job. To use
+            this operation, you must have permission to perform the <code>s3:DeleteJobTagging</code>
+            action. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Using
+            Job Tags</a> in the Amazon Simple Storage Service Developer Guide.
+            
+              
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>GetJobTagging</a></para></li><li><para><a>PutJobTagging</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CJobTaggingCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The AWS account ID associated with the Amazon S3 Batch Operations job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CJobTaggingCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The ID for the Amazon S3 Batch Operations job whose tags you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CJobTaggingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.DeleteJobTaggingResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CJobTaggingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CJobTaggingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CPublicAccessBlockCmdlet">
+            <summary>
+            Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web Services
+            account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CPublicAccessBlockCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account ID for the Amazon Web Services account whose <code>PublicAccessBlock</code>
+            configuration you want to remove.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CPublicAccessBlockCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.DeletePublicAccessBlockResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CPublicAccessBlockCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.RemoveS3CPublicAccessBlockCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet">
+            <summary>
+            Updates an existing Amazon S3 Batch Operations job's priority. For more information,
+            see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">Amazon
+            S3 Batch Operations</a> in the Amazon Simple Storage Service Developer Guide.
+            
+              
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>ListJobs</a></para></li><li><para><a>DescribeJob</a></para></li><li><para><a>UpdateJobStatus</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet.AccountId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The ID for the job whose priority you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet.Priority">
+            <summary>
+            <para>
+            <para>The priority you want to assign to this job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.UpdateJobPriorityResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.UpdateJobPriorityResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobPriorityCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet">
+            <summary>
+            Updates the status for the specified job. Use this operation to confirm that you want
+            to run a job or to cancel an existing job. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">Amazon
+            S3 Batch Operations</a> in the Amazon Simple Storage Service Developer Guide.
+            
+              
+            <para>
+            Related actions include:
+            </para><ul><li><para><a>CreateJob</a></para></li><li><para><a>ListJobs</a></para></li><li><para><a>DescribeJob</a></para></li><li><para><a>UpdateJobStatus</a></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.AccountId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.JobId">
+            <summary>
+            <para>
+            <para>The ID of the job whose status you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.RequestedJobStatus">
+            <summary>
+            <para>
+            <para>The status that you want to move the specified job to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.StatusUpdateReason">
+            <summary>
+            <para>
+            <para>A description of the reason why you want to change the specified job's status. This
+            field can be any string up to the maximum length.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.UpdateJobStatusResponse).
+            Specifying the name of a property of type Amazon.S3Control.Model.UpdateJobStatusResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the JobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^JobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.UpdateS3CJobStatusCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet">
+            <summary>
+            Associates an access policy with the specified access point. Each access point can
+            have only one policy, so a request made to this API replaces any existing policy associated
+            with the specified access point.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The AWS account ID for owner of the bucket associated with the specified access point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access point that you want to associate with the specified policy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet.Policy">
+            <summary>
+            <para>
+            <para>The policy that you want to apply to the specified access point. For more information
+            about access point policies, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
+            Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage Service
+            Developer Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.S3Control.Model.PutAccessPointPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Policy parameter.
+            The -PassThru parameter is deprecated, use -Select '^Policy' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.S3C.WriteS3CAccessPointPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

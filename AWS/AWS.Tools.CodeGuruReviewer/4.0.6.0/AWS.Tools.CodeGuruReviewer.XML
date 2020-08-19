@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.CodeGuruReviewer</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewCmdlet">
+            <summary>
+            Returns the metadaata associated with the code review along with its status.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewCmdlet.CodeReviewArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the code review to describe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CodeReview'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.DescribeCodeReviewResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.DescribeCodeReviewResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CodeReviewArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CodeReviewArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet">
+            <summary>
+            Lists all the code reviews that the customer has created in the past 90 days.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.ProviderType">
+            <summary>
+            <para>
+            <para> List of provider types for filtering that needs to be applied before displaying the
+            result. For example, "providerTypes=[GitHub]" will list code reviews from GitHub.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.RepositoryName">
+            <summary>
+            <para>
+            <para> List of repository names for filtering that needs to be applied before displaying
+            the result. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.State">
+            <summary>
+            <para>
+            <para> List of states for filtering that needs to be applied before displaying the result.
+            For example, "states=[Pending]" will list code reviews in the Pending state. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.Type">
+            <summary>
+            <para>
+            <para> The type of code reviews to list in the response. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para> The maximum number of results that are returned per call. The default is 100. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para> If nextToken is returned, there are more results available. The value of nextToken
+            is a unique pagination token for each page. Make the call again using the returned
+            token to retrieve the next page. Keep all other arguments unchanged. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CodeReviewSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.ListCodeReviewsResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.ListCodeReviewsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Type parameter.
+            The -PassThru parameter is deprecated, use -Select '^Type' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRCodeReviewListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackCmdlet">
+            <summary>
+            Describes the customer feedback for a CodeGuru Reviewer recommendation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackCmdlet.CodeReviewArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) that identifies the code review. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackCmdlet.RecommendationId">
+            <summary>
+            <para>
+            <para> The recommendation ID that can be used to track the provided recommendations and
+            then to collect the feedback. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackCmdlet.UserId">
+            <summary>
+            <para>
+            <para> Optional parameter to describe the feedback for a given user. If this is not supplied,
+            it defaults to the user making the request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RecommendationFeedback'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.DescribeRecommendationFeedbackResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.DescribeRecommendationFeedbackResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecommendationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecommendationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet">
+            <summary>
+            Lists the customer feedback for a CodeGuru Reviewer recommendation for all users.
+            This API will be used from the console to extract the previously given feedback by
+            the user to pre-populate the feedback emojis for all recommendations.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.CodeReviewArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) that identifies the code review. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.RecommendationId">
+            <summary>
+            <para>
+            <para> Filter on recommendationIds that need to be applied before displaying the result.
+            This can be used to query all the recommendation feedback for a given recommendation.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.UserId">
+            <summary>
+            <para>
+            <para> Filter on userIds that need to be applied before displaying the result. This can
+            be used to query all the recommendation feedback for a code review from a given user.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para> The maximum number of results that are returned per call. The default is 100. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para> If nextToken is returned, there are more results available. The value of nextToken
+            is a unique pagination token for each page. Make the call again using the returned
+            token to retrieve the next page. Keep all other arguments unchanged. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RecommendationFeedbackSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.ListRecommendationFeedbackResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.ListRecommendationFeedbackResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CodeReviewArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CodeReviewArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationFeedbackListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet">
+            <summary>
+            Returns the list of all recommendations for a completed code review.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet.CodeReviewArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the code review to describe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para> The maximum number of results that are returned per call. The default is 100. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para> Pagination token. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RecommendationSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.ListRecommendationsResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.ListRecommendationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CodeReviewArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CodeReviewArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRecommendationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationCmdlet">
+            <summary>
+            Describes a repository association.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationCmdlet.AssociationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) identifying the association. You can retrieve this
+            ARN by calling <code>ListRepositories</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RepositoryAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.DescribeRepositoryAssociationResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.DescribeRepositoryAssociationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssociationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssociationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet">
+            <summary>
+            Lists repository associations. You can optionally filter on one or more of the following
+            recommendation properties: provider types, states, names, and owners.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.Name">
+            <summary>
+            <para>
+            <para>List of repository names to use as a filter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.Owner">
+            <summary>
+            <para>
+            <para>List of owners to use as a filter. For GitHub, this is name of the GitHub account
+            that was used to associate the repository. For AWS CodeCommit, it is the name of the
+            CodeCommit account that was used to associate the repository.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.ProviderType">
+            <summary>
+            <para>
+            <para>List of provider types to use as a filter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.State">
+            <summary>
+            <para>
+            <para>List of states to use as a filter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of repository association results returned by <code>ListRepositoryAssociations</code>
+            in paginated output. When this parameter is used, <code>ListRepositoryAssociations</code>
+            only returns <code>maxResults</code> results in a single page with a <code>nextToken</code>
+            response element. The remaining results of the initial request can be seen by sending
+            another <code>ListRepositoryAssociations</code> request with the returned <code>nextToken</code>
+            value. This value can be between 1 and 25. If this parameter is not used, <code>ListRepositoryAssociations</code>
+            returns up to 25 results and a <code>nextToken</code> value if applicable. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The <code>nextToken</code> value returned from a previous paginated <code>ListRepositoryAssociations</code>
+            request where <code>maxResults</code> was used and the results exceeded the value
+            of that parameter. Pagination continues from the end of the previous results that
+            returned the <code>nextToken</code> value. </para><note><para>Treat this token as an opaque identifier that is only used to retrieve the next items
+            in a list and not for other programmatic purposes.</para></note>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RepositoryAssociationSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.ListRepositoryAssociationsResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.ListRepositoryAssociationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.GetCGRRepositoryAssociationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet">
+            <summary>
+            Associates an AWS CodeCommit repository with Amazon CodeGuru Reviewer. When you associate
+            an AWS CodeCommit repository with Amazon CodeGuru Reviewer, Amazon CodeGuru Reviewer
+            will provide recommendations for each pull request raised within the repository. You
+            can view recommendations in the AWS CodeCommit repository.
+            
+             
+            <para>
+            You can associate a GitHub repository using the Amazon CodeGuru Reviewer console.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.ClientRequestToken">
+            <summary>
+            <para>
+            <para>Unique, case-sensitive identifier that you provide to ensure the idempotency of the
+            request.</para><para>To add a new repository association, this parameter specifies a unique identifier
+            for the new repository association that helps ensure idempotency.</para><para>If you use the AWS CLI or one of the AWS SDKs to call this operation, you can leave
+            this parameter empty. The CLI or SDK generates a random UUID for you and includes
+            that in the request. If you don't use the SDK and instead generate a raw HTTP request
+            to the Secrets Manager service endpoint, you must generate a ClientRequestToken yourself
+            for new versions and include that value in the request.</para><para>You typically interact with this value if you implement your own retry logic and want
+            to ensure that a given repository association is not created twice. We recommend that
+            you generate a UUID-type value to ensure uniqueness within the specified repository
+            association.</para><para>Amazon CodeGuru Reviewer uses this value to prevent the accidental creation of duplicate
+            repository associations if there are failures and retries. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.Bitbucket_ConnectionArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) identifying the repository connection. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.Bitbucket_Name">
+            <summary>
+            <para>
+            <para> The name of the third party source repository. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.CodeCommit_Name">
+            <summary>
+            <para>
+            <para>The name of the AWS CodeCommit repository.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.Bitbucket_Owner">
+            <summary>
+            <para>
+            <para> The username of the owner of the repository. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RepositoryAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.AssociateRepositoryResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.AssociateRepositoryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CodeCommit_Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^CodeCommit_Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.RegisterCGRRepositoryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.UnregisterCGRRepositoryCmdlet">
+            <summary>
+            Removes the association between Amazon CodeGuru Reviewer and a repository.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.UnregisterCGRRepositoryCmdlet.AssociationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) identifying the association.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.UnregisterCGRRepositoryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RepositoryAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.DisassociateRepositoryResponse).
+            Specifying the name of a property of type Amazon.CodeGuruReviewer.Model.DisassociateRepositoryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.UnregisterCGRRepositoryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssociationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssociationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.UnregisterCGRRepositoryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet">
+            <summary>
+            Stores customer feedback for a CodeGuru-Reviewer recommendation. When this API is
+            called again with different reactions the previous feedback is overwritten.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet.CodeReviewArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) that identifies the code review. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet.Reaction">
+            <summary>
+            <para>
+            <para> List for storing reactions. Reactions are utf-8 text code for emojis. If you send
+            an empty list it clears all your feedback. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet.RecommendationId">
+            <summary>
+            <para>
+            <para> The recommendation ID that can be used to track the provided recommendations and
+            then to collect the feedback. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruReviewer.Model.PutRecommendationFeedbackResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecommendationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecommendationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGR.WriteCGRRecommendationFeedbackCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

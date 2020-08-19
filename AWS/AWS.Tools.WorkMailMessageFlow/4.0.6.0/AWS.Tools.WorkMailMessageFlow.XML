@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.WorkMailMessageFlow</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.WMMF.GetWMMFRawMessageContentCmdlet">
+            <summary>
+            Retrieves the raw content of an in-transit email message, in MIME format.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WMMF.GetWMMFRawMessageContentCmdlet.MessageId">
+            <summary>
+            <para>
+            <para>The identifier of the email message to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WMMF.GetWMMFRawMessageContentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'MessageContent'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMailMessageFlow.Model.GetRawMessageContentResponse).
+            Specifying the name of a property of type Amazon.WorkMailMessageFlow.Model.GetRawMessageContentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WMMF.GetWMMFRawMessageContentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the MessageId parameter.
+            The -PassThru parameter is deprecated, use -Select '^MessageId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+    </members>
+</doc>

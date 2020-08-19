@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.AmazonCloudSearchDomainConfig</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.AmazonCloudSearchDomainConfig</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RegionEndpointServiceName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ServiceVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UserAgent</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RegionEndpointServiceName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ServiceVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UserAgent</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.UploadDocumentsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.UploadDocumentsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>FilePath</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ContentType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Documents</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>FilePath</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ContentType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Documents</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.Bucket</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.Bucket</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Count</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Value</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Count</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Value</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.BucketInfo</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.BucketInfo</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Buckets</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Buckets</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.DocumentServiceException</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.DocumentServiceException</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.DocumentServiceWarning</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.DocumentServiceWarning</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Message</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Message</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.FieldStats</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.FieldStats</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Count</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Max</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Mean</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Min</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Missing</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Stddev</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Sum</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SumOfSquares</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.Hit</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.Hit</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Exprs</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Fields</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Highlights</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Exprs</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Fields</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Highlights</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.Hits</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.Hits</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Cursor</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Found</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Hit</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Start</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Cursor</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Found</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Hit</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Start</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SearchRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SearchRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Cursor</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Expr</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Facet</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FilterQuery</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Highlight</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Partial</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Query</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>QueryOptions</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>QueryParser</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Return</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Size</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Sort</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Start</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Stats</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SearchResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SearchResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Facets</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Hits</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Stats</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Facets</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Hits</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Stats</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SearchStatus</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SearchStatus</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Rid</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Timems</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Rid</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Timems</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SuggestionMatch</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SuggestionMatch</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Id</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Score</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Suggestion</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Id</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Score</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Suggestion</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SuggestModel</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SuggestModel</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Found</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Query</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Suggestions</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Found</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Query</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Suggestions</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SuggestRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SuggestRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Query</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Size</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Suggester</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Query</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Size</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Suggester</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SuggestResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SuggestResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Suggest</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Suggest</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.SuggestStatus</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.SuggestStatus</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Rid</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Timems</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Rid</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Timems</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Model.UploadDocumentsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Model.UploadDocumentsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Adds</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Deletes</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Warnings</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Adds</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Deletes</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Warnings</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.CloudSearchDomain.Internal.AmazonCloudSearchDomainMetadata</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.CloudSearchDomain.Internal.AmazonCloudSearchDomainMetadata</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ServiceId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OperationNameMapping</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ServiceId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OperationNameMapping</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
+<!-- SIG # Begin signature block -->
+<!-- MIIcUAYJKoZIhvcNAQcCoIIcQTCCHD0CAQExDzANBglghkgBZQMEAgEFADB5Bgor -->
+<!-- BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG -->
+<!-- KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCAFYIg3m62Dlfv7 -->
+<!-- 8NKfPbGLGH+iJA7O8Qt8/YH2ydaRrKCCF0cwggS5MIIDoaADAgECAhArd4OFAE9M -->
+<!-- ppHAfzWQwHt/MA0GCSqGSIb3DQEBCwUAMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UE -->
+<!-- ChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0 -->
+<!-- IE5ldHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUg -->
+<!-- U2lnbmluZyBDQSAtIEcyMB4XDTE3MDcxMDAwMDAwMFoXDTIwMDcxMDIzNTk1OVow -->
+<!-- ajELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1Nl -->
+<!-- YXR0bGUxGTAXBgNVBAoMEEFtYXpvbi5jb20sIEluYy4xGTAXBgNVBAMMEEFtYXpv -->
+<!-- bi5jb20sIEluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC18TJW -->
+<!-- m2/aGpvb+TP2CZMg49X/5bjDAgPxWlAs7bqDyZnRYJork4rLmejpeJu+2BhRjZeK -->
+<!-- OirT4XveddBsdL1/TR+FKp8BXEsrm0wcR4yT6mNHJ9yCgC1YBNG91bZ75kRIT+46 -->
+<!-- chbC7eNI5703wi8ejxe2KvvOERppBTaFStVJuAHab69dvFma8qE3s7wbqPdQ5eTI -->
+<!-- +Xm0bXp8cObS+vj+hf3N2pfDNWM8ITva3kbowGoCW0rKzpf7fBGtBOKnOCCSL0yC -->
+<!-- AOwLlFkslemVyrT1/HTDjOTKCro016HxOPddA4cefvr2ZhGlRZQQHg7wMdG7TpZX -->
+<!-- ueQ6LoS9UxlzCYHFAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQE -->
+<!-- AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBM -->
+<!-- MCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcC -->
+<!-- AjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5 -->
+<!-- S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2Iu -->
+<!-- Y29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9y -->
+<!-- Yi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIu -->
+<!-- Y3J0MA0GCSqGSIb3DQEBCwUAA4IBAQC+C4TcK44ph2QQK/1f65jOR23DtSBC3y9a -->
+<!-- bzRHdo4qxmcAW5ot69os7GJfzgVsA5lh1IT4+aMuGYA4GTcF6iTSOMgFSRwP8urI -->
+<!-- N2BprsWuMJsQ7+Flo3PBRN3dU6idOlFKOfuRxgIHRn47t2yRan6XTNhfiWl84DrD -->
+<!-- NjSTnk4c72Gzu0hiwQB9OTsf8CQP3Shb3ZzcAOmeUB01TFoJU34PfJpKlKQZeQIi -->
+<!-- W5WdPPr1G/0cAHgejDHtdNYcSqIWfoGeYgCxUg1IFpp1VmPlqb/de8QKONzPDK6/ -->
+<!-- 5hulSGqGgpRmEkwGGJiQeOB51GxYZRCPq3hN3UJ6N0A+hYzj7yspMIIFRzCCBC+g -->
+<!-- AwIBAgIQfBs1NUrn23TnQV8RacprqDANBgkqhkiG9w0BAQsFADCBvTELMAkGA1UE -->
+<!-- BhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2ln -->
+<!-- biBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwOCBWZXJpU2lnbiwgSW5j -->
+<!-- LiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MTgwNgYDVQQDEy9WZXJpU2lnbiBV -->
+<!-- bml2ZXJzYWwgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xNDA3MjIw -->
+<!-- MDAwMDBaFw0yNDA3MjEyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UEChMU -->
+<!-- U3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5l -->
+<!-- dHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2ln -->
+<!-- bmluZyBDQSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA15VD -->
+<!-- 1NzfZ645+1KktiYxBHDpt45bKro3aTWVj7vAMOeG2HO73+vRdj+KVo7rLUvwVxhO -->
+<!-- sY2lM9MLdSPVankn3aPT9w6HZbXerRzx9TW0IlGvIqHBXUuQf8BZTqudeakC1x5J -->
+<!-- sTtNh/7CeKu/71KunK8I2TnlmlE+aV8wEE5xY2xY4fAgMxsPdL5byxLh24zEgJRy -->
+<!-- u/ZFmp7BJQv7oxye2KYJcHHswEdMj33D3hnOPu4Eco4X0//wsgUyGUzTsByf/qV4 -->
+<!-- IEJwQbAmjG8AyDoAEUF6QbCnipEEoJl49He082Aq5mxQBLcUYP8NUfSoi4T+Idpc -->
+<!-- Xn31KXlPsER0b21y/wIDAQABo4IBeDCCAXQwLgYIKwYBBQUHAQEEIjAgMB4GCCsG -->
+<!-- AQUFBzABhhJodHRwOi8vcy5zeW1jZC5jb20wEgYDVR0TAQH/BAgwBgEB/wIBADBm -->
+<!-- BgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYIKwYBBQUHAgEWF2h0dHBzOi8v -->
+<!-- ZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkaF2h0dHBzOi8vZC5zeW1jYi5j -->
+<!-- b20vcnBhMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9zLnN5bWNiLmNvbS91bml2 -->
+<!-- ZXJzYWwtcm9vdC5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDgYDVR0PAQH/BAQD -->
+<!-- AgEGMCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFTeW1hbnRlY1BLSS0xLTcyNDAd -->
+<!-- BgNVHQ4EFgQU1MAGIknrOUvdk+JcobhHdglyA1gwHwYDVR0jBBgwFoAUtnf6aUhH -->
+<!-- n1MS1cLqBzJ2B9GXBxkwDQYJKoZIhvcNAQELBQADggEBAH/ryqfqi3ZC6z6OIFQw -->
+<!-- 47e53PpIPhbHD0WVEM0nhqNm8wLtcfiqwlWXkXCD+VJ+Umk8yfHglEaAGLuh1KRW -->
+<!-- pvMdAJHVhvNIh+DLxDRoIF60y/kF7ZyvcFMnueg+flGgaXGL3FHtgDolMp9Er25D -->
+<!-- KNMhdbuX2IuLjP6pBEYEhfcVnEsRjcQsF/7Vbn+a4laS8ZazrS359N/aiZnOsjhE -->
+<!-- wPdHe8olufoqaDObUHLeqJ/UzSwLNL2LMHhA4I2OJxuQbxq+CBWBXesv4lHnUR7J -->
+<!-- eCnnHmW/OO8BSgEJJA4WxBR5wUE3NNA9kVKUneFo7wjw4mmcZ26QCxqTcdQmAsPA -->
+<!-- WiMwggZqMIIFUqADAgECAhADAZoCOv9YsWvW1ermF/BmMA0GCSqGSIb3DQEBBQUA -->
+<!-- MGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsT -->
+<!-- EHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQg -->
+<!-- Q0EtMTAeFw0xNDEwMjIwMDAwMDBaFw0yNDEwMjIwMDAwMDBaMEcxCzAJBgNVBAYT -->
+<!-- AlVTMREwDwYDVQQKEwhEaWdpQ2VydDElMCMGA1UEAxMcRGlnaUNlcnQgVGltZXN0 -->
+<!-- YW1wIFJlc3BvbmRlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKNk -->
+<!-- Xfx8s+CCNeDg9sYq5kl1O8xu4FOpnx9kWeZ8a39rjJ1V+JLjntVaY1sCSVDZg85v -->
+<!-- Zu7dy4XpX6X51Id0iEQ7Gcnl9ZGfxhQ5rCTqqEsskYnMXij0ZLZQt/USs3OWCmej -->
+<!-- vmGfrvP9Enh1DqZbFP1FI46GRFV9GIYFjFWHeUhG98oOjafeTl/iqLYtWQJhiGFy -->
+<!-- GGi5uHzu5uc0LzF3gTAfuzYBje8n4/ea8EwxZI3j6/oZh6h+z+yMDDZbesF6uHjH -->
+<!-- yQYuRhDIjegEYNu8c3T6Ttj+qkDxss5wRoPp2kChWTrZFQlXmVYwk/PJYczQCMxr -->
+<!-- 7GJCkawCwO+k8IkRj3cCAwEAAaOCAzUwggMxMA4GA1UdDwEB/wQEAwIHgDAMBgNV -->
+<!-- HRMBAf8EAjAAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMIIBvwYDVR0gBIIBtjCC -->
+<!-- AbIwggGhBglghkgBhv1sBwEwggGSMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k -->
+<!-- aWdpY2VydC5jb20vQ1BTMIIBZAYIKwYBBQUHAgIwggFWHoIBUgBBAG4AeQAgAHUA -->
+<!-- cwBlACAAbwBmACAAdABoAGkAcwAgAEMAZQByAHQAaQBmAGkAYwBhAHQAZQAgAGMA -->
+<!-- bwBuAHMAdABpAHQAdQB0AGUAcwAgAGEAYwBjAGUAcAB0AGEAbgBjAGUAIABvAGYA -->
+<!-- IAB0AGgAZQAgAEQAaQBnAGkAQwBlAHIAdAAgAEMAUAAvAEMAUABTACAAYQBuAGQA -->
+<!-- IAB0AGgAZQAgAFIAZQBsAHkAaQBuAGcAIABQAGEAcgB0AHkAIABBAGcAcgBlAGUA -->
+<!-- bQBlAG4AdAAgAHcAaABpAGMAaAAgAGwAaQBtAGkAdAAgAGwAaQBhAGIAaQBsAGkA -->
+<!-- dAB5ACAAYQBuAGQAIABhAHIAZQAgAGkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAA -->
+<!-- aABlAHIAZQBpAG4AIABiAHkAIAByAGUAZgBlAHIAZQBuAGMAZQAuMAsGCWCGSAGG -->
+<!-- /WwDFTAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcNK2cCzTAdBgNVHQ4EFgQU -->
+<!-- YVpNJLZJMp1KKnkag0v0HonByn0wfQYDVR0fBHYwdDA4oDagNIYyaHR0cDovL2Ny -->
+<!-- bDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcmwwOKA2oDSG -->
+<!-- Mmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEu -->
+<!-- Y3JsMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGln -->
+<!-- aWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5j -->
+<!-- b20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNydDANBgkqhkiG9w0BAQUFAAOCAQEA -->
+<!-- nSV+GzNNsiaBXJuGziMgD4CH5Yj//7HUaiwx7ToXGXEXzakbvFoWOQCd42yE5FpA -->
+<!-- +94GAYw3+puxnSR+/iCkV61bt5qwYCbqaVchXTQvH3Gwg5QZBWs1kBCge5fH9j/n -->
+<!-- 4hFBpr1i2fAnPTgdKG86Ugnw7HBi02JLsOBzppLA044x2C/jbRcTBu7kA7YUq/OP -->
+<!-- Q6dxnSHdFMoVXZJB2vkPgdGZdA0mxA5/G7X1oPHGdwYoFenYk+VVFvC7Cqsc21xI -->
+<!-- J2bIo4sKHOWV2q7ELlmgYd3a822iYemKC23sEhi991VUQAOSK2vCUcIKSK+w1G7g -->
+<!-- 9BQKOhvjjz3Kr2qNe9zYRDCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhsw -->
+<!-- DQYJKoZIhvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0 -->
+<!-- IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNl -->
+<!-- cnQgQXNzdXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAw -->
+<!-- MDAwMFowYjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcG -->
+<!-- A1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJl -->
+<!-- ZCBJRCBDQS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnK -->
+<!-- wkKVpYBzQHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InE -->
+<!-- Ctqvy15r7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH -->
+<!-- 6zY/2DDD/6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77b -->
+<!-- lUjE7h6z8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnx -->
+<!-- TPKvmPv2zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2Kk -->
+<!-- PzIUYJX9BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0 -->
+<!-- MDIGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEF -->
+<!-- BQcDCDCCAdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYB -->
+<!-- BQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9y -->
+<!-- eS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYA -->
+<!-- IAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkA -->
+<!-- dAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAA -->
+<!-- RABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAA -->
+<!-- UgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAA -->
+<!-- dwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4A -->
+<!-- ZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkA -->
+<!-- bgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1Ud -->
+<!-- EwEB/wQIMAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRw -->
+<!-- Oi8vb2NzcC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRz -->
+<!-- LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1Ud -->
+<!-- HwR6MHgwOqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFz -->
+<!-- c3VyZWRJRFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNv -->
+<!-- bS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZ -->
+<!-- B+0e36K+Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0G -->
+<!-- CSqGSIb3DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/s -->
+<!-- dR90OPKyXGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZ -->
+<!-- Vann4+erYs37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQl -->
+<!-- c+Qqq8+cdkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dF -->
+<!-- zdaD7eeSDY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsY -->
+<!-- Gk38KiGtSTGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEXzCCBFsCAQEwgZkw -->
+<!-- gYQxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRTeW1hbnRlYyBDb3Jwb3JhdGlvbjEf -->
+<!-- MB0GA1UECxMWU3ltYW50ZWMgVHJ1c3QgTmV0d29yazE1MDMGA1UEAxMsU3ltYW50 -->
+<!-- ZWMgQ2xhc3MgMyBTSEEyNTYgQ29kZSBTaWduaW5nIENBIC0gRzICECt3g4UAT0ym -->
+<!-- kcB/NZDAe38wDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIBDDEKMAigAoAA -->
+<!-- oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w -->
+<!-- DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQg0TOromnplq6wkepJ+feVmyBj -->
+<!-- 0HUw/FkZqrwg8KdQXREwDQYJKoZIhvcNAQEBBQAEggEALvfkeqk65WC4OhGc+o5X -->
+<!-- KUdrPtLuvXYpliosfE7+8Kkv3yWH60uxRUHN+Y56sje6skmBJDMbKqyxxvKqBZT8 -->
+<!-- FtBK/In5iAHVUP9p41qwYM0WS3dqDm/zhRMKhdBtLLSej0P+TFkuHgjKODU9XLkn -->
+<!-- D3kjhkXZr4hn4o6MgXQVLeadgFgBibrJewzlrpkuKdVVplzgpw8JuyNNqk2/28pE -->
+<!-- +9ivpx7k3Ekgoemo8cPYEkmiGToMvQdrKkazAyqP8LO7tioIkbbFENMQYifLzeTc -->
+<!-- Q3p+WRcXi9VX07wHK/jP7qxRmHT+0/pu5X8zwqN2FtWSFsk/yxLXLexY5aDKHEJK -->
+<!-- 16GCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYTAlVT -->
+<!-- MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j -->
+<!-- b20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/WLFr -->
+<!-- 1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAc -->
+<!-- BgkqhkiG9w0BCQUxDxcNMjAwNjEwMjMxNjM0WjAjBgkqhkiG9w0BCQQxFgQUaQbV -->
+<!-- BqtPy1vPcFNIJCqEUDwzvr4wDQYJKoZIhvcNAQEBBQAEggEAlNYJhYpQcrH2z+N4 -->
+<!-- cQsRxwIyM+OUbSuiCAHsDBj6xDwArGfAuvYuXc48+DgOsvydsMKnxX2x7DblZhoD -->
+<!-- +xSj/E4hia5uzNBfIoAIc6EZ6F7451xX78YNxRHa2o48uMmerYO0raB1KFNczJ/B -->
+<!-- ARro2nRuCdXB1UDE18nt5Fe9DXS4VrKnqWr7pRYcjKR8Kj/pq0WiRDbinz7MBQxr -->
+<!-- EH11QsItqYipxnpHSQn+jF81QducWrA6p3z60XVl7Giy9BsPKxCPXAJ15Ol3Tb62 -->
+<!-- PJY/S0zmgbUD7NJPFjG6U160/cDO/ybUPvzieg+5Ww9kgZsmIEfJxKQTo1ZFoISh -->
+<!-- 4RhUpA== -->
+<!-- SIG # End signature block -->

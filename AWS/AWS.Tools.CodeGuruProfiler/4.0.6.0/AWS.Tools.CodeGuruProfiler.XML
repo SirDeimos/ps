@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.CodeGuruProfiler</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.GetCGPPolicyCmdlet">
+            <summary>
+            Gets the profiling group policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPPolicyCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.GetPolicyResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.GetPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet">
+            <summary>
+            Gets the aggregated profile of a profiling group for the specified time range. If
+            the requested time range does not align with the available aggregated profiles, it
+            is expanded to attain alignment. If aggregated profiles are available only for part
+            of the period requested, the profile is returned from the earliest available to the
+            latest within the requested time range. 
+            
+             
+            <para>
+            For example, if the requested time range is from 00:00 to 00:20 and the available
+            profiles are from 00:15 to 00:25, the returned profile will be from 00:15 to 00:20.
+            
+            </para><para>
+            You must specify exactly two of the following parameters: <code>startTime</code>,
+            <code>period</code>, and <code>endTime</code>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.Accept">
+            <summary>
+            <para>
+            <para>The format of the profile to return. You can choose <code>application/json</code>
+            or the default <code>application/x-amzn-ion</code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.EndTime">
+            <summary>
+            <para>
+            <para>You must specify exactly two of the following parameters: <code>startTime</code>,
+            <code>period</code>, and <code>endTime</code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.MaxDepth">
+            <summary>
+            <para>
+            <para>The maximum depth of the graph.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.Period">
+            <summary>
+            <para>
+            <para>The period of the profile to get. The time range must be in the past and not longer
+            than one week. </para><para>You must specify exactly two of the following parameters: <code>startTime</code>,
+            <code>period</code>, and <code>endTime</code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.StartTime">
+            <summary>
+            <para>
+            <para>The start time of the profile to get.</para><para>You must specify exactly two of the following parameters: <code>startTime</code>,
+            <code>period</code>, and <code>endTime</code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.GetProfileResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.GetProfileResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet">
+            <summary>
+            List the start times of the available aggregated profiles of a profiling group for
+            an aggregation period within the specified time range.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.EndTime">
+            <summary>
+            <para>
+            <para>The end time of the time range from which to list the profiles.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.OrderBy">
+            <summary>
+            <para>
+            <para>The order (ascending or descending by start time of the profile) to use when listing
+            profiles. Defaults to <code>TIMESTAMP_DESCENDING</code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.Period">
+            <summary>
+            <para>
+            <para>The aggregation period.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.StartTime">
+            <summary>
+            <para>
+            <para>The start time of the time range from which to list the profiles.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of profile time results returned by <code>ListProfileTimes</code>
+            in paginated output. When this parameter is used, <code>ListProfileTimes</code> only
+            returns <code>maxResults</code> results in a single page with a <code>nextToken</code>
+            response element. The remaining results of the initial request can be seen by sending
+            another <code>ListProfileTimes</code> request with the returned <code>nextToken</code>
+            value. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The <code>nextToken</code> value returned from a previous paginated <code>ListProfileTimes</code>
+            request where <code>maxResults</code> was used and the results exceeded the value
+            of that parameter. Pagination continues from the end of the previous results that
+            returned the <code>nextToken</code> value. </para><note><para>This token should be treated as an opaque identifier that is only used to retrieve
+            the next items in a list and not for other programmatic purposes.</para></note>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProfileTimes'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.ListProfileTimesResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.ListProfileTimesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfileTimeListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupCmdlet">
+            <summary>
+            Describes a profiling group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The profiling group name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProfilingGroup'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.DescribeProfilingGroupResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.DescribeProfilingGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet">
+            <summary>
+            Lists profiling groups.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet.IncludeDescription">
+            <summary>
+            <para>
+            <para>A Boolean value indicating whether to include a description.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of profiling groups results returned by <code>ListProfilingGroups</code>
+            in paginated output. When this parameter is used, <code>ListProfilingGroups</code>
+            only returns <code>maxResults</code> results in a single page along with a <code>nextToken</code>
+            response element. The remaining results of the initial request can be seen by sending
+            another <code>ListProfilingGroups</code> request with the returned <code>nextToken</code>
+            value. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The <code>nextToken</code> value returned from a previous paginated <code>ListProfilingGroups</code>
+            request where <code>maxResults</code> was used and the results exceeded the value
+            of that parameter. Pagination continues from the end of the previous results that
+            returned the <code>nextToken</code> value. </para><note><para>This token should be treated as an opaque identifier that is only used to retrieve
+            the next items in a list and not for other programmatic purposes.</para></note>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.ListProfilingGroupsResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.ListProfilingGroupsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IncludeDescription parameter.
+            The -PassThru parameter is deprecated, use -Select '^IncludeDescription' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.GetCGPProfilingGroupListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet">
+            <summary>
+            Creates a profiling group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet.AgentOrchestrationConfig_ProfilingEnabled">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>Unique, case-sensitive identifier that you provide to ensure the idempotency of the
+            request.</para><para>This parameter specifies a unique identifier for the new profiling group that helps
+            ensure idempotency.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProfilingGroup'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.CreateProfilingGroupResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.CreateProfilingGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.NewCGPProfilingGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet">
+            <summary>
+            Removes statement for the provided action group from the policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet.ActionGroup">
+            <summary>
+            <para>
+            <para>The list of actions that the users and roles can perform on the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet.RevisionId">
+            <summary>
+            <para>
+            <para>A unique identifier for the current revision of the policy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.RemovePermissionResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.RemovePermissionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPPermissionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPProfilingGroupCmdlet">
+            <summary>
+            Deletes a profiling group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPProfilingGroupCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The profiling group name to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPProfilingGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.DeleteProfilingGroupResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPProfilingGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.RemoveCGPProfilingGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet" -->
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.AgentProfile">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.ContentType">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.ProfileToken">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.PostAgentProfileResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AgentProfile parameter.
+            The -PassThru parameter is deprecated, use -Select '^AgentProfile' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SendCGPAgentProfileCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Amazon.PowerShell.Cmdlets.CGP.SetCGPAgentConfigurationCmdlet" -->
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SetCGPAgentConfigurationCmdlet.FleetInstanceId">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SetCGPAgentConfigurationCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SetCGPAgentConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Configuration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.ConfigureAgentResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.ConfigureAgentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SetCGPAgentConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.SetCGPAgentConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.UpdateCGPProfilingGroupCmdlet">
+            <summary>
+            Updates a profiling group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.UpdateCGPProfilingGroupCmdlet.AgentOrchestrationConfig_ProfilingEnabled">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.UpdateCGPProfilingGroupCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.UpdateCGPProfilingGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProfilingGroup'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.UpdateProfilingGroupResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.UpdateProfilingGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.UpdateCGPProfilingGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.UpdateCGPProfilingGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet">
+            <summary>
+            Provides permission to the principals. This overwrites the existing permissions, and
+            is not additive.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.ActionGroup">
+            <summary>
+            <para>
+            <para>The list of actions that the users and roles can perform on the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.Principal">
+            <summary>
+            <para>
+            <para>The list of role and user ARNs or the accountId that needs access (wildcards are not
+            allowed).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.ProfilingGroupName">
+            <summary>
+            <para>
+            <para>The name of the profiling group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.RevisionId">
+            <summary>
+            <para>
+            <para>A unique identifier for the current revision of the policy. This is required, if a
+            policy exists for the profiling group. This is not required when creating the policy
+            for the first time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.CodeGuruProfiler.Model.PutPermissionResponse).
+            Specifying the name of a property of type Amazon.CodeGuruProfiler.Model.PutPermissionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProfilingGroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProfilingGroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.CGP.WriteCGPPermissionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

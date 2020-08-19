@@ -1,0 +1,1861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>View node for Amazon.Kinesis.AmazonKinesisConfig</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.AmazonKinesisConfig</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RegionEndpointServiceName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ServiceVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UserAgent</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RegionEndpointServiceName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ServiceVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UserAgent</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.AddTagsToStreamRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.AddTagsToStreamRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tags</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tags</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.Consumer</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.Consumer</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ConsumerARN</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ConsumerCreationTimestamp</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ConsumerName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ConsumerStatus</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ConsumerARN</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ConsumerCreationTimestamp</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ConsumerName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ConsumerStatus</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ConsumerDescription</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ConsumerDescription</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>ConsumerARN</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ConsumerCreationTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ConsumerName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ConsumerStatus</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamARN</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.CreateStreamRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.CreateStreamRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ShardCount</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ShardCount</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DecreaseStreamRetentionPeriodRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DecreaseStreamRetentionPeriodRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RetentionPeriodHours</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RetentionPeriodHours</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DeleteStreamRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DeleteStreamRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EnforceConsumerDeletion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EnforceConsumerDeletion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DeregisterStreamConsumerRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DeregisterStreamConsumerRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ConsumerARN</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ConsumerName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamARN</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ConsumerARN</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ConsumerName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamARN</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeLimitsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeLimitsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>OpenShardCount</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ShardLimit</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>OpenShardCount</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ShardLimit</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeStreamConsumerRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeStreamConsumerRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ConsumerARN</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ConsumerName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamARN</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ConsumerARN</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ConsumerName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamARN</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeStreamConsumerResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeStreamConsumerResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ConsumerDescription</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ConsumerDescription</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeStreamRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeStreamRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ExclusiveStartShardId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Limit</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ExclusiveStartShardId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Limit</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeStreamResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeStreamResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>StreamDescription</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>StreamDescription</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeStreamSummaryRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeStreamSummaryRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DescribeStreamSummaryResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DescribeStreamSummaryResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>StreamDescriptionSummary</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>StreamDescriptionSummary</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DisableEnhancedMonitoringRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DisableEnhancedMonitoringRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ShardLevelMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.DisableEnhancedMonitoringResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.DisableEnhancedMonitoringResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CurrentShardLevelMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DesiredShardLevelMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CurrentShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DesiredShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.EnableEnhancedMonitoringRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.EnableEnhancedMonitoringRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ShardLevelMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.EnableEnhancedMonitoringResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.EnableEnhancedMonitoringResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CurrentShardLevelMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>DesiredShardLevelMetrics</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CurrentShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>DesiredShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.EnhancedMetrics</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.EnhancedMetrics</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ShardLevelMetrics</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ShardLevelMetrics</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.GetRecordsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.GetRecordsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Limit</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ShardIterator</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Limit</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ShardIterator</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.GetRecordsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.GetRecordsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>MillisBehindLatest</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextShardIterator</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Records</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>MillisBehindLatest</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextShardIterator</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Records</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.GetShardIteratorRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.GetShardIteratorRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>ShardId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ShardIteratorType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StartingSequenceNumber</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Timestamp</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.GetShardIteratorResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.GetShardIteratorResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ShardIterator</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ShardIterator</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.HashKeyRange</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.HashKeyRange</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EndingHashKey</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StartingHashKey</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EndingHashKey</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StartingHashKey</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.IncreaseStreamRetentionPeriodRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.IncreaseStreamRetentionPeriodRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RetentionPeriodHours</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RetentionPeriodHours</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListShardsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListShardsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>ExclusiveStartShardId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MaxResults</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>NextToken</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamCreationTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamName</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListShardsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListShardsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Shards</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Shards</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListStreamConsumersRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListStreamConsumersRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>MaxResults</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamARN</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamCreationTimestamp</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>MaxResults</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamARN</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamCreationTimestamp</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListStreamConsumersResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListStreamConsumersResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Consumers</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Consumers</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListStreamsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListStreamsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ExclusiveStartStreamName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Limit</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ExclusiveStartStreamName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Limit</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListStreamsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListStreamsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>HasMoreStreams</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamNames</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>HasMoreStreams</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamNames</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListTagsForStreamRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListTagsForStreamRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ExclusiveStartTagKey</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Limit</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ExclusiveStartTagKey</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Limit</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.ListTagsForStreamResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.ListTagsForStreamResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>HasMoreTags</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Tags</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>HasMoreTags</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Tags</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.MergeShardsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.MergeShardsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AdjacentShardToMerge</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ShardToMerge</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AdjacentShardToMerge</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ShardToMerge</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.PutRecordRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.PutRecordRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Data</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ExplicitHashKey</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PartitionKey</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SequenceNumberForOrdering</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamName</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.PutRecordResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.PutRecordResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EncryptionType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SequenceNumber</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ShardId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SequenceNumber</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ShardId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.PutRecordsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.PutRecordsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Records</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Records</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.PutRecordsRequestEntry</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.PutRecordsRequestEntry</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Data</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ExplicitHashKey</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PartitionKey</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Data</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ExplicitHashKey</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PartitionKey</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.PutRecordsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.PutRecordsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EncryptionType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>FailedRecordCount</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Records</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>FailedRecordCount</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Records</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.PutRecordsResultEntry</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.PutRecordsResultEntry</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ErrorCode</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ErrorMessage</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>SequenceNumber</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ShardId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ErrorCode</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ErrorMessage</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>SequenceNumber</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ShardId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.Record</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.Record</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>ApproximateArrivalTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Data</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>PartitionKey</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SequenceNumber</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.RegisterStreamConsumerRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.RegisterStreamConsumerRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ConsumerName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamARN</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ConsumerName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamARN</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.RegisterStreamConsumerResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.RegisterStreamConsumerResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Consumer</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Consumer</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.RemoveTagsFromStreamRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.RemoveTagsFromStreamRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TagKeys</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TagKeys</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.SequenceNumberRange</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.SequenceNumberRange</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EndingSequenceNumber</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StartingSequenceNumber</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EndingSequenceNumber</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StartingSequenceNumber</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.Shard</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.Shard</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AdjacentParentShardId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HashKeyRange</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ParentShardId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SequenceNumberRange</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ShardId</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.SplitShardRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.SplitShardRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>NewStartingHashKey</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ShardToSplit</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>NewStartingHashKey</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ShardToSplit</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.StartStreamEncryptionRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.StartStreamEncryptionRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EncryptionType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>KeyId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>KeyId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.StopStreamEncryptionRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.StopStreamEncryptionRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EncryptionType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>KeyId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>KeyId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.StreamDescription</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.StreamDescription</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EnhancedMonitoring</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HasMoreShards</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>KeyId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RetentionPeriodHours</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Shards</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamARN</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamCreationTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamStatus</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.StreamDescriptionSummary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.StreamDescriptionSummary</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>ConsumerCount</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EncryptionType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>EnhancedMonitoring</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>KeyId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>OpenShardCount</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RetentionPeriodHours</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamARN</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamCreationTimestamp</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>StreamStatus</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.Tag</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.Tag</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Key</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Value</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Key</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Value</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.UpdateShardCountRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.UpdateShardCountRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ScalingType</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TargetShardCount</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ScalingType</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TargetShardCount</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Model.UpdateShardCountResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Model.UpdateShardCountResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CurrentShardCount</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>StreamName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TargetShardCount</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CurrentShardCount</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>StreamName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TargetShardCount</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.Kinesis.Internal.AmazonKinesisMetadata</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.Kinesis.Internal.AmazonKinesisMetadata</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ServiceId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OperationNameMapping</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ServiceId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OperationNameMapping</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
+<!-- SIG # Begin signature block -->
+<!-- MIIcUAYJKoZIhvcNAQcCoIIcQTCCHD0CAQExDzANBglghkgBZQMEAgEFADB5Bgor -->
+<!-- BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG -->
+<!-- KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBbmgRxTRT8IFeG -->
+<!-- GSTHT/J0WECc+PyhNKBI0tpz7sdVn6CCF0cwggS5MIIDoaADAgECAhArd4OFAE9M -->
+<!-- ppHAfzWQwHt/MA0GCSqGSIb3DQEBCwUAMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UE -->
+<!-- ChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0 -->
+<!-- IE5ldHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUg -->
+<!-- U2lnbmluZyBDQSAtIEcyMB4XDTE3MDcxMDAwMDAwMFoXDTIwMDcxMDIzNTk1OVow -->
+<!-- ajELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1Nl -->
+<!-- YXR0bGUxGTAXBgNVBAoMEEFtYXpvbi5jb20sIEluYy4xGTAXBgNVBAMMEEFtYXpv -->
+<!-- bi5jb20sIEluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC18TJW -->
+<!-- m2/aGpvb+TP2CZMg49X/5bjDAgPxWlAs7bqDyZnRYJork4rLmejpeJu+2BhRjZeK -->
+<!-- OirT4XveddBsdL1/TR+FKp8BXEsrm0wcR4yT6mNHJ9yCgC1YBNG91bZ75kRIT+46 -->
+<!-- chbC7eNI5703wi8ejxe2KvvOERppBTaFStVJuAHab69dvFma8qE3s7wbqPdQ5eTI -->
+<!-- +Xm0bXp8cObS+vj+hf3N2pfDNWM8ITva3kbowGoCW0rKzpf7fBGtBOKnOCCSL0yC -->
+<!-- AOwLlFkslemVyrT1/HTDjOTKCro016HxOPddA4cefvr2ZhGlRZQQHg7wMdG7TpZX -->
+<!-- ueQ6LoS9UxlzCYHFAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQE -->
+<!-- AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBM -->
+<!-- MCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcC -->
+<!-- AjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5 -->
+<!-- S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2Iu -->
+<!-- Y29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9y -->
+<!-- Yi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIu -->
+<!-- Y3J0MA0GCSqGSIb3DQEBCwUAA4IBAQC+C4TcK44ph2QQK/1f65jOR23DtSBC3y9a -->
+<!-- bzRHdo4qxmcAW5ot69os7GJfzgVsA5lh1IT4+aMuGYA4GTcF6iTSOMgFSRwP8urI -->
+<!-- N2BprsWuMJsQ7+Flo3PBRN3dU6idOlFKOfuRxgIHRn47t2yRan6XTNhfiWl84DrD -->
+<!-- NjSTnk4c72Gzu0hiwQB9OTsf8CQP3Shb3ZzcAOmeUB01TFoJU34PfJpKlKQZeQIi -->
+<!-- W5WdPPr1G/0cAHgejDHtdNYcSqIWfoGeYgCxUg1IFpp1VmPlqb/de8QKONzPDK6/ -->
+<!-- 5hulSGqGgpRmEkwGGJiQeOB51GxYZRCPq3hN3UJ6N0A+hYzj7yspMIIFRzCCBC+g -->
+<!-- AwIBAgIQfBs1NUrn23TnQV8RacprqDANBgkqhkiG9w0BAQsFADCBvTELMAkGA1UE -->
+<!-- BhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2ln -->
+<!-- biBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwOCBWZXJpU2lnbiwgSW5j -->
+<!-- LiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MTgwNgYDVQQDEy9WZXJpU2lnbiBV -->
+<!-- bml2ZXJzYWwgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xNDA3MjIw -->
+<!-- MDAwMDBaFw0yNDA3MjEyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UEChMU -->
+<!-- U3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5l -->
+<!-- dHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2ln -->
+<!-- bmluZyBDQSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA15VD -->
+<!-- 1NzfZ645+1KktiYxBHDpt45bKro3aTWVj7vAMOeG2HO73+vRdj+KVo7rLUvwVxhO -->
+<!-- sY2lM9MLdSPVankn3aPT9w6HZbXerRzx9TW0IlGvIqHBXUuQf8BZTqudeakC1x5J -->
+<!-- sTtNh/7CeKu/71KunK8I2TnlmlE+aV8wEE5xY2xY4fAgMxsPdL5byxLh24zEgJRy -->
+<!-- u/ZFmp7BJQv7oxye2KYJcHHswEdMj33D3hnOPu4Eco4X0//wsgUyGUzTsByf/qV4 -->
+<!-- IEJwQbAmjG8AyDoAEUF6QbCnipEEoJl49He082Aq5mxQBLcUYP8NUfSoi4T+Idpc -->
+<!-- Xn31KXlPsER0b21y/wIDAQABo4IBeDCCAXQwLgYIKwYBBQUHAQEEIjAgMB4GCCsG -->
+<!-- AQUFBzABhhJodHRwOi8vcy5zeW1jZC5jb20wEgYDVR0TAQH/BAgwBgEB/wIBADBm -->
+<!-- BgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYIKwYBBQUHAgEWF2h0dHBzOi8v -->
+<!-- ZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkaF2h0dHBzOi8vZC5zeW1jYi5j -->
+<!-- b20vcnBhMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9zLnN5bWNiLmNvbS91bml2 -->
+<!-- ZXJzYWwtcm9vdC5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDgYDVR0PAQH/BAQD -->
+<!-- AgEGMCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFTeW1hbnRlY1BLSS0xLTcyNDAd -->
+<!-- BgNVHQ4EFgQU1MAGIknrOUvdk+JcobhHdglyA1gwHwYDVR0jBBgwFoAUtnf6aUhH -->
+<!-- n1MS1cLqBzJ2B9GXBxkwDQYJKoZIhvcNAQELBQADggEBAH/ryqfqi3ZC6z6OIFQw -->
+<!-- 47e53PpIPhbHD0WVEM0nhqNm8wLtcfiqwlWXkXCD+VJ+Umk8yfHglEaAGLuh1KRW -->
+<!-- pvMdAJHVhvNIh+DLxDRoIF60y/kF7ZyvcFMnueg+flGgaXGL3FHtgDolMp9Er25D -->
+<!-- KNMhdbuX2IuLjP6pBEYEhfcVnEsRjcQsF/7Vbn+a4laS8ZazrS359N/aiZnOsjhE -->
+<!-- wPdHe8olufoqaDObUHLeqJ/UzSwLNL2LMHhA4I2OJxuQbxq+CBWBXesv4lHnUR7J -->
+<!-- eCnnHmW/OO8BSgEJJA4WxBR5wUE3NNA9kVKUneFo7wjw4mmcZ26QCxqTcdQmAsPA -->
+<!-- WiMwggZqMIIFUqADAgECAhADAZoCOv9YsWvW1ermF/BmMA0GCSqGSIb3DQEBBQUA -->
+<!-- MGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsT -->
+<!-- EHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQg -->
+<!-- Q0EtMTAeFw0xNDEwMjIwMDAwMDBaFw0yNDEwMjIwMDAwMDBaMEcxCzAJBgNVBAYT -->
+<!-- AlVTMREwDwYDVQQKEwhEaWdpQ2VydDElMCMGA1UEAxMcRGlnaUNlcnQgVGltZXN0 -->
+<!-- YW1wIFJlc3BvbmRlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKNk -->
+<!-- Xfx8s+CCNeDg9sYq5kl1O8xu4FOpnx9kWeZ8a39rjJ1V+JLjntVaY1sCSVDZg85v -->
+<!-- Zu7dy4XpX6X51Id0iEQ7Gcnl9ZGfxhQ5rCTqqEsskYnMXij0ZLZQt/USs3OWCmej -->
+<!-- vmGfrvP9Enh1DqZbFP1FI46GRFV9GIYFjFWHeUhG98oOjafeTl/iqLYtWQJhiGFy -->
+<!-- GGi5uHzu5uc0LzF3gTAfuzYBje8n4/ea8EwxZI3j6/oZh6h+z+yMDDZbesF6uHjH -->
+<!-- yQYuRhDIjegEYNu8c3T6Ttj+qkDxss5wRoPp2kChWTrZFQlXmVYwk/PJYczQCMxr -->
+<!-- 7GJCkawCwO+k8IkRj3cCAwEAAaOCAzUwggMxMA4GA1UdDwEB/wQEAwIHgDAMBgNV -->
+<!-- HRMBAf8EAjAAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMIIBvwYDVR0gBIIBtjCC -->
+<!-- AbIwggGhBglghkgBhv1sBwEwggGSMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k -->
+<!-- aWdpY2VydC5jb20vQ1BTMIIBZAYIKwYBBQUHAgIwggFWHoIBUgBBAG4AeQAgAHUA -->
+<!-- cwBlACAAbwBmACAAdABoAGkAcwAgAEMAZQByAHQAaQBmAGkAYwBhAHQAZQAgAGMA -->
+<!-- bwBuAHMAdABpAHQAdQB0AGUAcwAgAGEAYwBjAGUAcAB0AGEAbgBjAGUAIABvAGYA -->
+<!-- IAB0AGgAZQAgAEQAaQBnAGkAQwBlAHIAdAAgAEMAUAAvAEMAUABTACAAYQBuAGQA -->
+<!-- IAB0AGgAZQAgAFIAZQBsAHkAaQBuAGcAIABQAGEAcgB0AHkAIABBAGcAcgBlAGUA -->
+<!-- bQBlAG4AdAAgAHcAaABpAGMAaAAgAGwAaQBtAGkAdAAgAGwAaQBhAGIAaQBsAGkA -->
+<!-- dAB5ACAAYQBuAGQAIABhAHIAZQAgAGkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAA -->
+<!-- aABlAHIAZQBpAG4AIABiAHkAIAByAGUAZgBlAHIAZQBuAGMAZQAuMAsGCWCGSAGG -->
+<!-- /WwDFTAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcNK2cCzTAdBgNVHQ4EFgQU -->
+<!-- YVpNJLZJMp1KKnkag0v0HonByn0wfQYDVR0fBHYwdDA4oDagNIYyaHR0cDovL2Ny -->
+<!-- bDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcmwwOKA2oDSG -->
+<!-- Mmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEu -->
+<!-- Y3JsMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGln -->
+<!-- aWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5j -->
+<!-- b20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNydDANBgkqhkiG9w0BAQUFAAOCAQEA -->
+<!-- nSV+GzNNsiaBXJuGziMgD4CH5Yj//7HUaiwx7ToXGXEXzakbvFoWOQCd42yE5FpA -->
+<!-- +94GAYw3+puxnSR+/iCkV61bt5qwYCbqaVchXTQvH3Gwg5QZBWs1kBCge5fH9j/n -->
+<!-- 4hFBpr1i2fAnPTgdKG86Ugnw7HBi02JLsOBzppLA044x2C/jbRcTBu7kA7YUq/OP -->
+<!-- Q6dxnSHdFMoVXZJB2vkPgdGZdA0mxA5/G7X1oPHGdwYoFenYk+VVFvC7Cqsc21xI -->
+<!-- J2bIo4sKHOWV2q7ELlmgYd3a822iYemKC23sEhi991VUQAOSK2vCUcIKSK+w1G7g -->
+<!-- 9BQKOhvjjz3Kr2qNe9zYRDCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhsw -->
+<!-- DQYJKoZIhvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0 -->
+<!-- IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNl -->
+<!-- cnQgQXNzdXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAw -->
+<!-- MDAwMFowYjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcG -->
+<!-- A1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJl -->
+<!-- ZCBJRCBDQS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnK -->
+<!-- wkKVpYBzQHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InE -->
+<!-- Ctqvy15r7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH -->
+<!-- 6zY/2DDD/6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77b -->
+<!-- lUjE7h6z8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnx -->
+<!-- TPKvmPv2zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2Kk -->
+<!-- PzIUYJX9BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0 -->
+<!-- MDIGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEF -->
+<!-- BQcDCDCCAdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYB -->
+<!-- BQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9y -->
+<!-- eS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYA -->
+<!-- IAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkA -->
+<!-- dAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAA -->
+<!-- RABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAA -->
+<!-- UgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAA -->
+<!-- dwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4A -->
+<!-- ZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkA -->
+<!-- bgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1Ud -->
+<!-- EwEB/wQIMAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRw -->
+<!-- Oi8vb2NzcC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRz -->
+<!-- LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1Ud -->
+<!-- HwR6MHgwOqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFz -->
+<!-- c3VyZWRJRFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNv -->
+<!-- bS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZ -->
+<!-- B+0e36K+Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0G -->
+<!-- CSqGSIb3DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/s -->
+<!-- dR90OPKyXGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZ -->
+<!-- Vann4+erYs37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQl -->
+<!-- c+Qqq8+cdkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dF -->
+<!-- zdaD7eeSDY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsY -->
+<!-- Gk38KiGtSTGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEXzCCBFsCAQEwgZkw -->
+<!-- gYQxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRTeW1hbnRlYyBDb3Jwb3JhdGlvbjEf -->
+<!-- MB0GA1UECxMWU3ltYW50ZWMgVHJ1c3QgTmV0d29yazE1MDMGA1UEAxMsU3ltYW50 -->
+<!-- ZWMgQ2xhc3MgMyBTSEEyNTYgQ29kZSBTaWduaW5nIENBIC0gRzICECt3g4UAT0ym -->
+<!-- kcB/NZDAe38wDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIBDDEKMAigAoAA -->
+<!-- oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w -->
+<!-- DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQg8/bP8IezyjUIPObSgXs8TYqI -->
+<!-- wxPXZWKomofxBPukvSQwDQYJKoZIhvcNAQEBBQAEggEAAkB9+YnOQFk86ReCK0mg -->
+<!-- g9aXozHU1tcLpRaNTF7RFBvVW0THANBXkEAHZHcuvNqL7WULbQouE7qrwNhs11+u -->
+<!-- QcjyVRFfFlD/hrntSTBp0c5L1cUaWAwIFn93RbWj9ZpQlUuqposrQat02XBnGqmT -->
+<!-- yKX6730dVzTxNhkEJ0CTjCCW07QXoPYxVk+Lw2Ram/blaOuzhDhrVT+cgRyIHKF/ -->
+<!-- hfSjfvHNDHsWosvw8W31Sv1X39K7LUoF3jfiRdY1hJmJzpDSWkHKkzu5vSbvZ7Df -->
+<!-- d5Me+zw+IDBzoUE/oUoZsB2Bl20RR1pQORieih2pXzK3WvrdybLc+VbKwrTyBKAQ -->
+<!-- haGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYTAlVT -->
+<!-- MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j -->
+<!-- b20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/WLFr -->
+<!-- 1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAc -->
+<!-- BgkqhkiG9w0BCQUxDxcNMjAwNjEwMjMxNzI0WjAjBgkqhkiG9w0BCQQxFgQUfrRN -->
+<!-- jOI6lPPgyk8PN9zvxKuG6v0wDQYJKoZIhvcNAQEBBQAEggEATcheG0ZvMUiStrrb -->
+<!-- oN93wlhv/U2kPQNTGuG0SC4Z7HupfvuXBdX/y4JXW38l4HbKQuhdYMUfho+9XORF -->
+<!-- XTr+eo8kp3QN12QBW8inArfyOZakm3g3mBfcATO6yuoykSUEjsTGXsQbJiPaRweh -->
+<!-- LoPTAeGfj8ypH7i4NO8iZTXSUODGKizPT+lRbSZOOl6w4vF8K2/hb95ib73S5G+4 -->
+<!-- vvhk+WM9CSZBwNS7OhmhR9Z71dKyxW39rhZ7Rs+Dt2UiYLVVkWhMyrQI8AZJde2Y -->
+<!-- FzfV6+jrj5falq6xVoeEyWEQuZ9gjRtbp61uzsIWgWO3075vBBfsO2r+rTAUXU48 -->
+<!-- IzuuyQ== -->
+<!-- SIG # End signature block -->

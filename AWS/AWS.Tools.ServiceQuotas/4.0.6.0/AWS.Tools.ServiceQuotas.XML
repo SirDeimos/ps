@@ -1,0 +1,800 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.ServiceQuotas</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQAssociationForServiceQuotaTemplateCmdlet">
+            <summary>
+            Retrieves the <code>ServiceQuotaTemplateAssociationStatus</code> value from the service.
+            Use this action to determine if the Service Quota template is associated, or enabled.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAssociationForServiceQuotaTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ServiceQuotaTemplateAssociationStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.GetAssociationForServiceQuotaTemplateResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.GetAssociationForServiceQuotaTemplateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaCmdlet">
+            <summary>
+            Retrieves the default service quotas values. The Value returned for each quota is
+            the AWS default value, even if the quotas have been increased..
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Identifies the service quota you want to select.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Quota'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.GetAWSDefaultServiceQuotaResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.GetAWSDefaultServiceQuotaResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet">
+            <summary>
+            Lists all default service quotas for the specified AWS service or all AWS services.
+            ListAWSDefaultServiceQuotas is similar to <a>ListServiceQuotas</a> except for the
+            Value object. The Value object returned by <code>ListAWSDefaultServiceQuotas</code>
+            is the default value assigned by AWS. This request returns a list of all service quotas
+            for the specified service. The listing of each you'll see the default values are the
+            values that AWS provides for the quotas. 
+            
+             <note><para>
+            Always check the <code>NextToken</code> response parameter when calling any of the
+            <code>List*</code> operations. These operations can return an unexpected list of results,
+            even when there are more results available. When this happens, the <code>NextToken</code>
+            response parameter contains a value to pass the next call to the same API to request
+            the next part of the list.
+            </para></note><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Limits the number of results that you want to include in the response.
+            If you don't include this parameter, the response defaults to a value that's specific
+            to the operation. If additional items exist beyond the specified maximum, the <code>NextToken</code>
+            element is present and has a value (isn't null). Include that value as the <code>NextToken</code>
+            request parameter in the call to the operation to get the next part of the results.
+            You should check <code>NextToken</code> after every operation to ensure that you receive
+            all of the results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Use this parameter in a request if you receive a <code>NextToken</code>
+            response in a previous request that indicates that there's more output available.
+            In a subsequent call, set it to the value of the previous call's <code>NextToken</code>
+            response to indicate where the output should continue from. If additional items exist
+            beyond the specified maximum, the <code>NextToken</code> element is present and has
+            a value (isn't null). Include that value as the <code>NextToken</code> request parameter
+            in the call to the operation to get the next part of the results. You should check
+            <code>NextToken</code> after every operation to ensure that you receive all of the
+            results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Quotas'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.ListAWSDefaultServiceQuotasResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.ListAWSDefaultServiceQuotasResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServiceCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServiceCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQAWSDefaultServiceQuotaListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeCmdlet">
+            <summary>
+            Retrieves the details for a particular increase request.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeCmdlet.RequestId">
+            <summary>
+            <para>
+            <para>Identifies the quota increase request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RequestedQuota'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.GetRequestedServiceQuotaChangeResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.GetRequestedServiceQuotaChangeResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RequestId parameter.
+            The -PassThru parameter is deprecated, use -Select '^RequestId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet">
+            <summary>
+            Requests a list of the changes to specific service quotas. This command provides additional
+            granularity over the <code>ListRequestedServiceQuotaChangeHistory</code> command.
+            Once a quota change request has reached <code>CASE_CLOSED, APPROVED,</code> or <code>DENIED</code>,
+            the history has been kept for 90 days.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Specifies the service quota that you want to use</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.Status">
+            <summary>
+            <para>
+            <para>Specifies the status value of the quota increase request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Limits the number of results that you want to include in the response.
+            If you don't include this parameter, the response defaults to a value that's specific
+            to the operation. If additional items exist beyond the specified maximum, the <code>NextToken</code>
+            element is present and has a value (isn't null). Include that value as the <code>NextToken</code>
+            request parameter in the call to the operation to get the next part of the results.
+            You should check <code>NextToken</code> after every operation to ensure that you receive
+            all of the results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Use this parameter in a request if you receive a <code>NextToken</code>
+            response in a previous request that indicates that there's more output available.
+            In a subsequent call, set it to the value of the previous call's <code>NextToken</code>
+            response to indicate where the output should continue from.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RequestedQuotas'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.ListRequestedServiceQuotaChangeHistoryByQuotaResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.ListRequestedServiceQuotaChangeHistoryByQuotaResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryByQuotaListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet">
+            <summary>
+            Requests a list of the changes to quotas for a service.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.Status">
+            <summary>
+            <para>
+            <para>Specifies the status value of the quota increase request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Limits the number of results that you want to include in the response.
+            If you don't include this parameter, the response defaults to a value that's specific
+            to the operation. If additional items exist beyond the specified maximum, the <code>NextToken</code>
+            element is present and has a value (isn't null). Include that value as the <code>NextToken</code>
+            request parameter in the call to the operation to get the next part of the results.
+            You should check <code>NextToken</code> after every operation to ensure that you receive
+            all of the results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Use this parameter in a request if you receive a <code>NextToken</code>
+            response in a previous request that indicates that there's more output available.
+            In a subsequent call, set it to the value of the previous call's <code>NextToken</code>
+            response to indicate where the output should continue from.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RequestedQuotas'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.ListRequestedServiceQuotaChangeHistoryResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.ListRequestedServiceQuotaChangeHistoryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServiceCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServiceCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQRequestedServiceQuotaChangeHistoryListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceListCmdlet">
+            <summary>
+            Lists the AWS services available in Service Quotas. Not all AWS services are available
+            in Service Quotas. To list the see the list of the service quotas for a specific service,
+            use <a>ListServiceQuotas</a>.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Limits the number of results that you want to include in the response.
+            If you don't include this parameter, the response defaults to a value that's specific
+            to the operation. If additional items exist beyond the specified maximum, the <code>NextToken</code>
+            element is present and has a value (isn't null). Include that value as the <code>NextToken</code>
+            request parameter in the call to the operation to get the next part of the results.
+            You should check <code>NextToken</code> after every operation to ensure that you receive
+            all of the results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Use this parameter in a request if you receive a <code>NextToken</code>
+            response in a previous request that indicates that there's more output available.
+            In a subsequent call, set it to the value of the previous call's <code>NextToken</code>
+            response to indicate where the output should continue from.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Services'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.ListServicesResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.ListServicesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaCmdlet">
+            <summary>
+            Returns the details for the specified service quota. This operation provides a different
+            Value than the <code>GetAWSDefaultServiceQuota</code> operation. This operation returns
+            the applied value for each quota. <code>GetAWSDefaultServiceQuota</code> returns the
+            default AWS value for each quota.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Identifies the service quota you want to select.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Quota'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.GetServiceQuotaResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.GetServiceQuotaResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestFromTemplateCmdlet">
+            <summary>
+            Returns the details of the service quota increase request in your template.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestFromTemplateCmdlet.AwsRegion">
+            <summary>
+            <para>
+            <para>Specifies the AWS Region for the quota that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestFromTemplateCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Specifies the quota you want.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestFromTemplateCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestFromTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ServiceQuotaIncreaseRequestInTemplate'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.GetServiceQuotaIncreaseRequestFromTemplateResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.GetServiceQuotaIncreaseRequestFromTemplateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestFromTemplateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet">
+            <summary>
+            Returns a list of the quota increase requests in the template.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.AwsRegion">
+            <summary>
+            <para>
+            <para>Specifies the AWS Region for the quota that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>The identifier for a service. When performing an operation, use the <code>ServiceCode</code>
+            to specify a particular service. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Limits the number of results that you want to include in the response.
+            If you don't include this parameter, the response defaults to a value that's specific
+            to the operation. If additional items exist beyond the specified maximum, the <code>NextToken</code>
+            element is present and has a value (isn't null). Include that value as the <code>NextToken</code>
+            request parameter in the call to the operation to get the next part of the results.
+            You should check <code>NextToken</code> after every operation to ensure that you receive
+            all of the results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Use this parameter in a request if you receive a <code>NextToken</code>
+            response in a previous request that indicates that there's more output available.
+            In a subsequent call, set it to the value of the previous call's <code>NextToken</code>
+            response to indicate where the output should continue from.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ServiceQuotaIncreaseRequestInTemplateList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.ListServiceQuotaIncreaseRequestsInTemplateResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.ListServiceQuotaIncreaseRequestsInTemplateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServiceCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServiceCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaIncreaseRequestsInTemplateListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet">
+            <summary>
+            Lists all service quotas for the specified AWS service. This request returns a list
+            of the service quotas for the specified service. you'll see the default values are
+            the values that AWS provides for the quotas. 
+            
+             <note><para>
+            Always check the <code>NextToken</code> response parameter when calling any of the
+            <code>List*</code> operations. These operations can return an unexpected list of results,
+            even when there are more results available. When this happens, the <code>NextToken</code>
+            response parameter contains a value to pass the next call to the same API to request
+            the next part of the list.
+            </para></note><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>The identifier for a service. When performing an operation, use the <code>ServiceCode</code>
+            to specify a particular service. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>(Optional) Limits the number of results that you want to include in the response.
+            If you don't include this parameter, the response defaults to a value that's specific
+            to the operation. If additional items exist beyond the specified maximum, the <code>NextToken</code>
+            element is present and has a value (isn't null). Include that value as the <code>NextToken</code>
+            request parameter in the call to the operation to get the next part of the results.
+            You should check <code>NextToken</code> after every operation to ensure that you receive
+            all of the results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>(Optional) Use this parameter in a request if you receive a <code>NextToken</code>
+            response in a previous request that indicates that there's more output available.
+            In a subsequent call, set it to the value of the previous call's <code>NextToken</code>
+            response to indicate where the output should continue from.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Quotas'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.ListServiceQuotasResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.ListServiceQuotasResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServiceCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServiceCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.GetSQServiceQuotaListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.RegisterSQServiceQuotaTemplateCmdlet">
+            <summary>
+            Associates the Service Quotas template with your organization so that when new accounts
+            are created in your organization, the template submits increase requests for the specified
+            service quotas. Use the Service Quotas template to request an increase for any adjustable
+            quota value. After you define the Service Quotas template, use this operation to associate,
+            or enable, the template.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RegisterSQServiceQuotaTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.AssociateServiceQuotaTemplateResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RegisterSQServiceQuotaTemplateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet">
+            <summary>
+            Removes a service quota increase request from the Service Quotas template.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet.AwsRegion">
+            <summary>
+            <para>
+            <para>Specifies the AWS Region for the quota that you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Specifies the code for the quota that you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the code for the service that you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.DeleteServiceQuotaIncreaseRequestFromTemplateResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RemoveSQServiceQuotaIncreaseRequestFromTemplateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet">
+            <summary>
+            Retrieves the details of a service quota increase request. The response to this command
+            provides the details in the <a>RequestedServiceQuotaChange</a> object.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet.DesiredValue">
+            <summary>
+            <para>
+            <para>Specifies the value submitted in the service quota increase request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Specifies the service quota that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RequestedQuota'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.RequestServiceQuotaIncreaseResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.RequestServiceQuotaIncreaseResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.RequestSQServiceQuotaIncreaseCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.UnregisterSQServiceQuotaTemplateCmdlet">
+            <summary>
+            Disables the Service Quotas template. Once the template is disabled, it does not request
+            quota increases for new accounts in your organization. Disabling the quota template
+            does not apply the quota increase requests from the template. 
+            
+             
+            <para><b>Related operations</b></para><ul><li><para>
+            To enable the quota template, call <a>AssociateServiceQuotaTemplate</a>. 
+            </para></li><li><para>
+            To delete a specific service quota from the template, use <a>DeleteServiceQuotaIncreaseRequestFromTemplate</a>.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.UnregisterSQServiceQuotaTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.DisassociateServiceQuotaTemplateResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.UnregisterSQServiceQuotaTemplateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet">
+            <summary>
+            Defines and adds a quota to the service quota template. To add a quota to the template,
+            you must provide the <code>ServiceCode</code>, <code>QuotaCode</code>, <code>AwsRegion</code>,
+            and <code>DesiredValue</code>. Once you add a quota to the template, use <a>ListServiceQuotaIncreaseRequestsInTemplate</a>
+            to see the list of quotas in the template.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.AwsRegion">
+            <summary>
+            <para>
+            <para>Specifies the AWS Region for the quota. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.DesiredValue">
+            <summary>
+            <para>
+            <para>Specifies the new, increased value for the quota. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.QuotaCode">
+            <summary>
+            <para>
+            <para>Specifies the service quota that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.ServiceCode">
+            <summary>
+            <para>
+            <para>Specifies the service that you want to use.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ServiceQuotaIncreaseRequestInTemplate'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ServiceQuotas.Model.PutServiceQuotaIncreaseRequestIntoTemplateResponse).
+            Specifying the name of a property of type Amazon.ServiceQuotas.Model.PutServiceQuotaIncreaseRequestIntoTemplateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QuotaCode parameter.
+            The -PassThru parameter is deprecated, use -Select '^QuotaCode' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SQ.WriteSQServiceQuotaIncreaseRequestIntoTemplateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

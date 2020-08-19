@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.ResourceGroups</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.AddRGResourceTagCmdlet">
+            <summary>
+            Adds tags to a resource group with the specified ARN. Existing tags on a resource
+            group are not changed if they are not specified in the request parameters.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.AddRGResourceTagCmdlet.Arn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to which to add tags.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.AddRGResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to add to the specified resource. A tag is a string-to-string map of key-value
+            pairs. Tag keys can have a maximum character length of 128 characters, and tag values
+            can have a maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.AddRGResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.TagResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.TagResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.AddRGResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Tag parameter.
+            The -PassThru parameter is deprecated, use -Select '^Tag' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.AddRGResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet">
+            <summary>
+            Returns a list of AWS resource identifiers that matches a specified query. The query
+            uses the same format as a resource query in a CreateGroup or UpdateGroupQuery operation.<br/><br/>In the AWS.Tools.ResourceGroups module, this cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet.ResourceQuery">
+            <summary>
+            <para>
+            <para>The search query, using the same formats that are supported for resource group definition.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of group member ARNs returned by <code>SearchResources</code> in
+            paginated output. By default, this number is 50.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The NextToken value that is returned in a paginated <code>SearchResources</code> request.
+            To get the next page of results, run the call again, add the NextToken parameter,
+            and specify the NextToken value.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In the AWS.Tools.ResourceGroups module, this parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.SearchResourcesResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.SearchResourcesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceQuery parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceQuery' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.FindRGResourceCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.GetRGGroupCmdlet">
+            <summary>
+            Returns information about a specified resource group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupCmdlet.GroupName">
+            <summary>
+            <para>
+            <para>The name of the resource group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Group'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.GetGroupResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.GetGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet">
+            <summary>
+            Returns a list of existing resource groups in your account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>Filters, formatted as GroupFilter objects, that you want to apply to a ListGroups
+            operation.</para><ul><li><para><code>resource-type</code> - Filter groups by resource type. Specify up to five resource
+            types in the format AWS::ServiceCode::ResourceType. For example, AWS::EC2::Instance,
+            or AWS::S3::Bucket.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of resource group results that are returned by ListGroups in paginated
+            output. By default, this number is 50.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>50</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The NextToken value that is returned in a paginated <code>ListGroups</code> request.
+            To get the next page of results, run the call again, add the NextToken parameter,
+            and specify the NextToken value.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GroupIdentifiers'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.ListGroupsResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.ListGroupsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Filter parameter.
+            The -PassThru parameter is deprecated, use -Select '^Filter' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.GetRGGroupQueryCmdlet">
+            <summary>
+            Returns the resource query associated with the specified resource group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupQueryCmdlet.GroupName">
+            <summary>
+            <para>
+            <para>The name of the resource group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupQueryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GroupQuery'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.GetGroupQueryResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.GetGroupQueryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupQueryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet">
+            <summary>
+            Returns a list of ARNs of resources that are members of a specified resource group.<br/><br/>In the AWS.Tools.ResourceGroups module, this cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>Filters, formatted as ResourceFilter objects, that you want to apply to a ListGroupResources
+            operation.</para><ul><li><para><code>resource-type</code> - Filter resources by their type. Specify up to five resource
+            types in the format AWS::ServiceCode::ResourceType. For example, AWS::EC2::Instance,
+            or AWS::S3::Bucket.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.GroupName">
+            <summary>
+            <para>
+            <para>The name of the resource group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of group member ARNs that are returned in a single call by ListGroupResources,
+            in paginated output. By default, this number is 50.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The NextToken value that is returned in a paginated ListGroupResources request. To
+            get the next page of results, run the call again, add the NextToken parameter, and
+            specify the NextToken value.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In the AWS.Tools.ResourceGroups module, this parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.ListGroupResourcesResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.ListGroupResourcesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGGroupResourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.GetRGResourceTagCmdlet">
+            <summary>
+            Returns a list of tags that are associated with a resource group, specified by an
+            ARN.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGResourceTagCmdlet.Arn">
+            <summary>
+            <para>
+            <para>The ARN of the resource group for which you want a list of tags. The resource must
+            exist within the account you are using.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.GetTagsResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.GetTagsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.GetRGResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Arn parameter.
+            The -PassThru parameter is deprecated, use -Select '^Arn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet">
+            <summary>
+            Creates a group with a specified name, description, and resource query.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the resource group. Descriptions can have a maximum of 511 characters,
+            including letters, numbers, hyphens, underscores, punctuation, and spaces.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the group, which is the identifier of the group in other operations. A
+            resource group name cannot be updated after it is created. A resource group name can
+            have a maximum of 128 characters, including letters, numbers, hyphens, dots, and underscores.
+            The name cannot start with <code>AWS</code> or <code>aws</code>; these are reserved.
+            A resource group name must be unique within your account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.ResourceQuery">
+            <summary>
+            <para>
+            <para>The resource query that determines which AWS resources are members of this group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to add to the group. A tag is a string-to-string map of key-value pairs.
+            Tag keys can have a maximum character length of 128 characters, and tag values can
+            have a maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.CreateGroupResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.CreateGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceQuery parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceQuery' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.NewRGGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.RemoveRGGroupCmdlet">
+            <summary>
+            Deletes a specified resource group. Deleting a resource group does not delete resources
+            that are members of the group; it only deletes the group structure.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGGroupCmdlet.GroupName">
+            <summary>
+            <para>
+            <para>The name of the resource group to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Group'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.DeleteGroupResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.DeleteGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupName parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.RemoveRGResourceTagCmdlet">
+            <summary>
+            Deletes specified tags from a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGResourceTagCmdlet.Arn">
+            <summary>
+            <para>
+            <para>The ARN of the resource from which to remove tags.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGResourceTagCmdlet.Key">
+            <summary>
+            <para>
+            <para>The keys of the tags to be removed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.UntagResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.UntagResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Key parameter.
+            The -PassThru parameter is deprecated, use -Select '^Key' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.RemoveRGResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupCmdlet">
+            <summary>
+            Updates an existing group with a new or changed description. You cannot update the
+            name of a resource group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the resource group. Descriptions can have a maximum of 511 characters,
+            including letters, numbers, hyphens, underscores, punctuation, and spaces.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupCmdlet.GroupName">
+            <summary>
+            <para>
+            <para>The name of the resource group for which you want to update its description.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Group'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.UpdateGroupResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.UpdateGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Description parameter.
+            The -PassThru parameter is deprecated, use -Select '^Description' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupQueryCmdlet">
+            <summary>
+            Updates the resource query of a group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupQueryCmdlet.GroupName">
+            <summary>
+            <para>
+            <para>The name of the resource group for which you want to edit the query.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupQueryCmdlet.ResourceQuery">
+            <summary>
+            <para>
+            <para>The resource query that determines which AWS resources are members of the resource
+            group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupQueryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GroupQuery'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ResourceGroups.Model.UpdateGroupQueryResponse).
+            Specifying the name of a property of type Amazon.ResourceGroups.Model.UpdateGroupQueryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupQueryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceQuery parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceQuery' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.RG.UpdateRGGroupQueryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

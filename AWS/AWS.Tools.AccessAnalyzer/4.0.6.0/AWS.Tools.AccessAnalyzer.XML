@@ -1,0 +1,828 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.AccessAnalyzer</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.AddIAMAAResourceTagCmdlet">
+            <summary>
+            Adds a tag to the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.AddIAMAAResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to add the tag to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.AddIAMAAResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to add to the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.AddIAMAAResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.AddIAMAAResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.AddIAMAAResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceCmdlet">
+            <summary>
+            Retrieves information about a resource that was analyzed.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceCmdlet.AnalyzerArn">
+            <summary>
+            <para>
+            <para>The ARN of the analyzer to retrieve information from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to retrieve information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Resource'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.GetAnalyzedResourceResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.GetAnalyzedResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet">
+            <summary>
+            Retrieves a list of resources of the specified type that have been analyzed by the
+            specified analyzer..<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.AnalyzerArn">
+            <summary>
+            <para>
+            <para>The ARN of the analyzer to retrieve a list of analyzed resources from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.ResourceType">
+            <summary>
+            <para>
+            <para>The type of resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in the response.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token used for pagination of results returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AnalyzedResources'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.ListAnalyzedResourcesResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.ListAnalyzedResourcesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzedResourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerCmdlet">
+            <summary>
+            Retrieves information about the specified analyzer.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer retrieved.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Analyzer'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.GetAnalyzerResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.GetAnalyzerResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerName parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet">
+            <summary>
+            Retrieves a list of analyzers.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of analyzer.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in the response.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token used for pagination of results returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Analyzers'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.ListAnalyzersResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.ListAnalyzersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Type parameter.
+            The -PassThru parameter is deprecated, use -Select '^Type' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAAnalyzerListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleCmdlet">
+            <summary>
+            Retrieves information about an archive rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer to retrieve rules from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleCmdlet.RuleName">
+            <summary>
+            <para>
+            <para>The name of the rule to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ArchiveRule'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.GetArchiveRuleResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.GetArchiveRuleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RuleName parameter.
+            The -PassThru parameter is deprecated, use -Select '^RuleName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet">
+            <summary>
+            Retrieves a list of archive rules created for the specified analyzer.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer to retrieve rules from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in the request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token used for pagination of results returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ArchiveRules'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.ListArchiveRulesResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.ListArchiveRulesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerName parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAArchiveRuleListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingCmdlet">
+            <summary>
+            Retrieves information about the specified finding.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingCmdlet.AnalyzerArn">
+            <summary>
+            <para>
+            <para>The ARN of the analyzer that generated the finding.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingCmdlet.Id">
+            <summary>
+            <para>
+            <para>The ID of the finding to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Finding'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.GetFindingResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.GetFindingResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet">
+            <summary>
+            Retrieves a list of findings generated by the specified analyzer.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.AnalyzerArn">
+            <summary>
+            <para>
+            <para>The ARN of the analyzer to retrieve findings from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.Sort_AttributeName">
+            <summary>
+            <para>
+            <para>The name of the attribute to sort on.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>A filter to match for the findings to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.Sort_OrderBy">
+            <summary>
+            <para>
+            <para>The sort order, ascending or descending.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in the response.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token used for pagination of results returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Findings'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.ListFindingsResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.ListFindingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAFindingListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAResourceTagCmdlet">
+            <summary>
+            Retrieves a list of tags applied to the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to retrieve tags from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.GetIAMAAResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet">
+            <summary>
+            Creates an analyzer for your account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer to create.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.ArchiveRule">
+            <summary>
+            <para>
+            <para>Specifies the archive rules to add for the analyzer. Archive rules automatically archive
+            findings that meet the criteria you define for the rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the analyzer.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of analyzer to create. Only ACCOUNT analyzers are supported. You can create
+            only one analyzer per account per Region.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A client token.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Arn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.CreateAnalyzerResponse).
+            Specifying the name of a property of type Amazon.AccessAnalyzer.Model.CreateAnalyzerResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerName parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAAnalyzerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet">
+            <summary>
+            Creates an archive rule for the specified analyzer. Archive rules automatically archive
+            findings that meet the criteria you define when you create the rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the created analyzer.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The criteria for the rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.RuleName">
+            <summary>
+            <para>
+            <para>The name of the rule to create.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A client token.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.CreateArchiveRuleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RuleName parameter.
+            The -PassThru parameter is deprecated, use -Select '^RuleName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.NewIAMAAArchiveRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAAnalyzerCmdlet">
+            <summary>
+            Deletes the specified analyzer. When you delete an analyzer, Access Analyzer is disabled
+            for the account in the current or specific Region. All findings that were generated
+            by the analyzer are deleted. You cannot undo this action.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAAnalyzerCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAAnalyzerCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A client token.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAAnalyzerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.DeleteAnalyzerResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAAnalyzerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerName parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAAnalyzerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet">
+            <summary>
+            Deletes the specified archive rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer that associated with the archive rule to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet.RuleName">
+            <summary>
+            <para>
+            <para>The name of the rule to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A client token.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.DeleteArchiveRuleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RuleName parameter.
+            The -PassThru parameter is deprecated, use -Select '^RuleName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAArchiveRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAResourceTagCmdlet">
+            <summary>
+            Removes a tag from the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to remove the tag from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The key for the tag to add.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.RemoveIAMAAResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.StartIAMAAResourceScanCmdlet">
+            <summary>
+            Immediately starts a scan of the policies applied to the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.StartIAMAAResourceScanCmdlet.AnalyzerArn">
+            <summary>
+            <para>
+            <para>The ARN of the analyzer to use to scan the policies applied to the specified resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.StartIAMAAResourceScanCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to scan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.StartIAMAAResourceScanCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.StartResourceScanResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.StartIAMAAResourceScanCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.StartIAMAAResourceScanCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet">
+            <summary>
+            Updates the criteria and values for the specified archive rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.AnalyzerName">
+            <summary>
+            <para>
+            <para>The name of the analyzer to update the archive rules for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.Filter">
+            <summary>
+            <para>
+            <para>A filter to match for the rules to update. Only rules that match the filter are updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.RuleName">
+            <summary>
+            <para>
+            <para>The name of the rule to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A client token.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.UpdateArchiveRuleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RuleName parameter.
+            The -PassThru parameter is deprecated, use -Select '^RuleName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAArchiveRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet">
+            <summary>
+            Updates the status for the specified findings.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.AnalyzerArn">
+            <summary>
+            <para>
+            <para>The ARN of the analyzer that generated the findings to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.Id">
+            <summary>
+            <para>
+            <para>The IDs of the findings to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource identified in the finding.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.Status">
+            <summary>
+            <para>
+            <para>The state represents the action to take to update the finding Status. Use <code>ARCHIVE</code>
+            to change an Active finding to an Archived finding. Use <code>ACTIVE</code> to change
+            an Archived finding to an Active finding.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A client token.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AccessAnalyzer.Model.UpdateFindingsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AnalyzerArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AnalyzerArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IAMAA.UpdateIAMAAFindingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

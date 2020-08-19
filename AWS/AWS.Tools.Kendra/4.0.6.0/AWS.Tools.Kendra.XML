@@ -1,0 +1,1351 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Kendra</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.AddKNDRResourceTagCmdlet">
+            <summary>
+            Adds the specified tag to the specified index, FAQ, or data source resource. If the
+            tag already exists, the existing value is replaced with the new value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.AddKNDRResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the index, FAQ, or data source to tag.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.AddKNDRResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of tag keys to add to the index, FAQ, or data source. If a tag already exists,
+            the existing value is replaced with the new value.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.AddKNDRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.AddKNDRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.AddKNDRResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceCmdlet">
+            <summary>
+            Gets information about a Amazon Kendra data source.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceCmdlet.Id">
+            <summary>
+            <para>
+            <para>The unique identifier of the data source to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.DescribeDataSourceResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.DescribeDataSourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet">
+            <summary>
+            Lists the data sources that you have created.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of data sources to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the previous response was incomplete (because there is more data to retrieve),
+            Amazon Kendra returns a pagination token in the response. You can use this pagination
+            token to retrieve the next set of data sources (<code>DataSourceSummaryItems</code>).
+            </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'SummaryItems'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.ListDataSourcesResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.ListDataSourcesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IndexId parameter.
+            The -PassThru parameter is deprecated, use -Select '^IndexId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet">
+            <summary>
+            Gets statistics about synchronizing Amazon Kendra with a data source.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.StartTimeFilter_EndTime">
+            <summary>
+            <para>
+            <para>The UNIX datetime of the end of the time range.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.Id">
+            <summary>
+            <para>
+            <para>The identifier of the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.StartTimeFilter_StartTime">
+            <summary>
+            <para>
+            <para>The UNIX datetime of the beginning of the time range.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.StatusFilter">
+            <summary>
+            <para>
+            <para>When specified, only returns synchronization jobs with the <code>Status</code> field
+            equal to the specified status.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of synchronization jobs to return in the response. If there are
+            fewer results in the list, this response contains only the actual results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request to <code>GetDataSourceSyncJobHistory</code>
+            was truncated, include the <code>NextToken</code> to fetch the next set of jobs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'History'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.ListDataSourceSyncJobsResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.ListDataSourceSyncJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRDataSourceSyncJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqCmdlet">
+            <summary>
+            Gets information about an FAQ list.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqCmdlet.Id">
+            <summary>
+            <para>
+            <para>The unique identifier of the FAQ.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the FAQ.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.DescribeFaqResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.DescribeFaqResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet">
+            <summary>
+            Gets a list of FAQ lists associated with an index.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The index that contains the FAQ lists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of FAQs to return in the response. If there are fewer results in
+            the list, this response contains only the actual results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the result of the previous request to <code>ListFaqs</code> was truncated, include
+            the <code>NextToken</code> to fetch the next set of FAQs.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FaqSummaryItems'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.ListFaqsResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.ListFaqsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IndexId parameter.
+            The -PassThru parameter is deprecated, use -Select '^IndexId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRFaqListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexCmdlet">
+            <summary>
+            Describes an existing Amazon Kendra index
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexCmdlet.Id">
+            <summary>
+            <para>
+            <para>The name of the index to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.DescribeIndexResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.DescribeIndexResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexListCmdlet">
+            <summary>
+            Lists the Amazon Kendra indexes that you have created.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of data sources to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>If the previous response was incomplete (because there is more data to retrieve),
+            Amazon Kendra returns a pagination token in the response. You can use this pagination
+            token to retrieve the next set of indexes (<code>DataSourceSummaryItems</code>). </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'IndexConfigurationSummaryItems'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.ListIndicesResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.ListIndicesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRIndexListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRResourceTagCmdlet">
+            <summary>
+            Gets a list of tags associated with a specified resource. Indexes, FAQs, and data
+            sources can have tags associated with them.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the index, FAQ, or data source to get a list of
+            tags for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.GetKNDRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet">
+            <summary>
+            Searches an active index. Use this API to search your documents using query. The <code>Query</code>
+            operation enables to do faceted search and to filter results based on document attributes.
+            
+             
+            <para>
+            It also enables you to provide user context that Amazon Kendra uses to enforce document
+            access control in the search results. 
+            </para><para>
+            Amazon Kendra searches your index for text content and question and answer (FAQ) content.
+            By default the response contains three types of results.
+            </para><ul><li><para>
+            Relevant passages
+            </para></li><li><para>
+            Matching FAQs
+            </para></li><li><para>
+            Relevant documents
+            </para></li></ul><para>
+            You can specify that the query return only one type of result using the <code>QueryResultTypeConfig</code>
+            parameter.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.AttributeFilter">
+            <summary>
+            <para>
+            <para>Enables filtered searches based on document attributes. You can only provide one attribute
+            filter; however, the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code>
+            parameters contain a list of other filters.</para><para>The <code>AttributeFilter</code> parameter enables you to create a set of filtering
+            rules that a document must satisfy to be included in the query results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.Facet">
+            <summary>
+            <para>
+            <para>An array of documents attributes. Amazon Kendra returns a count for each attribute
+            key specified. You can use this information to help narrow the search for your user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The unique identifier of the index to search. The identifier is returned in the response
+            from the operation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.PageNumber">
+            <summary>
+            <para>
+            <para>Query results are returned in pages the size of the <code>PageSize</code> parameter.
+            By default, Amazon Kendra returns the first page of results. Use this parameter to
+            get result pages after the first one.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.QueryResultTypeFilter">
+            <summary>
+            <para>
+            <para>Sets the type of query. Only results for the specified query type are returned.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.QueryText">
+            <summary>
+            <para>
+            <para>The text to search for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.RequestedDocumentAttribute">
+            <summary>
+            <para>
+            <para>An array of document attributes to include in the response. No other document attributes
+            are included in the response. By default all document attributes are included in the
+            response. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.PageSize">
+            <summary>
+            <para>
+            <para>Sets the number of results that are returned in each page of results. The default
+            page size is 10. The maximum number of results returned is 100. If you ask for more
+            than 100 results, only 100 are returned.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.QueryResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.QueryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QueryText parameter.
+            The -PassThru parameter is deprecated, use -Select '^QueryText' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.InvokeKNDRQueryCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet">
+            <summary>
+            Creates a data source that you use to with an Amazon Kendra index. 
+            
+             
+            <para>
+            You specify a name, connector type and description for your data source. You can choose
+            between an S3 connector, a SharePoint Online connector, and a database connector.
+            </para><para>
+            You also specify configuration information such as document metadata (author, source
+            URI, and so on) and user context information.
+            </para><para><code>CreateDataSource</code> is a synchronous operation. The operation returns 200
+            if the data source was successfully created. Otherwise, an exception is raised.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Configuration">
+            <summary>
+            <para>
+            <para>The connector configuration information that is required to access the repository.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description for the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that should be associated with this data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Name">
+            <summary>
+            <para>
+            <para>A unique name for the data source. A data source name can't be changed without deleting
+            and recreating the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of a role with permission to access the data source.
+            For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM
+            Roles for Amazon Kendra</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Schedule">
+            <summary>
+            <para>
+            <para>Sets the frequency that Amazon Kendra will check the documents in your repository
+            and update the index. If you don't set a schedule Amazon Kendra will not periodically
+            update the index. You can call the <code>StartDataSourceSyncJob</code> operation to
+            update the index.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that identify the data source. You can use the tags to identify
+            and organize your resources and to control access to resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of repository that contains the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Id'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.CreateDataSourceResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.CreateDataSourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRDataSourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet">
+            <summary>
+            Creates an new set of frequently asked question (FAQ) questions and answers.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.S3Path_Bucket">
+            <summary>
+            <para>
+            <para>The name of the S3 bucket that contains the file.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the FAQ.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the FAQ.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.S3Path_Key">
+            <summary>
+            <para>
+            <para>The name of the file.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name that should be associated with the FAQ.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that
+            contains the FAQs. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM
+            Roles for Amazon Kendra</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that identify the FAQ. You can use the tags to identify
+            and organize your resources and to control access to resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Id'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.CreateFaqResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.CreateFaqResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRFaqCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet">
+            <summary>
+            Creates a new Amazon Kendra index. Index creation is an asynchronous operation. To
+            determine if index creation has completed, check the <code>Status</code> field returned
+            from a call to . The <code>Status</code> field is set to <code>ACTIVE</code> when
+            the index is ready to use.
+            
+             
+            <para>
+            Once the index is active you can index your documents using the operation or using
+            one of the supported data sources. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description for the index.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.Edition">
+            <summary>
+            <para>
+            <para>The Amazon Kendra edition to use for the index. Choose <code>DEVELOPER_EDITION</code>
+            for indexes intended for development, testing, or proof of concept. Use <code>ENTERPRISE_EDITION</code>
+            for your production databases. Once you set the edition for an index, it can't be
+            changed. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.ServerSideEncryptionConfiguration_KmsKeyId">
+            <summary>
+            <para>
+            <para>The identifier of the AWS KMS customer master key (CMK). Amazon Kendra doesn't support
+            asymmetric CMKs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name for the new index.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>An IAM role that gives Amazon Kendra permissions to access your Amazon CloudWatch
+            logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code>
+            operation to index documents from an Amazon S3 bucket.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that identify the index. You can use the tags to identify
+            and organize your resources and to control access to resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A token that you provide to identify the request to create an index. Multiple calls
+            to the <code>CreateIndex</code> operation with the same client token will create only
+            one index.”</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Id'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.CreateIndexResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.CreateIndexResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.NewKNDRIndexCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDataSourceCmdlet">
+            <summary>
+            Deletes an Amazon Kendra data source. An exception is not thrown if the data source
+            is already being deleted. While the data source is being deleted, the <code>Status</code>
+            field returned by a call to the operation is set to <code>DELETING</code>. For more
+            information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/delete-data-source.html">Deleting
+            Data Sources</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDataSourceCmdlet.Id">
+            <summary>
+            <para>
+            <para>The unique identifier of the data source to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDataSourceCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The unique identifier of the index associated with the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDataSourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.DeleteDataSourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDataSourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IndexId parameter.
+            The -PassThru parameter is deprecated, use -Select '^IndexId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDataSourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet">
+            <summary>
+            Removes one or more documents from an index. The documents must have been added with
+            the <a>BatchPutDocument</a> operation.
+            
+             
+            <para>
+            The documents are deleted asynchronously. You can see the progress of the deletion
+            by using AWS CloudWatch. Any error messages releated to the processing of the batch
+            are sent to you CloudWatch log.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.DataSourceSyncJobMetricTarget_DataSourceId">
+            <summary>
+            <para>
+            <para>The ID of the data source that is running the sync job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.DataSourceSyncJobMetricTarget_DataSourceSyncJobId">
+            <summary>
+            <para>
+            <para>The ID of the sync job that is running on the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.DocumentIdList">
+            <summary>
+            <para>
+            <para>One or more identifiers for documents to delete from the index.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the documents to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FailedDocuments'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.BatchDeleteDocumentResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.BatchDeleteDocumentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IndexId parameter.
+            The -PassThru parameter is deprecated, use -Select '^IndexId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRDocumentBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRFaqCmdlet">
+            <summary>
+            Removes an FAQ from an index.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRFaqCmdlet.Id">
+            <summary>
+            <para>
+            <para>The identifier of the FAQ to remove.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRFaqCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The index to remove the FAQ from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRFaqCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.DeleteFaqResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRFaqCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRFaqCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRIndexCmdlet">
+            <summary>
+            Deletes an existing Amazon Kendra index. An exception is not thrown if the index is
+            already being deleted. While the index is being deleted, the <code>Status</code> field
+            returned by a call to the <a>DescribeIndex</a> operation is set to <code>DELETING</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRIndexCmdlet.Id">
+            <summary>
+            <para>
+            <para>The identifier of the index to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRIndexCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.DeleteIndexResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRIndexCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRIndexCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRResourceTagCmdlet">
+            <summary>
+            Removes a tag from an index, FAQ, or a data source.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the index, FAQ, or data source to remove the tag
+            from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>A list of tag keys to remove from the index, FAQ, or data source. If a tag key does
+            not exist on the resource, it is ignored.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.RemoveKNDRResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet">
+            <summary>
+            Enables you to provide feedback to Amazon Kendra to improve the performance of the
+            service.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.ClickFeedbackItem">
+            <summary>
+            <para>
+            <para>Tells Amazon Kendra that a particular search result link was chosen by the user. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that was queried.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.QueryId">
+            <summary>
+            <para>
+            <para>The identifier of the specific query for which you are submitting feedback. The query
+            ID is returned in the response to the operation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.RelevanceFeedbackItem">
+            <summary>
+            <para>
+            <para>Provides Amazon Kendra with relevant or not relevant feedback for whether a particular
+            item was relevant to the search.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.SubmitFeedbackResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the QueryId parameter.
+            The -PassThru parameter is deprecated, use -Select '^QueryId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.SendKNDRFeedbackCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.StartKNDRDataSourceSyncJobCmdlet">
+            <summary>
+            Starts a synchronization job for a data source. If a synchronization job is already
+            in progress, Amazon Kendra returns a <code>ResourceInUseException</code> exception.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StartKNDRDataSourceSyncJobCmdlet.Id">
+            <summary>
+            <para>
+            <para>The identifier of the data source to synchronize.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StartKNDRDataSourceSyncJobCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StartKNDRDataSourceSyncJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ExecutionId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.StartDataSourceSyncJobResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.StartDataSourceSyncJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StartKNDRDataSourceSyncJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StartKNDRDataSourceSyncJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.StopKNDRDataSourceSyncJobCmdlet">
+            <summary>
+            Stops a running synchronization job. You can't stop a scheduled synchronization job.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StopKNDRDataSourceSyncJobCmdlet.Id">
+            <summary>
+            <para>
+            <para>The identifier of the data source for which to stop the synchronization jobs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StopKNDRDataSourceSyncJobCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StopKNDRDataSourceSyncJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.StopDataSourceSyncJobResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StopKNDRDataSourceSyncJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.StopKNDRDataSourceSyncJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet">
+            <summary>
+            Updates an existing Amazon Kendra data source.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Configuration">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Description">
+            <summary>
+            <para>
+            <para>The new description for the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Id">
+            <summary>
+            <para>
+            <para>The unique identifier of the data source to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index that contains the data source to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the data source to update. The name of the data source can't be updated.
+            To rename a data source you must delete the data source and re-create it.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the new role to use when the data source is accessing
+            resources on your behalf.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Schedule">
+            <summary>
+            <para>
+            <para>The new update schedule for the data source.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.UpdateDataSourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRDataSourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet">
+            <summary>
+            Updates an existing Amazon Kendra index.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.Description">
+            <summary>
+            <para>
+            <para>A new description for the index.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.DocumentMetadataConfigurationUpdate">
+            <summary>
+            <para>
+            <para>The document metadata to update. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.Id">
+            <summary>
+            <para>
+            <para>The identifier of the index to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the index to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.CapacityUnits_QueryCapacityUnit">
+            <summary>
+            <para>
+            <para>The amount of extra query capacity for an index. Each capacity unit provides 0.5 queries
+            per second and 40,000 queries per day.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>A new IAM role that gives Amazon Kendra permission to access your Amazon CloudWatch
+            logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.CapacityUnits_StorageCapacityUnit">
+            <summary>
+            <para>
+            <para>The amount of extra storage capacity for an index. Each capacity unit provides 150
+            Gb of storage space or 500,000 documents, whichever is reached first.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.UpdateIndexResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.UpdateKNDRIndexCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet">
+            <summary>
+            Adds one or more documents to an index.
+            
+             
+            <para>
+            The <code>BatchPutDocument</code> operation enables you to ingest inline documents
+            or a set of documents stored in an Amazon S3 bucket. Use this operation to ingest
+            your text and unstructured text into an index, add custom attributes to the documents,
+            and to attach an access control list to the documents added to the index.
+            </para><para>
+            The documents are indexed asynchronously. You can see the progress of the batch using
+            AWS CloudWatch. Any error messages related to processing the batch are sent to your
+            AWS CloudWatch log.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet.Document">
+            <summary>
+            <para>
+            <para>One or more documents to add to the index. </para><para>Documents have the following file size limits.</para><ul><li><para>5 MB total size for inline documents</para></li><li><para>50 MB total size for files from an S3 bucket</para></li><li><para>5 MB extracted text for any file</para></li></ul><para>For more information about file size and transaction per second quotas, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet.IndexId">
+            <summary>
+            <para>
+            <para>The identifier of the index to add the documents to. You need to create the index
+            first using the <a>CreateIndex</a> operation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code>
+            operation. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM
+            Roles for Amazon Kendra</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'FailedDocuments'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Kendra.Model.BatchPutDocumentResponse).
+            Specifying the name of a property of type Amazon.Kendra.Model.BatchPutDocumentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the IndexId parameter.
+            The -PassThru parameter is deprecated, use -Select '^IndexId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.KNDR.WriteKNDRDocumentBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

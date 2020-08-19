@@ -1,0 +1,1238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Transfer</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.AddTFRResourceTagCmdlet">
+            <summary>
+            Attaches a key-value pair to a resource, as identified by its Amazon Resource Name
+            (ARN). Resources are users, servers, roles, and other entities.
+            
+             
+            <para>
+            There is no response returned from this call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.AddTFRResourceTagCmdlet.Arn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) for a specific AWS resource, such as a server, user,
+            or role.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.AddTFRResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Key-value pairs assigned to ARNs that you can use to group and search for resources
+            by type. You can attach this metadata to user accounts for any purpose.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.AddTFRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.AddTFRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Arn parameter.
+            The -PassThru parameter is deprecated, use -Select '^Arn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.AddTFRResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet">
+            <summary>
+            Lists all of the tags associated with the Amazon Resource Number (ARN) you specify.
+            The resource can be a user, server, or role.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet.Arn">
+            <summary>
+            <para>
+            <para>Requests the tags associated with a particular Amazon Resource Name (ARN). An ARN
+            is an identifier for a specific AWS resource, such as a server, user, or role.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of tags to return as a response to the <code>ListTagsForResource</code>
+            request.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>1000</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>When you request additional results from the <code>ListTagsForResource</code> operation,
+            a <code>NextToken</code> parameter is returned in the input. You can then pass in
+            a subsequent command to the <code>NextToken</code> parameter to continue listing additional
+            tags.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Arn parameter.
+            The -PassThru parameter is deprecated, use -Select '^Arn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRResourceTagListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerCmdlet">
+            <summary>
+            Describes a file transfer protocol-enabled server that you specify by passing the
+            <code>ServerId</code> parameter.
+            
+             
+            <para>
+            The response contains a description of a server's properties. When you set <code>EndpointType</code>
+            to VPC, the response will contain the <code>EndpointDetails</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Server'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.DescribeServerResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.DescribeServerResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerListCmdlet">
+            <summary>
+            Lists the file transfer protocol-enabled servers that are associated with your AWS
+            account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of file transfer protocol-enabled servers to return as a response
+            to the <code>ListServers</code> query.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>1000</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>When additional results are obtained from the<code>ListServers</code> command, a <code>NextToken</code>
+            parameter is returned in the output. You can then pass the <code>NextToken</code>
+            parameter in a subsequent command to continue listing additional file transfer protocol-enabled
+            servers.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Servers'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.ListServersResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.ListServersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRServerListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserCmdlet">
+            <summary>
+            Describes the user assigned to the specific file transfer protocol-enabled server,
+            as identified by its <code>ServerId</code> property.
+            
+             
+            <para>
+            The response from this call returns the properties of the user associated with the
+            <code>ServerId</code> value that was specified.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server that
+            has this user assigned.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserCmdlet.UserName">
+            <summary>
+            <para>
+            <para>The name of the user assigned to one or more file transfer protocol-enabled servers.
+            User names are part of the sign-in credentials to use the AWS Transfer Family service
+            and perform file transfer tasks.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.DescribeUserResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.DescribeUserResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserName parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet">
+            <summary>
+            Lists the users for a file transfer protocol-enabled server that you specify by passing
+            the <code>ServerId</code> parameter.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server that
+            has users assigned to it.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Specifies the number of users to return as a response to the <code>ListUsers</code>
+            request.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>1000</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>When you can get additional results from the <code>ListUsers</code> call, a <code>NextToken</code>
+            parameter is returned in the output. You can then pass in a subsequent command to
+            the <code>NextToken</code> parameter to continue listing additional users.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Users'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.ListUsersResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.ListUsersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.GetTFRUserListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet">
+            <summary>
+            Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code>
+            value assigned to the specific file transfer protocol-enabled server, identified by
+            <code>ServerId</code>.
+            
+             
+            <para>
+            The response returns the <code>UserName</code> value, the <code>ServerId</code> value,
+            and the name of the <code>SshPublicKeyId</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet.SshPublicKeyBody">
+            <summary>
+            <para>
+            <para>The public key portion of an SSH key pair.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet.UserName">
+            <summary>
+            <para>
+            <para>The name of the user account that is assigned to one or more file transfer protocol-enabled
+            servers.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.ImportSshPublicKeyResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.ImportSshPublicKeyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SshPublicKeyBody parameter.
+            The -PassThru parameter is deprecated, use -Select '^SshPublicKeyBody' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.ImportTFRSshPublicKeyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet">
+            <summary>
+            Instantiates an autoscaling virtual server based on the selected file transfer protocol
+            in AWS. When you make updates to your file transfer protocol-enabled server or when
+            you work with users, use the service-generated <code>ServerId</code> property that
+            is assigned to the newly created server.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.EndpointDetails_AddressAllocationId">
+            <summary>
+            <para>
+            <para>A list of address allocation IDs that are required to attach an Elastic IP address
+            to your file transfer protocol-enabled server's endpoint. This is only valid in the
+            <code>UpdateServer</code> API.</para><note><para>This property can only be use when <code>EndpointType</code> is set to <code>VPC</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.Certificate">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. Required
+            when <code>Protocols</code> is set to <code>FTPS</code>.</para><para>To request a new public certificate, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html">Request
+            a public certificate</a> in the <i> AWS Certificate Manager User Guide</i>.</para><para>To import an existing certificate into ACM, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing
+            certificates into ACM</a> in the <i> AWS Certificate Manager User Guide</i>.</para><para>To request a private certificate to use FTPS through private IP addresses, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-private.html">Request
+            a private certificate</a> in the <i> AWS Certificate Manager User Guide</i>.</para><para>Certificates with the following cryptographic algorithms and key sizes are supported:</para><ul><li><para>2048-bit RSA (RSA_2048)</para></li><li><para>4096-bit RSA (RSA_4096)</para></li><li><para>Elliptic Prime Curve 256 bit (EC_prime256v1)</para></li><li><para>Elliptic Prime Curve 384 bit (EC_secp384r1)</para></li><li><para>Elliptic Prime Curve 521 bit (EC_secp521r1)</para></li></ul><note><para>The certificate must be a valid SSL/TLS X.509 version 3 certificate with FQDN or IP
+            address specified and information about the issuer.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.EndpointType">
+            <summary>
+            <para>
+            <para>The type of VPC endpoint that you want your file transfer protocol-enabled server
+            to connect to. You can choose to connect to the public internet or a VPC endpoint.
+            With a VPC endpoint, you can restrict access to your server and resources only within
+            your VPC.</para><note><para>It is recommended that you use <code>VPC</code> as the <code>EndpointType</code>.
+            With this endpoint type, you have the option to directly associate up to three Elastic
+            IPv4 addresses (BYO IP included) with your server's endpoint and use VPC security
+            groups to restrict traffic by the client's public IP address. This is not possible
+            with <code>EndpointType</code> set to <code>VPC_ENDPOINT</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.HostKey">
+            <summary>
+            <para>
+            <para>The RSA private key as generated by the <code>ssh-keygen -N "" -m PEM -f my-new-server-key</code>
+            command.</para><important><para>If you aren't planning to migrate existing users from an existing SFTP-enabled server
+            to a new server, don't update the host key. Accidentally changing a server's host
+            key can be disruptive.</para></important><para>For more information, see <a href="https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key">Change
+            the host key for your SFTP-enabled server</a> in the <i>AWS Transfer Family User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.IdentityProviderType">
+            <summary>
+            <para>
+            <para>Specifies the mode of authentication for a file transfer protocol-enabled server.
+            The default value is <code>SERVICE_MANAGED</code>, which allows you to store and access
+            user credentials within the AWS Transfer Family service. Use the <code>API_GATEWAY</code>
+            value to integrate with an identity provider of your choosing. The <code>API_GATEWAY</code>
+            setting requires you to provide an API Gateway endpoint URL to call for authentication
+            using the <code>IdentityProviderDetails</code> parameter.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.IdentityProviderDetails_InvocationRole">
+            <summary>
+            <para>
+            <para>Provides the type of <code>InvocationRole</code> used to authenticate the user account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.LoggingRole">
+            <summary>
+            <para>
+            <para>Allows the service to write your users' activity to your Amazon CloudWatch logs for
+            monitoring and auditing purposes.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.Protocol">
+            <summary>
+            <para>
+            <para>Specifies the file transfer protocol or protocols over which your file transfer protocol
+            client can connect to your server's endpoint. The available protocols are:</para><ul><li><para><code>SFTP</code> (Secure Shell (SSH) File Transfer Protocol): File transfer over
+            SSH</para></li><li><para><code>FTPS</code> (File Transfer Protocol Secure): File transfer with TLS encryption</para></li><li><para><code>FTP</code> (File Transfer Protocol): Unencrypted file transfer</para></li></ul><note><para>If you select <code>FTPS</code>, you must choose a certificate stored in AWS Certificate
+            Manager (ACM) which will be used to identify your server when clients connect to it
+            over FTPS.</para><para>If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then
+            the <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code>
+            must be <code>API_GATEWAY</code>.</para><para>If <code>Protocol</code> includes <code>FTP</code>, then <code>AddressAllocationIds</code>
+            cannot be associated.</para><para>If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code>
+            can be set to <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be
+            set to <code>SERVICE_MANAGED</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.EndpointDetails_SubnetId">
+            <summary>
+            <para>
+            <para>A list of subnet IDs that are required to host your file transfer protocol-enabled
+            server endpoint in your VPC.</para><note><para>This property can only be used when <code>EndpointType</code> is set to <code>VPC</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Key-value pairs that can be used to group and search for file transfer protocol-enabled
+            servers.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.IdentityProviderDetails_Url">
+            <summary>
+            <para>
+            <para>Provides the location of the service endpoint used to authenticate users.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.EndpointDetails_VpcEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the VPC endpoint.</para><note><para>This property can only be used when <code>EndpointType</code> is set to <code>VPC_ENDPOINT</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.EndpointDetails_VpcId">
+            <summary>
+            <para>
+            <para>The VPC ID of the VPC in which a file transfer protocol-enabled server's endpoint
+            will be hosted.</para><note><para>This property can only be used when <code>EndpointType</code> is set to <code>VPC</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ServerId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.CreateServerResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.CreateServerResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRServerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet">
+            <summary>
+            Creates a user and associates them with an existing file transfer protocol-enabled
+            server. You can only create and associate users with servers that have the <code>IdentityProviderType</code>
+            set to <code>SERVICE_MANAGED</code>. Using parameters for <code>CreateUser</code>,
+            you can specify the user name, set the home directory, store the user's public key,
+            and assign the user's AWS Identity and Access Management (IAM) role. You can also
+            optionally add a scope-down policy, and assign metadata with tags that can be used
+            to group and search for users.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.HomeDirectory">
+            <summary>
+            <para>
+            <para>The landing directory (folder) for a user when they log in to the file transfer protocol-enabled
+            server using the client.</para><para>An example is <i><code>your-Amazon-S3-bucket-name&gt;/home/username</code></i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.HomeDirectoryMapping">
+            <summary>
+            <para>
+            <para>Logical directory mappings that specify what Amazon S3 paths and keys should be visible
+            to your user and how you want to make them visible. You will need to specify the "<code>Entry</code>"
+            and "<code>Target</code>" pair, where <code>Entry</code> shows how the path is made
+            visible and <code>Target</code> is the actual Amazon S3 path. If you only specify
+            a target, it will be displayed as is. You will need to also make sure that your IAM
+            role provides access to paths in <code>Target</code>. The following is an example.</para><para><code>'[ "/bucket2/documentation", { "Entry": "your-personal-report.pdf", "Target":
+            "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]'</code></para><para>In most cases, you can use this value instead of the scope-down policy to lock your
+            user down to the designated home directory ("chroot"). To do this, you can set <code>Entry</code>
+            to '/' and set <code>Target</code> to the HomeDirectory parameter value.</para><note><para>If the target of a logical directory entry does not exist in Amazon S3, the entry
+            will be ignored. As a workaround, you can use the Amazon S3 api to create 0 byte objects
+            as place holders for your directory. If using the CLI, use the <code>s3api</code>
+            call instead of <code>s3</code> so you can use the put-object operation. For example,
+            you use the following: <code>aws s3api put-object --bucket bucketname --key path/to/folder/</code>.
+            Make sure that the end of the key name ends in a '/' for it to be considered a folder.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.HomeDirectoryType">
+            <summary>
+            <para>
+            <para>The type of landing directory (folder) you want your users' home directory to be when
+            they log into the file transfer protocol-enabled server. If you set it to <code>PATH</code>,
+            the user will see the absolute Amazon S3 bucket paths as is in their file transfer
+            protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings
+            in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 paths
+            visible to your users.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.Policy">
+            <summary>
+            <para>
+            <para>A scope-down policy for your user so you can use the same IAM role across multiple
+            users. This policy scopes down user access to portions of their Amazon S3 bucket.
+            Variables that you can use inside this policy include <code>${Transfer:UserName}</code>,
+            <code>${Transfer:HomeDirectory}</code>, and <code>${Transfer:HomeBucket}</code>.</para><note><para>For scope-down policies, AWS Transfer Family stores the policy as a JSON blob, instead
+            of the Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob
+            and pass it in the <code>Policy</code> argument.</para><para>For an example of a scope-down policy, see <a href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating
+            a scope-down policy</a>.</para><para>For more information, see <a href="https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html">AssumeRole</a>
+            in the <i>AWS Security Token Service API Reference</i>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.Role">
+            <summary>
+            <para>
+            <para>The IAM role that controls your users' access to your Amazon S3 bucket. The policies
+            attached to this role will determine the level of access you want to provide your
+            users when transferring files into and out of your Amazon S3 bucket or buckets. The
+            IAM role should also contain a trust relationship that allows the file transfer protocol-enabled
+            server to access your resources when servicing your users' transfer requests.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server instance.
+            This is the specific server that you added your user to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.SshPublicKeyBody">
+            <summary>
+            <para>
+            <para>The public portion of the Secure Shell (SSH) key used to authenticate the user to
+            the file transfer protocol-enabled server.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Key-value pairs that can be used to group and search for users. Tags are metadata
+            attached to users for any purpose.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.UserName">
+            <summary>
+            <para>
+            <para>A unique string that identifies a user and is associated with a file transfer protocol-enabled
+            server as specified by the <code>ServerId</code>. This user name must be a minimum
+            of 3 and a maximum of 32 characters long. The following are valid characters: a-z,
+            A-Z, 0-9, underscore, and hyphen. The user name can't start with a hyphen.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.CreateUserResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.CreateUserResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.NewTFRUserCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRResourceTagCmdlet">
+            <summary>
+            Detaches a key-value pair from a resource, as identified by its Amazon Resource Name
+            (ARN). Resources are users, servers, roles, and other entities.
+            
+             
+            <para>
+            No response is returned from this call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRResourceTagCmdlet.Arn">
+            <summary>
+            <para>
+            <para>The value of the resource that will have the tag removed. An Amazon Resource Name
+            (ARN) is an identifier for a specific AWS resource, such as a server, user, or role.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>TagKeys are key-value pairs assigned to ARNs that can be used to group and search
+            for resources by type. This metadata can be attached to resources for any purpose.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Arn parameter.
+            The -PassThru parameter is deprecated, use -Select '^Arn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRServerCmdlet">
+            <summary>
+            Deletes the file transfer protocol-enabled server that you specify.
+            
+             
+            <para>
+            No response returns from this operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRServerCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A unique system-assigned identifier for a file transfer protocol-enabled server instance.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRServerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.DeleteServerResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRServerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRServerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet">
+            <summary>
+            Deletes a user's Secure Shell (SSH) public key.
+            
+             
+            <para>
+            No response is returned from this operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server instance
+            that has the user assigned to it.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet.SshPublicKeyId">
+            <summary>
+            <para>
+            <para>A unique identifier used to reference your user's specific SSH key.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet.UserName">
+            <summary>
+            <para>
+            <para>A unique string that identifies a user whose public key is being deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.DeleteSshPublicKeyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SshPublicKeyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SshPublicKeyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRSshPublicKeyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRUserCmdlet">
+            <summary>
+            Deletes the user belonging to a file transfer protocol-enabled server you specify.
+            
+             
+            <para>
+            No response returns from this operation.
+            </para><note><para>
+            When you delete a user from a server, the user's information is lost.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRUserCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server instance
+            that has the user assigned to it.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRUserCmdlet.UserName">
+            <summary>
+            <para>
+            <para>A unique string that identifies a user that is being deleted from a file transfer
+            protocol-enabled server.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.DeleteUserResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserName parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.RemoveTFRUserCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.StartTFRServerCmdlet">
+            <summary>
+            Changes the state of a file transfer protocol-enabled server from <code>OFFLINE</code>
+            to <code>ONLINE</code>. It has no impact on a server that is already <code>ONLINE</code>.
+            An <code>ONLINE</code> server can accept and process file transfer jobs.
+            
+             
+            <para>
+            The state of <code>STARTING</code> indicates that the server is in an intermediate
+            state, either not fully able to respond, or not fully online. The values of <code>START_FAILED</code>
+            can indicate an error condition.
+            </para><para>
+            No response is returned from this call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StartTFRServerCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server that
+            you start.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StartTFRServerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.StartServerResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StartTFRServerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StartTFRServerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.StopTFRServerCmdlet">
+            <summary>
+            Changes the state of a file transfer protocol-enabled server from <code>ONLINE</code>
+            to <code>OFFLINE</code>. An <code>OFFLINE</code> server cannot accept and process
+            file transfer jobs. Information tied to your server, such as server and user properties,
+            are not affected by stopping your server. Stopping the server will not reduce or impact
+            your file transfer protocol endpoint billing.
+            
+             
+            <para>
+            The state of <code>STOPPING</code> indicates that the server is in an intermediate
+            state, either not fully able to respond, or not fully offline. The values of <code>STOP_FAILED</code>
+            can indicate an error condition.
+            </para><para>
+            No response is returned from this call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StopTFRServerCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server that
+            you stopped.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StopTFRServerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.StopServerResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StopTFRServerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.StopTFRServerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet">
+            <summary>
+            If the <code>IdentityProviderType</code> of a file transfer protocol-enabled server
+            is <code>API_Gateway</code>, tests whether your API Gateway is set up successfully.
+            We highly recommend that you call this operation to test your authentication method
+            as soon as you create your server. By doing so, you can troubleshoot issues with the
+            API Gateway integration to ensure that your users can successfully use the service.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned identifier for a specific file transfer protocol-enabled server.
+            That server's user authentication method is tested with a user name and password.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.ServerProtocol">
+            <summary>
+            <para>
+            <para>The type of file transfer protocol to be tested.</para><para>The available protocols are:</para><ul><li><para>Secure Shell (SSH) File Transfer Protocol (SFTP)</para></li><li><para>File Transfer Protocol Secure (FTPS)</para></li><li><para>File Transfer Protocol (FTP)</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.SourceIp">
+            <summary>
+            <para>
+            <para>The source IP address of the user account to be tested.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.UserName">
+            <summary>
+            <para>
+            <para>The name of the user account to be tested.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.UserPassword">
+            <summary>
+            <para>
+            <para>The password of the user account to be tested.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.TestIdentityProviderResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.TestIdentityProviderResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.TestTFRIdentityProviderCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet">
+            <summary>
+            Updates the file transfer protocol-enabled server's properties after that server has
+            been created.
+            
+             
+            <para>
+            The <code>UpdateServer</code> call returns the <code>ServerId</code> of the server
+            you updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.EndpointDetails_AddressAllocationId">
+            <summary>
+            <para>
+            <para>A list of address allocation IDs that are required to attach an Elastic IP address
+            to your file transfer protocol-enabled server's endpoint. This is only valid in the
+            <code>UpdateServer</code> API.</para><note><para>This property can only be use when <code>EndpointType</code> is set to <code>VPC</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.Certificate">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. Required
+            when <code>Protocols</code> is set to <code>FTPS</code>.</para><para>To request a new public certificate, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html">Request
+            a public certificate</a> in the <i> AWS Certificate Manager User Guide</i>.</para><para>To import an existing certificate into ACM, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing
+            certificates into ACM</a> in the <i> AWS Certificate Manager User Guide</i>.</para><para>To request a private certificate to use FTPS through private IP addresses, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-private.html">Request
+            a private certificate</a> in the <i> AWS Certificate Manager User Guide</i>.</para><para>Certificates with the following cryptographic algorithms and key sizes are supported:</para><ul><li><para>2048-bit RSA (RSA_2048)</para></li><li><para>4096-bit RSA (RSA_4096)</para></li><li><para>Elliptic Prime Curve 256 bit (EC_prime256v1)</para></li><li><para>Elliptic Prime Curve 384 bit (EC_secp384r1)</para></li><li><para>Elliptic Prime Curve 521 bit (EC_secp521r1)</para></li></ul><note><para>The certificate must be a valid SSL/TLS X.509 version 3 certificate with FQDN or IP
+            address specified and information about the issuer.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.EndpointType">
+            <summary>
+            <para>
+            <para>The type of endpoint that you want your file transfer protocol-enabled server to connect
+            to. You can choose to connect to the public internet or a VPC endpoint. With a VPC
+            endpoint, you can restrict access to your server and resources only within your VPC.</para><note><para>It is recommended that you use <code>VPC</code> as the <code>EndpointType</code>.
+            With this endpoint type, you have the option to directly associate up to three Elastic
+            IPv4 addresses (BYO IP included) with your server's endpoint and use VPC security
+            groups to restrict traffic by the client's public IP address. This is not possible
+            with <code>EndpointType</code> set to <code>VPC_ENDPOINT</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.HostKey">
+            <summary>
+            <para>
+            <para>The RSA private key as generated by <code>ssh-keygen -N "" -m PEM -f my-new-server-key</code>.</para><important><para>If you aren't planning to migrate existing users from an existing file transfer protocol-enabled
+            server to a new server, don't update the host key. Accidentally changing a server's
+            host key can be disruptive.</para></important><para>For more information, see <a href="https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key">Change
+            the host key for your SFTP-enabled server</a> in the <i>AWS Transfer Family User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.IdentityProviderDetails_InvocationRole">
+            <summary>
+            <para>
+            <para>Provides the type of <code>InvocationRole</code> used to authenticate the user account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.LoggingRole">
+            <summary>
+            <para>
+            <para>Changes the AWS Identity and Access Management (IAM) role that allows Amazon S3 events
+            to be logged in Amazon CloudWatch, turning logging on or off.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.Protocol">
+            <summary>
+            <para>
+            <para>Specifies the file transfer protocol or protocols over which your file transfer protocol
+            client can connect to your server's endpoint. The available protocols are:</para><ul><li><para>Secure Shell (SSH) File Transfer Protocol (SFTP): File transfer over SSH</para></li><li><para>File Transfer Protocol Secure (FTPS): File transfer with TLS encryption</para></li><li><para>File Transfer Protocol (FTP): Unencrypted file transfer</para></li></ul><note><para>If you select <code>FTPS</code>, you must choose a certificate stored in AWS Certificate
+            Manager (ACM) which will be used to identify your server when clients connect to it
+            over FTPS.</para><para>If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then
+            the <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code>
+            must be <code>API_GATEWAY</code>.</para><para>If <code>Protocol</code> includes <code>FTP</code>, then <code>AddressAllocationIds</code>
+            cannot be associated.</para><para>If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code>
+            can be set to <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be
+            set to <code>SERVICE_MANAGED</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server instance
+            that the user account is assigned to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.EndpointDetails_SubnetId">
+            <summary>
+            <para>
+            <para>A list of subnet IDs that are required to host your file transfer protocol-enabled
+            server endpoint in your VPC.</para><note><para>This property can only be used when <code>EndpointType</code> is set to <code>VPC</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.IdentityProviderDetails_Url">
+            <summary>
+            <para>
+            <para>Provides the location of the service endpoint used to authenticate users.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.EndpointDetails_VpcEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the VPC endpoint.</para><note><para>This property can only be used when <code>EndpointType</code> is set to <code>VPC_ENDPOINT</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.EndpointDetails_VpcId">
+            <summary>
+            <para>
+            <para>The VPC ID of the VPC in which a file transfer protocol-enabled server's endpoint
+            will be hosted.</para><note><para>This property can only be used when <code>EndpointType</code> is set to <code>VPC</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ServerId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.UpdateServerResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.UpdateServerResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRServerCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet">
+            <summary>
+            Assigns new properties to a user. Parameters you pass modify any or all of the following:
+            the home directory, role, and policy for the <code>UserName</code> and <code>ServerId</code>
+            you specify.
+            
+             
+            <para>
+            The response returns the <code>ServerId</code> and the <code>UserName</code> for the
+            updated user.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.HomeDirectory">
+            <summary>
+            <para>
+            <para>Specifies the landing directory (folder) for a user when they log in to the file transfer
+            protocol-enabled server using their file transfer protocol client.</para><para>An example is <code>your-Amazon-S3-bucket-name&gt;/home/username</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.HomeDirectoryMapping">
+            <summary>
+            <para>
+            <para>Logical directory mappings that specify what Amazon S3 paths and keys should be visible
+            to your user and how you want to make them visible. You will need to specify the "<code>Entry</code>"
+            and "<code>Target</code>" pair, where <code>Entry</code> shows how the path is made
+            visible and <code>Target</code> is the actual Amazon S3 path. If you only specify
+            a target, it will be displayed as is. You will need to also make sure that your IAM
+            role provides access to paths in <code>Target</code>. The following is an example.</para><para><code>'[ "/bucket2/documentation", { "Entry": "your-personal-report.pdf", "Target":
+            "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]'</code></para><para>In most cases, you can use this value instead of the scope-down policy to lock your
+            user down to the designated home directory ("chroot"). To do this, you can set <code>Entry</code>
+            to '/' and set <code>Target</code> to the HomeDirectory parameter value.</para><note><para>If the target of a logical directory entry does not exist in Amazon S3, the entry
+            will be ignored. As a workaround, you can use the Amazon S3 api to create 0 byte objects
+            as place holders for your directory. If using the CLI, use the <code>s3api</code>
+            call instead of <code>s3</code> so you can use the put-object operation. For example,
+            you use the following: <code>aws s3api put-object --bucket bucketname --key path/to/folder/</code>.
+            Make sure that the end of the key name ends in a / for it to be considered a folder.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.HomeDirectoryType">
+            <summary>
+            <para>
+            <para>The type of landing directory (folder) you want your users' home directory to be when
+            they log into the file transfer protocol-enabled server. If you set it to <code>PATH</code>,
+            the user will see the absolute Amazon S3 bucket paths as is in their file transfer
+            protocol clients. If you set it <code>LOGICAL</code>, you will need to provide mappings
+            in the <code>HomeDirectoryMappings</code> for how you want to make Amazon S3 paths
+            visible to your users.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.Policy">
+            <summary>
+            <para>
+            <para>Allows you to supply a scope-down policy for your user so you can use the same IAM
+            role across multiple users. The policy scopes down user access to portions of your
+            Amazon S3 bucket. Variables you can use inside this policy include <code>${Transfer:UserName}</code>,
+            <code>${Transfer:HomeDirectory}</code>, and <code>${Transfer:HomeBucket}</code>.</para><note><para>For scope-down policies, AWS Transfer Family stores the policy as a JSON blob, instead
+            of the Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob
+            and pass it in the <code>Policy</code> argument.</para><para>For an example of a scope-down policy, see <a href="https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down">Creating
+            a scope-down policy</a>.</para><para>For more information, see <a href="https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html">AssumeRole</a>
+            in the <i>AWS Security Token Service API Reference</i>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.Role">
+            <summary>
+            <para>
+            <para>The IAM role that controls your users' access to your Amazon S3 bucket. The policies
+            attached to this role will determine the level of access you want to provide your
+            users when transferring files into and out of your Amazon S3 bucket or buckets. The
+            IAM role should also contain a trust relationship that allows the file transfer protocol-enabled
+            server to access your resources when servicing your users' transfer requests.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.ServerId">
+            <summary>
+            <para>
+            <para>A system-assigned unique identifier for a file transfer protocol-enabled server instance
+            that the user account is assigned to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.UserName">
+            <summary>
+            <para>
+            <para>A unique string that identifies a user and is associated with a file transfer protocol-enabled
+            server as specified by the <code>ServerId</code>. This is the string that will be
+            used by your user when they log in to your server. This user name is a minimum of
+            3 and a maximum of 32 characters long. The following are valid characters: a-z, A-Z,
+            0-9, underscore, and hyphen. The user name can't start with a hyphen.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Transfer.Model.UpdateUserResponse).
+            Specifying the name of a property of type Amazon.Transfer.Model.UpdateUserResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserName parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.TFR.UpdateTFRUserCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

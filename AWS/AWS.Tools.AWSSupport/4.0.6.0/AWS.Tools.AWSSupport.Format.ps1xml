@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>View node for Amazon.AWSSupport.AmazonAWSSupportConfig</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.AmazonAWSSupportConfig</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>RegionEndpointServiceName</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ServiceVersion</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>UserAgent</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>RegionEndpointServiceName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ServiceVersion</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>UserAgent</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.AddAttachmentsToSetRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.AddAttachmentsToSetRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Attachments</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>AttachmentSetId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Attachments</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>AttachmentSetId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.AddAttachmentsToSetResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.AddAttachmentsToSetResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AttachmentSetId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ExpiryTime</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AttachmentSetId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ExpiryTime</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.AddCommunicationToCaseRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.AddCommunicationToCaseRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AttachmentSetId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CaseId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CcEmailAddresses</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CommunicationBody</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AttachmentSetId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CaseId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CcEmailAddresses</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>CommunicationBody</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.AddCommunicationToCaseResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.AddCommunicationToCaseResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Result</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Result</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.Attachment</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.Attachment</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Data</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>FileName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Data</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>FileName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.AttachmentDetails</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.AttachmentDetails</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AttachmentId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>FileName</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AttachmentId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>FileName</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.CaseDetails</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.CaseDetails</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>CaseId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CategoryCode</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CcEmailAddresses</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DisplayId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Language</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>RecentCommunications</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ServiceCode</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SeverityCode</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Subject</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SubmittedBy</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeCreated</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.Category</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.Category</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Code</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Code</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.Communication</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.Communication</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AttachmentSet</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Body</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CaseId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SubmittedBy</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>TimeCreated</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.CreateCaseRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.CreateCaseRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AttachmentSetId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CategoryCode</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CcEmailAddresses</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CommunicationBody</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IssueType</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Language</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ServiceCode</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>SeverityCode</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Subject</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.CreateCaseResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.CreateCaseResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CaseId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CaseId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeAttachmentRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeAttachmentRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>AttachmentId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>AttachmentId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeAttachmentResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeAttachmentResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Attachment</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Attachment</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeCasesRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeCasesRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AfterTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>BeforeTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CaseIdList</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>DisplayId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeCommunications</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>IncludeResolvedCases</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Language</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MaxResults</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>NextToken</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeCasesResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeCasesResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Cases</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Cases</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeCommunicationsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeCommunicationsRequest</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>AfterTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>BeforeTime</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CaseId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>MaxResults</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>NextToken</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeCommunicationsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeCommunicationsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Communications</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Communications</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeServicesRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeServicesRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Language</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ServiceCodeList</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Language</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ServiceCodeList</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeServicesResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeServicesResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Services</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Services</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeSeverityLevelsRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeSeverityLevelsRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Language</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Language</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeSeverityLevelsResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeSeverityLevelsResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>SeverityLevels</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>SeverityLevels</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckRefreshStatusesRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckRefreshStatusesRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CheckIds</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CheckIds</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckRefreshStatusesResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckRefreshStatusesResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Statuses</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Statuses</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckResultRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckResultRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CheckId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Language</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CheckId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Language</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckResultResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckResultResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Result</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Result</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorChecksRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorChecksRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Language</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Language</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorChecksResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorChecksResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Checks</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Checks</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckSummariesRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckSummariesRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CheckIds</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CheckIds</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckSummariesResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.DescribeTrustedAdvisorCheckSummariesResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Summaries</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Summaries</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.RecentCaseCommunications</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.RecentCaseCommunications</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Communications</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>NextToken</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Communications</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>NextToken</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.RefreshTrustedAdvisorCheckRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.RefreshTrustedAdvisorCheckRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CheckId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CheckId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.RefreshTrustedAdvisorCheckResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.RefreshTrustedAdvisorCheckResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.ResolveCaseRequest</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.ResolveCaseRequest</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CaseId</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CaseId</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.ResolveCaseResponse</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.ResolveCaseResponse</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>FinalCaseStatus</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>InitialCaseStatus</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>FinalCaseStatus</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>InitialCaseStatus</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.Service</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.Service</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Categories</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Code</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Categories</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Code</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.SeverityLevel</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.SeverityLevel</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Code</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Name</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Code</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorCategorySpecificSummary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorCategorySpecificSummary</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CostOptimizing</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CostOptimizing</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorCheckDescription</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorCheckDescription</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>Category</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Metadata</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Name</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorCheckRefreshStatus</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorCheckRefreshStatus</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>CheckId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>MillisUntilNextRefreshable</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Status</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>CheckId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MillisUntilNextRefreshable</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Status</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorCheckResult</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorCheckResult</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>CategorySpecificSummary</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CheckId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>FlaggedResources</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ResourcesSummary</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Timestamp</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorCheckSummary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorCheckSummary</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>CategorySpecificSummary</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>CheckId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>HasFlaggedResources</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ResourcesSummary</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Timestamp</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorCostOptimizingSummary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorCostOptimizingSummary</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>EstimatedMonthlySavings</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>EstimatedPercentMonthlySavings</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>EstimatedMonthlySavings</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>EstimatedPercentMonthlySavings</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorResourceDetail</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorResourceDetail</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>IsSuppressed</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Metadata</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Region</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>ResourceId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>Status</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Model.TrustedAdvisorResourcesSummary</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Model.TrustedAdvisorResourcesSummary</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ResourcesFlagged</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ResourcesIgnored</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ResourcesProcessed</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ResourcesSuppressed</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ResourcesFlagged</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ResourcesIgnored</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ResourcesProcessed</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ResourcesSuppressed</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>View node for Amazon.AWSSupport.Internal.AmazonAWSSupportMetadata</Name>
+      <ViewSelectedBy>
+        <TypeName>Amazon.AWSSupport.Internal.AmazonAWSSupportMetadata</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>ServiceId</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>OperationNameMapping</Label>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>ServiceId</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>OperationNameMapping</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
+<!-- SIG # Begin signature block -->
+<!-- MIIcUAYJKoZIhvcNAQcCoIIcQTCCHD0CAQExDzANBglghkgBZQMEAgEFADB5Bgor -->
+<!-- BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG -->
+<!-- KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCBIPyvRIrikFdXp -->
+<!-- c2f0PB5IT65mtxbuRvgVBFJEyBJpyaCCF0cwggS5MIIDoaADAgECAhArd4OFAE9M -->
+<!-- ppHAfzWQwHt/MA0GCSqGSIb3DQEBCwUAMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UE -->
+<!-- ChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0 -->
+<!-- IE5ldHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUg -->
+<!-- U2lnbmluZyBDQSAtIEcyMB4XDTE3MDcxMDAwMDAwMFoXDTIwMDcxMDIzNTk1OVow -->
+<!-- ajELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1Nl -->
+<!-- YXR0bGUxGTAXBgNVBAoMEEFtYXpvbi5jb20sIEluYy4xGTAXBgNVBAMMEEFtYXpv -->
+<!-- bi5jb20sIEluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC18TJW -->
+<!-- m2/aGpvb+TP2CZMg49X/5bjDAgPxWlAs7bqDyZnRYJork4rLmejpeJu+2BhRjZeK -->
+<!-- OirT4XveddBsdL1/TR+FKp8BXEsrm0wcR4yT6mNHJ9yCgC1YBNG91bZ75kRIT+46 -->
+<!-- chbC7eNI5703wi8ejxe2KvvOERppBTaFStVJuAHab69dvFma8qE3s7wbqPdQ5eTI -->
+<!-- +Xm0bXp8cObS+vj+hf3N2pfDNWM8ITva3kbowGoCW0rKzpf7fBGtBOKnOCCSL0yC -->
+<!-- AOwLlFkslemVyrT1/HTDjOTKCro016HxOPddA4cefvr2ZhGlRZQQHg7wMdG7TpZX -->
+<!-- ueQ6LoS9UxlzCYHFAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQE -->
+<!-- AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBM -->
+<!-- MCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcC -->
+<!-- AjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5 -->
+<!-- S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2Iu -->
+<!-- Y29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9y -->
+<!-- Yi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIu -->
+<!-- Y3J0MA0GCSqGSIb3DQEBCwUAA4IBAQC+C4TcK44ph2QQK/1f65jOR23DtSBC3y9a -->
+<!-- bzRHdo4qxmcAW5ot69os7GJfzgVsA5lh1IT4+aMuGYA4GTcF6iTSOMgFSRwP8urI -->
+<!-- N2BprsWuMJsQ7+Flo3PBRN3dU6idOlFKOfuRxgIHRn47t2yRan6XTNhfiWl84DrD -->
+<!-- NjSTnk4c72Gzu0hiwQB9OTsf8CQP3Shb3ZzcAOmeUB01TFoJU34PfJpKlKQZeQIi -->
+<!-- W5WdPPr1G/0cAHgejDHtdNYcSqIWfoGeYgCxUg1IFpp1VmPlqb/de8QKONzPDK6/ -->
+<!-- 5hulSGqGgpRmEkwGGJiQeOB51GxYZRCPq3hN3UJ6N0A+hYzj7yspMIIFRzCCBC+g -->
+<!-- AwIBAgIQfBs1NUrn23TnQV8RacprqDANBgkqhkiG9w0BAQsFADCBvTELMAkGA1UE -->
+<!-- BhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2ln -->
+<!-- biBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwOCBWZXJpU2lnbiwgSW5j -->
+<!-- LiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MTgwNgYDVQQDEy9WZXJpU2lnbiBV -->
+<!-- bml2ZXJzYWwgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0xNDA3MjIw -->
+<!-- MDAwMDBaFw0yNDA3MjEyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEdMBsGA1UEChMU -->
+<!-- U3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5l -->
+<!-- dHdvcmsxNTAzBgNVBAMTLFN5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2ln -->
+<!-- bmluZyBDQSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA15VD -->
+<!-- 1NzfZ645+1KktiYxBHDpt45bKro3aTWVj7vAMOeG2HO73+vRdj+KVo7rLUvwVxhO -->
+<!-- sY2lM9MLdSPVankn3aPT9w6HZbXerRzx9TW0IlGvIqHBXUuQf8BZTqudeakC1x5J -->
+<!-- sTtNh/7CeKu/71KunK8I2TnlmlE+aV8wEE5xY2xY4fAgMxsPdL5byxLh24zEgJRy -->
+<!-- u/ZFmp7BJQv7oxye2KYJcHHswEdMj33D3hnOPu4Eco4X0//wsgUyGUzTsByf/qV4 -->
+<!-- IEJwQbAmjG8AyDoAEUF6QbCnipEEoJl49He082Aq5mxQBLcUYP8NUfSoi4T+Idpc -->
+<!-- Xn31KXlPsER0b21y/wIDAQABo4IBeDCCAXQwLgYIKwYBBQUHAQEEIjAgMB4GCCsG -->
+<!-- AQUFBzABhhJodHRwOi8vcy5zeW1jZC5jb20wEgYDVR0TAQH/BAgwBgEB/wIBADBm -->
+<!-- BgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYIKwYBBQUHAgEWF2h0dHBzOi8v -->
+<!-- ZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkaF2h0dHBzOi8vZC5zeW1jYi5j -->
+<!-- b20vcnBhMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9zLnN5bWNiLmNvbS91bml2 -->
+<!-- ZXJzYWwtcm9vdC5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDgYDVR0PAQH/BAQD -->
+<!-- AgEGMCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFTeW1hbnRlY1BLSS0xLTcyNDAd -->
+<!-- BgNVHQ4EFgQU1MAGIknrOUvdk+JcobhHdglyA1gwHwYDVR0jBBgwFoAUtnf6aUhH -->
+<!-- n1MS1cLqBzJ2B9GXBxkwDQYJKoZIhvcNAQELBQADggEBAH/ryqfqi3ZC6z6OIFQw -->
+<!-- 47e53PpIPhbHD0WVEM0nhqNm8wLtcfiqwlWXkXCD+VJ+Umk8yfHglEaAGLuh1KRW -->
+<!-- pvMdAJHVhvNIh+DLxDRoIF60y/kF7ZyvcFMnueg+flGgaXGL3FHtgDolMp9Er25D -->
+<!-- KNMhdbuX2IuLjP6pBEYEhfcVnEsRjcQsF/7Vbn+a4laS8ZazrS359N/aiZnOsjhE -->
+<!-- wPdHe8olufoqaDObUHLeqJ/UzSwLNL2LMHhA4I2OJxuQbxq+CBWBXesv4lHnUR7J -->
+<!-- eCnnHmW/OO8BSgEJJA4WxBR5wUE3NNA9kVKUneFo7wjw4mmcZ26QCxqTcdQmAsPA -->
+<!-- WiMwggZqMIIFUqADAgECAhADAZoCOv9YsWvW1ermF/BmMA0GCSqGSIb3DQEBBQUA -->
+<!-- MGIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsT -->
+<!-- EHd3dy5kaWdpY2VydC5jb20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQg -->
+<!-- Q0EtMTAeFw0xNDEwMjIwMDAwMDBaFw0yNDEwMjIwMDAwMDBaMEcxCzAJBgNVBAYT -->
+<!-- AlVTMREwDwYDVQQKEwhEaWdpQ2VydDElMCMGA1UEAxMcRGlnaUNlcnQgVGltZXN0 -->
+<!-- YW1wIFJlc3BvbmRlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKNk -->
+<!-- Xfx8s+CCNeDg9sYq5kl1O8xu4FOpnx9kWeZ8a39rjJ1V+JLjntVaY1sCSVDZg85v -->
+<!-- Zu7dy4XpX6X51Id0iEQ7Gcnl9ZGfxhQ5rCTqqEsskYnMXij0ZLZQt/USs3OWCmej -->
+<!-- vmGfrvP9Enh1DqZbFP1FI46GRFV9GIYFjFWHeUhG98oOjafeTl/iqLYtWQJhiGFy -->
+<!-- GGi5uHzu5uc0LzF3gTAfuzYBje8n4/ea8EwxZI3j6/oZh6h+z+yMDDZbesF6uHjH -->
+<!-- yQYuRhDIjegEYNu8c3T6Ttj+qkDxss5wRoPp2kChWTrZFQlXmVYwk/PJYczQCMxr -->
+<!-- 7GJCkawCwO+k8IkRj3cCAwEAAaOCAzUwggMxMA4GA1UdDwEB/wQEAwIHgDAMBgNV -->
+<!-- HRMBAf8EAjAAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMIIBvwYDVR0gBIIBtjCC -->
+<!-- AbIwggGhBglghkgBhv1sBwEwggGSMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k -->
+<!-- aWdpY2VydC5jb20vQ1BTMIIBZAYIKwYBBQUHAgIwggFWHoIBUgBBAG4AeQAgAHUA -->
+<!-- cwBlACAAbwBmACAAdABoAGkAcwAgAEMAZQByAHQAaQBmAGkAYwBhAHQAZQAgAGMA -->
+<!-- bwBuAHMAdABpAHQAdQB0AGUAcwAgAGEAYwBjAGUAcAB0AGEAbgBjAGUAIABvAGYA -->
+<!-- IAB0AGgAZQAgAEQAaQBnAGkAQwBlAHIAdAAgAEMAUAAvAEMAUABTACAAYQBuAGQA -->
+<!-- IAB0AGgAZQAgAFIAZQBsAHkAaQBuAGcAIABQAGEAcgB0AHkAIABBAGcAcgBlAGUA -->
+<!-- bQBlAG4AdAAgAHcAaABpAGMAaAAgAGwAaQBtAGkAdAAgAGwAaQBhAGIAaQBsAGkA -->
+<!-- dAB5ACAAYQBuAGQAIABhAHIAZQAgAGkAbgBjAG8AcgBwAG8AcgBhAHQAZQBkACAA -->
+<!-- aABlAHIAZQBpAG4AIABiAHkAIAByAGUAZgBlAHIAZQBuAGMAZQAuMAsGCWCGSAGG -->
+<!-- /WwDFTAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcNK2cCzTAdBgNVHQ4EFgQU -->
+<!-- YVpNJLZJMp1KKnkag0v0HonByn0wfQYDVR0fBHYwdDA4oDagNIYyaHR0cDovL2Ny -->
+<!-- bDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcmwwOKA2oDSG -->
+<!-- Mmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRENBLTEu -->
+<!-- Y3JsMHcGCCsGAQUFBwEBBGswaTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGln -->
+<!-- aWNlcnQuY29tMEEGCCsGAQUFBzAChjVodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5j -->
+<!-- b20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNydDANBgkqhkiG9w0BAQUFAAOCAQEA -->
+<!-- nSV+GzNNsiaBXJuGziMgD4CH5Yj//7HUaiwx7ToXGXEXzakbvFoWOQCd42yE5FpA -->
+<!-- +94GAYw3+puxnSR+/iCkV61bt5qwYCbqaVchXTQvH3Gwg5QZBWs1kBCge5fH9j/n -->
+<!-- 4hFBpr1i2fAnPTgdKG86Ugnw7HBi02JLsOBzppLA044x2C/jbRcTBu7kA7YUq/OP -->
+<!-- Q6dxnSHdFMoVXZJB2vkPgdGZdA0mxA5/G7X1oPHGdwYoFenYk+VVFvC7Cqsc21xI -->
+<!-- J2bIo4sKHOWV2q7ELlmgYd3a822iYemKC23sEhi991VUQAOSK2vCUcIKSK+w1G7g -->
+<!-- 9BQKOhvjjz3Kr2qNe9zYRDCCBs0wggW1oAMCAQICEAb9+QOWA63qAArrPye7uhsw -->
+<!-- DQYJKoZIhvcNAQEFBQAwZTELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0 -->
+<!-- IEluYzEZMBcGA1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEkMCIGA1UEAxMbRGlnaUNl -->
+<!-- cnQgQXNzdXJlZCBJRCBSb290IENBMB4XDTA2MTExMDAwMDAwMFoXDTIxMTExMDAw -->
+<!-- MDAwMFowYjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcG -->
+<!-- A1UECxMQd3d3LmRpZ2ljZXJ0LmNvbTEhMB8GA1UEAxMYRGlnaUNlcnQgQXNzdXJl -->
+<!-- ZCBJRCBDQS0xMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6IItmfnK -->
+<!-- wkKVpYBzQHDSnlZUXKnE0kEGj8kz/E1FkVyBn+0snPgWWd+etSQVwpi5tHdJ3InE -->
+<!-- Ctqvy15r7a2wcTHrzzpADEZNk+yLejYIA6sMNP4YSYL+x8cxSIB8HqIPkg5QycaH -->
+<!-- 6zY/2DDD/6b3+6LNb3Mj/qxWBZDwMiEWicZwiPkFl32jx0PdAug7Pe2xQaPtP77b -->
+<!-- lUjE7h6z8rwMK5nQxl0SQoHhg26Ccz8mSxSQrllmCsSNvtLOBq6thG9IhJtPQLnx -->
+<!-- TPKvmPv2zkBdXPao8S+v7Iki8msYZbHBc63X8djPHgp0XEK4aH631XcKJ1Z8D2Kk -->
+<!-- PzIUYJX9BwSiCQIDAQABo4IDejCCA3YwDgYDVR0PAQH/BAQDAgGGMDsGA1UdJQQ0 -->
+<!-- MDIGCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwMGCCsGAQUFBwMEBggrBgEF -->
+<!-- BQcDCDCCAdIGA1UdIASCAckwggHFMIIBtAYKYIZIAYb9bAABBDCCAaQwOgYIKwYB -->
+<!-- BQUHAgEWLmh0dHA6Ly93d3cuZGlnaWNlcnQuY29tL3NzbC1jcHMtcmVwb3NpdG9y -->
+<!-- eS5odG0wggFkBggrBgEFBQcCAjCCAVYeggFSAEEAbgB5ACAAdQBzAGUAIABvAGYA -->
+<!-- IAB0AGgAaQBzACAAQwBlAHIAdABpAGYAaQBjAGEAdABlACAAYwBvAG4AcwB0AGkA -->
+<!-- dAB1AHQAZQBzACAAYQBjAGMAZQBwAHQAYQBuAGMAZQAgAG8AZgAgAHQAaABlACAA -->
+<!-- RABpAGcAaQBDAGUAcgB0ACAAQwBQAC8AQwBQAFMAIABhAG4AZAAgAHQAaABlACAA -->
+<!-- UgBlAGwAeQBpAG4AZwAgAFAAYQByAHQAeQAgAEEAZwByAGUAZQBtAGUAbgB0ACAA -->
+<!-- dwBoAGkAYwBoACAAbABpAG0AaQB0ACAAbABpAGEAYgBpAGwAaQB0AHkAIABhAG4A -->
+<!-- ZAAgAGEAcgBlACAAaQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABoAGUAcgBlAGkA -->
+<!-- bgAgAGIAeQAgAHIAZQBmAGUAcgBlAG4AYwBlAC4wCwYJYIZIAYb9bAMVMBIGA1Ud -->
+<!-- EwEB/wQIMAYBAf8CAQAweQYIKwYBBQUHAQEEbTBrMCQGCCsGAQUFBzABhhhodHRw -->
+<!-- Oi8vb2NzcC5kaWdpY2VydC5jb20wQwYIKwYBBQUHMAKGN2h0dHA6Ly9jYWNlcnRz -->
+<!-- LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcnQwgYEGA1Ud -->
+<!-- HwR6MHgwOqA4oDaGNGh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEFz -->
+<!-- c3VyZWRJRFJvb3RDQS5jcmwwOqA4oDaGNGh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNv -->
+<!-- bS9EaWdpQ2VydEFzc3VyZWRJRFJvb3RDQS5jcmwwHQYDVR0OBBYEFBUAEisTmLKZ -->
+<!-- B+0e36K+Vw0rZwLNMB8GA1UdIwQYMBaAFEXroq/0ksuCMS1Ri6enIZ3zbcgPMA0G -->
+<!-- CSqGSIb3DQEBBQUAA4IBAQBGUD7Jtygkpzgdtlspr1LPUukxR6tWXHvVDQtBs+/s -->
+<!-- dR90OPKyXGGinJXDUOSCuSPRujqGcq04eKx1XRcXNHJHhZRW0eu7NoR3zCSl8wQZ -->
+<!-- Vann4+erYs37iy2QwsDStZS9Xk+xBdIOPRqpFFumhjFiqKgz5Js5p8T1zh14dpQl -->
+<!-- c+Qqq8+cdkvtX8JLFuRLcEwAiR78xXm8TBJX/l/hHrwCXaj++wc4Tw3GXZG5D2dF -->
+<!-- zdaD7eeSDY2xaYxP+1ngIw/Sqq4AfO6cQg7PkdcntxbuD8O9fAqg7iwIVYUiuOsY -->
+<!-- Gk38KiGtSTGDR5V3cdyxG0tLHBCcdxTBnU8vWpUIKRAmMYIEXzCCBFsCAQEwgZkw -->
+<!-- gYQxCzAJBgNVBAYTAlVTMR0wGwYDVQQKExRTeW1hbnRlYyBDb3Jwb3JhdGlvbjEf -->
+<!-- MB0GA1UECxMWU3ltYW50ZWMgVHJ1c3QgTmV0d29yazE1MDMGA1UEAxMsU3ltYW50 -->
+<!-- ZWMgQ2xhc3MgMyBTSEEyNTYgQ29kZSBTaWduaW5nIENBIC0gRzICECt3g4UAT0ym -->
+<!-- kcB/NZDAe38wDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIBDDEKMAigAoAA -->
+<!-- oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w -->
+<!-- DAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgMLiy0JLdM0iEl8tkU2pVjxUs -->
+<!-- UqTXa9AVMjv9SXOkOB4wDQYJKoZIhvcNAQEBBQAEggEAH/jdVnHR0PhKbMefaSJr -->
+<!-- G3+qHnhgfEA8qhqDFO0V9RBdyx4uWI+dhZwMNTbohRzheETrlSxWp55hes4P/QIx -->
+<!-- WaAFKSDY6Upap/HWCBl4Vr4SXN+O0TaYZTEb/5uxMC+pz1jq5LXYZxsc7DzJhGuo -->
+<!-- PvlHkzMdDYMMORTSqh77Tj8X7nr1gDg/FQ9/eqiawYvnyciF2v/Lk4zwBJbdeUjL -->
+<!-- nCQS1jy76wzONsXmkopoKWYuyYM9JWvpMItN6KAH7WjSaEiBlvN3HzyX20ACbk3o -->
+<!-- Kgq8YIYjvnq9CaSclZd60YW+ipwLlGh8RgWOG31exiMfbcuJ+q2ir32bcwKMVx1B -->
+<!-- MKGCAg8wggILBgkqhkiG9w0BCQYxggH8MIIB+AIBATB2MGIxCzAJBgNVBAYTAlVT -->
+<!-- MRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j -->
+<!-- b20xITAfBgNVBAMTGERpZ2lDZXJ0IEFzc3VyZWQgSUQgQ0EtMQIQAwGaAjr/WLFr -->
+<!-- 1tXq5hfwZjAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAc -->
+<!-- BgkqhkiG9w0BCQUxDxcNMjAwNjEwMjMxNjI2WjAjBgkqhkiG9w0BCQQxFgQUJl/w -->
+<!-- 0CIny02ovd/ZmfToz3qWqlcwDQYJKoZIhvcNAQEBBQAEggEAcqbBd1rRbrqxeZYP -->
+<!-- 3zV2bJiq3KUaolIBM0U1fuKn6DVp/mW9PJosQn7zHrlVHYI1gkJbeH3XqdZCroTk -->
+<!-- bj/biNqOufYg3ukRH3pWW7GV/6qQ2DwwVp1dy6Y+DiIfGIog/GFy7s1bcao/XdFm -->
+<!-- kTEl/fTQCXeg3PDoKmv69MvAU8IKmZ5di89Zop8fU9JjAmN9p2Er/WpPxKA45Hi7 -->
+<!-- xPAfQqlQkKyKUr1Br969M/a57Ugc5AgJ7xPEJfIsMwQY4dOwaAuM7r2OVuieEMef -->
+<!-- Ls60o0T5AYjc6lUnbWkDaegCiYDHjqRIuVE2sjB4ViUJfy6OsgCNW9TAbHqYV3gu -->
+<!-- 60/eAA== -->
+<!-- SIG # End signature block -->

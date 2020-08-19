@@ -1,0 +1,1485 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.AppConfig</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.AddAPPCResourceTagCmdlet">
+            <summary>
+            Metadata to assign to an AppConfig resource. Tags help organize and categorize your
+            AppConfig resources. Each tag consists of a key and an optional value, both of which
+            you define. You can specify a maximum of 50 tags for a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.AddAPPCResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource for which to retrieve tags.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.AddAPPCResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value string map. The valid character set is [a-zA-Z+-=._:/]. The tag key
+            can be up to 128 characters and must not start with <code>aws:</code>. The tag value
+            can be up to 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.AddAPPCResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.AddAPPCResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.AddAPPCResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationCmdlet">
+            <summary>
+            Retrieve information about an application.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The ID of the application you want to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.GetApplicationResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.GetApplicationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationListCmdlet">
+            <summary>
+            List all applications in your AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return for this call. The call also returns a token
+            that you can specify in a subsequent call to get the next set of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to start the list. Use this token to get the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Items'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ListApplicationsResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.ListApplicationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCApplicationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet">
+            <summary>
+            Receive information about a configuration.
+            
+             <important><para>
+            AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter
+            to identify the configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code>
+            with each call to <code>GetConfiguration</code>, your clients receive the current
+            configuration. You are charged each time your clients receive a configuration.
+            </para><para>
+            To avoid excess charges, we recommend that you include the <code>ClientConfigurationVersion</code>
+            value with every call to <code>GetConfiguration</code>. This value must be saved on
+            your client. Subsequent calls to <code>GetConfiguration</code> must pass this value
+            by using the <code>ClientConfigurationVersion</code> parameter. 
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.Application">
+            <summary>
+            <para>
+            <para>The application to get. Specify either the application name or the application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.ClientConfigurationVersion">
+            <summary>
+            <para>
+            <para>The configuration version returned in the most recent <code>GetConfiguration</code>
+            response.</para><important><para>AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter
+            to identify the configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code>
+            with each call to <code>GetConfiguration</code>, your clients receive the current
+            configuration. You are charged each time your clients receive a configuration.</para><para>To avoid excess charges, we recommend that you include the <code>ClientConfigurationVersion</code>
+            value with every call to <code>GetConfiguration</code>. This value must be saved on
+            your client. Subsequent calls to <code>GetConfiguration</code> must pass this value
+            by using the <code>ClientConfigurationVersion</code> parameter. </para></important><para>For more information about working with configurations, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html">Retrieving
+            the Configuration</a> in the <i>AWS AppConfig User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.ClientId">
+            <summary>
+            <para>
+            <para>A unique ID to identify the client for the configuration. This ID enables AppConfig
+            to deploy the configuration in intervals, as defined in the deployment strategy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.Configuration">
+            <summary>
+            <para>
+            <para>The configuration to get. Specify either the configuration name or the configuration
+            ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.Environment">
+            <summary>
+            <para>
+            <para>The environment to get. Specify either the environment name or the environment ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.GetConfigurationResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.GetConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Configuration parameter.
+            The -PassThru parameter is deprecated, use -Select '^Configuration' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileCmdlet">
+            <summary>
+            Retrieve information about a configuration profile.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The ID of the application that includes the configuration profile you want to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileCmdlet.ConfigurationProfileId">
+            <summary>
+            <para>
+            <para>The ID of the configuration profile you want to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.GetConfigurationProfileResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.GetConfigurationProfileResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConfigurationProfileId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConfigurationProfileId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet">
+            <summary>
+            Lists the configuration profiles for an application.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return for this call. The call also returns a token
+            that you can specify in a subsequent call to get the next set of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to start the list. Use this token to get the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Items'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ListConfigurationProfilesResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.ListConfigurationProfilesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCConfigurationProfileListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentCmdlet">
+            <summary>
+            Retrieve information about a configuration deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The ID of the application that includes the deployment you want to get. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentCmdlet.DeploymentNumber">
+            <summary>
+            <para>
+            <para>The sequence number of the deployment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The ID of the environment that includes the deployment you want to get. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.GetDeploymentResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.GetDeploymentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeploymentNumber parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeploymentNumber' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet">
+            <summary>
+            Lists the deployments for an environment.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The environment ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return for this call. The call also returns a token
+            that you can specify in a subsequent call to get the next set of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to start the list. Use this token to get the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Items'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ListDeploymentsResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.ListDeploymentsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyCmdlet">
+            <summary>
+            Retrieve information about a deployment strategy. A deployment strategy defines important
+            criteria for rolling out your configuration to the designated targets. A deployment
+            strategy includes: the overall duration required, a percentage of targets to receive
+            the deployment during each interval, an algorithm that defines how percentage grows,
+            and bake time.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyCmdlet.DeploymentStrategyId">
+            <summary>
+            <para>
+            <para>The ID of the deployment strategy to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.GetDeploymentStrategyResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.GetDeploymentStrategyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeploymentStrategyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeploymentStrategyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyListCmdlet">
+            <summary>
+            List deployment strategies.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return for this call. The call also returns a token
+            that you can specify in a subsequent call to get the next set of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to start the list. Use this token to get the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Items'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ListDeploymentStrategiesResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.ListDeploymentStrategiesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCDeploymentStrategyListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentCmdlet">
+            <summary>
+            Retrieve information about an environment. An environment is a logical deployment
+            group of AppConfig applications, such as applications in a <code>Production</code>
+            environment or in an <code>EU_Region</code> environment. Each configuration deployment
+            targets an environment. You can enable one or more Amazon CloudWatch alarms for an
+            environment. If an alarm is triggered during a deployment, AppConfig roles back the
+            configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The ID of the application that includes the environment you want to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The ID of the environment you wnat to get.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.GetEnvironmentResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.GetEnvironmentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EnvironmentId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EnvironmentId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet">
+            <summary>
+            List the environments for an application.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return for this call. The call also returns a token
+            that you can specify in a subsequent call to get the next set of results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to start the list. Use this token to get the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Items'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ListEnvironmentsResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.ListEnvironmentsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCEnvironmentListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.GetAPPCResourceTagCmdlet">
+            <summary>
+            Retrieves the list of key-value tags assigned to the resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The resource ARN.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.GetAPPCResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet">
+            <summary>
+            An application in AppConfig is a logical unit of code that provides capabilities for
+            your customers. For example, an application can be a microservice that runs on Amazon
+            EC2 instances, a mobile application installed by your users, a serverless application
+            using Amazon API Gateway and AWS Lambda, or any system you run on behalf of others.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the application.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet.Name">
+            <summary>
+            <para>
+            <para>A name for the application.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata to assign to the application. Tags help organize and categorize your AppConfig
+            resources. Each tag consists of a key and an optional value, both of which you define.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.CreateApplicationResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.CreateApplicationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCApplicationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet">
+            <summary>
+            Information that enables AppConfig to access the configuration source. Valid configuration
+            sources include Systems Manager (SSM) documents, SSM Parameter Store parameters, and
+            Amazon S3 objects. A configuration profile includes the following information.
+            
+             <ul><li><para>
+            The Uri location of the configuration data.
+            </para></li><li><para>
+            The AWS Identity and Access Management (IAM) role that provides access to the configuration
+            data.
+            </para></li><li><para>
+            A validator for the configuration data. Available validators include either a JSON
+            Schema or an AWS Lambda function.
+            </para></li></ul><para>
+            For more information, see <a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html">Create
+            a Configuration and a Configuration Profile</a> in the <i>AWS AppConfig User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the configuration profile.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.LocationUri">
+            <summary>
+            <para>
+            <para>A URI to locate the configuration. You can specify a Systems Manager (SSM) document,
+            an SSM Parameter Store parameter, or an Amazon S3 object. For an SSM document, specify
+            either the document name in the format <code>ssm-document://&lt;Document_name&gt;</code>
+            or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name
+            in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For
+            an Amazon S3 object, specify the URI in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt;
+            </code>. Here is an example: s3://my-bucket/my-app/us-east-1/my-config.json</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.Name">
+            <summary>
+            <para>
+            <para>A name for the configuration profile.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.RetrievalRoleArn">
+            <summary>
+            <para>
+            <para>The ARN of an IAM role with permission to access the configuration at the specified
+            LocationUri.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata to assign to the configuration profile. Tags help organize and categorize
+            your AppConfig resources. Each tag consists of a key and an optional value, both of
+            which you define.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.Validator">
+            <summary>
+            <para>
+            <para>A list of methods for validating the configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.CreateConfigurationProfileResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.CreateConfigurationProfileResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCConfigurationProfileCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet">
+            <summary>
+            A deployment strategy defines important criteria for rolling out your configuration
+            to the designated targets. A deployment strategy includes: the overall duration required,
+            a percentage of targets to receive the deployment during each interval, an algorithm
+            that defines how percentage grows, and bake time.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.DeploymentDurationInMinute">
+            <summary>
+            <para>
+            <para>Total amount of time for a deployment to last.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the deployment strategy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.FinalBakeTimeInMinute">
+            <summary>
+            <para>
+            <para>The amount of time AppConfig monitors for alarms before considering the deployment
+            to be complete and no longer eligible for automatic roll back.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.GrowthFactor">
+            <summary>
+            <para>
+            <para>The percentage of targets to receive a deployed configuration during each interval.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.GrowthType">
+            <summary>
+            <para>
+            <para>The algorithm used to define how percentage grows over time. AWS AppConfig supports
+            the following growth types:</para><para><b>Linear</b>: For this type, AppConfig processes the deployment by dividing the
+            total number of targets by the value specified for <code>Step percentage</code>. For
+            example, a linear deployment that uses a <code>Step percentage</code> of 10 deploys
+            the configuration to 10 percent of the hosts. After those deployments are complete,
+            the system deploys the configuration to the next 10 percent. This continues until
+            100% of the targets have successfully received the configuration.</para><para><b>Exponential</b>: For this type, AppConfig processes the deployment exponentially
+            using the following formula: <code>G*(2^N)</code>. In this formula, <code>G</code>
+            is the growth factor specified by the user and <code>N</code> is the number of steps
+            until the configuration is deployed to all targets. For example, if you specify a
+            growth factor of 2, then the system rolls out the configuration as follows:</para><para><code>2*(2^0)</code></para><para><code>2*(2^1)</code></para><para><code>2*(2^2)</code></para><para>Expressed numerically, the deployment rolls out as follows: 2% of the targets, 4%
+            of the targets, 8% of the targets, and continues until the configuration has been
+            deployed to all targets.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.Name">
+            <summary>
+            <para>
+            <para>A name for the deployment strategy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.ReplicateTo">
+            <summary>
+            <para>
+            <para>Save the deployment strategy to a Systems Manager (SSM) document.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata to assign to the deployment strategy. Tags help organize and categorize your
+            AppConfig resources. Each tag consists of a key and an optional value, both of which
+            you define.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.CreateDeploymentStrategyResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.CreateDeploymentStrategyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCDeploymentStrategyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet">
+            <summary>
+            For each application, you define one or more environments. An environment is a logical
+            deployment group of AppConfig targets, such as applications in a <code>Beta</code>
+            or <code>Production</code> environment. You can also define environments for application
+            subcomponents such as the <code>Web</code>, <code>Mobile</code> and <code>Back-end</code>
+            components for your application. You can configure Amazon CloudWatch alarms for each
+            environment. The system monitors alarms during a configuration deployment. If an alarm
+            is triggered, the system rolls back the configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the environment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.Monitor">
+            <summary>
+            <para>
+            <para>Amazon CloudWatch alarms to monitor during the deployment process.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.Name">
+            <summary>
+            <para>
+            <para>A name for the environment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata to assign to the environment. Tags help organize and categorize your AppConfig
+            resources. Each tag consists of a key and an optional value, both of which you define.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.CreateEnvironmentResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.CreateEnvironmentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.NewAPPCEnvironmentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCApplicationCmdlet">
+            <summary>
+            Delete an application. Deleting an application does not delete a configuration from
+            a host.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCApplicationCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The ID of the application to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCApplicationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.DeleteApplicationResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCApplicationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCApplicationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCConfigurationProfileCmdlet">
+            <summary>
+            Delete a configuration profile. Deleting a configuration profile does not delete a
+            configuration from a host.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCConfigurationProfileCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID that includes the configuration profile you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCConfigurationProfileCmdlet.ConfigurationProfileId">
+            <summary>
+            <para>
+            <para>The ID of the configuration profile you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCConfigurationProfileCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.DeleteConfigurationProfileResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCConfigurationProfileCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConfigurationProfileId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConfigurationProfileId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCConfigurationProfileCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCDeploymentStrategyCmdlet">
+            <summary>
+            Delete a deployment strategy. Deleting a deployment strategy does not delete a configuration
+            from a host.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCDeploymentStrategyCmdlet.DeploymentStrategyId">
+            <summary>
+            <para>
+            <para>The ID of the deployment strategy you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCDeploymentStrategyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.DeleteDeploymentStrategyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCDeploymentStrategyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeploymentStrategyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeploymentStrategyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCDeploymentStrategyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCEnvironmentCmdlet">
+            <summary>
+            Delete an environment. Deleting an environment does not delete a configuration from
+            a host.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCEnvironmentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID that includes the environment you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCEnvironmentCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The ID of the environment you want to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCEnvironmentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.DeleteEnvironmentResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCEnvironmentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EnvironmentId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EnvironmentId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCEnvironmentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCResourceTagCmdlet">
+            <summary>
+            Deletes a tag key and value from an AppConfig resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource for which to remove tags.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The tag keys to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.RemoveAPPCResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet">
+            <summary>
+            Starts a deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.ConfigurationProfileId">
+            <summary>
+            <para>
+            <para>The configuration profile ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.ConfigurationVersion">
+            <summary>
+            <para>
+            <para>The configuration version to deploy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.DeploymentStrategyId">
+            <summary>
+            <para>
+            <para>The deployment strategy ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the deployment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The environment ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata to assign to the deployment. Tags help organize and categorize your AppConfig
+            resources. Each tag consists of a key and an optional value, both of which you define.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.StartDeploymentResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.StartDeploymentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StartAPPCDeploymentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet">
+            <summary>
+            Stops a deployment. This API action works only on deployments that have a status of
+            <code>DEPLOYING</code>. This action moves the deployment to a status of <code>ROLLED_BACK</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet.DeploymentNumber">
+            <summary>
+            <para>
+            <para>The sequence number of the deployment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The environment ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.StopDeploymentResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.StopDeploymentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeploymentNumber parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeploymentNumber' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.StopAPPCDeploymentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.TestAPPCConfigurationValidityCmdlet">
+            <summary>
+            Uses the validators in a configuration profile to validate a configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.TestAPPCConfigurationValidityCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.TestAPPCConfigurationValidityCmdlet.ConfigurationProfileId">
+            <summary>
+            <para>
+            <para>The configuration profile ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.TestAPPCConfigurationValidityCmdlet.ConfigurationVersion">
+            <summary>
+            <para>
+            <para>The version of the configuration to validate.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.TestAPPCConfigurationValidityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.ValidateConfigurationResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.TestAPPCConfigurationValidityCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConfigurationProfileId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConfigurationProfileId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet">
+            <summary>
+            Updates an application.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the application.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the application.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.UpdateApplicationResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.UpdateApplicationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ApplicationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ApplicationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCApplicationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet">
+            <summary>
+            Updates a configuration profile.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.ConfigurationProfileId">
+            <summary>
+            <para>
+            <para>The ID of the configuration profile.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the configuration profile.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the configuration profile.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.RetrievalRoleArn">
+            <summary>
+            <para>
+            <para>The ARN of an IAM role with permission to access the configuration at the specified
+            LocationUri.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.Validator">
+            <summary>
+            <para>
+            <para>A list of methods for validating the configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.UpdateConfigurationProfileResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.UpdateConfigurationProfileResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ConfigurationProfileId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ConfigurationProfileId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCConfigurationProfileCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet">
+            <summary>
+            Updates a deployment strategy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.DeploymentDurationInMinute">
+            <summary>
+            <para>
+            <para>Total amount of time for a deployment to last.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.DeploymentStrategyId">
+            <summary>
+            <para>
+            <para>The deployment strategy ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the deployment strategy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.FinalBakeTimeInMinute">
+            <summary>
+            <para>
+            <para>The amount of time AppConfig monitors for alarms before considering the deployment
+            to be complete and no longer eligible for automatic roll back.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.GrowthFactor">
+            <summary>
+            <para>
+            <para>The percentage of targets to receive a deployed configuration during each interval.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.GrowthType">
+            <summary>
+            <para>
+            <para>The algorithm used to define how percentage grows over time. AWS AppConfig supports
+            the following growth types:</para><para><b>Linear</b>: For this type, AppConfig processes the deployment by increments of
+            the growth factor evenly distributed over the deployment time. For example, a linear
+            deployment that uses a growth factor of 20 initially makes the configuration available
+            to 20 percent of the targets. After 1/5th of the deployment time has passed, the system
+            updates the percentage to 40 percent. This continues until 100% of the targets are
+            set to receive the deployed configuration.</para><para><b>Exponential</b>: For this type, AppConfig processes the deployment exponentially
+            using the following formula: <code>G*(2^N)</code>. In this formula, <code>G</code>
+            is the growth factor specified by the user and <code>N</code> is the number of steps
+            until the configuration is deployed to all targets. For example, if you specify a
+            growth factor of 2, then the system rolls out the configuration as follows:</para><para><code>2*(2^0)</code></para><para><code>2*(2^1)</code></para><para><code>2*(2^2)</code></para><para>Expressed numerically, the deployment rolls out as follows: 2% of the targets, 4%
+            of the targets, 8% of the targets, and continues until the configuration has been
+            deployed to all targets.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.UpdateDeploymentStrategyResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.UpdateDeploymentStrategyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeploymentStrategyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeploymentStrategyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCDeploymentStrategyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet">
+            <summary>
+            Updates an environment.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.ApplicationId">
+            <summary>
+            <para>
+            <para>The application ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the environment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.EnvironmentId">
+            <summary>
+            <para>
+            <para>The environment ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.Monitor">
+            <summary>
+            <para>
+            <para>Amazon CloudWatch alarms to monitor during the deployment process.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the environment.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.AppConfig.Model.UpdateEnvironmentResponse).
+            Specifying the name of a property of type Amazon.AppConfig.Model.UpdateEnvironmentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EnvironmentId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EnvironmentId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.APPC.UpdateAPPCEnvironmentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

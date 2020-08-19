@@ -1,0 +1,1585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.NetworkManager</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.AddNMGRResourceTagCmdlet">
+            <summary>
+            Tags a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.AddNMGRResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.AddNMGRResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the specified resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.AddNMGRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.AddNMGRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.AddNMGRResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet">
+            <summary>
+            Gets the association information for customer gateways that are associated with devices
+            and links in your global network.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.CustomerGatewayArn">
+            <summary>
+            <para>
+            <para>One or more customer gateway Amazon Resource Names (ARNs). For more information, see
+            <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies">Resources
+            Defined by Amazon EC2</a>. The maximum is 10.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CustomerGatewayAssociations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.GetCustomerGatewayAssociationsResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.GetCustomerGatewayAssociationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRCustomerGatewayAssociationCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet">
+            <summary>
+            Gets information about one or more of your devices in a global network.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>One or more device IDs. The maximum is 10.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of the site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Devices'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.GetDevicesResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.GetDevicesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRDeviceCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRGlobalNetworkCmdlet">
+            <summary>
+            Describes one or more global networks. By default, all global networks are described.
+            To describe the objects in your global network, you must use the appropriate <code>Get*</code>
+            action. For example, to list the transit gateways in your global network, use <a>GetTransitGatewayRegistrations</a>.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRGlobalNetworkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The IDs of one or more global networks. The maximum is 10.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRGlobalNetworkCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRGlobalNetworkCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRGlobalNetworkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GlobalNetworks'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DescribeGlobalNetworksResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DescribeGlobalNetworksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRGlobalNetworkCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet">
+            <summary>
+            Gets information about one or more links in a specified global network.
+            
+             
+            <para>
+            If you specify the site ID, you cannot specify the type or provider in the same request.
+            You can specify the type and provider in the same request.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>One or more link IDs. The maximum is 10.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.Provider">
+            <summary>
+            <para>
+            <para>The link provider.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of the site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.Type">
+            <summary>
+            <para>
+            <para>The link type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Links'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.GetLinksResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.GetLinksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet">
+            <summary>
+            Gets the link associations for a device or a link. Either the device ID or the link
+            ID must be specified.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>The ID of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>The ID of the link.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LinkAssociations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.GetLinkAssociationsResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.GetLinkAssociationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRLinkAssociationCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRResourceTagCmdlet">
+            <summary>
+            Lists the tags for a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TagList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet">
+            <summary>
+            Gets information about one or more of your sites in a global network.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>One or more site IDs. The maximum is 10.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Sites'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.GetSitesResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.GetSitesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRSiteCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet">
+            <summary>
+            Gets information about the transit gateway registrations in a specified global network.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.TransitGatewayArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Names (ARNs) of one or more transit gateways. The maximum is 10.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next page of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TransitGatewayRegistrations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.GetTransitGatewayRegistrationsResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.GetTransitGatewayRegistrationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.GetNMGRTransitGatewayRegistrationCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet">
+            <summary>
+            Creates a new device in a global network. If you specify both a site ID and a location,
+            the location of the site is used for visualization in the Network Manager console.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Location_Address">
+            <summary>
+            <para>
+            <para>The physical address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the device.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Location_Latitude">
+            <summary>
+            <para>
+            <para>The latitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Location_Longitude">
+            <summary>
+            <para>
+            <para>The longitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Model">
+            <summary>
+            <para>
+            <para>The model of the device.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.SerialNumber">
+            <summary>
+            <para>
+            <para>The serial number of the device.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of the site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the resource during creation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Vendor">
+            <summary>
+            <para>
+            <para>The vendor of the device.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Device'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.CreateDeviceResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.CreateDeviceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRDeviceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRGlobalNetworkCmdlet">
+            <summary>
+            Creates a new, empty global network.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRGlobalNetworkCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the global network.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRGlobalNetworkCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the resource during creation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRGlobalNetworkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GlobalNetwork'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.CreateGlobalNetworkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.CreateGlobalNetworkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRGlobalNetworkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Description parameter.
+            The -PassThru parameter is deprecated, use -Select '^Description' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRGlobalNetworkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet">
+            <summary>
+            Creates a new link for a specified site.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the link.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Bandwidth_DownloadSpeed">
+            <summary>
+            <para>
+            <para>Download speed in Mbps.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Provider">
+            <summary>
+            <para>
+            <para>The provider of the link.</para><para>Constraints: Cannot include the following characters: | \ ^</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of the site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the resource during creation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of the link.</para><para>Constraints: Cannot include the following characters: | \ ^</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Bandwidth_UploadSpeed">
+            <summary>
+            <para>
+            <para>Upload speed in Mbps.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Link'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.CreateLinkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.CreateLinkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SiteId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SiteId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRLinkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet">
+            <summary>
+            Creates a new site in a global network.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Location_Address">
+            <summary>
+            <para>
+            <para>The physical address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of your site.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Location_Latitude">
+            <summary>
+            <para>
+            <para>The latitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Location_Longitude">
+            <summary>
+            <para>
+            <para>The longitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the resource during creation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Site'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.CreateSiteResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.CreateSiteResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.NewNMGRSiteCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet">
+            <summary>
+            Associates a customer gateway with a device and optionally, with a link. If you specify
+            a link, it must be associated with the specified device. 
+            
+             
+            <para>
+            You can only associate customer gateways that are connected to a VPN attachment on
+            a transit gateway. The transit gateway must be registered in your global network.
+            When you register a transit gateway, customer gateways that are connected to the transit
+            gateway are automatically included in the global network. To list customer gateways
+            that are connected to a transit gateway, use the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpnConnections.html">DescribeVpnConnections</a>
+            EC2 API and filter by <code>transit-gateway-id</code>.
+            </para><para>
+            You cannot associate a customer gateway with more than one device and link. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.CustomerGatewayArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the customer gateway. For more information, see
+            <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies">Resources
+            Defined by Amazon EC2</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>The ID of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>The ID of the link.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CustomerGatewayAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.AssociateCustomerGatewayResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.AssociateCustomerGatewayResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CustomerGatewayArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CustomerGatewayArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRCustomerGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet">
+            <summary>
+            Associates a link to a device. A device can be associated to multiple links and a
+            link can be associated to multiple devices. The device and link must be in the same
+            global network and the same site.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>The ID of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>The ID of the link.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LinkAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.AssociateLinkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.AssociateLinkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LinkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^LinkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRLinkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRTransitGatewayCmdlet">
+            <summary>
+            Registers a transit gateway in your global network. The transit gateway can be in
+            any AWS Region, but it must be owned by the same AWS account that owns the global
+            network. You cannot register a transit gateway in more than one global network.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRTransitGatewayCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRTransitGatewayCmdlet.TransitGatewayArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies">Resources
+            Defined by Amazon EC2</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRTransitGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TransitGatewayRegistration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.RegisterTransitGatewayResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.RegisterTransitGatewayResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRTransitGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TransitGatewayArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TransitGatewayArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RegisterNMGRTransitGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRDeviceCmdlet">
+            <summary>
+            Deletes an existing device. You must first disassociate the device from any links
+            and customer gateways.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRDeviceCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>The ID of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRDeviceCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRDeviceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Device'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DeleteDeviceResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DeleteDeviceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRDeviceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeviceId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeviceId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRDeviceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRGlobalNetworkCmdlet">
+            <summary>
+            Deletes an existing global network. You must first delete all global network objects
+            (devices, links, and sites) and deregister all transit gateways.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRGlobalNetworkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRGlobalNetworkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GlobalNetwork'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DeleteGlobalNetworkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DeleteGlobalNetworkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRGlobalNetworkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRGlobalNetworkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRLinkCmdlet">
+            <summary>
+            Deletes an existing link. You must first disassociate the link from any devices and
+            customer gateways.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRLinkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRLinkCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>The ID of the link.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRLinkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Link'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DeleteLinkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DeleteLinkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRLinkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LinkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^LinkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRLinkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRResourceTagCmdlet">
+            <summary>
+            Removes tags from a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The tag keys to remove from the specified resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRSiteCmdlet">
+            <summary>
+            Deletes an existing site. The site cannot be associated with any device or link.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRSiteCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRSiteCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of the site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRSiteCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Site'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DeleteSiteResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DeleteSiteResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRSiteCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SiteId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SiteId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.RemoveNMGRSiteCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRCustomerGatewayCmdlet">
+            <summary>
+            Disassociates a customer gateway from a device and a link.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRCustomerGatewayCmdlet.CustomerGatewayArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the customer gateway. For more information, see
+            <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies">Resources
+            Defined by Amazon EC2</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRCustomerGatewayCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRCustomerGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CustomerGatewayAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DisassociateCustomerGatewayResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DisassociateCustomerGatewayResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRCustomerGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CustomerGatewayArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CustomerGatewayArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRCustomerGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet">
+            <summary>
+            Disassociates an existing device from a link. You must first disassociate any customer
+            gateways that are associated with the link.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>The ID of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>The ID of the link.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LinkAssociation'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DisassociateLinkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DisassociateLinkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LinkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^LinkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRLinkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRTransitGatewayCmdlet">
+            <summary>
+            Deregisters a transit gateway from your global network. This action does not delete
+            your transit gateway, or modify any of its attachments. This action removes any customer
+            gateway associations.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRTransitGatewayCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRTransitGatewayCmdlet.TransitGatewayArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the transit gateway.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRTransitGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TransitGatewayRegistration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.DeregisterTransitGatewayResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.DeregisterTransitGatewayResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRTransitGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TransitGatewayArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TransitGatewayArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UnregisterNMGRTransitGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet">
+            <summary>
+            Updates the details for an existing device. To remove information for any of the parameters,
+            specify an empty string.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Location_Address">
+            <summary>
+            <para>
+            <para>The physical address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the device.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.DeviceId">
+            <summary>
+            <para>
+            <para>The ID of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Location_Latitude">
+            <summary>
+            <para>
+            <para>The latitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Location_Longitude">
+            <summary>
+            <para>
+            <para>The longitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Model">
+            <summary>
+            <para>
+            <para>The model of the device.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.SerialNumber">
+            <summary>
+            <para>
+            <para>The serial number of the device.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of the site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of the device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Vendor">
+            <summary>
+            <para>
+            <para>The vendor of the device.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Device'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.UpdateDeviceResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.UpdateDeviceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DeviceId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DeviceId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRDeviceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRGlobalNetworkCmdlet">
+            <summary>
+            Updates an existing global network. To remove information for any of the parameters,
+            specify an empty string.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRGlobalNetworkCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the global network.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRGlobalNetworkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of your global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRGlobalNetworkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GlobalNetwork'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.UpdateGlobalNetworkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.UpdateGlobalNetworkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRGlobalNetworkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GlobalNetworkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GlobalNetworkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRGlobalNetworkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet">
+            <summary>
+            Updates the details for an existing link. To remove information for any of the parameters,
+            specify an empty string.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of the link.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Bandwidth_DownloadSpeed">
+            <summary>
+            <para>
+            <para>Download speed in Mbps.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.LinkId">
+            <summary>
+            <para>
+            <para>The ID of the link.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Provider">
+            <summary>
+            <para>
+            <para>The provider of the link.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of the link.</para><para>Length Constraints: Maximum length of 128 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Bandwidth_UploadSpeed">
+            <summary>
+            <para>
+            <para>Upload speed in Mbps.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Link'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.UpdateLinkResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.UpdateLinkResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LinkId parameter.
+            The -PassThru parameter is deprecated, use -Select '^LinkId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRLinkCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet">
+            <summary>
+            Updates the information for an existing site. To remove information for any of the
+            parameters, specify an empty string.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.Location_Address">
+            <summary>
+            <para>
+            <para>The physical address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.Description">
+            <summary>
+            <para>
+            <para>A description of your site.</para><para>Length Constraints: Maximum length of 256 characters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.GlobalNetworkId">
+            <summary>
+            <para>
+            <para>The ID of the global network.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.Location_Latitude">
+            <summary>
+            <para>
+            <para>The latitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.Location_Longitude">
+            <summary>
+            <para>
+            <para>The longitude.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.SiteId">
+            <summary>
+            <para>
+            <para>The ID of your site.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Site'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.NetworkManager.Model.UpdateSiteResponse).
+            Specifying the name of a property of type Amazon.NetworkManager.Model.UpdateSiteResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SiteId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SiteId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.NMGR.UpdateNMGRSiteCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

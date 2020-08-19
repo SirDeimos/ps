@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.IoTEventsData</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorCmdlet">
+            <summary>
+            Returns information about the specified detector (instance).
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model whose detectors (instances) you want information about.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorCmdlet.KeyValue">
+            <summary>
+            <para>
+            <para>A filter used to limit results to detectors (instances) created because of the given
+            key ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Detector'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEventsData.Model.DescribeDetectorResponse).
+            Specifying the name of a property of type Amazon.IoTEventsData.Model.DescribeDetectorResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet">
+            <summary>
+            Lists detectors (the instances of a detector model).<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model whose detectors (instances) are listed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.StateName">
+            <summary>
+            <para>
+            <para>A filter that limits results to those detectors (instances) in the given state.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return at one time.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DetectorSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEventsData.Model.ListDetectorsResponse).
+            Specifying the name of a property of type Amazon.IoTEventsData.Model.ListDetectorsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.GetIOTEDDetectorListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTED.SendIOTEDMessageBatchCmdlet">
+            <summary>
+            Sends a set of messages to the AWS IoT Events system. Each message payload is transformed
+            into the input you specify (<code>"inputName"</code>) and ingested into any detectors
+            that monitor that input. If multiple messages are sent, the order in which the messages
+            are processed isn't guaranteed. To guarantee ordering, you must send messages one
+            at a time and wait for a successful response.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.SendIOTEDMessageBatchCmdlet.Message">
+            <summary>
+            <para>
+            <para>The list of messages to send. Each message has the following format: <code>'{ "messageId":
+            "string", "inputName": "string", "payload": "string"}'</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.SendIOTEDMessageBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BatchPutMessageErrorEntries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEventsData.Model.BatchPutMessageResponse).
+            Specifying the name of a property of type Amazon.IoTEventsData.Model.BatchPutMessageResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.SendIOTEDMessageBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Message parameter.
+            The -PassThru parameter is deprecated, use -Select '^Message' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.SendIOTEDMessageBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTED.UpdateIOTEDDetectorBatchCmdlet">
+            <summary>
+            Updates the state, variable values, and timer settings of one or more detectors (instances)
+            of a specified detector model.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.UpdateIOTEDDetectorBatchCmdlet.Detector">
+            <summary>
+            <para>
+            <para>The list of detectors (instances) to update, along with the values to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.UpdateIOTEDDetectorBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BatchUpdateDetectorErrorEntries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEventsData.Model.BatchUpdateDetectorResponse).
+            Specifying the name of a property of type Amazon.IoTEventsData.Model.BatchUpdateDetectorResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.UpdateIOTEDDetectorBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Detector parameter.
+            The -PassThru parameter is deprecated, use -Select '^Detector' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTED.UpdateIOTEDDetectorBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2782 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.IoTSiteWise</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.AddIOTSWResourceTagCmdlet">
+            <summary>
+            Adds tags to an AWS IoT SiteWise resource. If a tag already exists for the resource,
+            this operation updates the tag's value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.AddIOTSWResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            of the resource to tag.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.AddIOTSWResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the resource. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.AddIOTSWResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.AddIOTSWResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.AddIOTSWResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet">
+            <summary>
+            Associates a child asset with the given parent asset through a hierarchy defined in
+            the parent asset's model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/add-associated-assets.html">Associating
+            Assets</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the parent asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet.ChildAssetId">
+            <summary>
+            <para>
+            <para>The ID of the child asset to be associated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet.HierarchyId">
+            <summary>
+            <para>
+            <para>The ID of a hierarchy in the parent asset's model. Hierarchies allow different groupings
+            of assets to be formed that all come from the same asset model. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html">Asset
+            Hierarchies</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.AssociateAssetsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet">
+            <summary>
+            Associates a group (batch) of assets with an AWS IoT SiteWise Monitor project.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The IDs of the assets to be associated to the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project to which to associate the assets.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Errors'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.BatchAssociateProjectAssetsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.BatchAssociateProjectAssetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ConnectIOTSWAssociateProjectAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet">
+            <summary>
+            Disassociates a child asset from the given parent asset through a hierarchy defined
+            in the parent asset's model.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the parent asset from which to disassociate the child asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet.ChildAssetId">
+            <summary>
+            <para>
+            <para>The ID of the child asset to disassociate.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet.HierarchyId">
+            <summary>
+            <para>
+            <para>The ID of a hierarchy in the parent asset's model. Hierarchies allow different groupings
+            of assets to be formed that all come from the same asset model. You can use the hierarchy
+            ID to identify the correct asset to disassociate. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html">Asset
+            Hierarchies</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DisassociateAssetsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet">
+            <summary>
+            Disassociates a group (batch) of assets from an AWS IoT SiteWise Monitor project.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The IDs of the assets to be disassociated from the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project from which to disassociate the assets.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Errors'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.BatchDisassociateProjectAssetsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.BatchDisassociateProjectAssetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.DisconnectIOTSWDisassociateProjectAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyCmdlet">
+            <summary>
+            Describes an access policy, which specifies an AWS SSO user or group's access to an
+            AWS IoT SiteWise Monitor portal or project.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyCmdlet.AccessPolicyId">
+            <summary>
+            <para>
+            <para>The ID of the access policy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeAccessPolicyResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeAccessPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccessPolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccessPolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet">
+            <summary>
+            Retrieves a paginated list of access policies for an AWS SSO identity (a user or group)
+            or an AWS IoT SiteWise Monitor resource (a portal or project).<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.IdentityId">
+            <summary>
+            <para>
+            <para>The ID of the identity. This parameter is required if you specify <code>identityType</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.IdentityType">
+            <summary>
+            <para>
+            <para>The type of identity (user or group). This parameter is required if you specify <code>identityId</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The ID of the resource. This parameter is required if you specify <code>resourceType</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.ResourceType">
+            <summary>
+            <para>
+            <para>The type of resource (portal or project). This parameter is required if you specify
+            <code>resourceId</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AccessPolicySummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListAccessPoliciesResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListAccessPoliciesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAccessPolicyListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetCmdlet">
+            <summary>
+            Retrieves information about an asset.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeAssetResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeAssetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet">
+            <summary>
+            Retrieves a paginated list of asset summaries.
+            
+             
+            <para>
+            You can use this operation to do the following:
+            </para><ul><li><para>
+            List assets based on a specific asset model.
+            </para></li><li><para>
+            List top-level assets.
+            </para></li></ul><para>
+            You can't use this operation to list all assets. To retrieve summaries for all of
+            your assets, use <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListAssetModels.html">ListAssetModels</a>
+            to get all of your asset model IDs. Then, use ListAssets to get all assets for each
+            asset model.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet.AssetModelId">
+            <summary>
+            <para>
+            <para>The ID of the asset model by which to filter the list of assets. This parameter is
+            required if you choose <code>ALL</code> for <code>filter</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filter for the requested list of assets. Choose one of the following options.
+            Defaults to <code>ALL</code>.</para><ul><li><para><code>ALL</code> – The list includes all assets for a given asset model ID. The <code>assetModelId</code>
+            parameter is required if you filter by <code>ALL</code>.</para></li><li><para><code>TOP_LEVEL</code> – The list includes only top-level assets in the asset hierarchy
+            tree.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListAssetsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListAssetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelCmdlet">
+            <summary>
+            Retrieves information about an asset model.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelCmdlet.AssetModelId">
+            <summary>
+            <para>
+            <para>The ID of the asset model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeAssetModelResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeAssetModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetModelId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetModelId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelListCmdlet">
+            <summary>
+            Retrieves a paginated list of summaries of all asset models.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetModelSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListAssetModelsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListAssetModelsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetModelListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyCmdlet">
+            <summary>
+            Retrieves information about an asset's property.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyCmdlet.PropertyId">
+            <summary>
+            <para>
+            <para>The ID of the asset property.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeAssetPropertyResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeAssetPropertyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet">
+            <summary>
+            Gets aggregated values for an asset property. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
+            Aggregated Property Values</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            
+             
+            <para>
+            To identify an asset property, you must specify one of the following:
+            </para><ul><li><para>
+            The <code>assetId</code> and <code>propertyId</code> of an asset property.
+            </para></li><li><para>
+            A <code>propertyAlias</code>, which is a data stream alias (for example, <code>/company/windfarm/3/turbine/7/temperature</code>).
+            To define an asset property's alias, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAssetProperty.html">UpdateAssetProperty</a>.
+            </para></li></ul><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.AggregateType">
+            <summary>
+            <para>
+            <para>The data aggregating function.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.EndDate">
+            <summary>
+            <para>
+            <para>The inclusive end of the range from which to query historical data, expressed in seconds
+            in Unix epoch time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.PropertyAlias">
+            <summary>
+            <para>
+            <para>The property alias that identifies the property, such as an OPC-UA server data stream
+            path (for example, <code>/company/windfarm/3/turbine/7/temperature</code>). For more
+            information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html">Mapping
+            Industrial Data Streams to Asset Properties</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.PropertyId">
+            <summary>
+            <para>
+            <para>The ID of the asset property.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.Quality">
+            <summary>
+            <para>
+            <para>The quality by which to filter asset data.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.Resolution">
+            <summary>
+            <para>
+            <para>The time interval over which to aggregate data.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.StartDate">
+            <summary>
+            <para>
+            <para>The exclusive start of the range from which to query historical data, expressed in
+            seconds in Unix epoch time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.TimeOrdering">
+            <summary>
+            <para>
+            <para>The chronological sorting order of the requested information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AggregatedValues'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.GetAssetPropertyAggregatesResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.GetAssetPropertyAggregatesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyAggregateCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueCmdlet">
+            <summary>
+            Gets an asset property's current value. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values">Querying
+            Current Property Values</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            
+             
+            <para>
+            To identify an asset property, you must specify one of the following:
+            </para><ul><li><para>
+            The <code>assetId</code> and <code>propertyId</code> of an asset property.
+            </para></li><li><para>
+            A <code>propertyAlias</code>, which is a data stream alias (for example, <code>/company/windfarm/3/turbine/7/temperature</code>).
+            To define an asset property's alias, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAssetProperty.html">UpdateAssetProperty</a>.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueCmdlet.PropertyAlias">
+            <summary>
+            <para>
+            <para>The property alias that identifies the property, such as an OPC-UA server data stream
+            path (for example, <code>/company/windfarm/3/turbine/7/temperature</code>). For more
+            information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html">Mapping
+            Industrial Data Streams to Asset Properties</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueCmdlet.PropertyId">
+            <summary>
+            <para>
+            <para>The ID of the asset property.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PropertyValue'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.GetAssetPropertyValueResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.GetAssetPropertyValueResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet">
+            <summary>
+            Gets the history of an asset property's values. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values">Querying
+            Historical Property Values</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            
+             
+            <para>
+            To identify an asset property, you must specify one of the following:
+            </para><ul><li><para>
+            The <code>assetId</code> and <code>propertyId</code> of an asset property.
+            </para></li><li><para>
+            A <code>propertyAlias</code>, which is a data stream alias (for example, <code>/company/windfarm/3/turbine/7/temperature</code>).
+            To define an asset property's alias, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAssetProperty.html">UpdateAssetProperty</a>.
+            </para></li></ul><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.EndDate">
+            <summary>
+            <para>
+            <para>The inclusive end of the range from which to query historical data, expressed in seconds
+            in Unix epoch time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.PropertyAlias">
+            <summary>
+            <para>
+            <para>The property alias that identifies the property, such as an OPC-UA server data stream
+            path (for example, <code>/company/windfarm/3/turbine/7/temperature</code>). For more
+            information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html">Mapping
+            Industrial Data Streams to Asset Properties</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.PropertyId">
+            <summary>
+            <para>
+            <para>The ID of the asset property.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.Quality">
+            <summary>
+            <para>
+            <para>The quality by which to filter asset data.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.StartDate">
+            <summary>
+            <para>
+            <para>The exclusive start of the range from which to query historical data, expressed in
+            seconds in Unix epoch time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.TimeOrdering">
+            <summary>
+            <para>
+            <para>The chronological sorting order of the requested information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetPropertyValueHistory'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.GetAssetPropertyValueHistoryResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.GetAssetPropertyValueHistoryResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssetPropertyValueHistoryCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet">
+            <summary>
+            Retrieves a paginated list of the assets associated to a parent asset (<code>assetId</code>)
+            by a given hierarchy (<code>hierarchyId</code>).<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the parent asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.HierarchyId">
+            <summary>
+            <para>
+            <para>The hierarchy ID (of the parent asset model) whose associated assets are returned.
+            To find a hierarchy ID, use the <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAsset.html">DescribeAsset</a>
+            or <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html">DescribeAssetModel</a>
+            actions.</para><para>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html">Asset
+            Hierarchies</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListAssociatedAssetsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListAssociatedAssetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWAssociatedAssetListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardCmdlet">
+            <summary>
+            Retrieves information about a dashboard.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardCmdlet.DashboardId">
+            <summary>
+            <para>
+            <para>The ID of the dashboard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeDashboardResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeDashboardResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DashboardId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DashboardId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet">
+            <summary>
+            Retrieves a paginated list of dashboards for an AWS IoT SiteWise Monitor project.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DashboardSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListDashboardsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListDashboardsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWDashboardListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCmdlet">
+            <summary>
+            Retrieves information about a gateway.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCmdlet.GatewayId">
+            <summary>
+            <para>
+            <para>The ID of the gateway device.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeGatewayResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeGatewayResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GatewayId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GatewayId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCapabilityConfigurationCmdlet">
+            <summary>
+            Retrieves information about a gateway capability configuration. Each gateway capability
+            defines data sources for a gateway. A capability configuration can contain multiple
+            data source configurations. If you define OPC-UA sources for a gateway in the AWS
+            IoT SiteWise console, all of your OPC-UA sources are stored in one capability configuration.
+            To list all capability configurations for a gateway, use <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGateway.html">DescribeGateway</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCapabilityConfigurationCmdlet.CapabilityNamespace">
+            <summary>
+            <para>
+            <para>The namespace of the capability configuration. For example, if you configure OPC-UA
+            sources from the AWS IoT SiteWise console, your OPC-UA capability configuration has
+            the namespace <code>iotsitewise:opcuacollector:version</code>, where <code>version</code>
+            is a number such as <code>1</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCapabilityConfigurationCmdlet.GatewayId">
+            <summary>
+            <para>
+            <para>The ID of the gateway that defines the capability configuration.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCapabilityConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeGatewayCapabilityConfigurationResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeGatewayCapabilityConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayCapabilityConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GatewayId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GatewayId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayListCmdlet">
+            <summary>
+            Retrieves a paginated list of gateways.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GatewaySummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListGatewaysResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListGatewaysResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWGatewayListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWLoggingOptionCmdlet">
+            <summary>
+            Retrieves the current AWS IoT SiteWise logging options.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWLoggingOptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LoggingOptions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeLoggingOptionsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeLoggingOptionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalCmdlet">
+            <summary>
+            Retrieves information about a portal.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalCmdlet.PortalId">
+            <summary>
+            <para>
+            <para>The ID of the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribePortalResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribePortalResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PortalId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PortalId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalListCmdlet">
+            <summary>
+            Retrieves a paginated list of AWS IoT SiteWise Monitor portals.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PortalSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListPortalsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListPortalsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWPortalListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectCmdlet">
+            <summary>
+            Retrieves information about a project.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DescribeProjectResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DescribeProjectResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet">
+            <summary>
+            Retrieves a paginated list of assets associated with an AWS IoT SiteWise Monitor project.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetIds'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListProjectAssetsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListProjectAssetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectAssetListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet">
+            <summary>
+            Retrieves a paginated list of projects for an AWS IoT SiteWise Monitor portal.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet.PortalId">
+            <summary>
+            <para>
+            <para>The ID of the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to be returned per paginated request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to be used for the next set of paginated results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProjectSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListProjectsResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListProjectsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PortalId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PortalId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWProjectListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWResourceTagCmdlet">
+            <summary>
+            Retrieves the list of tags for an AWS IoT SiteWise resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.GetIOTSWResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.ImportIOTSWPutAssetPropertyValueCmdlet">
+            <summary>
+            Sends a list of asset property values to AWS IoT SiteWise. Each value is a timestamp-quality-value
+            (TQV) data point. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ingest-api.html">Ingesting
+            Data Using the API</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            
+             
+            <para>
+            To identify an asset property, you must specify one of the following:
+            </para><ul><li><para>
+            The <code>assetId</code> and <code>propertyId</code> of an asset property.
+            </para></li><li><para>
+            A <code>propertyAlias</code>, which is a data stream alias (for example, <code>/company/windfarm/3/turbine/7/temperature</code>).
+            To define an asset property's alias, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAssetProperty.html">UpdateAssetProperty</a>.
+            </para></li></ul><important><para>
+            With respect to Unix epoch time, AWS IoT SiteWise accepts only TQVs that have a timestamp
+            of no more than 15 minutes in the past and no more than 5 minutes in the future. AWS
+            IoT SiteWise rejects timestamps outside of the inclusive range of [-15, +5] minutes
+            and returns a <code>TimestampOutOfRangeException</code> error.
+            </para><para>
+            For each asset property, AWS IoT SiteWise overwrites TQVs with duplicate timestamps
+            unless the newer TQV has a different quality. For example, if you store a TQV <code>{T1,
+            GOOD, V1}</code>, then storing <code>{T1, GOOD, V2}</code> replaces the existing TQV.
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ImportIOTSWPutAssetPropertyValueCmdlet.Entry">
+            <summary>
+            <para>
+            <para>The list of asset property value entries for the batch put request. You can specify
+            up to 10 entries per request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ImportIOTSWPutAssetPropertyValueCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ErrorEntries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.BatchPutAssetPropertyValueResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.BatchPutAssetPropertyValueResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.ImportIOTSWPutAssetPropertyValueCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet">
+            <summary>
+            Creates an access policy that grants the specified AWS Single Sign-On user or group
+            access to the specified AWS IoT SiteWise Monitor portal or project resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.AccessPolicyPermission">
+            <summary>
+            <para>
+            <para>The permission level for this access policy. Note that a project <code>ADMINISTRATOR</code>
+            is also known as a project owner.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.Group_Id">
+            <summary>
+            <para>
+            <para>The AWS SSO ID of the group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.User_Id">
+            <summary>
+            <para>
+            <para>The AWS SSO ID of the user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.Portal_Id">
+            <summary>
+            <para>
+            <para>The ID of the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.Project_Id">
+            <summary>
+            <para>
+            <para>The ID of the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the access policy. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreateAccessPolicyResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreateAccessPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccessPolicyPermission parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccessPolicyPermission' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAccessPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet">
+            <summary>
+            Creates an asset from an existing asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-assets.html">Creating
+            Assets</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.AssetModelId">
+            <summary>
+            <para>
+            <para>The ID of the asset model from which to create the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.AssetName">
+            <summary>
+            <para>
+            <para>A unique, friendly name for the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the asset. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreateAssetResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreateAssetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetModelId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetModelId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet">
+            <summary>
+            Creates an asset model from specified property and hierarchy definitions. You create
+            assets from asset models. With asset models, you can easily create assets of the same
+            type that have standardized definitions. Each asset created from a model inherits
+            the asset model's property and hierarchy definitions. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/define-models.html">Defining
+            Asset Models</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.AssetModelDescription">
+            <summary>
+            <para>
+            <para>A description for the asset model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.AssetModelHierarchy">
+            <summary>
+            <para>
+            <para>The hierarchy definitions of the asset model. Each hierarchy specifies an asset model
+            whose assets can be children of any other assets created from this asset model. For
+            more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html">Asset
+            Hierarchies</a> in the <i>AWS IoT SiteWise User Guide</i>.</para><para>You can specify up to 10 hierarchies per asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a>
+            in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.AssetModelName">
+            <summary>
+            <para>
+            <para>A unique, friendly name for the asset model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.AssetModelProperty">
+            <summary>
+            <para>
+            <para>The property definitions of the asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html">Asset
+            Properties</a> in the <i>AWS IoT SiteWise User Guide</i>.</para><para>You can specify up to 200 properties per asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a>
+            in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the asset model. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreateAssetModelResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreateAssetModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWAssetModelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet">
+            <summary>
+            Creates a dashboard in an AWS IoT SiteWise Monitor project.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.DashboardDefinition">
+            <summary>
+            <para>
+            <para>The dashboard definition specified in a JSON literal. For detailed information, see
+            <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-dashboards-using-aws-cli.html">Creating
+            Dashboards (CLI)</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.DashboardDescription">
+            <summary>
+            <para>
+            <para>A description for the dashboard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.DashboardName">
+            <summary>
+            <para>
+            <para>A friendly name for the dashboard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project in which to create the dashboard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the dashboard. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreateDashboardResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreateDashboardResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWDashboardCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWGatewayCmdlet">
+            <summary>
+            Creates a gateway, which is a virtual or edge device that delivers industrial data
+            streams from local servers to AWS IoT SiteWise. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/gateway-connector.html">Ingesting
+            data using a gateway</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWGatewayCmdlet.GatewayName">
+            <summary>
+            <para>
+            <para>A unique, friendly name for the gateway.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWGatewayCmdlet.Greengrass_GroupArn">
+            <summary>
+            <para>
+            <para>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            of the Greengrass group. For more information about how to find a group's ARN, see
+            <a href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a>
+            and <a href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a>
+            in the <i>AWS IoT Greengrass API Reference</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWGatewayCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the gateway. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreateGatewayResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreateGatewayResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet">
+            <summary>
+            Creates a portal, which can contain projects and dashboards. Before you can create
+            a portal, you must configure AWS Single Sign-On in the current Region. AWS IoT SiteWise
+            Monitor uses AWS SSO to manage user permissions. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso">Enabling
+            AWS SSO</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            
+             <note><para>
+            Before you can sign in to a new portal, you must add at least one AWS SSO user or
+            group to that portal. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/administer-portals.html#portal-change-admins">Adding
+            or Removing Portal Administrators</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.PortalLogoImageFile_Data">
+            <summary>
+            <para>
+            <para>The image file contents, represented as a base64-encoded string. The file size must
+            be less than 1 MB.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.PortalContactEmail">
+            <summary>
+            <para>
+            <para>The AWS administrator's contact email address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.PortalDescription">
+            <summary>
+            <para>
+            <para>A description for the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.PortalName">
+            <summary>
+            <para>
+            <para>A friendly name for the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            of a service role that allows the portal's users to access your AWS IoT SiteWise resources
+            on your behalf. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-service-role.html">Using
+            service roles for AWS IoT SiteWise Monitor</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the portal. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.PortalLogoImageFile_Type">
+            <summary>
+            <para>
+            <para>The file type of the image.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreatePortalResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreatePortalResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWPortalCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet">
+            <summary>
+            Creates a project in the specified portal.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.PortalId">
+            <summary>
+            <para>
+            <para>The ID of the portal in which to create the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.ProjectDescription">
+            <summary>
+            <para>
+            <para>A description for the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.ProjectName">
+            <summary>
+            <para>
+            <para>A friendly name for the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.Tag">
+            <summary>
+            <para>
+            <para>A list of key-value pairs that contain metadata for the project. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging
+            your AWS IoT SiteWise resources</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.CreateProjectResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.CreateProjectResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PortalId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PortalId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.NewIOTSWProjectCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAccessPolicyCmdlet">
+            <summary>
+            Deletes an access policy that grants the specified AWS Single Sign-On identity access
+            to the specified AWS IoT SiteWise Monitor resource. You can use this operation to
+            revoke access to an AWS IoT SiteWise Monitor resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAccessPolicyCmdlet.AccessPolicyId">
+            <summary>
+            <para>
+            <para>The ID of the access policy to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAccessPolicyCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeleteAccessPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccessPolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccessPolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAccessPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetCmdlet">
+            <summary>
+            Deletes an asset. This action can't be undone. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/delete-assets-and-models.html">Deleting
+            Assets and Models</a> in the <i>AWS IoT SiteWise User Guide</i>. 
+            
+             <note><para>
+            You can't delete an asset that's associated to another asset. For more information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DisassociateAssets.html">DisassociateAssets</a>.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeleteAssetResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DeleteAssetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetModelCmdlet">
+            <summary>
+            Deletes an asset model. This action can't be undone. You must delete all assets created
+            from an asset model before you can delete the model. Also, you can't delete an asset
+            model if a parent asset model exists that contains a property formula expression that
+            depends on the asset model that you want to delete. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/delete-assets-and-models.html">Deleting
+            Assets and Models</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetModelCmdlet.AssetModelId">
+            <summary>
+            <para>
+            <para>The ID of the asset model to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetModelCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetModelStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeleteAssetModelResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DeleteAssetModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetModelId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetModelId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWAssetModelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWDashboardCmdlet">
+            <summary>
+            Deletes a dashboard from AWS IoT SiteWise Monitor.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWDashboardCmdlet.DashboardId">
+            <summary>
+            <para>
+            <para>The ID of the dashboard to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWDashboardCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWDashboardCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeleteDashboardResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWDashboardCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DashboardId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DashboardId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWDashboardCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWGatewayCmdlet">
+            <summary>
+            Deletes a gateway from AWS IoT SiteWise. When you delete a gateway, some of the gateway's
+            files remain in your gateway's file system. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-retention.html">Data
+            retention</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWGatewayCmdlet.GatewayId">
+            <summary>
+            <para>
+            <para>The ID of the gateway to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeleteGatewayResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GatewayId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GatewayId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWPortalCmdlet">
+            <summary>
+            Deletes a portal from AWS IoT SiteWise Monitor.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWPortalCmdlet.PortalId">
+            <summary>
+            <para>
+            <para>The ID of the portal to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWPortalCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWPortalCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PortalStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeletePortalResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.DeletePortalResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWPortalCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PortalId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PortalId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWPortalCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWProjectCmdlet">
+            <summary>
+            Deletes a project from AWS IoT SiteWise Monitor.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWProjectCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWProjectCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWProjectCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.DeleteProjectResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWProjectCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWProjectCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWResourceTagCmdlet">
+            <summary>
+            Removes a tag from an AWS IoT SiteWise resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            of the resource to untag.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>A list of keys for tags to remove from the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.RemoveIOTSWResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet">
+            <summary>
+            Updates an existing access policy that specifies an AWS SSO user or group's access
+            to an AWS IoT SiteWise Monitor portal or project resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.AccessPolicyId">
+            <summary>
+            <para>
+            <para>The ID of the access policy.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.AccessPolicyPermission">
+            <summary>
+            <para>
+            <para>The permission level for this access policy. Note that a project <code>ADMINISTRATOR</code>
+            is also known as a project owner.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.Group_Id">
+            <summary>
+            <para>
+            <para>The AWS SSO ID of the group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.User_Id">
+            <summary>
+            <para>
+            <para>The AWS SSO ID of the user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.Portal_Id">
+            <summary>
+            <para>
+            <para>The ID of the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.Project_Id">
+            <summary>
+            <para>
+            <para>The ID of the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateAccessPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccessPolicyId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccessPolicyId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAccessPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet">
+            <summary>
+            Updates an asset's name. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-assets-and-models.html">Updating
+            Assets and Models</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet.AssetName">
+            <summary>
+            <para>
+            <para>A unique, friendly name for the asset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateAssetResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.UpdateAssetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet">
+            <summary>
+            Updates an asset model and all of the assets that were created from the model. Each
+            asset created from the model inherits the updated asset model's property and hierarchy
+            definitions. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-assets-and-models.html">Updating
+            Assets and Models</a> in the <i>AWS IoT SiteWise User Guide</i>.
+            
+             <important><para>
+            This operation overwrites the existing model with the provided model. To avoid deleting
+            your asset model's properties or hierarchies, you must include their IDs and definitions
+            in the updated asset model payload. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html">DescribeAssetModel</a>.
+            </para><para>
+            If you remove a property from an asset model or update a property's formula expression,
+            AWS IoT SiteWise deletes all previous data for that property. If you remove a hierarchy
+            definition from an asset model, AWS IoT SiteWise disassociates every asset associated
+            with that hierarchy. You can't change the type or data type of an existing property.
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.AssetModelDescription">
+            <summary>
+            <para>
+            <para>A description for the asset model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.AssetModelHierarchy">
+            <summary>
+            <para>
+            <para>The updated hierarchy definitions of the asset model. Each hierarchy specifies an
+            asset model whose assets can be children of any other assets created from this asset
+            model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html">Asset
+            Hierarchies</a> in the <i>AWS IoT SiteWise User Guide</i>.</para><para>You can specify up to 10 hierarchies per asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a>
+            in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.AssetModelId">
+            <summary>
+            <para>
+            <para>The ID of the asset model to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.AssetModelName">
+            <summary>
+            <para>
+            <para>A unique, friendly name for the asset model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.AssetModelProperty">
+            <summary>
+            <para>
+            <para>The updated property definitions of the asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html">Asset
+            Properties</a> in the <i>AWS IoT SiteWise User Guide</i>.</para><para>You can specify up to 200 properties per asset model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a>
+            in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AssetModelStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateAssetModelResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.UpdateAssetModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetModelId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetModelId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetModelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet">
+            <summary>
+            Updates an asset property's alias and notification state.
+            
+             <important><para>
+            This operation overwrites the property's existing alias and notification state. To
+            keep your existing property's alias or notification state, you must include the existing
+            values in the UpdateAssetProperty request. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetProperty.html">DescribeAssetProperty</a>.
+            </para></important>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.AssetId">
+            <summary>
+            <para>
+            <para>The ID of the asset to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.PropertyAlias">
+            <summary>
+            <para>
+            <para>The property alias that identifies the property, such as an OPC-UA server data stream
+            path (for example, <code>/company/windfarm/3/turbine/7/temperature</code>). For more
+            information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html">Mapping
+            Industrial Data Streams to Asset Properties</a> in the <i>AWS IoT SiteWise User Guide</i>.</para><para>If you omit this parameter, the alias is removed from the property.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.PropertyId">
+            <summary>
+            <para>
+            <para>The ID of the asset property to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.PropertyNotificationState">
+            <summary>
+            <para>
+            <para>The MQTT notification state (enabled or disabled) for this asset property. When the
+            notification state is enabled, AWS IoT SiteWise publishes property value updates to
+            a unique MQTT topic. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html">Interacting
+            with Other Services</a> in the <i>AWS IoT SiteWise User Guide</i>.</para><para>If you omit this parameter, the notification state is set to <code>DISABLED</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateAssetPropertyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AssetId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AssetId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWAssetPropertyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet">
+            <summary>
+            Updates an AWS IoT SiteWise Monitor dashboard.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.DashboardDefinition">
+            <summary>
+            <para>
+            <para>The new dashboard definition, as specified in a JSON literal. For detailed information,
+            see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-dashboards-using-aws-cli.html">Creating
+            Dashboards (CLI)</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.DashboardDescription">
+            <summary>
+            <para>
+            <para>A new description for the dashboard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.DashboardId">
+            <summary>
+            <para>
+            <para>The ID of the dashboard to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.DashboardName">
+            <summary>
+            <para>
+            <para>A new friendly name for the dashboard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateDashboardResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DashboardId parameter.
+            The -PassThru parameter is deprecated, use -Select '^DashboardId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWDashboardCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCmdlet">
+            <summary>
+            Updates a gateway's name.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCmdlet.GatewayId">
+            <summary>
+            <para>
+            <para>The ID of the gateway to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCmdlet.GatewayName">
+            <summary>
+            <para>
+            <para>A unique, friendly name for the gateway.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateGatewayResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GatewayId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GatewayId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet">
+            <summary>
+            Updates a gateway capability configuration or defines a new capability configuration.
+            Each gateway capability defines data sources for a gateway. A capability configuration
+            can contain multiple data source configurations. If you define OPC-UA sources for
+            a gateway in the AWS IoT SiteWise console, all of your OPC-UA sources are stored in
+            one capability configuration. To list all capability configurations for a gateway,
+            use <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGateway.html">DescribeGateway</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet.CapabilityConfiguration">
+            <summary>
+            <para>
+            <para>The JSON document that defines the configuration for the gateway capability. For more
+            information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli">Configuring
+            data sources (CLI)</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet.CapabilityNamespace">
+            <summary>
+            <para>
+            <para>The namespace of the gateway capability configuration to be updated. For example,
+            if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA capability
+            configuration has the namespace <code>iotsitewise:opcuacollector:version</code>, where
+            <code>version</code> is a number such as <code>1</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet.GatewayId">
+            <summary>
+            <para>
+            <para>The ID of the gateway to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateGatewayCapabilityConfigurationResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.UpdateGatewayCapabilityConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GatewayId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GatewayId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWGatewayCapabilityConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet">
+            <summary>
+            Updates an AWS IoT SiteWise Monitor portal.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.File_Data">
+            <summary>
+            <para>
+            <para>The image file contents, represented as a base64-encoded string. The file size must
+            be less than 1 MB.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.PortalLogoImage_Id">
+            <summary>
+            <para>
+            <para>The ID of an existing image. Specify this parameter to keep an existing image.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.PortalContactEmail">
+            <summary>
+            <para>
+            <para>The AWS administrator's contact email address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.PortalDescription">
+            <summary>
+            <para>
+            <para>A new description for the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.PortalId">
+            <summary>
+            <para>
+            <para>The ID of the portal to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.PortalName">
+            <summary>
+            <para>
+            <para>A new friendly name for the portal.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            of a service role that allows the portal's users to access your AWS IoT SiteWise resources
+            on your behalf. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-service-role.html">Using
+            service roles for AWS IoT SiteWise Monitor</a> in the <i>AWS IoT SiteWise User Guide</i>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.File_Type">
+            <summary>
+            <para>
+            <para>The file type of the image.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'PortalStatus'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdatePortalResponse).
+            Specifying the name of a property of type Amazon.IoTSiteWise.Model.UpdatePortalResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the PortalId parameter.
+            The -PassThru parameter is deprecated, use -Select '^PortalId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWPortalCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet">
+            <summary>
+            Updates an AWS IoT SiteWise Monitor project.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.ProjectDescription">
+            <summary>
+            <para>
+            <para>A new description for the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.ProjectId">
+            <summary>
+            <para>
+            <para>The ID of the project to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.ProjectName">
+            <summary>
+            <para>
+            <para>A new friendly name for the project.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.UpdateProjectResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProjectId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProjectId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.UpdateIOTSWProjectCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTSW.WriteIOTSWLoggingOptionCmdlet">
+            <summary>
+            Sets logging options for AWS IoT SiteWise.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.WriteIOTSWLoggingOptionCmdlet.LoggingOptions_Level">
+            <summary>
+            <para>
+            <para>The AWS IoT SiteWise logging verbosity level.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.WriteIOTSWLoggingOptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTSiteWise.Model.PutLoggingOptionsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.WriteIOTSWLoggingOptionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LoggingOptions_Level parameter.
+            The -PassThru parameter is deprecated, use -Select '^LoggingOptions_Level' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTSW.WriteIOTSWLoggingOptionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

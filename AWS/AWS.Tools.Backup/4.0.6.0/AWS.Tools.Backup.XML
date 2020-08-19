@@ -1,0 +1,2278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Backup</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.AddBAKResourceTagCmdlet">
+            <summary>
+            Assigns a set of key-value pairs to a recovery point, backup plan, or backup vault
+            identified by an Amazon Resource Name (ARN).
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.AddBAKResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>An ARN that uniquely identifies a resource. The format of the ARN depends on the type
+            of the tagged resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.AddBAKResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Key-value pairs that are used to help organize your resources. You can assign your
+            own metadata to the resources you create. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.AddBAKResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.AddBAKResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.AddBAKResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.ExportBAKBackupPlanTemplateCmdlet">
+            <summary>
+            Returns the backup plan that is specified by the plan ID as a backup template.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.ExportBAKBackupPlanTemplateCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.ExportBAKBackupPlanTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupPlanTemplateJson'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ExportBackupPlanTemplateResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ExportBackupPlanTemplateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.ExportBAKBackupPlanTemplateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.ExportBAKBackupPlanTemplateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobCmdlet">
+            <summary>
+            Returns metadata associated with creating a backup of a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobCmdlet.BackupJobId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a request to AWS Backup to back up a resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeBackupJobResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeBackupJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupJobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupJobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet">
+            <summary>
+            Returns metadata about your backup jobs.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.ByBackupVaultName">
+            <summary>
+            <para>
+            <para>Returns only backup jobs that will be stored in the specified backup vault. Backup
+            vaults are identified by names that are unique to the account used to create them
+            and the AWS Region where they are created. They consist of lowercase letters, numbers,
+            and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.ByCreatedAfter">
+            <summary>
+            <para>
+            <para>Returns only backup jobs that were created after the specified date.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.ByCreatedBefore">
+            <summary>
+            <para>
+            <para>Returns only backup jobs that were created before the specified date.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.ByResourceArn">
+            <summary>
+            <para>
+            <para>Returns only backup jobs that match the specified resource Amazon Resource Name (ARN).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.ByResourceType">
+            <summary>
+            <para>
+            <para>Returns only backup jobs for the specified resources:</para><ul><li><para><code>DynamoDB</code> for Amazon DynamoDB</para></li><li><para><code>EBS</code> for Amazon Elastic Block Store</para></li><li><para><code>EFS</code> for Amazon Elastic File System</para></li><li><para><code>RDS</code> for Amazon Relational Database Service</para></li><li><para><code>Storage Gateway</code> for AWS Storage Gateway</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.ByState">
+            <summary>
+            <para>
+            <para>Returns only backup jobs that are in the specified state.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupJobs'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListBackupJobsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListBackupJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanCmdlet">
+            <summary>
+            Returns the body of a backup plan in JSON format, in addition to plan metadata.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanCmdlet.VersionId">
+            <summary>
+            <para>
+            <para>Unique, randomly generated, Unicode, UTF-8 encoded strings that are at most 1,024
+            bytes long. Version IDs cannot be edited.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetBackupPlanResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetBackupPlanResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromJSONCmdlet">
+            <summary>
+            Returns a valid JSON document specifying a backup plan or an error.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromJSONCmdlet.BackupPlanTemplateJson">
+            <summary>
+            <para>
+            <para>A customer-supplied backup plan document in JSON format.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromJSONCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupPlan'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetBackupPlanFromJSONResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetBackupPlanFromJSONResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromJSONCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanTemplateJson parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanTemplateJson' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromTemplateCmdlet">
+            <summary>
+            Returns the template specified by its <code>templateId</code> as a backup plan.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromTemplateCmdlet.BackupPlanTemplateId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a stored backup plan template.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromTemplateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupPlanDocument'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetBackupPlanFromTemplateResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetBackupPlanFromTemplateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanFromTemplateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanTemplateId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanTemplateId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanListCmdlet">
+            <summary>
+            Returns metadata of your saved backup plans, including Amazon Resource Names (ARNs),
+            plan IDs, creation and deletion dates, version IDs, plan names, and creator request
+            IDs.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanListCmdlet.IncludeDeleted">
+            <summary>
+            <para>
+            <para>A Boolean value with a default value of <code>FALSE</code> that returns deleted backup
+            plans when set to <code>TRUE</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupPlansList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListBackupPlansResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListBackupPlansResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanTemplateListCmdlet">
+            <summary>
+            Returns metadata of your saved backup plan templates, including the template ID, name,
+            and the creation and deletion dates.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanTemplateListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanTemplateListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanTemplateListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupPlanTemplatesList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListBackupPlanTemplatesResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListBackupPlanTemplatesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanTemplateListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet">
+            <summary>
+            Returns version metadata of your backup plans, including Amazon Resource Names (ARNs),
+            backup plan IDs, creation and deletion dates, plan names, and version IDs.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupPlanVersionsList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListBackupPlanVersionsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListBackupPlanVersionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupPlanVersionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionCmdlet">
+            <summary>
+            Returns selection metadata and a document in JSON format that specifies a list of
+            resources that are associated with a backup plan.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionCmdlet.SelectionId">
+            <summary>
+            <para>
+            <para>Uniquely identifies the body of a request to assign a set of resources to a backup
+            plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetBackupSelectionResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetBackupSelectionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SelectionId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SelectionId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet">
+            <summary>
+            Returns an array containing metadata of the resources associated with the target backup
+            plan.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupSelectionsList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListBackupSelectionsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListBackupSelectionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupSelectionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultCmdlet">
+            <summary>
+            Returns metadata about a backup vault specified by its name.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeBackupVaultResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeBackupVaultResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultAccessPolicyCmdlet">
+            <summary>
+            Returns the access policy document that is associated with the named backup vault.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultAccessPolicyCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetBackupVaultAccessPolicyResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetBackupVaultAccessPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultListCmdlet">
+            <summary>
+            Returns a list of recovery point storage containers along with information about them.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'BackupVaultList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListBackupVaultsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListBackupVaultsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultNotificationCmdlet">
+            <summary>
+            Returns event notifications for the specified backup vault.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultNotificationCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultNotificationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetBackupVaultNotificationsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetBackupVaultNotificationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKBackupVaultNotificationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobCmdlet">
+            <summary>
+            Returns metadata associated with creating a copy of a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobCmdlet.CopyJobId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a copy job.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CopyJob'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeCopyJobResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeCopyJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CopyJobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^CopyJobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet">
+            <summary>
+            Returns metadata about your copy jobs.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.ByCreatedAfter">
+            <summary>
+            <para>
+            <para>Returns only copy jobs that were created after the specified date.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.ByCreatedBefore">
+            <summary>
+            <para>
+            <para>Returns only copy jobs that were created before the specified date.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.ByDestinationVaultArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a source backup vault to copy
+            from; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.ByResourceArn">
+            <summary>
+            <para>
+            <para>Returns only copy jobs that match the specified resource Amazon Resource Name (ARN).
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.ByResourceType">
+            <summary>
+            <para>
+            <para>Returns only backup jobs for the specified resources:</para><ul><li><para><code>EBS</code> for Amazon Elastic Block Store</para></li><li><para><code>EFS</code> for Amazon Elastic File System</para></li><li><para><code>RDS</code> for Amazon Relational Database Service</para></li><li><para><code>Storage Gateway</code> for AWS Storage Gateway</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.ByState">
+            <summary>
+            <para>
+            <para>Returns only copy jobs that are in the specified state.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return maxResults number of items, NextToken allows you to return more
+            items in your list starting at the location pointed to by the next token. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CopyJobs'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListCopyJobsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListCopyJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKCopyJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceCmdlet">
+            <summary>
+            Returns information about a saved resource, including the last time it was backed
+            up, its Amazon Resource Name (ARN), and the AWS service type of the saved resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the
+            ARN depends on the resource type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeProtectedResourceResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeProtectedResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceListCmdlet">
+            <summary>
+            Returns an array of resources successfully backed up by AWS Backup, including the
+            time the resource was saved, an Amazon Resource Name (ARN) of the resource, and a
+            resource type.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Results'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListProtectedResourcesResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListProtectedResourcesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKProtectedResourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointCmdlet">
+            <summary>
+            Returns metadata associated with a recovery point, including ID, status, encryption,
+            and lifecycle.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointCmdlet.RecoveryPointArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a recovery point; for example,
+            <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeRecoveryPointResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeRecoveryPointResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecoveryPointArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecoveryPointArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointRestoreMetadataCmdlet">
+            <summary>
+            Returns a set of metadata key-value pairs that were used to create the backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointRestoreMetadataCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointRestoreMetadataCmdlet.RecoveryPointArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a recovery point; for example,
+            <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointRestoreMetadataCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetRecoveryPointRestoreMetadataResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetRecoveryPointRestoreMetadataResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointRestoreMetadataCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecoveryPointArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecoveryPointArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet">
+            <summary>
+            Returns detailed information about the recovery points stored in a backup vault.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.ByBackupPlanId">
+            <summary>
+            <para>
+            <para>Returns only recovery points that match the specified backup plan ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.ByCreatedAfter">
+            <summary>
+            <para>
+            <para>Returns only recovery points that were created after the specified timestamp.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.ByCreatedBefore">
+            <summary>
+            <para>
+            <para>Returns only recovery points that were created before the specified timestamp.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.ByResourceArn">
+            <summary>
+            <para>
+            <para>Returns only recovery points that match the specified resource Amazon Resource Name
+            (ARN).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.ByResourceType">
+            <summary>
+            <para>
+            <para>Returns only recovery points that match the specified resource type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RecoveryPoints'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListRecoveryPointsByBackupVaultResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListRecoveryPointsByBackupVaultResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByBackupVaultListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet">
+            <summary>
+            Returns detailed information about recovery points of the type specified by a resource
+            Amazon Resource Name (ARN).<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>An ARN that uniquely identifies a resource. The format of the ARN depends on the resource
+            type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RecoveryPoints'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListRecoveryPointsByResourceResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListRecoveryPointsByResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRecoveryPointsByResourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRegionSettingCmdlet">
+            <summary>
+            Returns the current service opt-in settings for the region. If the service has a value
+            set to true, AWS Backup will attempt to protect that service's resources in this region,
+            when included in an on-demand backup or scheduled backup plan. If the value is set
+            to false for a service, AWS Backup will not attempt to protect that service's resources
+            in this region.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRegionSettingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResourceTypeOptInPreference'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeRegionSettingsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeRegionSettingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet">
+            <summary>
+            Returns a list of key-value pairs assigned to a target recovery point, backup plan,
+            or backup vault.
+            
+             <note><para><code>ListTags</code> are currently only supported with Amazon EFS backups.
+            </para></note><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the
+            ARN depends on the type of resource. Valid targets for <code>ListTags</code> are recovery
+            points, backup plans, and backup vaults.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListTagsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListTagsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKResourceTagCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobCmdlet">
+            <summary>
+            Returns metadata associated with a restore job that is specified by a job ID.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobCmdlet.RestoreJobId">
+            <summary>
+            <para>
+            <para>Uniquely identifies the job that restores a recovery point.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DescribeRestoreJobResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DescribeRestoreJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RestoreJobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^RestoreJobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobListCmdlet">
+            <summary>
+            Returns a list of jobs that AWS Backup initiated to restore a saved resource, including
+            metadata about the recovery process.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to be returned.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The next item following a partial list of returned items. For example, if a request
+            is made to return <code>maxResults</code> number of items, <code>NextToken</code>
+            allows you to return more items in your list starting at the location pointed to by
+            the next token.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RestoreJobs'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.ListRestoreJobsResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.ListRestoreJobsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKRestoreJobListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.GetBAKSupportedResourceTypeCmdlet">
+            <summary>
+            Returns the AWS resource types supported by AWS Backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.GetBAKSupportedResourceTypeCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResourceTypes'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.GetSupportedResourceTypesResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.GetSupportedResourceTypesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet">
+            <summary>
+            Backup plans are documents that contain information that AWS Backup uses to schedule
+            tasks that create recovery points of resources.
+            
+             
+            <para>
+            If you call <code>CreateBackupPlan</code> with a plan that already exists, an <code>AlreadyExistsException</code>
+            is returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.BackupPlan_BackupPlanName">
+            <summary>
+            <para>
+            <para>The display name of a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.BackupPlanTag">
+            <summary>
+            <para>
+            <para>To help organize your resources, you can assign your own metadata to the resources
+            that you create. Each tag is a key-value pair. The specified tags are assigned to
+            all backups created with this plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.CreatorRequestId">
+            <summary>
+            <para>
+            <para>Identifies the request and allows failed requests to be retried without the risk of
+            executing the operation twice. If the request includes a <code>CreatorRequestId</code>
+            that matches an existing backup plan, that plan is returned. This parameter is optional.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.BackupPlan_Rule">
+            <summary>
+            <para>
+            <para>An array of <code>BackupRule</code> objects, each of which specifies a scheduled task
+            that is used to back up a selection of resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.CreateBackupPlanResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.CreateBackupPlanResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlan_BackupPlanName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlan_BackupPlanName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupPlanCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet">
+            <summary>
+            Creates a JSON document that specifies a set of resources to assign to a backup plan.
+            Resources can be included by specifying patterns for a <code>ListOfTags</code> and
+            selected <code>Resources</code>. 
+            
+             
+            <para>
+            For example, consider the following patterns:
+            </para><ul><li><para><code>Resources: "arn:aws:ec2:region:account-id:volume/volume-id"</code></para></li><li><para><code>ConditionKey:"department"</code></para><para><code>ConditionValue:"finance"</code></para><para><code>ConditionType:"STRINGEQUALS"</code></para></li><li><para><code>ConditionKey:"importance"</code></para><para><code>ConditionValue:"critical"</code></para><para><code>ConditionType:"STRINGEQUALS"</code></para></li></ul><para>
+            Using these patterns would back up all Amazon Elastic Block Store (Amazon EBS) volumes
+            that are tagged as <code>"department=finance"</code>, <code>"importance=critical"</code>,
+            in addition to an EBS volume with the specified volume Id.
+            </para><para>
+            Resources and conditions are additive in that all resources that match the pattern
+            are selected. This shouldn't be confused with a logical AND, where all conditions
+            must match. The matching patterns are logically 'put together using the OR operator.
+            In other words, all patterns that match are selected for backup.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies the backup plan to be associated with the selection of resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.CreatorRequestId">
+            <summary>
+            <para>
+            <para>A unique string that identifies the request and allows failed requests to be retried
+            without the risk of executing the operation twice.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.BackupSelection_IamRoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the IAM role that AWS Backup uses to authenticate when restoring the target
+            resource; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.BackupSelection_ListOfTag">
+            <summary>
+            <para>
+            <para>An array of conditions used to specify a set of resources to assign to a backup plan;
+            for example, <code>"STRINGEQUALS": {"ec2:ResourceTag/Department": "accounting"</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.BackupSelection_Resource">
+            <summary>
+            <para>
+            <para>An array of strings that contain Amazon Resource Names (ARNs) of resources to assign
+            to a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.BackupSelection_SelectionName">
+            <summary>
+            <para>
+            <para>The display name of a resource selection document.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.CreateBackupSelectionResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.CreateBackupSelectionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupSelectionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet">
+            <summary>
+            Creates a logical container where backups are stored. A <code>CreateBackupVault</code>
+            request includes a name, optionally one or more resource tags, an encryption key,
+            and a request ID.
+            
+             <note><para>
+            Sensitive data, such as passport numbers, should not be included the name of a backup
+            vault.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.BackupVaultTag">
+            <summary>
+            <para>
+            <para>Metadata that you can assign to help organize the resources that you create. Each
+            tag is a key-value pair.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.CreatorRequestId">
+            <summary>
+            <para>
+            <para>A unique string that identifies the request and allows failed requests to be retried
+            without the risk of executing the operation twice.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.EncryptionKeyArn">
+            <summary>
+            <para>
+            <para>The server-side encryption key that is used to protect your backups; for example,
+            <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.CreateBackupVaultResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.CreateBackupVaultResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.NewBAKBackupVaultCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupPlanCmdlet">
+            <summary>
+            Deletes a backup plan. A backup plan can only be deleted after all associated selections
+            of resources have been deleted. Deleting a backup plan deletes the current version
+            of a backup plan. Previous versions, if any, will still exist.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupPlanCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupPlanCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DeleteBackupPlanResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.DeleteBackupPlanResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupPlanCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlanId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlanId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupPlanCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupSelectionCmdlet">
+            <summary>
+            Deletes the resource selection associated with a backup plan that is specified by
+            the <code>SelectionId</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupSelectionCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupSelectionCmdlet.SelectionId">
+            <summary>
+            <para>
+            <para>Uniquely identifies the body of a request to assign a set of resources to a backup
+            plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupSelectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DeleteBackupSelectionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupSelectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SelectionId parameter.
+            The -PassThru parameter is deprecated, use -Select '^SelectionId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupSelectionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultCmdlet">
+            <summary>
+            Deletes the backup vault identified by its name. A vault can be deleted only if it
+            is empty.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DeleteBackupVaultResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultAccessPolicyCmdlet">
+            <summary>
+            Deletes the policy document that manages permissions on a backup vault.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultAccessPolicyCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DeleteBackupVaultAccessPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultAccessPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultNotificationCmdlet">
+            <summary>
+            Deletes event notifications for the specified backup vault.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultNotificationCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the Region where they
+            are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultNotificationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DeleteBackupVaultNotificationsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultNotificationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKBackupVaultNotificationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKRecoveryPointCmdlet">
+            <summary>
+            Deletes the recovery point specified by a recovery point ID.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKRecoveryPointCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKRecoveryPointCmdlet.RecoveryPointArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a recovery point; for example,
+            <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKRecoveryPointCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.DeleteRecoveryPointResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKRecoveryPointCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecoveryPointArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecoveryPointArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKRecoveryPointCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKResourceTagCmdlet">
+            <summary>
+            Removes a set of key-value pairs from a recovery point, backup plan, or backup vault
+            identified by an Amazon Resource Name (ARN)
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>An ARN that uniquely identifies a resource. The format of the ARN depends on the type
+            of the tagged resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKResourceTagCmdlet.TagKeyList">
+            <summary>
+            <para>
+            <para>A list of keys to identify which key-value tags to remove from a resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.RemoveBAKResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet">
+            <summary>
+            Starts a job to create a one-time backup of the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.CompleteWindowMinute">
+            <summary>
+            <para>
+            <para>A value in minutes after a backup job is successfully started before it must be completed
+            or it will be canceled by AWS Backup. This value is optional.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.Lifecycle_DeleteAfterDay">
+            <summary>
+            <para>
+            <para>Specifies the number of days after creation that a recovery point is deleted. Must
+            be greater than 90 days plus <code>MoveToColdStorageAfterDays</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.IamRoleArn">
+            <summary>
+            <para>
+            <para>Specifies the IAM role ARN used to create the target recovery point; for example,
+            <code>arn:aws:iam::123456789012:role/S3Access</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.IdempotencyToken">
+            <summary>
+            <para>
+            <para>A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.Lifecycle_MoveToColdStorageAfterDay">
+            <summary>
+            <para>
+            <para>Specifies the number of days after creation that a recovery point is moved to cold
+            storage.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.RecoveryPointTag">
+            <summary>
+            <para>
+            <para>To help organize your resources, you can assign your own metadata to the resources
+            that you create. Each tag is a key-value pair.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the
+            ARN depends on the resource type.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.StartWindowMinute">
+            <summary>
+            <para>
+            <para>A value in minutes after a backup is scheduled before a job will be canceled if it
+            doesn't start successfully. This value is optional.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.StartBackupJobResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.StartBackupJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKBackupJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet">
+            <summary>
+            Starts a job to create a one-time copy of the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.Lifecycle_DeleteAfterDay">
+            <summary>
+            <para>
+            <para>Specifies the number of days after creation that a recovery point is deleted. Must
+            be greater than 90 days plus <code>MoveToColdStorageAfterDays</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.DestinationBackupVaultArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a destination backup vault
+            to copy to; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.IamRoleArn">
+            <summary>
+            <para>
+            <para>Specifies the IAM role ARN used to copy the target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.IdempotencyToken">
+            <summary>
+            <para>
+            <para>A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.Lifecycle_MoveToColdStorageAfterDay">
+            <summary>
+            <para>
+            <para>Specifies the number of days after creation that a recovery point is moved to cold
+            storage.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.RecoveryPointArn">
+            <summary>
+            <para>
+            <para>An ARN that uniquely identifies a recovery point to use for the copy job; for example,
+            arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.SourceBackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical source container where backups are stored. Backup vaults are
+            identified by names that are unique to the account used to create them and the AWS
+            Region where they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.StartCopyJobResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.StartCopyJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SourceBackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^SourceBackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKCopyJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet">
+            <summary>
+            Recovers the saved resource identified by an Amazon Resource Name (ARN). 
+            
+             
+            <para>
+            If the resource ARN is included in the request, then the last complete backup of that
+            resource is recovered. If the ARN of a recovery point is supplied, then that recovery
+            point is restored.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.IamRoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the
+            target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.IdempotencyToken">
+            <summary>
+            <para>
+            <para>A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.Metadata">
+            <summary>
+            <para>
+            <para>A set of metadata key-value pairs. Contains information, such as a resource name,
+            required to restore a recovery point.</para><para> You can get configuration metadata about a resource at the time it was backed up
+            by calling <code>GetRecoveryPointRestoreMetadata</code>. However, values in addition
+            to those provided by <code>GetRecoveryPointRestoreMetadata</code> might be required
+            to restore a resource. For example, you might need to provide a new resource name
+            if the original already exists.</para><para>You need to specify specific metadata to restore an Amazon Elastic File System (Amazon
+            EFS) instance:</para><ul><li><para><code>file-system-id</code>: ID of the Amazon EFS file system that is backed up by
+            AWS Backup. Returned in <code>GetRecoveryPointRestoreMetadata</code>.</para></li><li><para><code>Encrypted</code>: A Boolean value that, if true, specifies that the file system
+            is encrypted. If <code>KmsKeyId</code> is specified, <code>Encrypted</code> must be
+            set to <code>true</code>.</para></li><li><para><code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored
+            file system.</para></li><li><para><code>PerformanceMode</code>: Specifies the throughput mode of the file system.</para></li><li><para><code>CreationToken</code>: A user-supplied value that ensures the uniqueness (idempotency)
+            of the request.</para></li><li><para><code>newFileSystem</code>: A Boolean value that, if true, specifies that the recovery
+            point is restored to a new Amazon EFS file system.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.RecoveryPointArn">
+            <summary>
+            <para>
+            <para>An ARN that uniquely identifies a recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.ResourceType">
+            <summary>
+            <para>
+            <para>Starts a job to restore a recovery point for one of the following resources:</para><ul><li><para><code>EBS</code> for Amazon Elastic Block Store</para></li><li><para><code>Storage Gateway</code> for AWS Storage Gateway</para></li><li><para><code>RDS</code> for Amazon Relational Database Service</para></li><li><para><code>DDB</code> for Amazon DynamoDB</para></li><li><para><code>EFS</code> for Amazon Elastic File System</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'RestoreJobId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.StartRestoreJobResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.StartRestoreJobResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecoveryPointArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecoveryPointArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StartBAKRestoreJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.StopBAKBackupJobCmdlet">
+            <summary>
+            Attempts to cancel a job to create a one-time backup of a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StopBAKBackupJobCmdlet.BackupJobId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a request to AWS Backup to back up a resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StopBAKBackupJobCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.StopBackupJobResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StopBAKBackupJobCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupJobId parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupJobId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.StopBAKBackupJobCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet">
+            <summary>
+            Replaces the body of a saved backup plan identified by its <code>backupPlanId</code>
+            with the input document in JSON format. The new version is uniquely identified by
+            a <code>VersionId</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet.BackupPlanId">
+            <summary>
+            <para>
+            <para>Uniquely identifies a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet.BackupPlan_BackupPlanName">
+            <summary>
+            <para>
+            <para>The display name of a backup plan.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet.BackupPlan_Rule">
+            <summary>
+            <para>
+            <para>An array of <code>BackupRule</code> objects, each of which specifies a scheduled task
+            that is used to back up a selection of resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.UpdateBackupPlanResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.UpdateBackupPlanResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupPlan_BackupPlanName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupPlan_BackupPlanName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKBackupPlanCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet">
+            <summary>
+            Sets the transition lifecycle of a recovery point.
+            
+             
+            <para>
+            The lifecycle defines when a protected resource is transitioned to cold storage and
+            when it expires. AWS Backup transitions and expires backups automatically according
+            to the lifecycle that you define. 
+            </para><para>
+            Backups transitioned to cold storage must be stored in cold storage for a minimum
+            of 90 days. Therefore, the “expire after days” setting must be 90 days greater than
+            the “transition to cold after days” setting. The “transition to cold after days” setting
+            cannot be changed after a backup has been transitioned to cold. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.Lifecycle_DeleteAfterDay">
+            <summary>
+            <para>
+            <para>Specifies the number of days after creation that a recovery point is deleted. Must
+            be greater than 90 days plus <code>MoveToColdStorageAfterDays</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.Lifecycle_MoveToColdStorageAfterDay">
+            <summary>
+            <para>
+            <para>Specifies the number of days after creation that a recovery point is moved to cold
+            storage.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.RecoveryPointArn">
+            <summary>
+            <para>
+            <para>An Amazon Resource Name (ARN) that uniquely identifies a recovery point; for example,
+            <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.UpdateRecoveryPointLifecycleResponse).
+            Specifying the name of a property of type Amazon.Backup.Model.UpdateRecoveryPointLifecycleResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RecoveryPointArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^RecoveryPointArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRecoveryPointLifecycleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRegionSettingCmdlet">
+            <summary>
+            Updates the current service opt-in settings for the region. If the service has a value
+            set to true, AWS Backup will attempt to protect that service's resources in this region,
+            when included in an on-demand backup or scheduled backup plan. If the value is set
+            to false for a service, AWS Backup will not attempt to protect that service's resources
+            in this region.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRegionSettingCmdlet.ResourceTypeOptInPreference">
+            <summary>
+            <para>
+            <para>Updates the list of services along with the opt-in preferences for the region.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRegionSettingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.UpdateRegionSettingsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.UpdateBAKRegionSettingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultAccessPolicyCmdlet">
+            <summary>
+            Sets a resource-based policy that is used to manage access permissions on the target
+            backup vault. Requires a backup vault name and an access policy document in JSON format.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultAccessPolicyCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultAccessPolicyCmdlet.Policy">
+            <summary>
+            <para>
+            <para>The backup vault access policy document in JSON format.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultAccessPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.PutBackupVaultAccessPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultAccessPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultAccessPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet">
+            <summary>
+            Turns on notifications on a backup vault for the specified topic and events.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet.BackupVaultEvent">
+            <summary>
+            <para>
+            <para>An array of events that indicate the status of jobs to back up resources to the backup
+            vault.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet.BackupVaultName">
+            <summary>
+            <para>
+            <para>The name of a logical container where backups are stored. Backup vaults are identified
+            by names that are unique to the account used to create them and the AWS Region where
+            they are created. They consist of lowercase letters, numbers, and hyphens.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet.SNSTopicArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events;
+            for example, <code>arn:aws:sns:us-west-2:111122223333:MyVaultTopic</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Backup.Model.PutBackupVaultNotificationsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the BackupVaultName parameter.
+            The -PassThru parameter is deprecated, use -Select '^BackupVaultName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.BAK.WriteBAKBackupVaultNotificationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

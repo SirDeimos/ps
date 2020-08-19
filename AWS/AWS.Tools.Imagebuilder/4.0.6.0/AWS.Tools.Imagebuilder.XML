@@ -1,0 +1,2263 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Imagebuilder</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.AddEC2IBResourceTagCmdlet">
+            <summary>
+            Adds a tag to a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.AddEC2IBResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource that you want to tag. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.AddEC2IBResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply to the resource. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.AddEC2IBResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.AddEC2IBResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.AddEC2IBResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentCmdlet">
+            <summary>
+            Gets a component object.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentCmdlet.ComponentBuildVersionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the component that you want to retrieve. Regex requires
+            "/\d+$" suffix.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Component'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetComponentResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetComponentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ComponentBuildVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ComponentBuildVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet">
+            <summary>
+            Returns the list of component build versions for the specified semantic version.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet.ComponentVersionArn">
+            <summary>
+            <para>
+            <para>The component version Amazon Resource Name (ARN) whose versions you want to list.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ComponentSummaryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListComponentBuildVersionsResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListComponentBuildVersionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ComponentVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ComponentVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentBuildVersionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet">
+            <summary>
+            Returns the list of component build versions for the specified semantic version.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet.Owner">
+            <summary>
+            <para>
+            <para>The owner defines which components you want to list. By default, this request will
+            only show components owned by your account. You can use this field to specify if you
+            want to view components owned by yourself, by Amazon, or those components that have
+            been shared with you by other customers. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ComponentVersionList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListComponentsResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListComponentsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentPolicyCmdlet">
+            <summary>
+            Gets a component policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentPolicyCmdlet.ComponentArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the component whose policy you want to retrieve.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Policy'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetComponentPolicyResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetComponentPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBComponentPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ComponentArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ComponentArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationCmdlet">
+            <summary>
+            Gets a distribution configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationCmdlet.DistributionConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the distribution configuration that you want to
+            retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DistributionConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetDistributionConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetDistributionConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DistributionConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DistributionConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationListCmdlet">
+            <summary>
+            Returns a list of distribution configurations.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DistributionConfigurationSummaryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListDistributionConfigurationsResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListDistributionConfigurationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBDistributionConfigurationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageCmdlet">
+            <summary>
+            Gets an image.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageCmdlet.ImageBuildVersionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image that you want to retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Image'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetImageResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetImageResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageBuildVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageBuildVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet">
+            <summary>
+            Returns a list of distribution configurations.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.ImageVersionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image whose build versions you want to retrieve.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageSummaryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListImageBuildVersionsResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListImageBuildVersionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageBuildVersionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet">
+            <summary>
+            Returns the list of image build versions for the specified semantic version.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet.Owner">
+            <summary>
+            <para>
+            <para>The owner defines which images you want to list. By default, this request will only
+            show images owned by your account. You can use this field to specify if you want to
+            view images owned by yourself, by Amazon, or those images that have been shared with
+            you by other customers. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageVersionList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListImagesResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListImagesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineCmdlet">
+            <summary>
+            Gets an image pipeline.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineCmdlet.ImagePipelineArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image pipeline that you want to retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImagePipeline'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetImagePipelineResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetImagePipelineResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImagePipelineArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImagePipelineArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet">
+            <summary>
+            Returns a list of images created by the specified pipeline.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.ImagePipelineArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image pipeline whose images you want to view.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageSummaryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListImagePipelineImagesResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListImagePipelineImagesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImagePipelineArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImagePipelineArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineImageListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineListCmdlet">
+            <summary>
+            Returns a list of image pipelines.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImagePipelineList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListImagePipelinesResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListImagePipelinesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePipelineListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePolicyCmdlet">
+            <summary>
+            Gets an image policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePolicyCmdlet.ImageArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image whose policy you want to retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Policy'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetImagePolicyResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetImagePolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImagePolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeCmdlet">
+            <summary>
+            Gets an image recipe.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image recipe that you want to retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageRecipe'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetImageRecipeResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetImageRecipeResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageRecipeArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageRecipeArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet">
+            <summary>
+            Returns a list of image recipes.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet.Owner">
+            <summary>
+            <para>
+            <para>The owner defines which image recipes you want to list. By default, this request will
+            only show image recipes owned by your account. You can use this field to specify if
+            you want to view image recipes owned by yourself, by Amazon, or those image recipes
+            that have been shared with you by other customers. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageRecipeSummaryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListImageRecipesResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListImageRecipesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipeListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipePolicyCmdlet">
+            <summary>
+            Gets an image recipe policy.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipePolicyCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image recipe whose policy you want to retrieve.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipePolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Policy'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetImageRecipePolicyResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetImageRecipePolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBImageRecipePolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageRecipeArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageRecipeArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationCmdlet">
+            <summary>
+            Gets an infrastructure configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationCmdlet.InfrastructureConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the infrastructure configuration that you want to
+            retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InfrastructureConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.GetInfrastructureConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.GetInfrastructureConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InfrastructureConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InfrastructureConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationListCmdlet">
+            <summary>
+            Returns a list of infrastructure configurations.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationListCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The filters. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum items to return in a request. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InfrastructureConfigurationSummaryList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListInfrastructureConfigurationsResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListInfrastructureConfigurationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBInfrastructureConfigurationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBResourceTagCmdlet">
+            <summary>
+            Returns the list of tags for the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.GetEC2IBResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet">
+            <summary>
+            Imports a component and transforms its data into a component document.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.ChangeDescription">
+            <summary>
+            <para>
+            <para>The change description of the component. Describes what change has been made in this
+            version, or what makes this version different from other versions of this component.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Data">
+            <summary>
+            <para>
+            <para>The data of the component. Used to specify the data inline. Either <code>data</code>
+            or <code>uri</code> can be used to specify the data within the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the component. Describes the contents of the component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Format">
+            <summary>
+            <para>
+            <para>The format of the resource that you want to import as a component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.KmsKeyId">
+            <summary>
+            <para>
+            <para>The ID of the KMS key that should be used to encrypt this component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Name">
+            <summary>
+            <para>
+            <para> The name of the component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Platform">
+            <summary>
+            <para>
+            <para>The platform of the component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.SemanticVersion">
+            <summary>
+            <para>
+            <para>The semantic version of the component. This version follows the semantic version syntax.
+            For example, major.minor.patch. This could be versioned like software (2.0.1) or like
+            a date (2019.12.01).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags of the component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of the component denotes whether the component is used to build the image
+            or only to test it. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Uri">
+            <summary>
+            <para>
+            <para>The uri of the component. Must be an S3 URL and the requester must have permission
+            to access the S3 bucket. If you use S3, you can specify component content up to your
+            service quota. Either <code>data</code> or <code>uri</code> can be used to specify
+            the data within the component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token of the component. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ComponentBuildVersionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.ImportComponentResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.ImportComponentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.ImportEC2IBComponentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet">
+            <summary>
+            Creates a new component that can be used to build, validate, test, and assess your
+            image.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.ChangeDescription">
+            <summary>
+            <para>
+            <para>The change description of the component. Describes what change has been made in this
+            version, or what makes this version different from other versions of this component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Data">
+            <summary>
+            <para>
+            <para>The data of the component. Used to specify the data inline. Either <code>data</code>
+            or <code>uri</code> can be used to specify the data within the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the component. Describes the contents of the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.KmsKeyId">
+            <summary>
+            <para>
+            <para>The ID of the KMS key that should be used to encrypt this component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Platform">
+            <summary>
+            <para>
+            <para>The platform of the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.SemanticVersion">
+            <summary>
+            <para>
+            <para>The semantic version of the component. This version follows the semantic version syntax.
+            For example, major.minor.patch. This could be versioned like software (2.0.1) or like
+            a date (2019.12.01).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.SupportedOsVersion">
+            <summary>
+            <para>
+            <para> The operating system (OS) version supported by the component. If the OS information
+            is available, a prefix match is performed against the parent image OS version during
+            image recipe creation. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags of the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Uri">
+            <summary>
+            <para>
+            <para>The uri of the component. Must be an S3 URL and the requester must have permission
+            to access the S3 bucket. If you use S3, you can specify component content up to your
+            service quota. Either <code>data</code> or <code>uri</code> can be used to specify
+            the data within the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token of the component.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ComponentBuildVersionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CreateComponentResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CreateComponentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBComponentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet">
+            <summary>
+            Creates a new distribution configuration. Distribution configurations define and configure
+            the outputs of your pipeline.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.Description">
+            <summary>
+            <para>
+            <para> The description of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.Distribution">
+            <summary>
+            <para>
+            <para> The distributions of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.Name">
+            <summary>
+            <para>
+            <para> The name of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.Tag">
+            <summary>
+            <para>
+            <para> The tags of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para> The idempotency token of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DistributionConfigurationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CreateDistributionConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CreateDistributionConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBDistributionConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet">
+            <summary>
+            Creates a new image. This request will create a new image along with all of the configured
+            output resources defined in the distribution configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.DistributionConfigurationArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the distribution configuration that defines and
+            configures the outputs of your pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.EnhancedImageMetadataEnabled">
+            <summary>
+            <para>
+            <para> Collects additional information about the image being created, including the operating
+            system (OS) version and package list. This information is used to enhance the overall
+            experience of using EC2 Image Builder. Enabled by default. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the image recipe that defines how images are configured,
+            tested, and assessed. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.ImageTestsConfiguration_ImageTestsEnabled">
+            <summary>
+            <para>
+            <para>Defines if tests should be executed when building this image.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.InfrastructureConfigurationArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the infrastructure configuration that defines the
+            environment in which your image will be built and tested. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.Tag">
+            <summary>
+            <para>
+            <para> The tags of the image. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.ImageTestsConfiguration_TimeoutMinute">
+            <summary>
+            <para>
+            <para>The maximum time in minutes that tests are permitted to run.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para> The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageBuildVersionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CreateImageResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CreateImageResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageRecipeArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageRecipeArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet">
+            <summary>
+            Creates a new image pipeline. Image pipelines enable you to automate the creation
+            and distribution of images.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Description">
+            <summary>
+            <para>
+            <para> The description of the image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.DistributionConfigurationArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the distribution configuration that will be used
+            to configure and distribute images created by this image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.EnhancedImageMetadataEnabled">
+            <summary>
+            <para>
+            <para> Collects additional information about the image being created, including the operating
+            system (OS) version and package list. This information is used to enhance the overall
+            experience of using EC2 Image Builder. Enabled by default. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the image recipe that will be used to configure
+            images created by this image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.ImageTestsConfiguration_ImageTestsEnabled">
+            <summary>
+            <para>
+            <para>Defines if tests should be executed when building this image.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.InfrastructureConfigurationArn">
+            <summary>
+            <para>
+            <para> The Amazon Resource Name (ARN) of the infrastructure configuration that will be used
+            to build images created by this image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Name">
+            <summary>
+            <para>
+            <para> The name of the image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Schedule_PipelineExecutionStartCondition">
+            <summary>
+            <para>
+            <para>The condition configures when the pipeline should trigger a new image build. When
+            the <code>pipelineExecutionStartCondition</code> is set to <code>EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE</code>,
+            EC2 Image Builder will build a new image only when there are known changes pending.
+            When it is set to <code>EXPRESSION_MATCH_ONLY</code>, it will build a new image every
+            time the CRON expression matches the current time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Schedule_ScheduleExpression">
+            <summary>
+            <para>
+            <para>The expression determines how often EC2 Image Builder evaluates your <code>pipelineExecutionStartCondition</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Status">
+            <summary>
+            <para>
+            <para> The status of the image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Tag">
+            <summary>
+            <para>
+            <para> The tags of the image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.ImageTestsConfiguration_TimeoutMinute">
+            <summary>
+            <para>
+            <para>The maximum time in minutes that tests are permitted to run.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para> The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImagePipelineArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CreateImagePipelineResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CreateImagePipelineResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImagePipelineCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet">
+            <summary>
+            Creates a new image recipe. Image recipes define how images are configured, tested,
+            and assessed.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.BlockDeviceMapping">
+            <summary>
+            <para>
+            <para>The block device mappings of the image recipe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.Component">
+            <summary>
+            <para>
+            <para>The components of the image recipe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.Description">
+            <summary>
+            <para>
+            <para> The description of the image recipe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.Name">
+            <summary>
+            <para>
+            <para> The name of the image recipe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.ParentImage">
+            <summary>
+            <para>
+            <para>The parent image of the image recipe. The value of the string can be the ARN of the
+            parent image or an AMI ID. The format for the ARN follows this example: <code>arn:aws:imagebuilder:us-west-2:aws:image/windows-server-2016-english-full-base-x86/2019.x.x</code>.
+            The ARN ends with <code>/20xx.x.x</code>, which communicates to EC2 Image Builder
+            that you want to use the latest AMI created in 20xx (year). You can provide the specific
+            version that you want to use, or you can use a wildcard in all of the fields. If you
+            enter an AMI ID for the string value, you must have access to the AMI, and the AMI
+            must be in the same Region in which you are using Image Builder. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.SemanticVersion">
+            <summary>
+            <para>
+            <para>The semantic version of the image recipe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.Tag">
+            <summary>
+            <para>
+            <para> The tags of the image recipe. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageRecipeArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CreateImageRecipeResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CreateImageRecipeResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBImageRecipeCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet">
+            <summary>
+            Creates a new infrastructure configuration. An infrastructure configuration defines
+            the environment in which your image will be built and tested.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the infrastructure configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.InstanceProfileName">
+            <summary>
+            <para>
+            <para>The instance profile to associate with the instance used to customize your EC2 AMI.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.InstanceType">
+            <summary>
+            <para>
+            <para>The instance types of the infrastructure configuration. You can specify one or more
+            instance types to use for this build. The service will pick one of these instance
+            types based on availability. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.KeyPair">
+            <summary>
+            <para>
+            <para>The key pair of the infrastructure configuration. This can be used to log on to and
+            debug the instance used to create your image. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the infrastructure configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.S3Logs_S3BucketName">
+            <summary>
+            <para>
+            <para>The Amazon S3 bucket in which to store the logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.S3Logs_S3KeyPrefix">
+            <summary>
+            <para>
+            <para>The Amazon S3 path in which to store the logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.SecurityGroupId">
+            <summary>
+            <para>
+            <para>The security group IDs to associate with the instance used to customize your EC2 AMI.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.SnsTopicArn">
+            <summary>
+            <para>
+            <para>The SNS topic on which to send image build events. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.SubnetId">
+            <summary>
+            <para>
+            <para>The subnet ID in which to place the instance used to customize your EC2 AMI. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags of the infrastructure configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.TerminateInstanceOnFailure">
+            <summary>
+            <para>
+            <para>The terminate instance on failure setting of the infrastructure configuration. Set
+            to false if you want Image Builder to retain the instance used to configure your AMI
+            if the build or test phase of your workflow fails. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InfrastructureConfigurationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CreateInfrastructureConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CreateInfrastructureConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.NewEC2IBInfrastructureConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBComponentCmdlet">
+            <summary>
+            Deletes a component build version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBComponentCmdlet.ComponentBuildVersionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the component build version to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBComponentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.DeleteComponentResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.DeleteComponentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBComponentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ComponentBuildVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ComponentBuildVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBComponentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBDistributionConfigurationCmdlet">
+            <summary>
+            Deletes a distribution configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBDistributionConfigurationCmdlet.DistributionConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the distribution configuration to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBDistributionConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.DeleteDistributionConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.DeleteDistributionConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBDistributionConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DistributionConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DistributionConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBDistributionConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageCmdlet">
+            <summary>
+            Deletes an image.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageCmdlet.ImageBuildVersionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.DeleteImageResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.DeleteImageResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageBuildVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageBuildVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImagePipelineCmdlet">
+            <summary>
+            Deletes an image pipeline.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImagePipelineCmdlet.ImagePipelineArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image pipeline to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImagePipelineCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.DeleteImagePipelineResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.DeleteImagePipelineResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImagePipelineCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImagePipelineArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImagePipelineArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImagePipelineCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageRecipeCmdlet">
+            <summary>
+            Deletes an image recipe.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageRecipeCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image recipe to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageRecipeCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.DeleteImageRecipeResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.DeleteImageRecipeResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageRecipeCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageRecipeArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageRecipeArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBImageRecipeCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBInfrastructureConfigurationCmdlet">
+            <summary>
+            Deletes an infrastructure configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBInfrastructureConfigurationCmdlet.InfrastructureConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the infrastructure configuration to delete. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBInfrastructureConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.DeleteInfrastructureConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.DeleteInfrastructureConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBInfrastructureConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InfrastructureConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InfrastructureConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBInfrastructureConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBResourceTagCmdlet">
+            <summary>
+            Removes a tag from a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource that you want to untag. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The tag keys to remove from the resource. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.RemoveEC2IBResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.StartEC2IBImagePipelineExecutionCmdlet">
+            <summary>
+            Manually triggers a pipeline to create an image.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StartEC2IBImagePipelineExecutionCmdlet.ImagePipelineArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image pipeline that you want to manually invoke.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StartEC2IBImagePipelineExecutionCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StartEC2IBImagePipelineExecutionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageBuildVersionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.StartImagePipelineExecutionResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.StartImagePipelineExecutionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StartEC2IBImagePipelineExecutionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImagePipelineArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImagePipelineArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StartEC2IBImagePipelineExecutionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.StopEC2IBImageCreationCmdlet">
+            <summary>
+            CancelImageCreation cancels the creation of Image. This operation can only be used
+            on images in a non-terminal state.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StopEC2IBImageCreationCmdlet.ImageBuildVersionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image whose creation you want to cancel.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StopEC2IBImageCreationCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token used to make this request idempotent.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StopEC2IBImageCreationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImageBuildVersionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.CancelImageCreationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.CancelImageCreationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StopEC2IBImageCreationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImageBuildVersionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImageBuildVersionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.StopEC2IBImageCreationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet">
+            <summary>
+            Updates a new distribution configuration. Distribution configurations define and
+            configure the outputs of your pipeline.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.DistributionConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the distribution configuration that you want to
+            update. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.Distribution">
+            <summary>
+            <para>
+            <para>The distributions of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token of the distribution configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DistributionConfigurationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.UpdateDistributionConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.UpdateDistributionConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DistributionConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^DistributionConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBDistributionConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet">
+            <summary>
+            Updates a new image pipeline. Image pipelines enable you to automate the creation
+            and distribution of images.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.DistributionConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the distribution configuration that will be used
+            to configure and distribute images updated by this image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.EnhancedImageMetadataEnabled">
+            <summary>
+            <para>
+            <para> Collects additional information about the image being created, including the operating
+            system (OS) version and package list. This information is used to enhance the overall
+            experience of using EC2 Image Builder. Enabled by default. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.ImagePipelineArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image pipeline that you want to update. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image recipe that will be used to configure
+            images updated by this image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.ImageTestsConfiguration_ImageTestsEnabled">
+            <summary>
+            <para>
+            <para>Defines if tests should be executed when building this image.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.InfrastructureConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the infrastructure configuration that will be used
+            to build images updated by this image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.Schedule_PipelineExecutionStartCondition">
+            <summary>
+            <para>
+            <para>The condition configures when the pipeline should trigger a new image build. When
+            the <code>pipelineExecutionStartCondition</code> is set to <code>EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE</code>,
+            EC2 Image Builder will build a new image only when there are known changes pending.
+            When it is set to <code>EXPRESSION_MATCH_ONLY</code>, it will build a new image every
+            time the CRON expression matches the current time.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.Schedule_ScheduleExpression">
+            <summary>
+            <para>
+            <para>The expression determines how often EC2 Image Builder evaluates your <code>pipelineExecutionStartCondition</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.Status">
+            <summary>
+            <para>
+            <para>The status of the image pipeline. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.ImageTestsConfiguration_TimeoutMinute">
+            <summary>
+            <para>
+            <para>The maximum time in minutes that tests are permitted to run.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ImagePipelineArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.UpdateImagePipelineResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.UpdateImagePipelineResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ImagePipelineArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ImagePipelineArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBImagePipelineCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet">
+            <summary>
+            Updates a new infrastructure configuration. An infrastructure configuration defines
+            the environment in which your image will be built and tested.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description of the infrastructure configuration. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.InfrastructureConfigurationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the infrastructure configuration that you want to
+            update. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.InstanceProfileName">
+            <summary>
+            <para>
+            <para>The instance profile to associate with the instance used to customize your EC2 AMI.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.InstanceType">
+            <summary>
+            <para>
+            <para>The instance types of the infrastructure configuration. You can specify one or more
+            instance types to use for this build. The service will pick one of these instance
+            types based on availability. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.KeyPair">
+            <summary>
+            <para>
+            <para>The key pair of the infrastructure configuration. This can be used to log on to and
+            debug the instance used to create your image. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.S3Logs_S3BucketName">
+            <summary>
+            <para>
+            <para>The Amazon S3 bucket in which to store the logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.S3Logs_S3KeyPrefix">
+            <summary>
+            <para>
+            <para>The Amazon S3 path in which to store the logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.SecurityGroupId">
+            <summary>
+            <para>
+            <para>The security group IDs to associate with the instance used to customize your EC2 AMI.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.SnsTopicArn">
+            <summary>
+            <para>
+            <para>The SNS topic on which to send image build events. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.SubnetId">
+            <summary>
+            <para>
+            <para>The subnet ID to place the instance used to customize your EC2 AMI in. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.TerminateInstanceOnFailure">
+            <summary>
+            <para>
+            <para>The terminate instance on failure setting of the infrastructure configuration. Set
+            to false if you want Image Builder to retain the instance used to configure your AMI
+            if the build or test phase of your workflow fails. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.ClientToken">
+            <summary>
+            <para>
+            <para>The idempotency token used to make this request idempotent. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InfrastructureConfigurationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.UpdateInfrastructureConfigurationResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.UpdateInfrastructureConfigurationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InfrastructureConfigurationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InfrastructureConfigurationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.UpdateEC2IBInfrastructureConfigurationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBComponentPolicyCmdlet">
+            <summary>
+            Applies a policy to a component. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a>
+            to share resources. If you call the Image Builder API <code>PutComponentPolicy</code>,
+            you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a>
+            in order for the resource to be visible to all principals with whom the resource is
+            shared.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBComponentPolicyCmdlet.ComponentArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the component that this policy should be applied
+            to. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBComponentPolicyCmdlet.Policy">
+            <summary>
+            <para>
+            <para>The policy to apply. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBComponentPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.PutComponentPolicyResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.PutComponentPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBComponentPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Policy parameter.
+            The -PassThru parameter is deprecated, use -Select '^Policy' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBComponentPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImagePolicyCmdlet">
+            <summary>
+            Applies a policy to an image. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a>
+            to share resources. If you call the Image Builder API <code>PutImagePolicy</code>,
+            you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a>
+            in order for the resource to be visible to all principals with whom the resource is
+            shared.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImagePolicyCmdlet.ImageArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image that this policy should be applied to.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImagePolicyCmdlet.Policy">
+            <summary>
+            <para>
+            <para>The policy to apply. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImagePolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.PutImagePolicyResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.PutImagePolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImagePolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Policy parameter.
+            The -PassThru parameter is deprecated, use -Select '^Policy' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImagePolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImageRecipePolicyCmdlet">
+            <summary>
+            Applies a policy to an image recipe. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a>
+            to share resources. If you call the Image Builder API <code>PutImageRecipePolicy</code>,
+            you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a>
+            in order for the resource to be visible to all principals with whom the resource is
+            shared.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImageRecipePolicyCmdlet.ImageRecipeArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the image recipe that this policy should be applied
+            to. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImageRecipePolicyCmdlet.Policy">
+            <summary>
+            <para>
+            <para>The policy to apply. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImageRecipePolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Imagebuilder.Model.PutImageRecipePolicyResponse).
+            Specifying the name of a property of type Amazon.Imagebuilder.Model.PutImageRecipePolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImageRecipePolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Policy parameter.
+            The -PassThru parameter is deprecated, use -Select '^Policy' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.EC2IB.WriteEC2IBImageRecipePolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2039 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.WorkMail</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet">
+            <summary>
+            Adds a member (user or group) to the resource's set of delegates.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The member (user or group) to associate to the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization under which the resource exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The resource for which members (users or groups) are associated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.AssociateDelegateToResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMDelegateToResourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet">
+            <summary>
+            Adds a member (user or group) to the group's set.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet.GroupId">
+            <summary>
+            <para>
+            <para>The group to which the member (user or group) is associated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet.MemberId">
+            <summary>
+            <para>
+            <para>The member (user or group) to associate to the group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization under which the group exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.AssociateMemberToGroupResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the MemberId parameter.
+            The -PassThru parameter is deprecated, use -Select '^MemberId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMMemberToGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.AddWMResourceTagCmdlet">
+            <summary>
+            Applies the specified tags to the specified Amazon WorkMail organization resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The resource ARN.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tag key-value pairs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.AddWMResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet">
+            <summary>
+            Gets the effects of an organization's access control rules as they apply to a specified
+            IPv4 address, access protocol action, or user ID.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet.Action">
+            <summary>
+            <para>
+            <para>The access protocol action. Valid values include <code>ActiveSync</code>, <code>AutoDiscover</code>,
+            <code>EWS</code>, <code>IMAP</code>, <code>SMTP</code>, <code>WindowsOutlook</code>,
+            and <code>WebMail</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet.IpAddress">
+            <summary>
+            <para>
+            <para>The IPv4 address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The user ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.GetAccessControlEffectResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.GetAccessControlEffectResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlEffectCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlRuleListCmdlet">
+            <summary>
+            Lists the access control rules for the specified organization.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlRuleListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlRuleListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Rules'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListAccessControlRulesResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListAccessControlRulesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAccessControlRuleListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet">
+            <summary>
+            Creates a paginated call to list the aliases associated with a given entity.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier for the entity for which to list the aliases.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the entity exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Aliases'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListAliasesResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListAliasesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMAliasListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMDefaultRetentionPolicyCmdlet">
+            <summary>
+            Gets the default retention policy details for the specified organization.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDefaultRetentionPolicyCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDefaultRetentionPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.GetDefaultRetentionPolicyResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.GetDefaultRetentionPolicyResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDefaultRetentionPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet">
+            <summary>
+            Lists the delegates associated with a resource. Users and groups can be resource delegates
+            and answer requests on behalf of the resource.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization that contains the resource for which delegates
+            are listed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The identifier for the resource whose delegates are listed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The number of maximum results in a page.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token used to paginate through the delegates associated with a resource.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Delegates'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListResourceDelegatesResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListResourceDelegatesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMDelegateListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMGroupCmdlet">
+            <summary>
+            Returns the data available for the group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupCmdlet.GroupId">
+            <summary>
+            <para>
+            <para>The identifier for the group to be described.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the group exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DescribeGroupResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.DescribeGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet">
+            <summary>
+            Returns summaries of the organization's groups.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the groups exist.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Groups'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListGroupsResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListGroupsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMGroupListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxDetailCmdlet">
+            <summary>
+            Requests a user's mailbox details for a specified organization and user.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxDetailCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization that contains the user whose mailbox details are
+            being requested.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxDetailCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The identifier for the user whose mailbox details are being requested.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxDetailCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.GetMailboxDetailsResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.GetMailboxDetailsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxDetailCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserId parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet">
+            <summary>
+            Lists the mailbox permissions associated with a user, group, or resource mailbox.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier of the user, group, or resource for which to list mailbox permissions.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier of the organization under which the user, group, or resource exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Permissions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListMailboxPermissionsResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListMailboxPermissionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMailboxPermissionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet">
+            <summary>
+            Returns an overview of the members of a group. Users and groups can be members of
+            a group.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.GroupId">
+            <summary>
+            <para>
+            <para>The identifier for the group to which the members (users or groups) are associated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the group exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para> The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Members'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListGroupMembersResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListGroupMembersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMMemberListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationCmdlet">
+            <summary>
+            Provides more information regarding a given organization based on its identifier.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization to be described.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DescribeOrganizationResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.DescribeOrganizationResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationListCmdlet">
+            <summary>
+            Returns summaries of the customer's organizations.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'OrganizationSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListOrganizationsResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListOrganizationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMOrganizationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMResourceCmdlet">
+            <summary>
+            Returns the data available for the resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier associated with the organization for which the resource is described.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The identifier of the resource to be described.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DescribeResourceResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.DescribeResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet">
+            <summary>
+            Returns summaries of the organization's resources.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the resources exist.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Resources'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListResourcesResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListResourcesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMResourceTagCmdlet">
+            <summary>
+            Lists the tags applied to an Amazon WorkMail organization resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The resource ARN.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMUserCmdlet">
+            <summary>
+            Provides information regarding the user.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the user exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The identifier for the user to be described.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DescribeUserResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.DescribeUserResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserId parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet">
+            <summary>
+            Returns summaries of the organization's users.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the users exist.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in a single call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token to use to retrieve the next page of results. The first call does not contain
+            any tokens.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Users'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ListUsersResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.ListUsersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.GetWMUserListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet">
+            <summary>
+            Adds an alias to the set of a given member (user or group) of Amazon WorkMail.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet.Alias">
+            <summary>
+            <para>
+            <para>The alias to add to the member set.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The member (user or group) to which this alias is added.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization under which the member (user or group) exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.CreateAliasResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Alias parameter.
+            The -PassThru parameter is deprecated, use -Select '^Alias' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMAliasCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.NewWMGroupCmdlet">
+            <summary>
+            Creates a group that can be used in Amazon WorkMail by calling the <a>RegisterToWorkMail</a>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMGroupCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMGroupCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization under which the group is to be created.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'GroupId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.CreateGroupResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.CreateGroupResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet">
+            <summary>
+            Creates a new Amazon WorkMail resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the new resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier associated with the organization for which the resource is created.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet.Type">
+            <summary>
+            <para>
+            <para>The type of the new resource. The available types are <code>equipment</code> and <code>room</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ResourceId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.CreateResourceResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.CreateResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMResourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet">
+            <summary>
+            Creates a user who can be used in Amazon WorkMail by calling the <a>RegisterToWorkMail</a>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.DisplayName">
+            <summary>
+            <para>
+            <para>The display name for the new user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name for the new user. Simple AD or AD Connector user names have a maximum length
+            of 20. All others have a maximum length of 64.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier of the organization for which the user is created.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.Password">
+            <summary>
+            <para>
+            <para>The password for the new user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'UserId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.CreateUserResponse).
+            Specifying the name of a property of type Amazon.WorkMail.Model.CreateUserResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.NewWMUserCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet">
+            <summary>
+            Registers an existing and disabled user, group, or resource for Amazon WorkMail use
+            by associating a mailbox and calendaring capabilities. It performs no change if the
+            user, group, or resource is enabled and fails if the user, group, or resource is deleted.
+            This operation results in the accumulation of costs. For more information, see <a href="https://aws.amazon.com/workmail/pricing">Pricing</a>. The equivalent console
+            functionality for this operation is <i>Enable</i>. 
+            
+             
+            <para>
+            Users can either be created by calling the <a>CreateUser</a> API operation or they
+            can be synchronized from your directory. For more information, see <a>DeregisterFromWorkMail</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet.Email">
+            <summary>
+            <para>
+            <para>The email for the user, group, or resource to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier for the user, group, or resource to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the user, group, or resource exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.RegisterToWorkMailResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RegisterWMToWorkMailCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMAccessControlRuleCmdlet">
+            <summary>
+            Deletes an access control rule for the specified WorkMail organization.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAccessControlRuleCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the access control rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAccessControlRuleCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAccessControlRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteAccessControlRuleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAccessControlRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAccessControlRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet">
+            <summary>
+            Remove one or more specified aliases from a set of aliases for a given user.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet.Alias">
+            <summary>
+            <para>
+            <para>The aliases to be removed from the user's set of aliases. Duplicate entries in the
+            list are collapsed into single entries (the list is transformed into a set).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier for the member (user or group) from which to have the aliases removed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the user exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteAliasResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Alias parameter.
+            The -PassThru parameter is deprecated, use -Select '^Alias' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMAliasCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet">
+            <summary>
+            Removes a member from the resource's set of delegates.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier for the member (user, group) to be removed from the resource's delegates.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the resource exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The identifier of the resource from which delegates' set members are removed. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DisassociateDelegateFromResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMDelegateFromResourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMFromWorkMailCmdlet">
+            <summary>
+            Mark a user, group, or resource as no longer used in Amazon WorkMail. This action
+            disassociates the mailbox and schedules it for clean-up. WorkMail keeps mailboxes
+            for 30 days before they are permanently removed. The functionality in the console
+            is <i>Disable</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMFromWorkMailCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier for the member (user or group) to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMFromWorkMailCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the Amazon WorkMail entity exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMFromWorkMailCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeregisterFromWorkMailResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMFromWorkMailCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMFromWorkMailCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMGroupCmdlet">
+            <summary>
+            Deletes a group from Amazon WorkMail.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMGroupCmdlet.GroupId">
+            <summary>
+            <para>
+            <para>The identifier of the group to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMGroupCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization that contains the group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteGroupResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the GroupId parameter.
+            The -PassThru parameter is deprecated, use -Select '^GroupId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet">
+            <summary>
+            Deletes permissions granted to a member (user or group).
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier of the member (user or group)that owns the mailbox.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet.GranteeId">
+            <summary>
+            <para>
+            <para>The identifier of the member (user or group) for which to delete granted permissions.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier of the organization under which the member (user or group) exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteMailboxPermissionsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMailboxPermissionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet">
+            <summary>
+            Removes a member from a group.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet.GroupId">
+            <summary>
+            <para>
+            <para>The identifier for the group from which members are removed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet.MemberId">
+            <summary>
+            <para>
+            <para>The identifier for the member to be removed to the group.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization under which the group exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DisassociateMemberFromGroupResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the MemberId parameter.
+            The -PassThru parameter is deprecated, use -Select '^MemberId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMMemberFromGroupCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceCmdlet">
+            <summary>
+            Deletes the specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier associated with the organization from which the resource is deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The identifier of the resource to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceTagCmdlet">
+            <summary>
+            Untags the specified tags from the specified Amazon WorkMail organization resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceTagCmdlet.ResourceARN">
+            <summary>
+            <para>
+            <para>The resource ARN.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The tag keys.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceARN parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceARN' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMRetentionPolicyCmdlet">
+            <summary>
+            Deletes the specified retention policy from the specified organization.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMRetentionPolicyCmdlet.Id">
+            <summary>
+            <para>
+            <para>The retention policy ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMRetentionPolicyCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMRetentionPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteRetentionPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMRetentionPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMRetentionPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.RemoveWMUserCmdlet">
+            <summary>
+            Deletes a user from Amazon WorkMail and all subsequent systems. Before you can delete
+            a user, the user state must be <code>DISABLED</code>. Use the <a>DescribeUser</a>
+            action to confirm the user state.
+            
+             
+            <para>
+            Deleting a user is permanent and cannot be undone. WorkMail archives user mailboxes
+            for 30 days before they are permanently removed.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMUserCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization that contains the user to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMUserCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The identifier of the user to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMUserCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.DeleteUserResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMUserCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserId parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.RemoveWMUserCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet">
+            <summary>
+            Allows the administrator to reset the password for a user.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier of the organization that contains the user for which the password is
+            reset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet.Password">
+            <summary>
+            <para>
+            <para>The new password for the user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The identifier of the user for whom the password is reset.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.ResetPasswordResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the UserId parameter.
+            The -PassThru parameter is deprecated, use -Select '^UserId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.ResetWMPasswordCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet">
+            <summary>
+            Updates a user's current mailbox quota for a specified organization and user.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet.MailboxQuota">
+            <summary>
+            <para>
+            <para>The updated mailbox quota, in MB, for the specified user.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier for the organization that contains the user for whom to update the
+            mailbox quota.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet.UserId">
+            <summary>
+            <para>
+            <para>The identifer for the user for whom to update the mailbox quota.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.UpdateMailboxQuotaResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMMailboxQuotaCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet">
+            <summary>
+            Updates the primary email for a user, group, or resource. The current email is moved
+            into the list of aliases (or swapped between an existing alias and the current primary
+            email), and the email provided in the input is promoted as the primary.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet.Email">
+            <summary>
+            <para>
+            <para>The value of the email to be updated as primary.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The user, group, or resource to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization that contains the user, group, or resource to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.UpdatePrimaryEmailAddressResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Email parameter.
+            The -PassThru parameter is deprecated, use -Select '^Email' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMPrimaryEmailAddressCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet">
+            <summary>
+            Updates data for the resource. To have the latest information, it must be preceded
+            by a <a>DescribeResource</a> call. The dataset in the request should be the one expected
+            when performing another <code>DescribeResource</code> call.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.BookingOption">
+            <summary>
+            <para>
+            <para>The resource's booking options to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the resource to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier associated with the organization for which the resource is updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.ResourceId">
+            <summary>
+            <para>
+            <para>The identifier of the resource to be updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.UpdateResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.UpdateWMResourceCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet">
+            <summary>
+            Adds a new access control rule for the specified organization. The rule allows or
+            denies access to the organization for the specified IPv4 addresses, access protocol
+            actions, and user IDs. Adding a new rule with the same name as an existing rule replaces
+            the older rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.Action">
+            <summary>
+            <para>
+            <para>Access protocol actions to include in the rule. Valid values include <code>ActiveSync</code>,
+            <code>AutoDiscover</code>, <code>EWS</code>, <code>IMAP</code>, <code>SMTP</code>,
+            <code>WindowsOutlook</code>, and <code>WebMail</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.Description">
+            <summary>
+            <para>
+            <para>The rule description.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.Effect">
+            <summary>
+            <para>
+            <para>The rule effect.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.IpRange">
+            <summary>
+            <para>
+            <para>IPv4 CIDR ranges to include in the rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.Name">
+            <summary>
+            <para>
+            <para>The rule name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.NotAction">
+            <summary>
+            <para>
+            <para>Access protocol actions to exclude from the rule. Valid values include <code>ActiveSync</code>,
+            <code>AutoDiscover</code>, <code>EWS</code>, <code>IMAP</code>, <code>SMTP</code>,
+            <code>WindowsOutlook</code>, and <code>WebMail</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.NotIpRange">
+            <summary>
+            <para>
+            <para>IPv4 CIDR ranges to exclude from the rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.NotUserId">
+            <summary>
+            <para>
+            <para>User IDs to exclude from the rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier of the organization.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.UserId">
+            <summary>
+            <para>
+            <para>User IDs to include in the rule.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.PutAccessControlRuleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMAccessControlRuleCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet">
+            <summary>
+            Sets permissions for a user, group, or resource. This replaces any pre-existing permissions.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.EntityId">
+            <summary>
+            <para>
+            <para>The identifier of the user, group, or resource for which to update mailbox permissions.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.GranteeId">
+            <summary>
+            <para>
+            <para>The identifier of the user, group, or resource to which to grant the permissions.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The identifier of the organization under which the user, group, or resource exists.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.PermissionValue">
+            <summary>
+            <para>
+            <para>The permissions granted to the grantee. SEND_AS allows the grantee to send email as
+            the owner of the mailbox (the grantee is not mentioned on these emails). SEND_ON_BEHALF
+            allows the grantee to send email on behalf of the owner of the mailbox (the grantee
+            is not mentioned as the physical sender of these emails). FULL_ACCESS allows the grantee
+            full access to the mailbox, irrespective of other folder-level permissions set on
+            the mailbox.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.PutMailboxPermissionsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EntityId parameter.
+            The -PassThru parameter is deprecated, use -Select '^EntityId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMMailboxPermissionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet">
+            <summary>
+            Puts a retention policy to the specified organization.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.Description">
+            <summary>
+            <para>
+            <para>The retention policy description.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.FolderConfiguration">
+            <summary>
+            <para>
+            <para>The retention policy folder configurations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.Id">
+            <summary>
+            <para>
+            <para>The retention policy ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.Name">
+            <summary>
+            <para>
+            <para>The retention policy name.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.OrganizationId">
+            <summary>
+            <para>
+            <para>The organization ID.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.WorkMail.Model.PutRetentionPolicyResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the OrganizationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^OrganizationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.WM.WriteWMRetentionPolicyCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

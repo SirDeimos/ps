@@ -1,0 +1,833 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.Shield</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDHealthCheckCmdlet">
+            <summary>
+            Adds health-based detection to the Shield Advanced protection for a resource. Shield
+            Advanced health-based detection uses the health of your AWS resource to improve responsiveness
+            and accuracy in attack detection and mitigation. 
+            
+             
+            <para>
+            You define the health check in Route 53 and then associate it with your Shield Advanced
+            protection. For more information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced-health-check-option">Shield
+            Advanced Health-Based Detection</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS
+            WAF and AWS Shield Developer Guide</a>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDHealthCheckCmdlet.HealthCheckArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the health check to associate with the protection.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDHealthCheckCmdlet.ProtectionId">
+            <summary>
+            <para>
+            <para>The unique identifier (ID) for the <a>Protection</a> object to add the health check
+            association to. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDHealthCheckCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.AssociateHealthCheckResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDHealthCheckCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the HealthCheckArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^HealthCheckArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDHealthCheckCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDProactiveEngagementDetailCmdlet">
+            <summary>
+            Initializes proactive engagement and sets the list of contacts for the DDoS Response
+            Team (DRT) to use. You must provide at least one phone number in the emergency contact
+            list. 
+            
+             
+            <para>
+            After you have initialized proactive engagement using this call, to disable or enable
+            proactive engagement, use the calls <code>DisableProactiveEngagement</code> and <code>EnableProactiveEngagement</code>.
+            
+            </para><note><para>
+            This call defines the list of email addresses and phone numbers that the DDoS Response
+            Team (DRT) can use to contact you for escalations to the DRT and to initiate proactive
+            customer support.
+            </para><para>
+            The contacts that you provide in the request replace any contacts that were already
+            defined. If you already have contacts defined and want to use them, retrieve the list
+            using <code>DescribeEmergencyContactSettings</code> and then provide it to this call.
+            
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDProactiveEngagementDetailCmdlet.EmergencyContactList">
+            <summary>
+            <para>
+            <para>A list of email addresses and phone numbers that the DDoS Response Team (DRT) can
+            use to contact you for escalations to the DRT and to initiate proactive customer support.
+            </para><para>To enable proactive engagement, the contact list must include at least one phone number.</para><note><para>The contacts that you provide here replace any contacts that were already defined.
+            If you already have contacts defined and want to use them, retrieve the list using
+            <code>DescribeEmergencyContactSettings</code> and then provide it here. </para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDProactiveEngagementDetailCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.AssociateProactiveEngagementDetailsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.AddSHLDProactiveEngagementDetailCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.DisableSHLDProactiveEngagementCmdlet">
+            <summary>
+            Removes authorization from the DDoS Response Team (DRT) to notify contacts about escalations
+            to the DRT and to initiate proactive customer support.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.DisableSHLDProactiveEngagementCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DisableProactiveEngagementResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.DisableSHLDProactiveEngagementCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.EnableSHLDProactiveEngagementCmdlet">
+            <summary>
+            Authorizes the DDoS Response Team (DRT) to use email and phone to notify contacts
+            about escalations to the DRT and to initiate proactive customer support.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.EnableSHLDProactiveEngagementCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.EnableProactiveEngagementResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.EnableSHLDProactiveEngagementCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackCmdlet">
+            <summary>
+            Describes the details of a DDoS attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackCmdlet.AttackId">
+            <summary>
+            <para>
+            <para>The unique identifier (ID) for the attack that to be described.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Attack'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DescribeAttackResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.DescribeAttackResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AttackId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AttackId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet">
+            <summary>
+            Returns all ongoing DDoS attacks or all DDoS attacks during a specified time period.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.EndTime_FromInclusive">
+            <summary>
+            <para>
+            <para>The start time, in Unix time in seconds. For more information see <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.StartTime_FromInclusive">
+            <summary>
+            <para>
+            <para>The start time, in Unix time in seconds. For more information see <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN (Amazon Resource Name) of the resource that was attacked. If this is left
+            blank, all applicable resources for this account will be included.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.EndTime_ToExclusive">
+            <summary>
+            <para>
+            <para>The end time, in Unix time in seconds. For more information see <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.StartTime_ToExclusive">
+            <summary>
+            <para>
+            <para>The end time, in Unix time in seconds. For more information see <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#parameter-types">timestamp</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of <a>AttackSummary</a> objects to be returned. If this is left
+            blank, the first 20 results will be returned.</para><para>This is a maximum value; it is possible that AWS WAF will return the results in smaller
+            batches. That is, the number of <a>AttackSummary</a> objects returned could be less
+            than <code>MaxResults</code>, even if there are still more <a>AttackSummary</a> objects
+            yet to return. If there are more <a>AttackSummary</a> objects to return, AWS WAF will
+            always also return a <code>NextToken</code>.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The <code>ListAttacksRequest.NextMarker</code> value from a previous call to <code>ListAttacksRequest</code>.
+            Pass null if this is the first call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AttackSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.ListAttacksResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.ListAttacksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDAttackListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDDRTAccessCmdlet">
+            <summary>
+            Returns the current role and list of Amazon S3 log buckets used by the DDoS Response
+            Team (DRT) to access your AWS account while assisting with attack mitigation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDDRTAccessCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DescribeDRTAccessResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.DescribeDRTAccessResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDEmergencyContactSettingCmdlet">
+            <summary>
+            A list of email addresses and phone numbers that the DDoS Response Team (DRT) can
+            use to contact you if you have proactive engagement enabled, for escalations to the
+            DRT and to initiate proactive customer support.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDEmergencyContactSettingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'EmergencyContactList'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DescribeEmergencyContactSettingsResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.DescribeEmergencyContactSettingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionCmdlet">
+            <summary>
+            Lists the details of a <a>Protection</a> object.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionCmdlet.ProtectionId">
+            <summary>
+            <para>
+            <para>The unique identifier (ID) for the <a>Protection</a> object that is described. When
+            submitting the <code>DescribeProtection</code> request you must provide either the
+            <code>ResourceArn</code> or the <code>ProtectionID</code>, but not both.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN (Amazon Resource Name) of the AWS resource for the <a>Protection</a> object
+            that is described. When submitting the <code>DescribeProtection</code> request you
+            must provide either the <code>ResourceArn</code> or the <code>ProtectionID</code>,
+            but not both.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Protection'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DescribeProtectionResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.DescribeProtectionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProtectionId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProtectionId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionListCmdlet">
+            <summary>
+            Lists all <a>Protection</a> objects for the account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of <a>Protection</a> objects to be returned. If this is left blank
+            the first 20 results will be returned.</para><para>This is a maximum value; it is possible that AWS WAF will return the results in smaller
+            batches. That is, the number of <a>Protection</a> objects returned could be less than
+            <code>MaxResults</code>, even if there are still more <a>Protection</a> objects yet
+            to return. If there are more <a>Protection</a> objects to return, AWS WAF will always
+            also return a <code>NextToken</code>.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The <code>ListProtectionsRequest.NextToken</code> value from a previous call to <code>ListProtections</code>.
+            Pass null if this is the first call.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Protections'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.ListProtectionsResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.ListProtectionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDProtectionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDSubscriptionCmdlet">
+            <summary>
+            Provides details about the AWS Shield Advanced subscription for an account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDSubscriptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Subscription'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DescribeSubscriptionResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.DescribeSubscriptionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDSubscriptionStateCmdlet">
+            <summary>
+            Returns the <code>SubscriptionState</code>, either <code>Active</code> or <code>Inactive</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GetSHLDSubscriptionStateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'SubscriptionState'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.GetSubscriptionStateResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.GetSubscriptionStateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTLogBucketAssociationCmdlet">
+            <summary>
+            Authorizes the DDoS Response Team (DRT) to access the specified Amazon S3 bucket containing
+            your AWS WAF logs. You can associate up to 10 Amazon S3 buckets with your subscription.
+            
+             
+            <para>
+            To use the services of the DRT and make an <code>AssociateDRTLogBucket</code> request,
+            you must be subscribed to the <a href="https://aws.amazon.com/premiumsupport/business-support/">Business
+            Support plan</a> or the <a href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise
+            Support plan</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTLogBucketAssociationCmdlet.LogBucket">
+            <summary>
+            <para>
+            <para>The Amazon S3 bucket that contains your AWS WAF logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTLogBucketAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.AssociateDRTLogBucketResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTLogBucketAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LogBucket parameter.
+            The -PassThru parameter is deprecated, use -Select '^LogBucket' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTLogBucketAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTRoleAssociationCmdlet">
+            <summary>
+            Authorizes the DDoS Response Team (DRT), using the specified role, to access your
+            AWS account to assist with DDoS attack mitigation during potential attacks. This enables
+            the DRT to inspect your AWS WAF configuration and create or update AWS WAF rules and
+            web ACLs.
+            
+             
+            <para>
+            You can associate only one <code>RoleArn</code> with your subscription. If you submit
+            an <code>AssociateDRTRole</code> request for an account that already has an associated
+            role, the new <code>RoleArn</code> will replace the existing <code>RoleArn</code>.
+            
+            </para><para>
+            Prior to making the <code>AssociateDRTRole</code> request, you must attach the <a href="https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy">AWSShieldDRTAccessPolicy</a>
+            managed policy to the role you will specify in the request. For more information see
+            <a href=" https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html">Attaching
+            and Detaching IAM Policies</a>. The role must also trust the service principal <code>
+            drt.shield.amazonaws.com</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html">IAM
+            JSON Policy Elements: Principal</a>.
+            </para><para>
+            The DRT will have access only to your AWS WAF and Shield resources. By submitting
+            this request, you authorize the DRT to inspect your AWS WAF and Shield configuration
+            and create and update AWS WAF rules and web ACLs on your behalf. The DRT takes these
+            actions only if explicitly authorized by you.
+            </para><para>
+            You must have the <code>iam:PassRole</code> permission to make an <code>AssociateDRTRole</code>
+            request. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting
+            a User Permissions to Pass a Role to an AWS Service</a>. 
+            </para><para>
+            To use the services of the DRT and make an <code>AssociateDRTRole</code> request,
+            you must be subscribed to the <a href="https://aws.amazon.com/premiumsupport/business-support/">Business
+            Support plan</a> or the <a href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise
+            Support plan</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTRoleAssociationCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the role the DRT will use to access your AWS account.</para><para>Prior to making the <code>AssociateDRTRole</code> request, you must attach the <a href="https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy">AWSShieldDRTAccessPolicy</a>
+            managed policy to this role. For more information see <a href=" https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html">Attaching
+            and Detaching IAM Policies</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTRoleAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.AssociateDRTRoleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTRoleAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the RoleArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^RoleArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.GrantSHLDDRTRoleAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDProtectionCmdlet">
+            <summary>
+            Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon
+            CloudFront distribution, Elastic Load Balancing load balancer, AWS Global Accelerator
+            accelerator, Elastic IP Address, or an Amazon Route 53 hosted zone.
+            
+             
+            <para>
+            You can add protection to only a single resource with each CreateProtection request.
+            If you want to add protection to multiple resources at once, use the <a href="https://console.aws.amazon.com/waf/">AWS
+            WAF console</a>. For more information see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-ddos.html">Getting
+            Started with AWS Shield Advanced</a> and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html">Add
+            AWS Shield Advanced Protection to more AWS Resources</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDProtectionCmdlet.Name">
+            <summary>
+            <para>
+            <para>Friendly name for the <code>Protection</code> you are creating.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDProtectionCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN (Amazon Resource Name) of the resource to be protected.</para><para>The ARN should be in one of the following formats:</para><ul><li><para>For an Application Load Balancer: <code>arn:aws:elasticloadbalancing:<i>region</i>:<i>account-id</i>:loadbalancer/app/<i>load-balancer-name</i>/<i>load-balancer-id</i></code></para></li><li><para>For an Elastic Load Balancer (Classic Load Balancer): <code>arn:aws:elasticloadbalancing:<i>region</i>:<i>account-id</i>:loadbalancer/<i>load-balancer-name</i></code></para></li><li><para>For an AWS CloudFront distribution: <code>arn:aws:cloudfront::<i>account-id</i>:distribution/<i>distribution-id</i></code></para></li><li><para>For an AWS Global Accelerator accelerator: <code>arn:aws:globalaccelerator::<i>account-id</i>:accelerator/<i>accelerator-id</i></code></para></li><li><para>For Amazon Route 53: <code>arn:aws:route53:::hostedzone/<i>hosted-zone-id</i></code></para></li><li><para>For an Elastic IP address: <code>arn:aws:ec2:<i>region</i>:<i>account-id</i>:eip-allocation/<i>allocation-id</i></code></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDProtectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProtectionId'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.CreateProtectionResponse).
+            Specifying the name of a property of type Amazon.Shield.Model.CreateProtectionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDProtectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDProtectionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDSubscriptionCmdlet">
+            <summary>
+            Activates AWS Shield Advanced for an account.
+            
+             
+            <para>
+            When you initally create a subscription, your subscription is set to be automatically
+            renewed at the end of the existing subscription period. You can change this by submitting
+            an <code>UpdateSubscription</code> request. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDSubscriptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.CreateSubscriptionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.NewSHLDSubscriptionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDHealthCheckCmdlet">
+            <summary>
+            Removes health-based detection from the Shield Advanced protection for a resource.
+            Shield Advanced health-based detection uses the health of your AWS resource to improve
+            responsiveness and accuracy in attack detection and mitigation. 
+            
+             
+            <para>
+            You define the health check in Route 53 and then associate or disassociate it with
+            your Shield Advanced protection. For more information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced-health-check-option">Shield
+            Advanced Health-Based Detection</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS
+            WAF and AWS Shield Developer Guide</a>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDHealthCheckCmdlet.HealthCheckArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the health check that is associated with the protection.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDHealthCheckCmdlet.ProtectionId">
+            <summary>
+            <para>
+            <para>The unique identifier (ID) for the <a>Protection</a> object to remove the health check
+            association from. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDHealthCheckCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DisassociateHealthCheckResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDHealthCheckCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the HealthCheckArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^HealthCheckArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDHealthCheckCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDProtectionCmdlet">
+            <summary>
+            Deletes an AWS Shield Advanced <a>Protection</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDProtectionCmdlet.ProtectionId">
+            <summary>
+            <para>
+            <para>The unique identifier (ID) for the <a>Protection</a> object to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDProtectionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DeleteProtectionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDProtectionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProtectionId parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProtectionId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDProtectionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDSubscriptionCmdlet">
+            <summary>
+            Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year
+            subscription commitment. You cannot delete a subscription prior to the completion
+            of that commitment.<br/><br/>This operation is deprecated.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDSubscriptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DeleteSubscriptionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RemoveSHLDSubscriptionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTLogBucketAssociationCmdlet">
+            <summary>
+            Removes the DDoS Response Team's (DRT) access to the specified Amazon S3 bucket containing
+            your AWS WAF logs.
+            
+             
+            <para>
+            To make a <code>DisassociateDRTLogBucket</code> request, you must be subscribed to
+            the <a href="https://aws.amazon.com/premiumsupport/business-support/">Business Support
+            plan</a> or the <a href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise
+            Support plan</a>. However, if you are not subscribed to one of these support plans,
+            but had been previously and had granted the DRT access to your account, you can submit
+            a <code>DisassociateDRTLogBucket</code> request to remove this access.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTLogBucketAssociationCmdlet.LogBucket">
+            <summary>
+            <para>
+            <para>The Amazon S3 bucket that contains your AWS WAF logs.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTLogBucketAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DisassociateDRTLogBucketResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTLogBucketAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LogBucket parameter.
+            The -PassThru parameter is deprecated, use -Select '^LogBucket' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTLogBucketAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTRoleAssociationCmdlet">
+            <summary>
+            Removes the DDoS Response Team's (DRT) access to your AWS account.
+            
+             
+            <para>
+            To make a <code>DisassociateDRTRole</code> request, you must be subscribed to the
+            <a href="https://aws.amazon.com/premiumsupport/business-support/">Business Support
+            plan</a> or the <a href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise
+            Support plan</a>. However, if you are not subscribed to one of these support plans,
+            but had been previously and had granted the DRT access to your account, you can submit
+            a <code>DisassociateDRTRole</code> request to remove this access.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTRoleAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.DisassociateDRTRoleResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.RevokeSHLDDRTRoleAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDEmergencyContactSettingCmdlet">
+            <summary>
+            Updates the details of the list of email addresses and phone numbers that the DDoS
+            Response Team (DRT) can use to contact you if you have proactive engagement enabled,
+            for escalations to the DRT and to initiate proactive customer support.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDEmergencyContactSettingCmdlet.EmergencyContactList">
+            <summary>
+            <para>
+            <para>A list of email addresses and phone numbers that the DDoS Response Team (DRT) can
+            use to contact you if you have proactive engagement enabled, for escalations to the
+            DRT and to initiate proactive customer support.</para><para>If you have proactive engagement enabled, the contact list must include at least one
+            phone number.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDEmergencyContactSettingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.UpdateEmergencyContactSettingsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDEmergencyContactSettingCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the EmergencyContactList parameter.
+            The -PassThru parameter is deprecated, use -Select '^EmergencyContactList' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDEmergencyContactSettingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDSubscriptionCmdlet">
+            <summary>
+            Updates the details of an existing subscription. Only enter values for parameters
+            you want to change. Empty parameters are not updated.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDSubscriptionCmdlet.AutoRenew">
+            <summary>
+            <para>
+            <para>When you initally create a subscription, <code>AutoRenew</code> is set to <code>ENABLED</code>.
+            If <code>ENABLED</code>, the subscription will be automatically renewed at the end
+            of the existing subscription period. You can change this by submitting an <code>UpdateSubscription</code>
+            request. If the <code>UpdateSubscription</code> request does not included a value
+            for <code>AutoRenew</code>, the existing value for <code>AutoRenew</code> remains
+            unchanged.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDSubscriptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.Shield.Model.UpdateSubscriptionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDSubscriptionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AutoRenew parameter.
+            The -PassThru parameter is deprecated, use -Select '^AutoRenew' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHLD.UpdateSHLDSubscriptionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

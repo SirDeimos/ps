@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.IoTEvents</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.AddIOTEResourceTagCmdlet">
+            <summary>
+            Adds to or modifies the tags of the given resource. Tags are metadata that can be
+            used to manage a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.AddIOTEResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.AddIOTEResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The new or modified tags for the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.AddIOTEResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.AddIOTEResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.AddIOTEResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelCmdlet">
+            <summary>
+            Describes a detector model. If the <code>version</code> parameter is not specified,
+            information about the latest version is returned.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelCmdlet.DetectorModelVersion">
+            <summary>
+            <para>
+            <para>The version of the detector model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DetectorModel'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.DescribeDetectorModelResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.DescribeDetectorModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelListCmdlet">
+            <summary>
+            Lists the detector models you have created. Only the metadata associated with each
+            detector model is returned.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return at one time.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DetectorModelSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.ListDetectorModelsResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.ListDetectorModelsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet">
+            <summary>
+            Lists all the versions of a detector model. Only the metadata associated with each
+            detector model version is returned.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model whose versions are returned.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return at one time.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DetectorModelVersionSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.ListDetectorModelVersionsResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.ListDetectorModelVersionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEDetectorModelVersionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputCmdlet">
+            <summary>
+            Describes an input.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputCmdlet.InputName">
+            <summary>
+            <para>
+            <para>The name of the input.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Input'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.DescribeInputResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.DescribeInputResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InputName parameter.
+            The -PassThru parameter is deprecated, use -Select '^InputName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputListCmdlet">
+            <summary>
+            Lists the inputs you have created.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return at one time.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token for the next set of results.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InputSummaries'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.ListInputsResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.ListInputsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEInputListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTELoggingOptionCmdlet">
+            <summary>
+            Retrieves the current settings of the AWS IoT Events logging options.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTELoggingOptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LoggingOptions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.DescribeLoggingOptionsResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.DescribeLoggingOptionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEResourceTagCmdlet">
+            <summary>
+            Lists the tags (metadata) you have assigned to the resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.GetIOTEResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet">
+            <summary>
+            Creates a detector model.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.DetectorModelDescription">
+            <summary>
+            <para>
+            <para>A brief description of the detector model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.EvaluationMethod">
+            <summary>
+            <para>
+            <para>Information about the order in which events are evaluated and how actions are executed.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.DetectorModelDefinition_InitialStateName">
+            <summary>
+            <para>
+            <para>The state that is entered at the creation of each detector (instance).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.Key">
+            <summary>
+            <para>
+            <para>The input attribute key used to identify a device or system to create a detector (an
+            instance of the detector model) and then to route each input received to the appropriate
+            detector (instance). This parameter uses a JSON-path expression in the message payload
+            of each input to specify the attribute-value pair that is used to identify the device
+            associated with the input.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the role that grants permission to AWS IoT Events to perform its operations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.DetectorModelDefinition_State">
+            <summary>
+            <para>
+            <para>Information about the states of the detector.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata that can be used to manage the detector model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DetectorModelConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.CreateDetectorModelResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.CreateDetectorModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEDetectorModelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet">
+            <summary>
+            Creates an input.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.InputDefinition_Attribute">
+            <summary>
+            <para>
+            <para>The attributes from the JSON payload that are made available by the input. Inputs
+            are derived from messages sent to the AWS IoT Events system using <code>BatchPutMessage</code>.
+            Each such message contains a JSON payload, and those attributes (and their paired
+            values) specified here are available for use in the <code>condition</code> expressions
+            used by detectors that monitor this input. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.InputDescription">
+            <summary>
+            <para>
+            <para>A brief description of the input.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.InputName">
+            <summary>
+            <para>
+            <para>The name you want to give to the input.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Metadata that can be used to manage the input.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InputConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.CreateInputResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.CreateInputResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InputName parameter.
+            The -PassThru parameter is deprecated, use -Select '^InputName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.NewIOTEInputCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEDetectorModelCmdlet">
+            <summary>
+            Deletes a detector model. Any active instances of the detector model are also deleted.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEDetectorModelCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model to be deleted.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEDetectorModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.DeleteDetectorModelResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEDetectorModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEDetectorModelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEInputCmdlet">
+            <summary>
+            Deletes an input.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEInputCmdlet.InputName">
+            <summary>
+            <para>
+            <para>The name of the input to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEInputCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.DeleteInputResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEInputCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InputName parameter.
+            The -PassThru parameter is deprecated, use -Select '^InputName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEInputCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEResourceTagCmdlet">
+            <summary>
+            Removes the given tags (metadata) from the resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>A list of the keys of the tags to be removed from the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.RemoveIOTEResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet">
+            <summary>
+            Updates a detector model. Detectors (instances) spawned by the previous version are
+            deleted and then re-created as new inputs arrive.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.DetectorModelDescription">
+            <summary>
+            <para>
+            <para>A brief description of the detector model.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.DetectorModelName">
+            <summary>
+            <para>
+            <para>The name of the detector model that is updated.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.EvaluationMethod">
+            <summary>
+            <para>
+            <para>Information about the order in which events are evaluated and how actions are executed.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.DetectorModelDefinition_InitialStateName">
+            <summary>
+            <para>
+            <para>The state that is entered at the creation of each detector (instance).</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the role that grants permission to AWS IoT Events to perform its operations.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.DetectorModelDefinition_State">
+            <summary>
+            <para>
+            <para>Information about the states of the detector.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'DetectorModelConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.UpdateDetectorModelResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.UpdateDetectorModelResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the DetectorModelName parameter.
+            The -PassThru parameter is deprecated, use -Select '^DetectorModelName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEDetectorModelCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet">
+            <summary>
+            Updates an input.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet.InputDefinition_Attribute">
+            <summary>
+            <para>
+            <para>The attributes from the JSON payload that are made available by the input. Inputs
+            are derived from messages sent to the AWS IoT Events system using <code>BatchPutMessage</code>.
+            Each such message contains a JSON payload, and those attributes (and their paired
+            values) specified here are available for use in the <code>condition</code> expressions
+            used by detectors that monitor this input. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet.InputDescription">
+            <summary>
+            <para>
+            <para>A brief description of the input.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet.InputName">
+            <summary>
+            <para>
+            <para>The name of the input you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InputConfiguration'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.UpdateInputResponse).
+            Specifying the name of a property of type Amazon.IoTEvents.Model.UpdateInputResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InputName parameter.
+            The -PassThru parameter is deprecated, use -Select '^InputName' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.UpdateIOTEInputCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet">
+            <summary>
+            Sets or updates the AWS IoT Events logging options.
+            
+             
+            <para>
+            If you update the value of any <code>loggingOptions</code> field, it takes up to one
+            minute for the change to take effect. If you change the policy attached to the role
+            you specified in the <code>roleArn</code> field (for example, to correct an invalid
+            policy), it takes up to five minutes for that change to take effect.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet.LoggingOptions_DetectorDebugOption">
+            <summary>
+            <para>
+            <para>Information that identifies those detector models and their detectors (instances)
+            for which the logging level is given.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet.LoggingOptions_Enabled">
+            <summary>
+            <para>
+            <para>If TRUE, logging is enabled for AWS IoT Events.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet.LoggingOptions_Level">
+            <summary>
+            <para>
+            <para>The logging level.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet.LoggingOptions_RoleArn">
+            <summary>
+            <para>
+            <para>The ARN of the role that grants permission to AWS IoT Events to perform logging.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.IoTEvents.Model.PutLoggingOptionsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.IOTE.WriteIOTELoggingOptionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

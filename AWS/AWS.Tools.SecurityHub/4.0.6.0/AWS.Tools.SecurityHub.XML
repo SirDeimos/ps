@@ -1,0 +1,1864 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.SecurityHub</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.AddSHUBResourceTagCmdlet">
+            <summary>
+            Adds one or more tags to a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.AddSHUBResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to apply the tags to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.AddSHUBResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to add to the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.AddSHUBResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.AddSHUBResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.AddSHUBResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.ConfirmSHUBInvitationCmdlet">
+            <summary>
+            Accepts the invitation to be a member account and be monitored by the Security Hub
+            master account that the invitation was sent from.
+            
+             
+            <para>
+            When the member account accepts the invitation, permission is granted to the master
+            account to view findings generated in the member account.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ConfirmSHUBInvitationCmdlet.InvitationId">
+            <summary>
+            <para>
+            <para>The ID of the invitation sent from the Security Hub master account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ConfirmSHUBInvitationCmdlet.MasterId">
+            <summary>
+            <para>
+            <para>The account ID of the Security Hub master account that sent the invitation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ConfirmSHUBInvitationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.AcceptInvitationResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ConfirmSHUBInvitationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InvitationId parameter.
+            The -PassThru parameter is deprecated, use -Select '^InvitationId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ConfirmSHUBInvitationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.DenySHUBInvitationCmdlet">
+            <summary>
+            Declines invitations to become a member account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DenySHUBInvitationCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The list of account IDs for the accounts from which to decline the invitations to
+            Security Hub.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DenySHUBInvitationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'UnprocessedAccounts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DeclineInvitationsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DeclineInvitationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DenySHUBInvitationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DenySHUBInvitationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBImportFindingsForProductCmdlet">
+            <summary>
+            Disables the integration of the specified product with Security Hub. After the integration
+            is disabled, findings from that product are no longer sent to Security Hub.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBImportFindingsForProductCmdlet.ProductSubscriptionArn">
+            <summary>
+            <para>
+            <para>The ARN of the integrated product to disable the integration for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBImportFindingsForProductCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DisableImportFindingsForProductResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBImportFindingsForProductCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProductSubscriptionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProductSubscriptionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBImportFindingsForProductCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBSecurityHubCmdlet">
+            <summary>
+            Disables Security Hub in your account only in the current Region. To disable Security
+            Hub in all Regions, you must submit one request per Region where you have enabled
+            Security Hub.
+            
+             
+            <para>
+            When you disable Security Hub for a master account, it doesn't disable Security Hub
+            for any associated member accounts.
+            </para><para>
+            When you disable Security Hub, your existing findings and insights and any Security
+            Hub configuration settings are deleted after 90 days and cannot be recovered. Any
+            standards that were enabled are disabled, and your master and member account associations
+            are removed.
+            </para><para>
+            If you want to save your existing findings, you must export them before you disable
+            Security Hub.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBSecurityHubCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DisableSecurityHubResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBSecurityHubCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBStandardsBatchCmdlet">
+            <summary>
+            Disables the standards specified by the provided <code>StandardsSubscriptionArns</code>.
+            
+             
+            <para>
+            For more information, see <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Security
+            Standards</a> section of the <i>AWS Security Hub User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBStandardsBatchCmdlet.StandardsSubscriptionArn">
+            <summary>
+            <para>
+            <para>The ARNs of the standards subscriptions to disable.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBStandardsBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'StandardsSubscriptions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.BatchDisableStandardsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.BatchDisableStandardsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBStandardsBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the StandardsSubscriptionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^StandardsSubscriptionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.DisableSHUBStandardsBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBImportFindingsForProductCmdlet">
+            <summary>
+            Enables the integration of a partner product with Security Hub. Integrated products
+            send findings to Security Hub.
+            
+             
+            <para>
+            When you enable a product integration, a permissions policy that grants permission
+            for the product to send findings to Security Hub is applied.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBImportFindingsForProductCmdlet.ProductArn">
+            <summary>
+            <para>
+            <para>The ARN of the product to enable the integration for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBImportFindingsForProductCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProductSubscriptionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.EnableImportFindingsForProductResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.EnableImportFindingsForProductResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBImportFindingsForProductCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ProductArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ProductArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBImportFindingsForProductCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBSecurityHubCmdlet">
+            <summary>
+            Enables Security Hub for your account in the current Region or the Region you specify
+            in the request.
+            
+             
+            <para>
+            When you enable Security Hub, you grant to Security Hub the permissions necessary
+            to gather findings from other services that are integrated with Security Hub.
+            </para><para>
+            When you use the <code>EnableSecurityHub</code> operation to enable Security Hub,
+            you also automatically enable the following standards.
+            </para><ul><li><para>
+            CIS AWS Foundations
+            </para></li><li><para>
+            AWS Foundational Security Best Practices
+            </para></li></ul><para>
+            You do not enable the Payment Card Industry Data Security Standard (PCI DSS) standard.
+            
+            </para><para>
+            To not enable the automatically enabled standards, set <code>EnableDefaultStandards</code>
+            to <code>false</code>.
+            </para><para>
+            After you enable Security Hub, to enable a standard, use the <code><a>BatchEnableStandards</a></code> operation. To disable a standard, use the <code><a>BatchDisableStandards</a></code> operation.
+            </para><para>
+            To learn more, see <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html">Setting
+            Up AWS Security Hub</a> in the <i>AWS Security Hub User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBSecurityHubCmdlet.EnableDefaultStandard">
+            <summary>
+            <para>
+            <para>Whether to enable the security standards that Security Hub has designated as automatically
+            enabled. If you do not provide a value for <code>EnableDefaultStandards</code>, it
+            is set to <code>true</code>. To not enable the automatically enabled standards, set
+            <code>EnableDefaultStandards</code> to <code>false</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBSecurityHubCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to add to the hub resource when you enable Security Hub.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBSecurityHubCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.EnableSecurityHubResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBSecurityHubCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBStandardsBatchCmdlet">
+            <summary>
+            Enables the standards specified by the provided <code>StandardsArn</code>. To obtain
+            the ARN for a standard, use the <code><a>DescribeStandards</a></code> operation.
+            
+             
+            <para>
+            For more information, see the <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Security
+            Standards</a> section of the <i>AWS Security Hub User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBStandardsBatchCmdlet.StandardsSubscriptionRequest">
+            <summary>
+            <para>
+            <para>The list of standards checks to enable.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBStandardsBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'StandardsSubscriptions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.BatchEnableStandardsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.BatchEnableStandardsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBStandardsBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the StandardsSubscriptionRequest parameter.
+            The -PassThru parameter is deprecated, use -Select '^StandardsSubscriptionRequest' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.EnableSHUBStandardsBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet">
+            <summary>
+            Returns a list of the custom action targets in Security Hub in your account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet.ActionTargetArn">
+            <summary>
+            <para>
+            <para>A list of custom action target ARNs for the custom action targets to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>DescribeActionTargets</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ActionTargets'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DescribeActionTargetsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DescribeActionTargetsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ActionTargetArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ActionTargetArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBActionTargetCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledProductsForImportListCmdlet">
+            <summary>
+            Lists all findings-generating solutions (products) that you are subscribed to receive
+            findings from in Security Hub.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledProductsForImportListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledProductsForImportListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>ListEnabledProductsForImport</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledProductsForImportListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ProductSubscriptions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.ListEnabledProductsForImportResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.ListEnabledProductsForImportResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledProductsForImportListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledStandardCmdlet">
+            <summary>
+            Returns a list of the standards that are currently enabled.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledStandardCmdlet.StandardsSubscriptionArn">
+            <summary>
+            <para>
+            <para>The list of the standards subscription ARNs for the standards to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledStandardCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledStandardCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>GetEnabledStandards</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledStandardCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'StandardsSubscriptions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetEnabledStandardsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetEnabledStandardsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBEnabledStandardCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet">
+            <summary>
+            Returns a list of findings that match the specified criteria.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The finding attributes used to define a condition to filter the returned findings.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet.SortCriterion">
+            <summary>
+            <para>
+            <para>The finding attributes used to sort the list of returned findings.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of findings to return.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>GetFindings</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Findings'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetFindingsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetFindingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBFindingCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBHubCmdlet">
+            <summary>
+            Returns details about the Hub resource in your account, including the <code>HubArn</code>
+            and the time when you enabled Security Hub.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBHubCmdlet.HubArn">
+            <summary>
+            <para>
+            <para>The ARN of the Hub resource to retrieve.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBHubCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DescribeHubResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DescribeHubResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBHubCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the HubArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^HubArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet">
+            <summary>
+            Lists and describes insights for the specified insight ARNs.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet.InsightArn">
+            <summary>
+            <para>
+            <para>The ARNs of the insights to describe. If you do not provide any insight ARNs, then
+            <code>GetInsights</code> returns all of your custom insights. It does not return any
+            managed insights.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return in the response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>GetInsights</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Insights'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetInsightsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetInsightsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InsightArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InsightArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightResultCmdlet">
+            <summary>
+            Lists the results of the Security Hub insight specified by the insight ARN.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightResultCmdlet.InsightArn">
+            <summary>
+            <para>
+            <para>The ARN of the insight for which to return results.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightResultCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InsightResults'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetInsightResultsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetInsightResultsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInsightResultCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InsightArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InsightArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationListCmdlet">
+            <summary>
+            Lists all Security Hub membership invitations that were sent to the current AWS account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return in the response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>ListInvitations</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Invitations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.ListInvitationsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.ListInvitationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationsCountCmdlet">
+            <summary>
+            Returns the count of all Security Hub membership invitations that were sent to the
+            current member account, not including the currently accepted invitation.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBInvitationsCountCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InvitationsCount'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetInvitationsCountResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetInvitationsCountResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMasterAccountCmdlet">
+            <summary>
+            Provides the details for the Security Hub master account for the current member account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMasterAccountCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Master'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetMasterAccountResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetMasterAccountResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberCmdlet">
+            <summary>
+            Returns the details for the Security Hub member accounts for the specified account
+            IDs.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The list of account IDs for the Security Hub member accounts to return the details
+            for. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.GetMembersResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.GetMembersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberListCmdlet">
+            <summary>
+            Lists details about all member accounts for the current Security Hub master account.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberListCmdlet.OnlyAssociated">
+            <summary>
+            <para>
+            <para>Specifies which member accounts to include in the response based on their relationship
+            status with the master account. The default value is <code>TRUE</code>.</para><para>If <code>OnlyAssociated</code> is set to <code>TRUE</code>, the response includes
+            member accounts whose relationship status with the master is set to <code>ENABLED</code>
+            or <code>DISABLED</code>.</para><para>If <code>OnlyAssociated</code> is set to <code>FALSE</code>, the response includes
+            all existing member accounts. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of items to return in the response. </para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>ListMembers</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Members'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.ListMembersResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.ListMembersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBMemberListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBProductCmdlet">
+            <summary>
+            Returns information about the available products that you can subscribe to and integrate
+            with Security Hub in order to consolidate findings.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBProductCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of results to return.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBProductCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>DescribeProducts</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBProductCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Products'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DescribeProductsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DescribeProductsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBProductCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBResourceTagCmdlet">
+            <summary>
+            Returns a list of tags associated with a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to retrieve tags for.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardCmdlet">
+            <summary>
+            Returns a list of the available standards in Security Hub.
+            
+             
+            <para>
+            For each standard, the results include the standard ARN, the name, and a description.
+            
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of standards to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>DescribeStandards</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Standards'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DescribeStandardsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DescribeStandardsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet">
+            <summary>
+            Returns a list of security standards controls.
+            
+             
+            <para>
+            For each control, the results include information about whether it is currently enabled,
+            the severity, and a link to remediation information.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet.StandardsSubscriptionArn">
+            <summary>
+            <para>
+            <para>The ARN of a resource that represents your subscription to a supported standard.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of security standard controls to return.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>The token that is required for pagination. On your first call to the <code>DescribeStandardsControls</code>
+            operation, set the value of this parameter to <code>NULL</code>.</para><para>For subsequent calls to the operation, to continue listing data, set the value of
+            this parameter to the value returned from the previous response.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Controls'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DescribeStandardsControlsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DescribeStandardsControlsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the StandardsSubscriptionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^StandardsSubscriptionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.GetSHUBStandardsControlCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.ImportSHUBFindingsBatchCmdlet">
+            <summary>
+            Imports security findings generated from an integrated third-party product into Security
+            Hub. This action is requested by the integrated product to import its findings into
+            Security Hub.
+            
+             
+            <para>
+            The maximum allowed size for a finding is 240 Kb. An error is returned for any finding
+            larger than 240 Kb.
+            </para><para>
+            After a finding is created, <code>BatchImportFindings</code> cannot be used to update
+            the following finding fields and objects, which Security Hub customers use to manage
+            their investigation workflow.
+            </para><ul><li><para><code>Confidence</code></para></li><li><para><code>Criticality</code></para></li><li><para><code>Note</code></para></li><li><para><code>RelatedFindings</code></para></li><li><para><code>Severity</code></para></li><li><para><code>Types</code></para></li><li><para><code>UserDefinedFields</code></para></li><li><para><code>VerificationState</code></para></li><li><para><code>Workflow</code></para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ImportSHUBFindingsBatchCmdlet.Finding">
+            <summary>
+            <para>
+            <para>A list of findings to import. To successfully import a finding, it must follow the
+            <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">AWS
+            Security Finding Format</a>. Maximum of 100 findings per request.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ImportSHUBFindingsBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.BatchImportFindingsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.BatchImportFindingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ImportSHUBFindingsBatchCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Finding parameter.
+            The -PassThru parameter is deprecated, use -Select '^Finding' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.ImportSHUBFindingsBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet">
+            <summary>
+            Creates a custom action target in Security Hub.
+            
+             
+            <para>
+            You can use custom actions on findings and insights in Security Hub to trigger target
+            actions in Amazon CloudWatch Events.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet.Description">
+            <summary>
+            <para>
+            <para>The description for the custom action target.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet.Id">
+            <summary>
+            <para>
+            <para>The ID for the custom action target.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the custom action target.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ActionTargetArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.CreateActionTargetResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.CreateActionTargetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Id parameter.
+            The -PassThru parameter is deprecated, use -Select '^Id' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBActionTargetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet">
+            <summary>
+            Creates a custom insight in Security Hub. An insight is a consolidation of findings
+            that relate to a security issue that requires attention or remediation.
+            
+             
+            <para>
+            To group the related findings in the insight, use the <code>GroupByAttribute</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet.Filter">
+            <summary>
+            <para>
+            <para>One or more attributes used to filter the findings included in the insight. The insight
+            only includes findings that match the criteria defined in the filters.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet.GroupByAttribute">
+            <summary>
+            <para>
+            <para>The attribute used to group the findings for the insight. The grouping attribute identifies
+            the type of item that the insight applies to. For example, if an insight is grouped
+            by resource identifier, then the insight produces a list of resource identifiers.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the custom insight to create.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InsightArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.CreateInsightResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.CreateInsightResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the Name parameter.
+            The -PassThru parameter is deprecated, use -Select '^Name' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBInsightCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBMemberCmdlet">
+            <summary>
+            Creates a member association in Security Hub between the specified accounts and the
+            account used to make the request, which is the master account. To successfully create
+            a member, you must use this action from an account that already has Security Hub enabled.
+            To enable Security Hub, you can use the <code><a>EnableSecurityHub</a></code> operation.
+            
+             
+            <para>
+            After you use <code>CreateMembers</code> to create member account associations in
+            Security Hub, you must use the <code><a>InviteMembers</a></code> operation to invite
+            the accounts to enable Security Hub and become member accounts in Security Hub.
+            </para><para>
+            If the account owner accepts the invitation, the account becomes a member account
+            in Security Hub. A permissions policy is added that permits the master account to
+            view the findings generated in the member account. When Security Hub is enabled in
+            the invited account, findings start to be sent to both the member and master accounts.
+            </para><para>
+            To remove the association between the master and member accounts, use the <code><a>DisassociateFromMasterAccount</a></code> or <code><a>DisassociateMembers</a></code> operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBMemberCmdlet.AccountDetail">
+            <summary>
+            <para>
+            <para>The list of accounts to associate with the Security Hub master account. For each account,
+            the list includes the account ID and the email address.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBMemberCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'UnprocessedAccounts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.CreateMembersResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.CreateMembersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBMemberCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountDetail parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountDetail' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.NewSHUBMemberCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBActionTargetCmdlet">
+            <summary>
+            Deletes a custom action target from Security Hub.
+            
+             
+            <para>
+            Deleting a custom action target does not affect any findings or insights that were
+            already sent to Amazon CloudWatch Events using the custom action.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBActionTargetCmdlet.ActionTargetArn">
+            <summary>
+            <para>
+            <para>The ARN of the custom action target to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBActionTargetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'ActionTargetArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DeleteActionTargetResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DeleteActionTargetResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBActionTargetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ActionTargetArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ActionTargetArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBActionTargetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInsightCmdlet">
+            <summary>
+            Deletes the insight specified by the <code>InsightArn</code>.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInsightCmdlet.InsightArn">
+            <summary>
+            <para>
+            <para>The ARN of the insight to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInsightCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'InsightArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DeleteInsightResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DeleteInsightResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInsightCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InsightArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InsightArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInsightCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInvitationCmdlet">
+            <summary>
+            Deletes invitations received by the AWS account to become a member account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInvitationCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The list of the account IDs that sent the invitations to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInvitationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'UnprocessedAccounts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DeleteInvitationsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DeleteInvitationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInvitationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBInvitationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMasterAccountAssociationCmdlet">
+            <summary>
+            Disassociates the current Security Hub member account from the associated master account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMasterAccountAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DisassociateFromMasterAccountResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMasterAccountAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberCmdlet">
+            <summary>
+            Deletes the specified member accounts from Security Hub.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The list of account IDs for the member accounts to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'UnprocessedAccounts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DeleteMembersResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.DeleteMembersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberAssociationCmdlet">
+            <summary>
+            Disassociates the specified member accounts from the associated master account.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberAssociationCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The account IDs of the member accounts to disassociate from the master account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberAssociationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.DisassociateMembersResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberAssociationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBMemberAssociationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBResourceTagCmdlet">
+            <summary>
+            Removes one or more tags from a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The ARN of the resource to remove the tags from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBResourceTagCmdlet.TagKey">
+            <summary>
+            <para>
+            <para>The tag keys associated with the tags to remove from the resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.RemoveSHUBResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.SendSHUBMemberInvitationCmdlet">
+            <summary>
+            Invites other AWS accounts to become member accounts for the Security Hub master account
+            that the invitation is sent from.
+            
+             
+            <para>
+            Before you can use this action to invite a member, you must first use the <code><a>CreateMembers</a></code> action to create the member account in Security Hub.
+            </para><para>
+            When the account owner accepts the invitation to become a member account and enables
+            Security Hub, the master account can view the findings generated from the member account.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.SendSHUBMemberInvitationCmdlet.AccountId">
+            <summary>
+            <para>
+            <para>The list of account IDs of the AWS accounts to invite to Security Hub as members.
+            </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.SendSHUBMemberInvitationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'UnprocessedAccounts'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.InviteMembersResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.InviteMembersResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.SendSHUBMemberInvitationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AccountId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AccountId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.SendSHUBMemberInvitationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet">
+            <summary>
+            Updates the name and description of a custom action target in Security Hub.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet.ActionTargetArn">
+            <summary>
+            <para>
+            <para>The ARN of the custom action target to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet.Description">
+            <summary>
+            <para>
+            <para>The updated description for the custom action target.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet.Name">
+            <summary>
+            <para>
+            <para>The updated name of the custom action target.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.UpdateActionTargetResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ActionTargetArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ActionTargetArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBActionTargetCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet">
+            <summary>
+            <code>UpdateFindings</code> is deprecated. Instead of <code>UpdateFindings</code>,
+            use <code>BatchUpdateFindings</code>.
+            
+             
+            <para>
+            Updates the <code>Note</code> and <code>RecordState</code> of the Security Hub-aggregated
+            findings that the filter attributes specify. Any member account that can view the
+            finding also sees the update to the finding.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet.Filter">
+            <summary>
+            <para>
+            <para>A collection of attributes that specify which findings you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet.RecordState">
+            <summary>
+            <para>
+            <para>The updated record state for the finding.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet.Note_Text">
+            <summary>
+            <para>
+            <para>The updated note text.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet.Note_UpdatedBy">
+            <summary>
+            <para>
+            <para>The principal that updated the note.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.UpdateFindingsResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet">
+            <summary>
+            Used by Security Hub customers to update information about their investigation into
+            a finding. Requested by master accounts or member accounts. Master accounts can update
+            findings for their account and their member accounts. Member accounts can update findings
+            for their account.
+            
+             
+            <para>
+            Updates from <code>BatchUpdateFindings</code> do not affect the value of <code>UpdatedAt</code>
+            for a finding.
+            </para><para>
+            Master accounts can use <code>BatchUpdateFindings</code> to update the following finding
+            fields and objects.
+            </para><ul><li><para><code>Confidence</code></para></li><li><para><code>Criticality</code></para></li><li><para><code>Note</code></para></li><li><para><code>RelatedFindings</code></para></li><li><para><code>Severity</code></para></li><li><para><code>Types</code></para></li><li><para><code>UserDefinedFields</code></para></li><li><para><code>VerificationState</code></para></li><li><para><code>Workflow</code></para></li></ul><para>
+            Member accounts can only use <code>BatchUpdateFindings</code> to update the Note object.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Confidence">
+            <summary>
+            <para>
+            <para>The updated value for the finding confidence. Confidence is defined as the likelihood
+            that a finding accurately identifies the behavior or issue that it was intended to
+            identify.</para><para>Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent
+            confidence and 100 means 100 percent confidence.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Criticality">
+            <summary>
+            <para>
+            <para>The updated value for the level of importance assigned to the resources associated
+            with the findings.</para><para>A score of 0 means that the underlying resources have no criticality, and a score
+            of 100 is reserved for the most critical resources. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.FindingIdentifier">
+            <summary>
+            <para>
+            <para>The list of findings to update. <code>BatchUpdateFindings</code> can be used to update
+            up to 100 findings at a time.</para><para>For each finding, the list provides the finding identifier and the ARN of the finding
+            provider.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Severity_Label">
+            <summary>
+            <para>
+            <para>The severity value of the finding. The allowed values are the following.</para><ul><li><para><code>INFORMATIONAL</code> - No issue was found.</para></li><li><para><code>LOW</code> - The issue does not require action on its own.</para></li><li><para><code>MEDIUM</code> - The issue must be addressed but not urgently.</para></li><li><para><code>HIGH</code> - The issue must be addressed as a priority.</para></li><li><para><code>CRITICAL</code> - The issue must be remediated immediately to avoid it escalating.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Severity_Normalized">
+            <summary>
+            <para>
+            <para>The normalized severity for the finding. This attribute is to be deprecated in favor
+            of <code>Label</code>.</para><para>If you provide <code>Normalized</code> and do not provide <code>Label</code>, <code>Label</code>
+            is set automatically as follows.</para><ul><li><para>0 - <code>INFORMATIONAL</code></para></li><li><para>1–39 - <code>LOW</code></para></li><li><para>40–69 - <code>MEDIUM</code></para></li><li><para>70–89 - <code>HIGH</code></para></li><li><para>90–100 - <code>CRITICAL</code></para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Severity_Product">
+            <summary>
+            <para>
+            <para>The native severity as defined by the AWS service or integrated partner product that
+            generated the finding.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.RelatedFinding">
+            <summary>
+            <para>
+            <para>A list of findings that are related to the updated findings.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Workflow_Status">
+            <summary>
+            <para>
+            <para>The status of the investigation into the finding. The allowed values are the following.</para><ul><li><para><code>NEW</code> - The initial state of a finding, before it is reviewed.</para></li><li><para><code>NOTIFIED</code> - Indicates that you notified the resource owner about the
+            security issue. Used when the initial reviewer is not the resource owner, and needs
+            intervention from the resource owner.</para></li><li><para><code>RESOLVED</code> - The finding was reviewed and remediated and is now considered
+            resolved.</para></li><li><para><code>SUPPRESSED</code> - The finding will not be reviewed again and will not be
+            acted upon.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Note_Text">
+            <summary>
+            <para>
+            <para>The updated note text.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Type">
+            <summary>
+            <para>
+            <para>One or more finding types in the format of namespace/category/classifier that classify
+            a finding.</para><para>Valid namespace values are as follows.</para><ul><li><para>Software and Configuration Checks</para></li><li><para>TTPs</para></li><li><para>Effects</para></li><li><para>Unusual Behaviors</para></li><li><para>Sensitive Data Identifications </para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Note_UpdatedBy">
+            <summary>
+            <para>
+            <para>The principal that updated the note.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.UserDefinedField">
+            <summary>
+            <para>
+            <para>A list of name/value string pairs associated with the finding. These are custom, user-defined
+            fields added to a finding.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.VerificationState">
+            <summary>
+            <para>
+            <para>Indicates the veracity of a finding.</para><para>The available values for <code>VerificationState</code> are as follows.</para><ul><li><para><code>UNKNOWN</code> – The default disposition of a security finding</para></li><li><para><code>TRUE_POSITIVE</code> – The security finding is confirmed</para></li><li><para><code>FALSE_POSITIVE</code> – The security finding was determined to be a false alarm</para></li><li><para><code>BENIGN_POSITIVE</code> – A special case of <code>TRUE_POSITIVE</code> where
+            the finding doesn't pose any threat, is expected, or both</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.BatchUpdateFindingsResponse).
+            Specifying the name of a property of type Amazon.SecurityHub.Model.BatchUpdateFindingsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBFindingsBatchCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet">
+            <summary>
+            Updates the Security Hub insight identified by the specified insight ARN.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.Filter">
+            <summary>
+            <para>
+            <para>The updated filters that define this insight.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.GroupByAttribute">
+            <summary>
+            <para>
+            <para>The updated <code>GroupBy</code> attribute that defines this insight.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.InsightArn">
+            <summary>
+            <para>
+            <para>The ARN of the insight that you want to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.Name">
+            <summary>
+            <para>
+            <para>The updated name for the insight.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.UpdateInsightResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the InsightArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^InsightArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBInsightCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet">
+            <summary>
+            Used to control whether an individual security standard control is enabled or disabled.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet.ControlStatus">
+            <summary>
+            <para>
+            <para>The updated status of the security standard control.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet.DisabledReason">
+            <summary>
+            <para>
+            <para>A description of the reason why you are disabling a security standard control.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet.StandardsControlArn">
+            <summary>
+            <para>
+            <para>The ARN of the security standard control to enable or disable.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.SecurityHub.Model.UpdateStandardsControlResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the StandardsControlArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^StandardsControlArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.SHUB.UpdateSHUBStandardsControlCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

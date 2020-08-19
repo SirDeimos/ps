@@ -1,0 +1,1483 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.DataSync</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.AddDSYNResourceTagCmdlet">
+            <summary>
+            Applies a key-value pair to an AWS resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.AddDSYNResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource to apply the tag to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.AddDSYNResourceTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The tags to apply.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.AddDSYNResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.TagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.AddDSYNResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.AddDSYNResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentCmdlet">
+            <summary>
+            Returns metadata such as the name, the network interfaces, and the status (that is,
+            whether the agent is running or not) for an agent. To specify which agent to describe,
+            use the Amazon Resource Name (ARN) of the agent in your request.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentCmdlet.AgentArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the agent to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeAgentResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeAgentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AgentArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AgentArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentListCmdlet">
+            <summary>
+            Returns a list of agents owned by an AWS account in the AWS Region specified in the
+            request. The returned list is ordered by agent Amazon Resource Name (ARN).
+            
+             
+            <para>
+            By default, this operation returns a maximum of 100 agents. This operation supports
+            pagination that enables you to optionally reduce the number of agents returned in
+            a response.
+            </para><para>
+            If you have more agents than are returned in a response (that is, the response returns
+            only a truncated list of your agents), the response contains a marker that you can
+            specify in your next request to fetch the next page of agents.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of agents to list.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>An opaque string that indicates the position at which to begin the next list of agents.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Agents'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.ListAgentsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.ListAgentsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNAgentListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationEfsCmdlet">
+            <summary>
+            Returns metadata, such as the path information about an Amazon EFS location.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationEfsCmdlet.LocationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the EFS location to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationEfsCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeLocationEfsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeLocationEfsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationEfsCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationFsxWindowCmdlet">
+            <summary>
+            Returns metadata, such as the path information about an Amazon FSx for Windows location.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationFsxWindowCmdlet.LocationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the FSx for Windows location to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationFsxWindowCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeLocationFsxWindowsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeLocationFsxWindowsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationFsxWindowCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationListCmdlet">
+            <summary>
+            Returns a lists of source and destination locations.
+            
+             
+            <para>
+            If you have more locations than are returned in a response (that is, the response
+            returns only a truncated list of your agents), the response contains a token that
+            you can specify in your next request to fetch the next page of locations.
+            </para><br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of locations to return.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>An opaque string that indicates the position at which to begin the next list of locations.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Locations'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.ListLocationsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.ListLocationsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationNfsCmdlet">
+            <summary>
+            Returns metadata, such as the path information, about a NFS location.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationNfsCmdlet.LocationArn">
+            <summary>
+            <para>
+            <para>The Amazon resource Name (ARN) of the NFS location to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationNfsCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeLocationNfsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeLocationNfsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationNfsCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationS3Cmdlet">
+            <summary>
+            Returns metadata, such as bucket name, about an Amazon S3 bucket location.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationS3Cmdlet.LocationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationS3Cmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeLocationS3Response).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeLocationS3Response will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationS3Cmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationSmbCmdlet">
+            <summary>
+            Returns metadata, such as the path and user information about a SMB location.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationSmbCmdlet.LocationArn">
+            <summary>
+            <para>
+            <para>The Amazon resource Name (ARN) of the SMB location to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationSmbCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeLocationSmbResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeLocationSmbResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNLocationSmbCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet">
+            <summary>
+            Returns all the tags associated with a specified resources.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource whose tags to list.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of locations to return.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>An opaque string that indicates the position at which to begin the next list of locations.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.ListTagsForResourceResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.ListTagsForResourceResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNResourceTagListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskCmdlet">
+            <summary>
+            Returns metadata about a task.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskCmdlet.TaskArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the task to describe.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeTaskResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeTaskResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionCmdlet">
+            <summary>
+            Returns detailed metadata about a task that is being executed.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionCmdlet.TaskExecutionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the task that is being executed.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DescribeTaskExecutionResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.DescribeTaskExecutionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskExecutionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskExecutionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet">
+            <summary>
+            Returns a list of executed tasks.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet.TaskArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the task whose tasks you want to list.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of executed tasks to list.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>An opaque string that indicates the position at which to begin the next list of the
+            executed tasks.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TaskExecutions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.ListTaskExecutionsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.ListTaskExecutionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskExecutionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskListCmdlet">
+            <summary>
+            Returns a list of all the tasks.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>The maximum number of tasks to return.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            <para>If a value for this parameter is not specified the cmdlet will use a default value of '<b>100</b>'.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>An opaque string that indicates the position at which to begin the next list of tasks.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tasks'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.ListTasksResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.ListTasksResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.GetDSYNTaskListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet">
+            <summary>
+            Activates an AWS DataSync agent that you have deployed on your host. The activation
+            process associates your agent with your account. In the activation process, you specify
+            information such as the AWS Region that you want to activate the agent in. You activate
+            the agent in the AWS Region where your target locations (in Amazon S3 or Amazon EFS)
+            reside. Your tasks are created in this AWS Region.
+            
+             
+            <para>
+            You can activate the agent in a VPC (Virtual private Cloud) or provide the agent access
+            to a VPC endpoint so you can run tasks without going over the public Internet.
+            </para><para>
+            You can use an agent for more than one location. If a task uses multiple agents, all
+            of them need to have status AVAILABLE for the task to run. If you use multiple agents
+            for a source location, the status of all the agents must be AVAILABLE for the task
+            to run. 
+            </para><para>
+            Agents are automatically updated by AWS on a regular basis, using a mechanism that
+            ensures minimal interruption to your tasks.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.ActivationKey">
+            <summary>
+            <para>
+            <para>Your agent activation key. You can get the activation key either by sending an HTTP
+            GET request with redirects that enable you to get the agent IP address (port 80).
+            Alternatively, you can get it from the AWS DataSync console.</para><para>The redirect URL returned in the response provides you the activation key for your
+            agent in the query string parameter <code>activationKey</code>. It might also include
+            other activation-related parameters; however, these are merely defaults. The arguments
+            you pass to this API call determine the actual configuration of your agent.</para><para>For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.AgentName">
+            <summary>
+            <para>
+            <para>The name you configured for your agent. This value is a text reference that is used
+            to identify the agent in the console.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.SecurityGroupArn">
+            <summary>
+            <para>
+            <para>The ARNs of the security groups used to protect your data transfer task subnets. See
+            <a>CreateAgentRequest$SubnetArns</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.SubnetArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic
+            network interfaces for each data transfer task. The agent that runs a task must be
+            private. When you start a task that is associated with an agent created in a VPC,
+            or one that has access to an IP address in a VPC, then the task is also private. In
+            this case, DataSync creates four network interfaces for each task in your subnet.
+            For a data transfer to work, the agent must be able to route to all these four network
+            interfaces.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents the tag that you want to associate with the agent.
+            The value can be an empty string. This value helps you manage, filter, and search
+            for your agents.</para><note><para>Valid characters for key and value are letters, spaces, and numbers representable
+            in UTF-8 format, and the following special characters: + - = . _ : / @. </para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.VpcEndpointId">
+            <summary>
+            <para>
+            <para>The ID of the VPC (Virtual Private Cloud) endpoint that the agent has access to. This
+            is the client-side VPC endpoint, also called a PrivateLink. If you don't have a PrivateLink
+            VPC endpoint, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html#create-endpoint-service">Creating
+            a VPC Endpoint Service Configuration</a> in the AWS VPC User Guide.</para><para>VPC endpoint ID looks like this: <code>vpce-01234d5aff67890e1</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'AgentArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateAgentResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateAgentResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ActivationKey parameter.
+            The -PassThru parameter is deprecated, use -Select '^ActivationKey' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNAgentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet">
+            <summary>
+            Creates an endpoint for an Amazon EFS file system.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.EfsFilesystemArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the Amazon EFS file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.Ec2Config_SecurityGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Names (ARNs) of the security groups that are configured for the
+            Amazon EC2 resource.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.Subdirectory">
+            <summary>
+            <para>
+            <para>A subdirectory in the location’s path. This subdirectory in the EFS file system is
+            used to read data from the EFS source location or write data to the EFS destination.
+            By default, AWS DataSync uses the root directory.</para><note><para><code>Subdirectory</code> must be specified with forward slashes. For example <code>/path/to/folder</code>.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.Ec2Config_SubnetArn">
+            <summary>
+            <para>
+            <para>The ARN of the subnet and the security group that DataSync uses to access the target
+            EFS file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents a tag that you want to add to the resource. The
+            value can be an empty string. This value helps you manage, filter, and search for
+            your resources. We recommend that you create a name tag for your location.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LocationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateLocationEfsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateLocationEfsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationEfsCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet">
+            <summary>
+            Creates an endpoint for an Amazon FSx for Windows file system.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.Domain">
+            <summary>
+            <para>
+            <para>The name of the Windows domain that the FSx for Windows server belongs to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.FsxFilesystemArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) for the FSx for Windows file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.Password">
+            <summary>
+            <para>
+            <para>The password of the user who has the permissions to access files and folders in the
+            FSx for Windows file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.SecurityGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Names (ARNs) of the security groups that are to use to configure
+            the FSx for Windows file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.Subdirectory">
+            <summary>
+            <para>
+            <para>A subdirectory in the location’s path. This subdirectory in the Amazon FSx for Windows
+            file system is used to read data from the Amazon FSx for Windows source location or
+            write data to the FSx for Windows destination.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents a tag that you want to add to the resource. The
+            value can be an empty string. This value helps you manage, filter, and search for
+            your resources. We recommend that you create a name tag for your location.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.User">
+            <summary>
+            <para>
+            <para>The user who has the permissions to access files and folders in the FSx for Windows
+            file system.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LocationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateLocationFsxWindowsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateLocationFsxWindowsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the FsxFilesystemArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^FsxFilesystemArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationFsxWindowCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet">
+            <summary>
+            Defines a file system on a Network File System (NFS) server that can be read from
+            or written to
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.OnPremConfig_AgentArn">
+            <summary>
+            <para>
+            <para>ARNs)of the agents to use for an NFS location.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.ServerHostname">
+            <summary>
+            <para>
+            <para>The name of the NFS server. This value is the IP address or Domain Name Service (DNS)
+            name of the NFS server. An agent that is installed on-premises uses this host name
+            to mount the NFS server in a network. </para><note><para>This name must either be DNS-compliant or must be an IP version 4 (IPv4) address.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.Subdirectory">
+            <summary>
+            <para>
+            <para>The subdirectory in the NFS file system that is used to read data from the NFS source
+            location or write data to the NFS destination. The NFS path should be a path that's
+            exported by the NFS server, or a subdirectory of that path. The path should be such
+            that it can be mounted by other NFS clients in your network. </para><para>To see all the paths exported by your NFS server. run "<code>showmount -e nfs-server-name</code>"
+            from an NFS client that has access to your server. You can specify any directory that
+            appears in the results, and any subdirectory of that directory. Ensure that the NFS
+            export is accessible without Kerberos authentication. </para><para>To transfer all the data in the folder you specified, DataSync needs to have permissions
+            to read all the data. To ensure this, either configure the NFS export with <code>no_root_squash,</code>
+            or ensure that the permissions for all of the files that you want DataSync allow read
+            access for all users. Doing either enables the agent to read the files. For the agent
+            to access directories, you must additionally enable all execute access.</para><para>For information about NFS export configuration, see 18.7. The /etc/exports Configuration
+            File in the Red Hat Enterprise Linux documentation.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents the tag that you want to add to the location. The
+            value can be an empty string. We recommend using tags to name your resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.MountOptions_Version">
+            <summary>
+            <para>
+            <para>The specific NFS version that you want DataSync to use to mount your NFS share. If
+            the server refuses to use the version specified, the sync will fail. If you don't
+            specify a version, DataSync defaults to <code>AUTOMATIC</code>. That is, DataSync
+            automatically selects a version based on negotiation with the NFS server.</para><para>You can specify the following NFS versions:</para><ul><li><para><b><a href="https://tools.ietf.org/html/rfc1813">NFSv3</a></b> - stateless protocol
+            version that allows for asynchronous writes on the server.</para></li><li><para><b><a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a></b> - stateful, firewall-friendly
+            protocol version that supports delegations and pseudo filesystems.</para></li><li><para><b><a href="https://tools.ietf.org/html/rfc5661">NFSv4.1</a></b> - stateful protocol
+            version that supports sessions, directory delegations, and parallel data processing.
+            Version 4.1 also includes all features available in version 4.0.</para></li></ul>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LocationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateLocationNfsResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateLocationNfsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationNfsCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet">
+            <summary>
+            Creates an endpoint for an Amazon S3 bucket.
+            
+             
+            <para>
+            For AWS DataSync to access a destination S3 bucket, it needs an AWS Identity and Access
+            Management (IAM) role that has the required permissions. You can set up the required
+            permissions by creating an IAM policy that grants the required permissions and attaching
+            the policy to the role. An example of such a policy is shown in the examples section.
+            </para><para>
+            For more information, see https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html#create-s3-location
+            in the <i>AWS DataSync User Guide.</i></para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.S3Config_BucketAccessRoleArn">
+            <summary>
+            <para>
+            <para>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a>CreateLocationS3</a>
+            operation. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.S3BucketArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the Amazon S3 bucket.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.S3StorageClass">
+            <summary>
+            <para>
+            <para>The Amazon S3 storage class that you want to store your files in when this location
+            is used as a task destination. For more information about S3 storage classes, see
+            <a href="https://aws.amazon.com/s3/storage-classes/">Amazon S3 Storage Classes</a>
+            in the <i>Amazon Simple Storage Service Developer Guide</i>. Some storage classes
+            have behaviors that can affect your S3 storage cost. For detailed information, see
+            <a>using-storage-classes</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.Subdirectory">
+            <summary>
+            <para>
+            <para>A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to
+            read data from the S3 source location or write data to the S3 destination.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents the tag that you want to add to the location. The
+            value can be an empty string. We recommend using tags to name your resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LocationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateLocationS3Response).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateLocationS3Response will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationS3Cmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet">
+            <summary>
+            Defines a file system on an Server Message Block (SMB) server that can be read from
+            or written to.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.AgentArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB)
+            location. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.Domain">
+            <summary>
+            <para>
+            <para>The name of the Windows domain that the SMB server belongs to.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.Password">
+            <summary>
+            <para>
+            <para>The password of the user who can mount the share, has the permissions to access files
+            and folders in the SMB share.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.ServerHostname">
+            <summary>
+            <para>
+            <para>The name of the SMB server. This value is the IP address or Domain Name Service (DNS)
+            name of the SMB server. An agent that is installed on-premises uses this hostname
+            to mount the SMB server in a network.</para><note><para>This name must either be DNS-compliant or must be an IP version 4 (IPv4) address.</para></note>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.Subdirectory">
+            <summary>
+            <para>
+            <para>The subdirectory in the SMB file system that is used to read data from the SMB source
+            location or write data to the SMB destination. The SMB path should be a path that's
+            exported by the SMB server, or a subdirectory of that path. The path should be such
+            that it can be mounted by other SMB clients in your network.</para><note><para><code>Subdirectory</code> must be specified with forward slashes. For example <code>/path/to/folder</code>.</para></note><para>To transfer all the data in the folder you specified, DataSync needs to have permissions
+            to mount the SMB share, as well as to access all the data in that share. To ensure
+            this, either ensure that the user/password specified belongs to the user who can mount
+            the share, and who has the appropriate permissions for all of the files and directories
+            that you want DataSync to access, or use credentials of a member of the Backup Operators
+            group to mount the share. Doing either enables the agent to access the data. For the
+            agent to access directories, you must additionally enable all execute access.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents the tag that you want to add to the location. The
+            value can be an empty string. We recommend using tags to name your resources.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.User">
+            <summary>
+            <para>
+            <para>The user who can mount the share, has the permissions to access files and folders
+            in the SMB share.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.MountOptions_Version">
+            <summary>
+            <para>
+            <para>The specific SMB version that you want DataSync to use to mount your SMB share. If
+            you don't specify a version, DataSync defaults to <code>AUTOMATIC</code>. That is,
+            DataSync automatically selects a version based on negotiation with the SMB server.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'LocationArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateLocationSmbResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateLocationSmbResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ServerHostname parameter.
+            The -PassThru parameter is deprecated, use -Select '^ServerHostname' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNLocationSmbCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet">
+            <summary>
+            Creates a task. A task is a set of two locations (source and destination) and a set
+            of Options that you use to control the behavior of a task. If you don't specify Options
+            when you create a task, AWS DataSync populates them with service defaults.
+            
+             
+            <para>
+            When you create a task, it first enters the CREATING state. During CREATING AWS DataSync
+            attempts to mount the on-premises Network File System (NFS) location. The task transitions
+            to the AVAILABLE state without waiting for the AWS location to become mounted. If
+            required, AWS DataSync mounts the AWS location before each task execution.
+            </para><para>
+            If an agent that is associated with a source (NFS) location goes offline, the task
+            transitions to the UNAVAILABLE status. If the status of the task remains in the CREATING
+            status for more than a few minutes, it means that your agent might be having trouble
+            mounting the source NFS file system. Check the task's ErrorCode and ErrorDetail. Mount
+            issues are often caused by either a misconfigured firewall or a mistyped NFS server
+            host name.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.CloudWatchLogGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to
+            monitor and log events in the task. </para><para>For more information on these groups, see Working with Log Groups and Log Streams
+            in the <i>Amazon CloudWatch User Guide.</i></para><para>For more information about how to use CloudWatch Logs with DataSync, see Monitoring
+            Your Task in the <i>AWS DataSync User Guide.</i></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.DestinationLocationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of an AWS storage resource's location. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Exclude">
+            <summary>
+            <para>
+            <para>A list of filter rules that determines which files to exclude from a task. The list
+            should contain a single filter string that consists of the patterns to exclude. The
+            patterns are delimited by "|" (that is, a pipe), for example, <code>"/folder1|/folder2"</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of a task. This value is a text reference that is used to identify the task
+            in the console. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Option">
+            <summary>
+            <para>
+            <para>The set of configuration options that control the behavior of a single execution of
+            the task that occurs when you call <code>StartTaskExecution</code>. You can configure
+            these options to preserve metadata such as user ID (UID) and group ID (GID), file
+            permissions, data integrity verification, and so on.</para><para>For each individual task execution, you can override these options by specifying the
+            <code>OverrideOptions</code> before starting a the task execution. For more information,
+            see the operation. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Schedule_ScheduleExpression">
+            <summary>
+            <para>
+            <para>A cron expression that specifies when AWS DataSync initiates a scheduled transfer
+            from a source to a destination location. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.SourceLocationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the source location for the task.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Tag">
+            <summary>
+            <para>
+            <para>The key-value pair that represents the tag that you want to add to the resource. The
+            value can be an empty string. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TaskArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CreateTaskResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.CreateTaskResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the SourceLocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^SourceLocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.NewDSYNTaskCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNAgentCmdlet">
+            <summary>
+            Deletes an agent. To specify which agent to delete, use the Amazon Resource Name (ARN)
+            of the agent in your request. The operation disassociates the agent from your AWS
+            account. However, it doesn't delete the agent virtual machine (VM) from your on-premises
+            environment.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNAgentCmdlet.AgentArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the agent to delete. Use the <code>ListAgents</code>
+            operation to return a list of agents for your account and AWS Region.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNAgentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DeleteAgentResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNAgentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AgentArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AgentArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNAgentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNLocationCmdlet">
+            <summary>
+            Deletes the configuration of a location used by AWS DataSync.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNLocationCmdlet.LocationArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the location to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNLocationCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DeleteLocationResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNLocationCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the LocationArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^LocationArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNLocationCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNResourceTagCmdlet">
+            <summary>
+            Removes a tag from an AWS resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNResourceTagCmdlet.Key">
+            <summary>
+            <para>
+            <para>The keys in the key-value pair in the tag to remove.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNResourceTagCmdlet.ResourceArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource to remove the tag from.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNResourceTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.UntagResourceResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNResourceTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the ResourceArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^ResourceArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNResourceTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNTaskCmdlet">
+            <summary>
+            Deletes a task.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNTaskCmdlet.TaskArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the task to delete.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.DeleteTaskResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNTaskCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.RemoveDSYNTaskCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet">
+            <summary>
+            Starts a specific invocation of a task. A <code>TaskExecution</code> value represents
+            an individual run of a task. Each task can have at most one <code>TaskExecution</code>
+            at a time.
+            
+             
+            <para><code>TaskExecution</code> has the following transition phases: INITIALIZING | PREPARING
+            | TRANSFERRING | VERIFYING | SUCCESS/FAILURE. 
+            </para><para>
+            For detailed information, see the Task Execution section in the Components and Terminology
+            topic in the <i>AWS DataSync User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet.Include">
+            <summary>
+            <para>
+            <para>A list of filter rules that determines which files to include when running a task.
+            The pattern should contain a single filter string that consists of the patterns to
+            include. The patterns are delimited by "|" (that is, a pipe). For example: <code>"/folder1|/folder2"</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet.OverrideOption">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet.TaskArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the task to start.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'TaskExecutionArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.StartTaskExecutionResponse).
+            Specifying the name of a property of type Amazon.DataSync.Model.StartTaskExecutionResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StartDSYNTaskExecutionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.StopDSYNTaskExecutionCmdlet">
+            <summary>
+            Cancels execution of a task. 
+            
+             
+            <para>
+            When you cancel a task execution, the transfer of some files are abruptly interrupted.
+            The contents of files that are transferred to the destination might be incomplete
+            or inconsistent with the source files. However, if you start a new task execution
+            on the same task and you allow the task execution to complete, file content on the
+            destination is complete and consistent. This applies to other unexpected failures
+            that interrupt a task execution. In all of these cases, AWS DataSync successfully
+            complete the transfer when you start the next task execution.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StopDSYNTaskExecutionCmdlet.TaskExecutionArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the task execution to cancel.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StopDSYNTaskExecutionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.CancelTaskExecutionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StopDSYNTaskExecutionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskExecutionArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskExecutionArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.StopDSYNTaskExecutionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNAgentCmdlet">
+            <summary>
+            Updates the name of an agent.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNAgentCmdlet.AgentArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the agent to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNAgentCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name that you want to use to configure the agent.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNAgentCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.UpdateAgentResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNAgentCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AgentArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^AgentArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNAgentCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet">
+            <summary>
+            Updates the metadata associated with a task.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.CloudWatchLogGroupArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.Exclude">
+            <summary>
+            <para>
+            <para>A list of filter rules that determines which files to exclude from a task. The list
+            should contain a single filter string that consists of the patterns to exclude. The
+            patterns are delimited by "|" (that is, a pipe), for example: <code>"/folder1|/folder2"</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.Name">
+            <summary>
+            <para>
+            <para>The name of the task to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.Option">
+            <summary>
+            <para>
+            The service has not provided documentation for this parameter; please refer to the service's API reference documentation for the latest available information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.Schedule_ScheduleExpression">
+            <summary>
+            <para>
+            <para>A cron expression that specifies when AWS DataSync initiates a scheduled transfer
+            from a source to a destination location. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.TaskArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the resource name of the task to update.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.DataSync.Model.UpdateTaskResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the TaskArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^TaskArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.DSYN.UpdateDSYNTaskCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>

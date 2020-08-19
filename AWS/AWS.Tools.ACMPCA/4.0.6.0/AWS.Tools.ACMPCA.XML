@@ -1,0 +1,1102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWS.Tools.ACMPCA</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.AddPCACertificateAuthorityTagCmdlet">
+            <summary>
+            Adds one or more tags to your private CA. Tags are labels that you can use to identify
+            and organize your AWS resources. Each tag consists of a key and an optional value.
+            You specify the private CA on input by its Amazon Resource Name (ARN). You specify
+            the tag by using a key-value pair. You can apply a tag to just one private CA if you
+            want to identify a specific characteristic of that CA, or you can apply the same tag
+            to multiple private CAs if you want to filter for a common relationship among those
+            CAs. To remove one or more tags, use the <a>UntagCertificateAuthority</a> action.
+            Call the <a>ListTags</a> action to see what tags are associated with your CA.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.AddPCACertificateAuthorityTagCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.AddPCACertificateAuthorityTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>List of tags to be associated with the CA.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.AddPCACertificateAuthorityTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.TagCertificateAuthorityResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.AddPCACertificateAuthorityTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.AddPCACertificateAuthorityTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateCmdlet">
+            <summary>
+            Retrieves a certificate from your private CA. The ARN of the certificate is returned
+            when you call the <a>IssueCertificate</a> action. You must specify both the ARN of
+            your private CA and the ARN of the issued certificate when calling the <b>GetCertificate</b>
+            action. You can retrieve the certificate if it is in the <b>ISSUED</b> state. You
+            can call the <a>CreateCertificateAuthorityAuditReport</a> action to create a report
+            that contains information about all of the certificates issued and revoked by your
+            private CA.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateCmdlet.CertificateArn">
+            <summary>
+            <para>
+            <para>The ARN of the issued certificate. The ARN contains the certificate serial number
+            and must be in the following form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i>/certificate/<i>286535153982981100925020015808220737245</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.GetCertificateResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.GetCertificateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCmdlet">
+            <summary>
+            Lists information about your private certificate authority (CA). You specify the private
+            CA on input by its ARN (Amazon Resource Name). The output contains the status of your
+            CA. This can be any of the following: 
+            
+             <ul><li><para><code>CREATING</code> - ACM Private CA is creating your private certificate authority.
+            </para></li><li><para><code>PENDING_CERTIFICATE</code> - The certificate is pending. You must use your
+            ACM Private CA-hosted or on-premises root or subordinate CA to sign your private CA
+            CSR and then import it into PCA. 
+            </para></li><li><para><code>ACTIVE</code> - Your private CA is active.
+            </para></li><li><para><code>DISABLED</code> - Your private CA has been disabled.
+            </para></li><li><para><code>EXPIRED</code> - Your private CA certificate has expired.
+            </para></li><li><para><code>FAILED</code> - Your private CA has failed. Your CA can fail because of problems
+            such a network outage or backend AWS failure or other errors. A failed CA can never
+            return to the pending state. You must create a new CA. 
+            </para></li><li><para><code>DELETED</code> - Your private CA is within the restoration period, after which
+            it is permanently deleted. The length of time remaining in the CA's restoration period
+            is also included in this action's output.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CertificateAuthority'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.DescribeCertificateAuthorityResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.DescribeCertificateAuthorityResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityAuditReportCmdlet">
+            <summary>
+            Lists information about a specific audit report created by calling the <a>CreateCertificateAuthorityAuditReport</a>
+            action. Audit information is created every time the certificate authority (CA) private
+            key is used. The private key is used when you call the <a>IssueCertificate</a> action
+            or the <a>RevokeCertificate</a> action.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityAuditReportCmdlet.AuditReportId">
+            <summary>
+            <para>
+            <para>The report ID returned by calling the <a>CreateCertificateAuthorityAuditReport</a>
+            action.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityAuditReportCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the private CA. This must be of the form:</para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityAuditReportCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.DescribeCertificateAuthorityAuditReportResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.DescribeCertificateAuthorityAuditReportResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityAuditReportCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the AuditReportId parameter.
+            The -PassThru parameter is deprecated, use -Select '^AuditReportId' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCertificateCmdlet">
+            <summary>
+            Retrieves the certificate and certificate chain for your private certificate authority
+            (CA). Both the certificate and the chain are base64 PEM-encoded. The chain does not
+            include the CA certificate. Each certificate in the chain signs the one before it.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCertificateCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of your private CA. This is of the form:</para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCertificateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.GetCertificateAuthorityCertificateResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.GetCertificateAuthorityCertificateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCertificateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCsrCmdlet">
+            <summary>
+            Retrieves the certificate signing request (CSR) for your private certificate authority
+            (CA). The CSR is created when you call the <a>CreateCertificateAuthority</a> action.
+            Sign the CSR with your ACM Private CA-hosted or on-premises root or subordinate CA.
+            Then import the signed certificate back into ACM Private CA by calling the <a>ImportCertificateAuthorityCertificate</a>
+            action. The CSR is returned as a base64 PEM-encoded string.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCsrCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called the <a>CreateCertificateAuthority</a>
+            action. This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCsrCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Csr'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.GetCertificateAuthorityCsrResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.GetCertificateAuthorityCsrResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityCsrCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityListCmdlet">
+            <summary>
+            Lists the private certificate authorities that you created by using the <a>CreateCertificateAuthority</a>
+            action.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Use this parameter when paginating results to specify the maximum number of items
+            to return in the response on each page. If additional items exist beyond the number
+            you specify, the <code>NextToken</code> element is sent in the response. Use this
+            <code>NextToken</code> value in a subsequent request to retrieve additional items.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Use this parameter when paginating results in a subsequent request after you receive
+            a response with truncated results. Set it to the value of the <code>NextToken</code>
+            parameter from the response you just received.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CertificateAuthorities'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.ListCertificateAuthoritiesResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.ListCertificateAuthoritiesResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet">
+            <summary>
+            Lists the tags, if any, that are associated with your private CA. Tags are labels
+            that you can use to identify and organize your CAs. Each tag consists of a key and
+            an optional value. Call the <a>TagCertificateAuthority</a> action to add one or more
+            tags to your CA. Call the <a>UntagCertificateAuthority</a> action to remove tags.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called the <a>CreateCertificateAuthority</a>
+            action. This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>Use this parameter when paginating results to specify the maximum number of items
+            to return in the response. If additional items exist beyond the number you specify,
+            the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value
+            in a subsequent request to retrieve additional items.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>Use this parameter when paginating results in a subsequent request after you receive
+            a response with truncated results. Set it to the value of <b>NextToken</b> from the
+            response you just received.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Tags'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.ListTagsResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.ListTagsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCACertificateAuthorityTagListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet">
+            <summary>
+            Lists all the permissions, if any, that have been assigned by a private CA. Permissions
+            can be granted with the <a>CreatePermission</a> action and revoked with the <a>DeletePermission</a>
+            action.<br/><br/>This cmdlet automatically pages all available results to the pipeline - parameters related to iteration are only needed if you want to manually control the paginated output. To disable autopagination, use -NoAutoIteration.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN
+            by calling the <a>ListCertificateAuthorities</a> action. This must be of the form:
+            <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code>
+            You can get a private CA's ARN by running the <a>ListCertificateAuthorities</a> action.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet.MaxResult">
+            <summary>
+            <para>
+            <para>When paginating results, use this parameter to specify the maximum number of items
+            to return in the response. If additional items exist beyond the number you specify,
+            the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value
+            in a subsequent request to retrieve additional items.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> In AWSPowerShell and AWSPowerShell.NetCore this parameter is used to limit the total number of items returned by the cmdlet.
+            <br/>In AWS.Tools this parameter is simply passed to the service to specify how many items should be returned by each service call.
+            <br/>Pipe the output of this cmdlet into Select-Object -First to terminate retrieving data pages early and control the number of items returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet.NextToken">
+            <summary>
+            <para>
+            <para>When paginating results, use this parameter in a subsequent request after you receive
+            a response with truncated results. Set it to the value of <b>NextToken</b> from the
+            response you just received.</para>
+            </para>
+            <para>
+            <br/><b>Note:</b> This parameter is only used if you are manually controlling output pagination of the service API call.
+            <br/>In order to manually control output pagination, use '-NextToken $null' for the first call and '-NextToken $AWSHistory.LastServiceResponse.NextToken' for subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'Permissions'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.ListPermissionsResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.ListPermissionsResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.GetPCAPermissionListCmdlet.NoAutoIteration">
+            <summary>
+            By default the cmdlet will auto-iterate and retrieve all results to the pipeline by performing multiple
+            service calls. If set, the cmdlet will retrieve only the next 'page' of results using the value of NextToken
+            as the start point.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet">
+            <summary>
+            Imports a signed private CA certificate into ACM Private CA. This action is used when
+            you are using a chain of trust whose root is located outside ACM Private CA. Before
+            you can call this action, the following preparations must in place:
+            
+             <ol><li><para>
+            In ACM Private CA, call the <a>CreateCertificateAuthority</a> action to create the
+            private CA that that you plan to back with the imported certificate.
+            </para></li><li><para>
+            Call the <a>GetCertificateAuthorityCsr</a> action to generate a certificate signing
+            request (CSR).
+            </para></li><li><para>
+            Sign the CSR using a root or intermediate CA hosted either by an on-premises PKI hierarchy
+            or a commercial CA..
+            </para></li><li><para>
+            Create a certificate chain and copy the signed certificate and the certificate chain
+            to your working directory.
+            </para></li></ol><para>
+            The following requirements apply when you import a CA certificate.
+            </para><ul><li><para>
+            You cannot import a non-self-signed certificate for use as a root CA.
+            </para></li><li><para>
+            You cannot import a self-signed certificate for use as a subordinate CA.
+            </para></li><li><para>
+            Your certificate chain must not include the private CA certificate that you are importing.
+            </para></li><li><para>
+            Your ACM Private CA-hosted or on-premises CA certificate must be the last certificate
+            in your chain. The subordinate certificate, if any, that your root CA signed must
+            be next to last. The subordinate certificate signed by the preceding subordinate CA
+            must come next, and so on until your chain is built. 
+            </para></li><li><para>
+            The chain must be PEM-encoded.
+            </para></li></ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet.Certificate">
+            <summary>
+            <para>
+            <para>The PEM-encoded certificate for a private CA. This may be a self-signed certificate
+            in the case of a root CA, or it may be signed by another CA that you control.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet.CertificateChain">
+            <summary>
+            <para>
+            <para>A PEM-encoded file that contains all of your certificates, other than the certificate
+            you're importing, chaining up to your root CA. Your ACM Private CA-hosted or on-premises
+            root certificate is the last in the chain, and each certificate in the chain signs
+            the one preceding. </para><para>This parameter must be supplied when you import a subordinate CA. When you import
+            a root CA, there is no chain.</para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.ImportCertificateAuthorityCertificateResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.ImportPCACertificateAuthorityCertificateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet">
+            <summary>
+            Uses your private certificate authority (CA) to issue a client certificate. This action
+            returns the Amazon Resource Name (ARN) of the certificate. You can retrieve the certificate
+            by calling the <a>GetCertificate</a> action and specifying the ARN. 
+            
+             <note><para>
+            You cannot use the ACM <b>ListCertificateAuthorities</b> action to retrieve the ARNs
+            of the certificates that you issue by using ACM Private CA.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must be of the form:</para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.Csr">
+            <summary>
+            <para>
+            <para>The certificate signing request (CSR) for the certificate you want to issue. You can
+            use the following OpenSSL command to create the CSR and a 2048 bit RSA private key.
+            </para><para><code>openssl req -new -newkey rsa:2048 -days 365 -keyout private/test_cert_priv_key.pem
+            -out csr/test_cert_.csr</code></para><para>If you have a configuration file, you can use the following OpenSSL command. The <code>usr_cert</code>
+            block in the configuration file contains your X509 version 3 extensions. </para><para><code>openssl req -new -config openssl_rsa.cnf -extensions usr_cert -newkey rsa:2048
+            -days -365 -keyout private/test_cert_priv_key.pem -out csr/test_cert_.csr</code></para>
+            </para>
+            <para>The cmdlet will automatically convert the supplied parameter of type string, string[], System.IO.FileInfo or System.IO.Stream to byte[] before supplying it to the service.</para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.IdempotencyToken">
+            <summary>
+            <para>
+            <para>Custom string that can be used to distinguish between calls to the <b>IssueCertificate</b>
+            action. Idempotency tokens time out after one hour. Therefore, if you call <b>IssueCertificate</b>
+            multiple times with the same idempotency token within 5 minutes, ACM Private CA recognizes
+            that you are requesting only one certificate and will issue only one. If you change
+            the idempotency token for each call, PCA recognizes that you are requesting multiple
+            certificates.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.SigningAlgorithm">
+            <summary>
+            <para>
+            <para>The name of the algorithm that will be used to sign the certificate to be issued.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.TemplateArn">
+            <summary>
+            <para>
+            <para>Specifies a custom configuration template to use when issuing a certificate. If this
+            parameter is not provided, ACM Private CA defaults to the <code>EndEntityCertificate/V1</code>
+            template.</para><para>The following service-owned <code>TemplateArn</code> values are supported by ACM Private
+            CA: </para><ul><li><para>arn:aws:acm-pca:::template/EndEntityCertificate/V1</para></li><li><para>arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen0/V1</para></li><li><para>arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen1/V1</para></li><li><para>arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1</para></li><li><para>arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1</para></li><li><para>arn:aws:acm-pca:::template/RootCACertificate/V1</para></li></ul><para>For more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html">Using
+            Templates</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.Validity">
+            <summary>
+            <para>
+            <para>The type of the validity period.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CertificateArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.IssueCertificateResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.IssueCertificateResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet">
+            <summary>
+            Creates a root or subordinate private certificate authority (CA). You must specify
+            the CA configuration, the certificate revocation list (CRL) configuration, the CA
+            type, and an optional idempotency token to avoid accidental creation of multiple CAs.
+            The CA configuration specifies the name of the algorithm and key size to be used to
+            create the CA private key, the type of signing algorithm that the CA uses, and X.500
+            subject information. The CRL configuration specifies the CRL expiration period in
+            days (the validity period of the CRL), the Amazon S3 bucket that will contain the
+            CRL, and a CNAME alias for the S3 bucket that is included in certificates issued by
+            the CA. If successful, this action returns the Amazon Resource Name (ARN) of the CA.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.CertificateAuthorityConfiguration">
+            <summary>
+            <para>
+            <para>Name and bit size of the private key algorithm, the name of the signing algorithm,
+            and X.500 certificate subject information.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.CertificateAuthorityType">
+            <summary>
+            <para>
+            <para>The type of the certificate authority.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.IdempotencyToken">
+            <summary>
+            <para>
+            <para>Alphanumeric string that can be used to distinguish between calls to <b>CreateCertificateAuthority</b>.
+            Idempotency tokens time out after five minutes. Therefore, if you call <b>CreateCertificateAuthority</b>
+            multiple times with the same idempotency token within a five minute period, ACM Private
+            CA recognizes that you are requesting only one certificate. As a result, ACM Private
+            CA issues only one. If you change the idempotency token for each call, however, ACM
+            Private CA recognizes that you are requesting multiple certificates.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.RevocationConfiguration">
+            <summary>
+            <para>
+            <para>Contains a Boolean value that you can use to enable a certification revocation list
+            (CRL) for the CA, the name of the S3 bucket to which ACM Private CA will write the
+            CRL, and an optional CNAME alias that you can use to hide the name of your bucket
+            in the <b>CRL Distribution Points</b> extension of your CA certificate. For more information,
+            see the <a>CrlConfiguration</a> structure. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.Tag">
+            <summary>
+            <para>
+            <para>Key-value pairs that will be attached to the new private CA. You can associate up
+            to 50 tags with a private CA. For information using tags with </para><para>IAM to manage permissions, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html">Controlling
+            Access Using IAM Tags</a>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is 'CertificateAuthorityArn'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.CreateCertificateAuthorityResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.CreateCertificateAuthorityResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet">
+            <summary>
+            Creates an audit report that lists every time that your CA private key is used. The
+            report is saved in the Amazon S3 bucket that you specify on input. The <a>IssueCertificate</a>
+            and <a>RevokeCertificate</a> actions use the private key.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet.AuditReportResponseFormat">
+            <summary>
+            <para>
+            <para>The format in which to create the report. This can be either <b>JSON</b> or <b>CSV</b>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the CA to be audited. This is of the form:</para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet.S3BucketName">
+            <summary>
+            <para>
+            <para>The name of the S3 bucket that will contain the audit report.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The default value is '*'.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.CreateCertificateAuthorityAuditReportResponse).
+            Specifying the name of a property of type Amazon.ACMPCA.Model.CreateCertificateAuthorityAuditReportResponse will result in that property being returned.
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCACertificateAuthorityAuditReportCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet">
+            <summary>
+            Assigns permissions from a private CA to a designated AWS service. Services are specified
+            by their service principals and can be given permission to create and retrieve certificates
+            on a private CA. Services can also be given permission to list the active permissions
+            that the private CA has granted. For ACM to automatically renew your private CA's
+            certificates, you must assign all possible permissions from the CA to the ACM service
+            principal.
+            
+             
+            <para>
+            At this time, you can only assign permissions to ACM (<code>acm.amazonaws.com</code>).
+            Permissions can be revoked with the <a>DeletePermission</a> action and listed with
+            the <a>ListPermissions</a> action.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.Action">
+            <summary>
+            <para>
+            <para>The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
+            <code>GetCertificate</code>, and <code>ListPermissions</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) of the CA that grants the permissions. You can find
+            the ARN by calling the <a>ListCertificateAuthorities</a> action. This must have the
+            following form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.Principal">
+            <summary>
+            <para>
+            <para>The AWS service or identity that receives the permission. At this time, the only valid
+            principal is <code>acm.amazonaws.com</code>.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.SourceAccount">
+            <summary>
+            <para>
+            <para>The ID of the calling account.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.CreatePermissionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.NewPCAPermissionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityCmdlet">
+            <summary>
+            Deletes a private certificate authority (CA). You must provide the Amazon Resource
+            Name (ARN) of the private CA that you want to delete. You can find the ARN by calling
+            the <a>ListCertificateAuthorities</a> action. 
+            
+             <note><para>
+            Deleting a CA will invalidate other CAs and certificates below it in your CA hierarchy.
+            </para></note><para>
+            Before you can delete a CA that you have created and activated, you must disable it.
+            To do this, call the <a>UpdateCertificateAuthority</a> action and set the <b>CertificateAuthorityStatus</b>
+            parameter to <code>DISABLED</code>. 
+            </para><para>
+            Additionally, you can delete a CA if you are waiting for it to be created (that is,
+            the status of the CA is <code>CREATING</code>). You can also delete it if the CA has
+            been created but you haven't yet imported the signed certificate into ACM Private
+            CA (that is, the status of the CA is <code>PENDING_CERTIFICATE</code>). 
+            </para><para>
+            When you successfully call <a>DeleteCertificateAuthority</a>, the CA's status changes
+            to <code>DELETED</code>. However, the CA won't be permanently deleted until the restoration
+            period has passed. By default, if you do not set the <code>PermanentDeletionTimeInDays</code>
+            parameter, the CA remains restorable for 30 days. You can set the parameter from 7
+            to 30 days. The <a>DescribeCertificateAuthority</a> action returns the time remaining
+            in the restoration window of a private CA in the <code>DELETED</code> state. To restore
+            an eligible CA, call the <a>RestoreCertificateAuthority</a> action.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must have the following form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityCmdlet.PermanentDeletionTimeInDay">
+            <summary>
+            <para>
+            <para>The number of days to make a CA restorable after it has been deleted. This can be
+            anywhere from 7 to 30 days, with 30 being the default.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.DeleteCertificateAuthorityResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityTagCmdlet">
+            <summary>
+            Remove one or more tags from your private CA. A tag consists of a key-value pair.
+            If you do not specify the value portion of the tag when calling this action, the tag
+            will be removed regardless of value. If you specify a value, the tag is removed only
+            if it is associated with the specified value. To add tags to a private CA, use the
+            <a>TagCertificateAuthority</a>. Call the <a>ListTags</a> action to see what tags are
+            associated with your CA.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityTagCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called <a>CreateCertificateAuthority</a>.
+            This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityTagCmdlet.Tag">
+            <summary>
+            <para>
+            <para>List of tags to be removed from the CA.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityTagCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.UntagCertificateAuthorityResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityTagCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCACertificateAuthorityTagCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet">
+            <summary>
+            Revokes permissions that a private CA assigned to a designated AWS service. Permissions
+            can be created with the <a>CreatePermission</a> action and listed with the <a>ListPermissions</a>
+            action.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Number (ARN) of the private CA that issued the permissions. You
+            can find the CA's ARN by calling the <a>ListCertificateAuthorities</a> action. This
+            must have the following form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet.Principal">
+            <summary>
+            <para>
+            <para>The AWS service or identity that will have its CA permissions revoked. At this time,
+            the only valid service principal is <code>acm.amazonaws.com</code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet.SourceAccount">
+            <summary>
+            <para>
+            <para>The AWS account that calls this action.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.DeletePermissionResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RemovePCAPermissionCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.RestorePCACertificateAuthorityCmdlet">
+            <summary>
+            Restores a certificate authority (CA) that is in the <code>DELETED</code> state. You
+            can restore a CA during the period that you defined in the <b>PermanentDeletionTimeInDays</b>
+            parameter of the <a>DeleteCertificateAuthority</a> action. Currently, you can specify
+            7 to 30 days. If you did not specify a <b>PermanentDeletionTimeInDays</b> value, by
+            default you can restore the CA at any time in a 30 day period. You can check the time
+            remaining in the restoration period of a private CA in the <code>DELETED</code> state
+            by calling the <a>DescribeCertificateAuthority</a> or <a>ListCertificateAuthorities</a>
+            actions. The status of a restored CA is set to its pre-deletion status when the <b>RestoreCertificateAuthority</b>
+            action returns. To change its status to <code>ACTIVE</code>, call the <a>UpdateCertificateAuthority</a>
+            action. If the private CA was in the <code>PENDING_CERTIFICATE</code> state at deletion,
+            you must use the <a>ImportCertificateAuthorityCertificate</a> action to import a certificate
+            authority into the private CA before it can be activated. You cannot restore a CA
+            after the restoration period has ended.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RestorePCACertificateAuthorityCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>The Amazon Resource Name (ARN) that was returned when you called the <a>CreateCertificateAuthority</a>
+            action. This must be of the form: </para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RestorePCACertificateAuthorityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.RestoreCertificateAuthorityResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RestorePCACertificateAuthorityCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RestorePCACertificateAuthorityCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet">
+            <summary>
+            Revokes a certificate that was issued inside ACM Private CA. If you enable a certificate
+            revocation list (CRL) when you create or update your private CA, information about
+            the revoked certificates will be included in the CRL. ACM Private CA writes the CRL
+            to an S3 bucket that you specify. For more information about revocation, see the <a>CrlConfiguration</a>
+            structure. ACM Private CA also writes revocation information to the audit report.
+            For more information, see <a>CreateCertificateAuthorityAuditReport</a>. 
+            
+             <note><para>
+            You cannot revoke a root CA self-signed certificate.
+            </para></note>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the private CA that issued the certificate to be revoked.
+            This must be of the form:</para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet.CertificateSerial">
+            <summary>
+            <para>
+            <para>Serial number of the certificate to be revoked. This must be in hexadecimal format.
+            You can retrieve the serial number by calling <a>GetCertificate</a> with the Amazon
+            Resource Name (ARN) of the certificate you want and the ARN of your private CA. The
+            <b>GetCertificate</b> action retrieves the certificate in the PEM format. You can
+            use the following OpenSSL command to list the certificate in text format and copy
+            the hexadecimal serial number. </para><para><code>openssl x509 -in <i>file_path</i> -text -noout</code></para><para>You can also copy the serial number from the console or use the <a href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html">DescribeCertificate</a>
+            action in the <i>AWS Certificate Manager API Reference</i>. </para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet.RevocationReason">
+            <summary>
+            <para>
+            <para>Specifies why you revoked the certificate.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.RevokeCertificateResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.RevokePCACertificateCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+        <member name="T:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet">
+            <summary>
+            Updates the status or configuration of a private certificate authority (CA). Your
+            private CA must be in the <code>ACTIVE</code> or <code>DISABLED</code> state before
+            you can update it. You can disable a private CA that is in the <code>ACTIVE</code>
+            state or make a CA that is in the <code>DISABLED</code> state active again.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet.CertificateAuthorityArn">
+            <summary>
+            <para>
+            <para>Amazon Resource Name (ARN) of the private CA that issued the certificate to be revoked.
+            This must be of the form:</para><para><code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i></code></para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet.RevocationConfiguration">
+            <summary>
+            <para>
+            <para>Revocation information for your private CA.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet.Status">
+            <summary>
+            <para>
+            <para>Status of your private CA.</para>
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet.Select">
+            <summary>
+            Use the -Select parameter to control the cmdlet output. The cmdlet doesn't have a return value by default.
+            Specifying -Select '*' will result in the cmdlet returning the whole service response (Amazon.ACMPCA.Model.UpdateCertificateAuthorityResponse).
+            Specifying -Select '^ParameterName' will result in the cmdlet returning the selected cmdlet parameter value.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet.PassThru">
+            <summary>
+            Changes the cmdlet behavior to return the value passed to the CertificateAuthorityArn parameter.
+            The -PassThru parameter is deprecated, use -Select '^CertificateAuthorityArn' instead. This parameter will be removed in a future version.
+            </summary>
+        </member>
+        <member name="P:Amazon.PowerShell.Cmdlets.PCA.UpdatePCACertificateAuthorityCmdlet.Force">
+            <summary>
+            This parameter overrides confirmation prompts to force 
+            the cmdlet to continue its operation. This parameter should always
+            be used with caution.
+            </summary>
+        </member>
+    </members>
+</doc>
