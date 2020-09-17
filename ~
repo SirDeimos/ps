@@ -1,0 +1,4 @@
+Host smaxdev
+  HostName 52.35.124.76
+  IdentityFile ~/.ssh/onash-glg
+  User onash
